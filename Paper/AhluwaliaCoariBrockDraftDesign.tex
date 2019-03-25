@@ -1,6 +1,6 @@
 
 
-\documentclass{llncs}
+\documentclass[runningheads]{llncs}
 
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -32,7 +32,7 @@
 	
 	\section{Introduction}
 	
-	The ability to easily communicate with people in another language is one of the most powerful and satisfying experiences in life. Technology has come a long way from the discovery of the Rosetta Stone in 1799, which allowed us to translate Egyptian hieroglyphics to ancient Greek in a mere 23 years. In the modern day, tools such as Google translate can be used in real time to convert between languages and allow people to connect from different cultures$^1$. The latest iterations of Google Translate even use machine learning and neural nets to parse more than just  single words, delivering a more satisfying user experience$^2$.
+	The ability to easily communicate with people in another language is one of the most powerful and satisfying experiences in life. Technology has come a long way from the discovery of the Rosetta Stone in 1799, which allowed us to translate Egyptian hieroglyphics to ancient Greek in a mere 23 years. In the modern day, tools such as Google translate can be used in real time to convert between languages and allow people to connect from different cultures~\cite{ref_url6}. The latest iterations of Google Translate even use machine learning and neural nets to parse more than just  single words, delivering a more satisfying user experience~\cite{ref_url7}.
 	
 	As far as we have come, however, the areas where we struggle are still painfully obvious. While Google Translate will usually allow you to find a bathroom and order off a menu, the intricacies and complexities of a normal, native conversation still can cause a non-fluent speaker issues. For example, if an American coworker mentions to a Brazilian coworker about their performance on a project with "You hit one out of the park.", the Brazilian coworker could translate the words, but without familiarity with the context of a baseball game, the Brazilian would be confused and would have to ask for clarification if it was possible. It would be even harder if the Brazilian was reading a book in English with a colloquialism, since there would be no human to ask for help.
 	
@@ -167,12 +167,67 @@
 	\subsection{Evaluating the Neural Translation Model}
 	
 	\section{Full Demo}
-	Brian, but not by Friday. Maybe Sunday.
-	
+	The front end for the Pristine Language Translation (PST) site is a simple proof-of-concept page with three boxes for input: The language and the text the user is translating from, and the language code the user is translating to. The user must fill in all three boxes with valid input before hitting the "Translate" button:
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Screen_top.png}
+			\captionof{figure}{Language Input}
+			\label{fig:Language Input}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+After the user has entered the data and hit the "Translate" button the information is passed to our pyton NLP processing. First our model finds the closest linguistic match to the sentence entered to a sentence for which the translation is known. Then we have a separate pos-processing step to calculate how close of a match the input sentence is to the matched sentence, and we retrieve that translations of that sentence for the requested language:
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Process_Map.png}
+			\captionof{figure}{Process Map}
+			\label{fig:Process Map}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+The results are then reurned to the screen for display. Note that there can be more than one valid translation for an input sentence, provided our database has the mappings:
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Screen.png}
+			\captionof{figure}{Display Translations}
+			\label{fig:Display Translations}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+If the user wants to try another sentence the user can change any of the three inputs above and hit the "Translate" button again to repeat the process.
+
 	\subsection{Conclusions}
 	
 	\section{Ethical Considerations}
-	Meenu or Brian - Meenu to pick either "Ethical Considerations" or "Conclusions and Other Work"
+	The use of Natural Language Processing (NLP) in regards to language transations raises several ethical issues. Like many other fields in data science, practicioners of NLP must worry about the core questions around gathering data, as well as a second, more-specific ethical concern around their topic (in the case of this paper, translation of language). First we will address the core questions around ethical data science behaviors, then the more specific issue around our translation project.
+
+In order to find a framework in which to address ethical considerations, it would be helpful to have a template, or some core questions to answer. Margot Mieske proposes in her paper "A Quantitative Study of Data in the NLP community" five key questions every NLP programmer must answer: ~\cite{ref_url5}
+
+
+\begin{itemize}
+	\item Has data been collected? 
+	\item How was this data collected and processed? 
+ 	\item Was previously available data used/extended – which one? 
+	\item Is a link or a contact given? 
+	\item Where does it point (private page, research institute, official repository)?
+\end{itemize}
+
+For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url8,ref_url9,ref_url10}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. Translations were then done using a combination of Google Translate~\cite{ref_url11} and a human expertise in Portuguese and Hindi in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation. The original list of sentences and translations can be found in our public Github Repository here:
+
+\url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
+
+
+For the specifics around ethical considerations for NLP we turn to Jochen L. Leidner and Vassilis Plachouras and their paper "Ethical by Design: Ethics Best Practices for Natural Language Processing"~\cite{ref_url12}.  Leidner and Plachouras propose that since NLP pertains to human language and touches every part of human life it has a specific ethics dimension, therefore automation and errors also become ethical topics. We need to make sure our translations and base sentences are unbiased and fair, without discrimination based on age, race, or gender. This is why we chose to target trave sites that hopefuly won't favor certain demographics. At the very least we are transparent about from where we pulled the sentences.
+
+
+This is also why we carefully scanned each translation for fairness to make sure our data was reviewed before putting it out to the public, and why we keep a tight control over the sentences that might be suggested for a user. As it is, this proof-of-concept system is not something I'd like to put out into the world for general use. With only 200 sentences the risks around mistranslating something are too high, there is the potential for widepread confusion if our suggestions aren't close enough to the input request. Before going public we would need to follow Leidner and Plachouras's advice and establish an ethics review board that establish a process for reviewing and implementing new translation requests and helping monitor issues around translations on the site.
+
 	
 	
 	\section{Conclusions and Other Work}
@@ -184,24 +239,48 @@
 	
 	It would be interesting to see how the model would perform when built using Attention.
 	
+\begin{thebibliography}{8}
 	
 	
-	\section{References}
-	1.	Google’s new translation software is powered by brainlike artificial intelligence (2016, September 27),  Retrieved February 04, 2019, from 
-	https://www.sciencemag.org/news/2016/09/google-s-new-translation-software-powered-brainlike-artificial-intelligence?r3f\_986=https://www.google.com/
-	\\
-	\\
-	2.	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15),  Retrieved February 04, 2019, from https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate
-	\\
-	\\
-	3. A ten-minute introduction to sequence-to-sequence learning in Keras, from
-	https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html
-	\\
-	\\
-	4.  figure 2 from
-	https://cdn-images-1.medium.com/max/1600/1*37tROolA8uW7Nz2YpFsWqA.jpeg
-	\\
-	\\
+\bibitem{ref_url1}
+	Google’s new translation software is powered by brainlike artificial intelligence (2016, September 27), Available at:
+	\url{https://www.sciencemag.org/news/2016/09/google-s-new-translation-software-powered-brainlike-artificial-intelligence?r3f\_986=https://www.google.com/}.  Last accessed 4 Feb 2019
+	
+	
+\bibitem{ref_url2}
+	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 4 Feb 2019
 
+\bibitem{ref_ur3}
+	A ten-minute introduction to sequence-to-sequence learning in Keras, Available at: \url{https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html}.  Last accessed 4 Feb 2019
+
+
+\bibitem{ref_url4}
+	figure 2, Available at: \url{https://cdn-images-1.medium.com/max/1600/1*37tROolA8uW7Nz2YpFsWqA.jpeg}.  Last accessed 4 Feb 2019
+
+\bibitem{ref_url5}
+	A Quantitative Study of Data in the NLP community, Margot Mieskes, Available at: \url{http://www.ethicsinnlp.org/workshop/EthNLP-2017.pdf}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url6}
+	Google’s new translation software is powered by brainlike artificial intelligence (2016, September 27), Available at: \url{https://www.sciencemag.org/news/2016/09/google-s-new-translation-software-powered-brainlike-artificial-intelligence?r3f\_986=https://www.google.com/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_ur7}
+	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url8}
+	76 English Phrases for Traveling with Ease, Available at: \url{https://www.fluentu.com/blog/english/english-travel-phrases/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url9}
+	Travel English-- 100 sentences you must know, Available at: \url{https://www.rong-chang.com/travel/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url10}
+	100 Common English Phrases and Sentence Patterns (With Dialogue), Available at: \url{https://basicenglishspeaking.com/100-common-phrases-and-sentence-patterns/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url11}
+	Google Translate, Available at: \url{https://translate.google.com/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url12}
+	Ethical by Design: Ethics Best Practices for Natural Language Processing, Jochen L. Leidner and Vassilis Plachouras, Available at: \url{http://www.ethicsinnlp.org/workshop/pdf/EthNLP02.pdf/}.  Last accessed 25 Mar 2019
+
+\end{thebibliography}
 	
 \end{document}
