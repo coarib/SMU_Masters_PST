@@ -96,7 +96,7 @@
 		\begin{center}
 			\includegraphics[width=\linewidth]{enc_dec_2.png}
 			\captionof{figure}{Sequence to Sequence Modell}
-			\label{fig:Sequence to Sequence Model}
+			\label{fig:Sequence to Sequence Model}~\cite{ref_url4}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
@@ -106,6 +106,7 @@
 	Let's say we are trying to convert the following sentence from English to Portuguese.
 
 	Input sentence (English) - i have lost my passport
+	
 	Output sentence (Portuguese) - eu perdi meu passaporte
 	
 	A sentence can be seen as a sequence of words or characters. We will split the sentence by words. So, for the above example in English, there are 5 words which are fed to the encoder as shown in the figure below. The input is referred to as X and X{i} is the input sequence at time step i. So we have the following input.
@@ -118,7 +119,7 @@
 		\begin{center}
 			\includegraphics[width=\linewidth]{EncoderLSTM.jpeg}
 			\captionof{figure}{Encoder LSTM}
-			\label{fig:Encoder LSTM}
+			\label{fig:Encoder LSTM}~\cite{ref_url5}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
@@ -135,9 +136,9 @@
 	
 	\begin{minipage}{\linewidth}
 	 	\begin{center}
-	 		\includegraphics[width=\linewidth]{decoder.jpeg}\cite{Anu:2013}
+	 		\includegraphics[width=\linewidth]{decoder.jpeg}
 	 		\captionof{figure}{Decoder LSTM}
-	 		\label{fig:Decoder LSTM}
+	 		\label{fig:Decoder LSTM}~\cite{ref_url6}
 	 	\end{center}
 	 \end{minipage}
 	 \afterpage{\clearpage}
@@ -155,7 +156,7 @@
 		\begin{center}
 			\includegraphics[width=\linewidth]{architecture.png}
 			\captionof{figure}{Model Architechture}
-			\label{fig:Model Architectture}
+			\label{fig:Model Architectture}~\cite{ref_url7}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
@@ -207,7 +208,7 @@ If the user wants to try another sentence the user can change any of the three i
 	\section{Ethical Considerations}
 	The use of Natural Language Processing (NLP) in regards to language transations raises several ethical issues. Like many other fields in data science, practicioners of NLP must worry about the core questions around gathering data, as well as a second, more-specific ethical concern around their topic (in the case of this paper, translation of language). First we will address the core questions around ethical data science behaviors, then the more specific issue around our translation project.
 
-In order to find a framework in which to address ethical considerations, it would be helpful to have a template, or some core questions to answer. Margot Mieske proposes in her paper "A Quantitative Study of Data in the NLP community" five key questions every NLP programmer must answer: ~\cite{ref_url5}
+In order to find a framework in which to address ethical considerations, it would be helpful to have a template, or some core questions to answer. Margot Mieske proposes in her paper "A Quantitative Study of Data in the NLP community" five key questions every NLP programmer must answer: ~\cite{ref_url8}
 
 
 \begin{itemize}
@@ -218,12 +219,12 @@ In order to find a framework in which to address ethical considerations, it woul
 	\item Where does it point (private page, research institute, official repository)?
 \end{itemize}
 
-For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url8,ref_url9,ref_url10}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. Translations were then done using a combination of Google Translate~\cite{ref_url11} and a human expertise in Portuguese and Hindi in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation. The original list of sentences and translations can be found in our public Github Repository here:
+For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url11,ref_url9,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. Translations were then done using a combination of Google Translate~\cite{ref_url14} and a human expertise in Portuguese and Hindi in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation. The original list of sentences and translations can be found in our public Github Repository here:
 
 \url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
 
 
-For the specifics around ethical considerations for NLP we turn to Jochen L. Leidner and Vassilis Plachouras and their paper "Ethical by Design: Ethics Best Practices for Natural Language Processing"~\cite{ref_url12}.  Leidner and Plachouras propose that since NLP pertains to human language and touches every part of human life it has a specific ethics dimension, therefore automation and errors also become ethical topics. We need to make sure our translations and base sentences are unbiased and fair, without discrimination based on age, race, or gender. This is why we chose to target trave sites that hopefuly won't favor certain demographics. At the very least we are transparent about from where we pulled the sentences.
+For the specifics around ethical considerations for NLP we turn to Jochen L. Leidner and Vassilis Plachouras and their paper "Ethical by Design: Ethics Best Practices for Natural Language Processing"~\cite{ref_url15}.  Leidner and Plachouras propose that since NLP pertains to human language and touches every part of human life it has a specific ethics dimension, therefore automation and errors also become ethical topics. We need to make sure our translations and base sentences are unbiased and fair, without discrimination based on age, race, or gender. This is why we chose to target trave sites that hopefuly won't favor certain demographics. At the very least we are transparent about from where we pulled the sentences.
 
 
 This is also why we carefully scanned each translation for fairness to make sure our data was reviewed before putting it out to the public, and why we keep a tight control over the sentences that might be suggested for a user. As it is, this proof-of-concept system is not something I'd like to put out into the world for general use. With only 200 sentences the risks around mistranslating something are too high, there is the potential for widepread confusion if our suggestions aren't close enough to the input request. Before going public we would need to follow Leidner and Plachouras's advice and establish an ethics review board that establish a process for reviewing and implementing new translation requests and helping monitor issues around translations on the site.
@@ -252,33 +253,41 @@ This is also why we carefully scanned each translation for fairness to make sure
 
 \bibitem{ref_ur3}
 	A ten-minute introduction to sequence-to-sequence learning in Keras, Available at: \url{https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html}.  Last accessed 4 Feb 2019
-
-
+	
 \bibitem{ref_url4}
-	figure 2, Available at: \url{https://cdn-images-1.medium.com/max/1600/1*37tROolA8uW7Nz2YpFsWqA.jpeg}.  Last accessed 4 Feb 2019
-
+	Figure 1. Available at: \url{https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/01/enc_dec_2.png}.  Last accessed 22 Mar 2019
+	
 \bibitem{ref_url5}
-	A Quantitative Study of Data in the NLP community, Margot Mieskes, Available at: \url{http://www.ethicsinnlp.org/workshop/EthNLP-2017.pdf}.  Last accessed 25 Mar 2019
+	Figure 2. Available at: \url{https://cdn-images-1.medium.com/max/1600/1*37tROolA8uW7Nz2YpFsWqA.jpeg}.  Last accessed 22 Mar 2019
 
 \bibitem{ref_url6}
-	Google’s new translation software is powered by brainlike artificial intelligence (2016, September 27), Available at: \url{https://www.sciencemag.org/news/2016/09/google-s-new-translation-software-powered-brainlike-artificial-intelligence?r3f\_986=https://www.google.com/}.  Last accessed 25 Mar 2019
+	Figure 3. Available at: \url{https://cdn-images-1.medium.com/max/1600/1*SQAxk6gSUM_AK2d53neYmA.jpeg}. Last accessed 22 Mar 2019
 
-\bibitem{ref_ur7}
-	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 25 Mar 2019
-
+\bibitem{ref_url7}
+	Figure 4, Available at: \url{https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/01/architecture.png}. Last accessd 22 Mar 2019
+	
 \bibitem{ref_url8}
-	76 English Phrases for Traveling with Ease, Available at: \url{https://www.fluentu.com/blog/english/english-travel-phrases/}.  Last accessed 25 Mar 2019
+	A Quantitative Study of Data in the NLP community, Margot Mieskes, Available at: \url{http://www.ethicsinnlp.org/workshop/EthNLP-2017.pdf}.  Last accessed 25 Mar 2019
 
 \bibitem{ref_url9}
+	Google’s new translation software is powered by brainlike artificial intelligence (2016, September 27), Available at: \url{https://www.sciencemag.org/news/2016/09/google-s-new-translation-software-powered-brainlike-artificial-intelligence?r3f\_986=https://www.google.com/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_ur1l0}
+	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url1}
+	76 English Phrases for Traveling with Ease, Available at: \url{https://www.fluentu.com/blog/english/english-travel-phrases/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url2}
 	Travel English-- 100 sentences you must know, Available at: \url{https://www.rong-chang.com/travel/}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url10}
+\bibitem{ref_url13}
 	100 Common English Phrases and Sentence Patterns (With Dialogue), Available at: \url{https://basicenglishspeaking.com/100-common-phrases-and-sentence-patterns/}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url11}
+\bibitem{ref_url14}
 	Google Translate, Available at: \url{https://translate.google.com/}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url12}
+\bibitem{ref_url15}
 	Ethical by Design: Ethics Best Practices for Natural Language Processing, Jochen L. Leidner and Vassilis Plachouras, Available at: \url{http://www.ethicsinnlp.org/workshop/pdf/EthNLP02.pdf/}.  Last accessed 25 Mar 2019
 
 \end{thebibliography}
