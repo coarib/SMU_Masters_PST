@@ -1,0 +1,11 @@
+CREATE TABLE `Translations` (
+  `translation_id` int(11) NOT NULL AUTO_INCREMENT,
+  `sentence_id_1` int(11) DEFAULT NULL,
+  `sentence_id_2` int(11) DEFAULT NULL,
+  PRIMARY KEY (`translation_id`),
+  UNIQUE KEY `translation_id_UNIQUE` (`translation_id`),
+  KEY `sentence_id_1_idx` (`sentence_id_1`),
+  KEY `sentence_id2_idx` (`sentence_id_2`),
+  CONSTRAINT `sentence_id1` FOREIGN KEY (`sentence_id_1`) REFERENCES `Sentences` (`sentence_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `sentence_id2` FOREIGN KEY (`sentence_id_2`) REFERENCES `Sentences` (`sentence_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2401 DEFAULT CHARSET=utf8;

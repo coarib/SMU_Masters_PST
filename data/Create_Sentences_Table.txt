@@ -1,0 +1,7 @@
+CREATE TABLE `Sentences` (
+  `sentence_id` int(11) NOT NULL AUTO_INCREMENT,
+  `text` varchar(500) DEFAULT NULL,
+  `language_key` varchar(2) DEFAULT NULL,
+  `suggested_replacement` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`sentence_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=801 DEFAULT CHARSET=utf8;

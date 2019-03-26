@@ -44,26 +44,51 @@
 	
 	Due to the strictly educational and academic nature of the project, we are not attempting to provide a full translation solution. We will limit our translations to English, Portuguese, and Hindi, and we will only provide translations for a few hundred phrases. This will be sufficient to demonstrate the appeal and power of this technique, and we will show how this solution could grow into a complete, living solution using crowdsourcing and time. 
 	
-	\section{State of Translations}
-	Meenu or Brian - Meenu to pick either "State of Translations" or "A New Approach to Translations"
-	
 	\subsection{Existing Tools and Methods}
+	[TODO: Add section here]
 	
-	\subsection{Outstanding Issues}
-	
-	\section{A New Approach to Translations}
-	Meenu or Brian - Meenu to pick either "State of Translations" or "A New Approach to Translations"
-	
-	\subsection{Pristine Sentence Translations Theory}
-	
-	\subsection{Pristine Sentence Translations In Action}
+	\section{Solution Approach}
+	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section will go over what the steps look like and how they relate to each other in a full iteration of the program. 
+
+First, we will form a pristine database of known, correct, contextual translations to sentences that focus on translating the intent of sentences rather than the word in that sentence. There is more detail on this step in the "Data Collection" section. 
+
+Second, we will take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the "Full Demo" section. 
+
+Third, we plan to use a sequence to sequence model to find as close a match as possible to the input sentence and its associated translation. This section is still in progress in this iteration of the document, we will use it to verify our approach in step four which meets functional expectations for the project. More details of that can be found in the "Encoder-Decoder Long Short-Term Memory (LSTM) Networks" section. 
+
+Fourth, we will measure the closeness of our guessed sentence to our input sentence using cosine similarity and return the cosine similarity value along with alll sentences that relate to the matched sentence to the front end.This is covered in more detail in the "Cosine Similarity" and "Results and Analysis" sections.  
+
+Fifth and last, we will display our results to the user through the front end. This is covered in more detail in the "Full Demo" section.
 	
 	\subsection{Database Design}
+	Our database consists of two tables:
+			
+		\begin{enumerate}
+			\item Sentences: Stores a unique Sentence ID for a combination of text (max 500 characters) and a language key (EN=English, PT=Portuguese, HI=Hindi). There is also a place for a suggested replacement for possible future enhancements, but this is not used in our current version of the program.
+			\item Translations: A table that stores the Sentence IDs that are translations of each other, linking the sentences together. These Sentence IDs are foreign keys that link to Sentence IDs in the Sentece table
+		\end{enumerate}
+
+	The use of the Translations lookup table allows us to associate any number of sentences to each other, so we can have more than one translation for a sentence, and we can maintain translations to sentences only that match up together. In the fuure we might have sentences in English that only have translations in Hindi, but not Portuguese, for example. 	
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Database_Diagram.png}
+			\captionof{figure}{Database Diagram}
+			\label{fig:Database Diagrams}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
+	\subsection{Data Collection}
+	<Covered in Ethical Considerations as well, I'll revisit this to make it unique>
+
+	For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url11,ref_url12,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. Translations were then done using a combination of Google Translate~\cite{ref_url14} and a human expertise in Portuguese and Hindi in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation. The original list of sentences and translations can be found in our public Github Repository here:
+
+\url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
 	
 	\section{Predictive Modeling}
-	Meenu citing https://machinelearningmastery.com/develop-neural-machine-translation-system-keras/
-	
-	Automatic or machine translation is one of the most challenging AI tasks given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation. 
+	Automatic or machine translation is one of the most challenging AI tasks given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation. ~\cite{ref_url16}
 	
 	Sequence to Sequence (often abbreviated to seq2seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We will target sentence translations to and from English, Portuguese and  Hindi languages only. Use of seq2seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data
 	
@@ -82,7 +107,29 @@
 	We will also compute the vocabulary sizes and the length of maximum sequence for both the languages. We need to encode each input and output sentences to integers and  pad them to the maximum phrase length to make all sentences of the same length. This is because we will use word embedding for the input sentence and one hot encoding for the output. In one hot encoding, a document is represented as a sequence of integer values, where each word in the document is represented as a unique integer. One hot encoding is needed because the model will predict the probability of each word in the vocabulary as output.
 	
 
+	\subsection{Cosine Similarity}	
+	[TODO: Add section here]
 	
+<NOTE: This is the direct content, I will clean it up so as not to plagiarize>:
+
+
+"Cosine similarity measures the similarity between two vectors of an inner product space.
+It is measured by the cosine of the angle between two vectors and determines whether
+two vectors are pointing in roughly the same direction. It is often used to measure
+document similarity in text analysis.A document can be represented by thousands of attributes, each recording the frequency of a particular word (such as a keyword) or phrase in the document. Thus,
+each document is an object represented by what is called a term-frequency vector. For
+example, in Table 2.5, we see that Document1 contains five instances of the word team,
+while hockey occurs three times. The word coach is absent from the entire document, as
+indicated by a count value of 0. Such data can be highly asymmetric.
+Term-frequency vectors are typically very long and sparse (i.e., they have many 0 values). Applications using such structures include information retrieval, text document
+clustering, biological taxonomy, and gene feature mapping. The traditional distance
+measures that we have studied in this chapter do not work well for such sparse numeric
+data. For example, two term-frequency vectors may have many 0 values in common,
+meaning that the corresponding documents do not share many words, but this does not
+make them similar. We need a measure that will focus on the words that the two documents do have in common, and the occurrence frequency of such words. In other words,
+we need a measure for numeric data that ignores zero-matches."~\cite{ref_book1}
+
+
 	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
 	A typical seq2seq model consists of 2 major components
 	\begin{enumerate}
@@ -161,11 +208,6 @@
 	\end{minipage}
 	\afterpage{\clearpage}
 
-
-	To be continued....
-	
-	
-	\subsection{Evaluating the Neural Translation Model}
 	
 	\section{Full Demo}
 	The front end for the Pristine Language Translation (PST) site is a simple proof-of-concept page with three boxes for input: The language and the text the user is translating from, and the language code the user is translating to. The user must fill in all three boxes with valid input before hitting the "Translate" button:
@@ -203,8 +245,14 @@ The results are then reurned to the screen for display. Note that there can be m
 	\afterpage{\clearpage}
 If the user wants to try another sentence the user can change any of the three inputs above and hit the "Translate" button again to repeat the process.
 
-	\subsection{Conclusions}
+	\subsection{Results and Analysis}
+	[TODO: Add section here]
 	
+		
+
+	\subsection{Conclusions}
+	[TODO: Add section here]
+
 	\section{Ethical Considerations}
 	The use of Natural Language Processing (NLP) in regards to language transations raises several ethical issues. Like many other fields in data science, practicioners of NLP must worry about the core questions around gathering data, as well as a second, more-specific ethical concern around their topic (in the case of this paper, translation of language). First we will address the core questions around ethical data science behaviors, then the more specific issue around our translation project.
 
@@ -219,7 +267,7 @@ In order to find a framework in which to address ethical considerations, it woul
 	\item Where does it point (private page, research institute, official repository)?
 \end{itemize}
 
-For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url11,ref_url9,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. Translations were then done using a combination of Google Translate~\cite{ref_url14} and a human expertise in Portuguese and Hindi in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation. The original list of sentences and translations can be found in our public Github Repository here:
+For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url11,ref_url12,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. Translations were then done using a combination of Google Translate~\cite{ref_url14} and a human expertise in Portuguese and Hindi in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation. The original list of sentences and translations can be found in our public Github Repository here:
 
 \url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
 
@@ -230,9 +278,8 @@ For the specifics around ethical considerations for NLP we turn to Jochen L. Lei
 This is also why we carefully scanned each translation for fairness to make sure our data was reviewed before putting it out to the public, and why we keep a tight control over the sentences that might be suggested for a user. As it is, this proof-of-concept system is not something I'd like to put out into the world for general use. With only 200 sentences the risks around mistranslating something are too high, there is the potential for widepread confusion if our suggestions aren't close enough to the input request. Before going public we would need to follow Leidner and Plachouras's advice and establish an ethics review board that establish a process for reviewing and implementing new translation requests and helping monitor issues around translations on the site.
 
 	
-	
 	\section{Conclusions and Other Work}
-	Meenu or Brian - Meenu to pick either "Ethical Considerations" or "Conclusions and Other Work"
+	[TODO: Add detail here]
 	
 	Pristine Sentence Translations model is only built for about 200 sentences which could be translated from/to English, Portuguese and Hindi languages. This model could be expanded by adding more data and by incorporating more languages for translations.
 	
@@ -275,10 +322,10 @@ This is also why we carefully scanned each translation for fairness to make sure
 \bibitem{ref_ur1l0}
 	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url1}
+\bibitem{ref_url11}
 	76 English Phrases for Traveling with Ease, Available at: \url{https://www.fluentu.com/blog/english/english-travel-phrases/}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url2}
+\bibitem{ref_url12}
 	Travel English-- 100 sentences you must know, Available at: \url{https://www.rong-chang.com/travel/}.  Last accessed 25 Mar 2019
 
 \bibitem{ref_url13}
@@ -289,6 +336,12 @@ This is also why we carefully scanned each translation for fairness to make sure
 
 \bibitem{ref_url15}
 	Ethical by Design: Ethics Best Practices for Natural Language Processing, Jochen L. Leidner and Vassilis Plachouras, Available at: \url{http://www.ethicsinnlp.org/workshop/pdf/EthNLP02.pdf/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url16}
+How to Develop a Neural Machine Translation System from Scratch, by Jason Brownlee on January 10, 2018, Available at: \url{https://machinelearningmastery.com/develop-neural-machine-translation-system-keras/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_book1}
+Jiawei Han, Micheline Kamber and Jian Pei: Data Mining: Concepts and Techniques. 3rd ed. Elsevier Inc., Chapter 2.4.7 - Cosine Similarity, Page 77 (2012)
 
 \end{thebibliography}
 	
