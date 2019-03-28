@@ -43,6 +43,10 @@
 	One main issue with the approach outlined above is that if we do not have an exact match for the sentence, our method return nothing. so if we tried to translate "You really hit one out of the park" from English into Portuguese we would not get any results. We decided to address this concern using Natural Language Processing (NLP) to filter out the noise in a sentence, and then use Predictive Modeling in order to find the sentence "most like" the input sentence. Using this method, "You really hit one out of the park" would ideally map most closely to "You hit one out of the park", and return the same translation: "Você foi ótima". The front-end will indicate that the translation is not for the original input sentence, instead it will indicate that it is "Showing Results for: You hit one out of the park."
 	
 	Due to the strictly educational and academic nature of the project, we are not attempting to provide a full translation solution. We will limit our translations to English, Portuguese, and Hindi, and we will only provide translations for a few hundred phrases. This will be sufficient to demonstrate the appeal and power of this technique, and we will show how this solution could grow into a complete, living solution using crowdsourcing and time. 
+
+	Given the nature of PSTs we will need to find a way to determine the closeness of sentences to each other. We will analyze two different methods of determining how close one sentence is to another, Euclidean Distance and Cosine Similarity, and choose the best method based on the metrics it provides for closeness. After we determine the closest match of an input sentence to one we know through our PST database, we can return a curated translation that matches that sentence in the requested language.
+
+	By the end of this paper, hopefully we can convince the reader of the potential value of this approach to translations and inspire future work that build on our base proof-of-concept into a more robust translation mechanism. 
 	
 	\subsection{Existing Tools and Methods}
 	The concept of translating one langauge to another is one of the most prevalent topics in data science, so it was all too easy to find existing tools and methods. This first example we would like to cover is one of the stronger forces in translation today: Google Translate. In 2016 Google started using Neural Nets to perform translations and saw vast reduction in errors. ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
@@ -87,11 +91,11 @@
 	One of the problems we wanted to solve early was to be able to test our model offline, in case a network connect occurred we still wanted access to our model. To facilitate this we extracted the data in the database into dataframes through sqlalchemy~\cite{ref_url15} and exported the data to .pkl files. We then load the .pkl files whenever we need the data for a model, which makes us immune to network interruptions. Examples of the SQL Queries used to extract the data can be found in Appendix A.
 
 	\subsection{Data Collection}
-	<Covered in Ethical Considerations as well, I'll revisit this to make it unique>
-
-	For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url11,ref_url12,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. Translations were then done using a combination of Google Translate~\cite{ref_url14} and a human expertise in Portuguese and Hindi in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation. The original list of sentences and translations can be found in our public Github Repository here:
-
-\url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
+	
+	The data for this project was collected to help people who travel for businsess or pleasure.  If someone who can speak English is travelling to India, though most Indians know some English, he will face a few communication issues when conversing with waiter, taxi driver, hotel staff etc. The initial collection of 200 English Sentences  are valuable to know when travelling. The sentences were assembled in English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Potuguese and Hindi using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in Hindi. If the translation done by Google did not make sense, the translation was modified to make it more sensible. 
+	The list of sentences and translations can be found in our public Github Repository:
+	
+	\url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
 	
 	\section{Predictive Modeling}
 	Automatic or machine translation is one of the most challenging AI tasks given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation. ~\cite{ref_url16}
@@ -235,13 +239,94 @@ The results are then reurned to the screen for display. Note that there can be m
 If the user wants to try another sentence the user can change any of the three inputs above and hit the "Translate" button again to repeat the process.
 
 	\subsection{Results and Analysis}
-	
-	~\cite{ref_url20}
-	
-		
+	After we assembled our database of translations and built our PKL files our only outstanding task was to pick a method for determining how close sentences are. We had two contenders: Euclidean Distances and Cosine Similarities. We needed a way to determine, given our dataset, which method stood the best chance of matching an input sentence to the sentence we thought it should match to. We decided to try slightly altering some of our pristine sentences in our database and runnign them through both comparisons, then analyze how well each method performed.
 
+To start, we altered our known sentence "'we are good friends" to "we are best friends", and ran it through the Euclidean Distance and Cosine Similarity comparisons. Here is the output:
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Friends_Comparison.png}
+			\captionof{figure}{Sentence Comparison 1}
+			\label{fig:Sentence Comparison 1}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
+	You can see that both methods were effective at finding the result we anticipated: "We are good friends." However, if you look at how close the second-best guess was in each comparison you can see that the cosine similarity method seemed much better at finding that result. The next-closest Euclidean Distance was only 62.31\% more than the best guess, but for Cosine Similarity the best guess was 135.73\% better than the next-best guess. Even though both performed admirably in this circumstance, it seems like cosine similarity was able to more clearly diffferentiate the sentence we want from the sentence we don't. 
+	As an example of the end-to-end process, here's the translation of our found pristine sentence to the Portuguese "Nós somos bons amigos.":
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Language_Match.png}
+			\captionof{figure}{Translating Matched Sentence to Portuguese}
+			\label{fig:Translating Matched Sentence  to Portuguese}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
+	We tried many examples and the results were similar, here is another example where we  we altered our known sentence "'I would like dessert" to "'I would love dessert":
+
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Dessert_Comparison.png}
+			\captionof{figure}{Sentence Comparison 2}
+			\label{fig:Sentence Comparison 2}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	Again, both methods were effective at finding the result we anticipated: "I would like dessert." However, the next-closest Euclidean Distance was only 46.48\% more than the best guess, but for Cosine Similarity the best guess was 95.07\% better than the next-best guess. 
+
+	We also thought that it would be interesting to try a sentence that wasn't even close to one to which we knew the translation. For this we altered "I would like some water" to "I would like some blueberry muffins and orange juice, please." We knew this wouldn't be pretty, here is the result:
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Terrible_Comparison.png}
+			\captionof{figure}{Sentence Comparison 3}
+			\label{fig:Sentence Comparison 3}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	The good news is that both methods found what we hoped: "I would like some water." It's also notable that the Cosine Similarity did perform very slightly better than Euclidean Distance in terms of the difference to the next-highest match: 3.01\% for Cosine Similarity vs. 0.83\% for Euclidean Distance. However, looking at the quality of match for Cosine Similarity says that these sentences are only 36.12\% similar, which is a very low similarity compared to the over 70\% of the other two matches. We would need to strongly discourage anyone taking this translation as a close match to what is entered.
+
+	Finally, we wanted to list the point of PST, translating a sentence that is hard to translation from one language to another. In this case we chose "You really hit one out of the park". Google Translate shows this in Portuguese as "Você realmente bateu um fora do Parque", which still would not give a native Portuguese speaker any idea what that sentence means to them, unless they knew American Baseball. Here's how PST Performs:
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Park_Comparison.png}
+			\captionof{figure}{Sentence Comparison 4}
+			\label{fig:Sentence Comparison 4}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Park_Translation.png}
+			\captionof{figure}{Translation for Colloquialism}
+			\label{fig:Translation for Colloquialism}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	The sentence we input was very similar to the PST entry "You hit one out of the park", which is reflected in the displayed scores. More importantly, PST returned "Você foi ótimo", which means "You were great" in English, which is the intent of the colloquialism. 
+
+	Now that we have performed our analysis we are ready to decide on a final method.
+
+	All code for our comparisons can be found at this URL in the References section: ~\cite{ref_url20}
+	
 	\subsection{Conclusions}
-	[TODO: Add section here]
+	Cosine Similarity seems to outperform Euclidean Distance as a determination of sentence similarity, so that is the metric we will focus on for determining closeness of input sentences to our known sentences. It makes sense that Cosine Similarity would be a more ideal fit than Euclidean Sentences because every unexpected word in Euclidean Distance comparison is penalized, but in Cosine Similarity these are ignored and we focus only on the matches. This helps cut through the noise and return a more confident match in what we want.
+
+	In addition, by testing a very bad sentence match we touched on the possibility of using a similarity threshold of some kind, where perhaps in future iterations of the program we could warn users not to pay too much attention to a sentence match less than some percentage. Over 70\% match seems like a good match, below 40\% seems like a bad match, but we need to compare a lot more data to determine what that threshold might make sense to be.
+
+	We have also shown how PST could be used to overcome some of the hazards around langauge translation today, ignoring colloquialisms and focusing on the intent of the sentence.
+
+	Given our work so far, we now have a method to find a sentence ID that is our closest match to an input sentence, then take that sentence ID and find all the applicable known translations for that sentence. We can do this for all 200 sentences in our database, and can display how close of a match we have made using Cosine Similarity, which we have identified as our chosen similarity determination method. This is enough to demonstrate the basic concept of PST, and can be expanded on for future work.
 
 	\section{Ethical Considerations}
 	The use of Natural Language Processing (NLP) in regards to language transations raises several ethical issues. Like many other fields in data science, practicioners of NLP must worry about the core questions around gathering data, as well as a second, more-specific ethical concern around their topic (in the case of this paper, translation of language). First we will address the core questions around ethical data science behaviors, then the more specific issue around our translation project.
@@ -269,11 +354,11 @@ This is also why we carefully scanned each translation for fairness to make sure
 
 	
 	\section{Conclusions and Other Work}
-	[TODO: Add detail here]
+	Through this proof-of-concept we have shown the potential around Pristine Sentence Translations, and have overcome some of the technical hurdles of implementing the translation system. There is plenty of room for improvement, but it explores a fresh take on translations that is both simple in nature and effective for solving issues around hard-to-translate words and colloquialisms. 
+		
+	This Pristine Sentence Translations proof-of-concept is only built for about 200 sentences which could be translated from/to English, Portuguese and Hindi languages. This model could be expanded by adding more data and by incorporating more languages for translations. The greater the number of sentences in the database, the greater the chance of finding a significant match to an imput sentence. Tens of thousands of sentences would be needed in order to function as a serivceable translation algorithm, and with the evolution of language this would need to be added onto constantly. Methods of discovering translations might include crowdsourcing to large groups knowledgeable in both languages (translators, teachers, bilingual students), or crawling for translations on travel sites, online movie scripts, instruction booklets, etc.
 	
-	Pristine Sentence Translations model is only built for about 200 sentences which could be translated from/to English, Portuguese and Hindi languages. This model could be expanded by adding more data and by incorporating more languages for translations.
-	
-	One could try dropout and other forms of regularization techniques to mitigate over-fitting, or perform with hyperparamter tuning. Play with learning rate, batch-size, number of epochs etc.
+	One could try dropout and other forms of regularization techniques to mitigate over-fitting, or perform with hyperparamter tuning. One could also play with learning rate, batch-size, number of epochs etc.
 	
 	It would be interesting to see how the model would perform when built using Attention.
 	
