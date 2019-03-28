@@ -46,6 +46,7 @@
 	
 	\subsection{Existing Tools and Methods}
 	The concept of translating one langauge to another is one of the most prevalent topics in data science, so it was all too easy to find existing tools and methods. This first example we would like to cover is one of the stronger forces in translation today: Google Translate. In 2016 Google started using Neural Nets to perform translations and saw vast reduction in errors. ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
+
 	The next method we found was much closer to our intent. The outhor developed a Neural Machine Translation System using Keras, and used a "closeness of match" system to translate between one language and another.~\cite{ref_url16} This approach is almost perfect for what we need, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST will use a similar approach, but aims to find a matching sentence ID for the input sentece, then lookup all sentences that are translations for that sentence in the requested language. More details will be provided in the "Solution Approach" section.
 	
 	\section{Solution Approach}
@@ -234,7 +235,8 @@ The results are then reurned to the screen for display. Note that there can be m
 If the user wants to try another sentence the user can change any of the three inputs above and hit the "Translate" button again to repeat the process.
 
 	\subsection{Results and Analysis}
-	[TODO: Add section here]
+	
+	~\cite{ref_url20}
 	
 		
 
@@ -336,6 +338,9 @@ Found in translation: More accurate, fluent sentences in Google Translat, by Cat
 
 \bibitem{ref_url19}
 What is Euclidean Distance?, On April 1, 2017, Available at:  \url{What is Euclidean Distance?  https://machinelearningtutorials.com/euclidean-distance/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url20}
+Text Similarities, Meenu Ahluwalia and Brian Coari, Available at:  \url{https://github.com/coarib/SMU_Masters_PST/blob/master/src/TextSimilarity_edited.ipynb}.  Last accessed 25 Mar 2019
 
 \bibitem{ref_book1}
 Jiawei Han, Micheline Kamber and Jian Pei: Data Mining: Concepts and Techniques. 3rd ed. Elsevier Inc., Chapter 2.4.7 - Cosine Similarity, Page 77 (2012)
