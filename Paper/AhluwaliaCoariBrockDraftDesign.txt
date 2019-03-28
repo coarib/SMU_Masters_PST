@@ -45,26 +45,23 @@
 	Due to the strictly educational and academic nature of the project, we are not attempting to provide a full translation solution. We will limit our translations to English, Portuguese, and Hindi, and we will only provide translations for a few hundred phrases. This will be sufficient to demonstrate the appeal and power of this technique, and we will show how this solution could grow into a complete, living solution using crowdsourcing and time. 
 	
 	\subsection{Existing Tools and Methods}
-	The concept of translating one langauge to another is one of the most prevalent topics in data science, so it was all too easy to find existing tools and methods. This first example we would like to cover is one of the stronger forces in translation today: Google Translate. In 2016 Google started using Neural Nets to perform translations and saw vast reduction in errors. ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
-	The next method we found was much closer to our intent. The outhor developed a Neural Machine Translation System using Keras, and used a "closeness of match" system to translate between one language and another.~\cite{ref_url16} This approach is almost perfect for what we need, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST will use a similar approach, but aims to find a matching sentence ID for the input sentece, then lookup all sentences that are translations for that sentence in the requested language. More details will be provided in the "Solution Approach" section.
+	[TODO: Add section here]
 	
 	\section{Solution Approach}
 	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section will go over what the steps look like and how they relate to each other in a full iteration of the program. 
 
-	First, we will form a pristine database of known, correct, contextual translations to sentences that focus on translating the intent of sentences rather than the word in that sentence. There is more detail on this step in the "Data Collection" section. 
+First, we will form a pristine database of known, correct, contextual translations to sentences that focus on translating the intent of sentences rather than the word in that sentence. There is more detail on this step in the "Data Collection" section. 
 
-	Second, we will take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the "Full Demo" section. 
+Second, we will take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the "Full Demo" section. 
 
-	Third, we plan to use a sequence to sequence model to find as close a match as possible to the input sentence and its associated translation. This section is still in progress in this iteration of the document, we will use it to verify our approach in step four which meets functional expectations for the project. More details of that can be found in the "Encoder-Decoder Long Short-Term Memory (LSTM) Networks" section. 
+Third, we plan to use a sequence to sequence model to find as close a match as possible to the input sentence and its associated translation. This section is still in progress in this iteration of the document, we will use it to verify our approach in step four which meets functional expectations for the project. More details of that can be found in the "Encoder-Decoder Long Short-Term Memory (LSTM) Networks" section. 
 
-	Fourth, we will measure the closeness of our guessed sentence to our input sentence using Euclidean Distance and  Cosine Similarity and return the result of the method that we determine is the best performing indicator, along with alll sentences that relate to the matched sentence to the front end.This is covered in more detail in the "Euclidean Distance and Cosine Similarity" and "Results and Analysis" sections.
+Fourth, we will measure the closeness of our guessed sentence to our input sentence using cosine similarity and return the cosine similarity value along with alll sentences that relate to the matched sentence to the front end.This is covered in more detail in the "Cosine Similarity" and "Results and Analysis" sections.  
 
-	Fifth and last, we will display our results to the user through the front end. This is covered in more detail in the "Full Demo" section.
+Fifth and last, we will display our results to the user through the front end. This is covered in more detail in the "Full Demo" section.
 	
 	\subsection{Database Design}
-	For our database design we wanted to leverage a cloud-based storage system so that we could both reference the same live database, as well as making the database updateable in realtime in case we want to utilize a realtime update strategy in the future. We chose Google Coud Platform (GCP) as a host for our database due to its ease of setup and robust set of no-cost features. 
-	
-	Our GCP database consists of two tables:
+	Our database consists of two tables:
 			
 		\begin{enumerate}
 			\item Sentences: Stores a unique Sentence ID for a combination of text (max 500 characters) and a language key (EN=English, PT=Portuguese, HI=Hindi). There is also a place for a suggested replacement for possible future enhancements, but this is not used in our current version of the program.
@@ -82,8 +79,6 @@
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
-
-	One of the problems we wanted to solve early was to be able to test our model offline, in case a network connect occurred we still wanted access to our model. To facilitate this we extracted the data in the database into dataframes through sqlalchemy~\cite{ref_url15} and exported the data to .pkl files. We then load the .pkl files whenever we need the data for a model, which makes us immune to network interruptions. Examples of the SQL Queries used to extract the data can be found in Appendix A.
 
 	\subsection{Data Collection}
 	<Covered in Ethical Considerations as well, I'll revisit this to make it unique>
@@ -109,14 +104,31 @@
 						\item document-count:An integer count of the total number of documents that were used to fit the Tokenizer.
 					\end{enumerate}
 	
-	We will also compute the vocabulary sizes and the length of maximum sequence for both the languages. We need to encode each input and output sentences to integers and  pad them to the maximum phrase length to make all sentences of the same length. This is because we will use word embedding for the input sentence and one hot encoding for the output. In one hot encoding, a document is represented as a sequence of integer values, where each word in the document is represented as a unique integer. One hot encoding is needed because the model will predict the probability of each word in the vocabulary as output.	
-
-	\subsection{Euclidean Distance and Cosine Similarity}	
-	For our comparison on closeness of strings we will leverage two methods: Euclidean Distance and Cosine Similarity. Euclidean Distance measures the distance between two points in a space, and therefore the minimum distance is the closest match. Cosine Similarity is the similarity between two vectors in a space, and therefor the maximum similarity is the closest match. In this section we will decribe how these methods calculate their scores, and in the "Results" section we will show the result of the comparison and choose our preferred match.
+	We will also compute the vocabulary sizes and the length of maximum sequence for both the languages. We need to encode each input and output sentences to integers and  pad them to the maximum phrase length to make all sentences of the same length. This is because we will use word embedding for the input sentence and one hot encoding for the output. In one hot encoding, a document is represented as a sequence of integer values, where each word in the document is represented as a unique integer. One hot encoding is needed because the model will predict the probability of each word in the vocabulary as output.
 	
-Euclidean distance, also known as L2 distance or the Pythagorean metric, is a basic measure of distance in a space. given a number of dimensions in a space, the Euclidean Distance calculates the length of a line segment connecting those points. This distance is calculated by going through all of the dimensions, adding up the square of the difference between the points of each value for that dimension, then taking the square root of that sum. This method is called the Pythagorean Formula.~\cite{ref_url19}. This method is easy to understand, but it seems like it might struggle if the data are not of similar shapes, as is the case with our sentence sample.
 
-Cosine Similarity tries to measure similarity in a fundementally different way from Euclidean Distance. Instead of stepping through and comparing data point-by-point, Cosine Similarity instead steps through each sample and tries to build a directional veector for ther shape of the data, then measures the cosine of the angle between the two vectors. In the case of text analysis the cosine similarity uses the frequency of words in a sentence order to determine a directional vector. Cosine Similarity ignores the words that are not in common between two sentences, and focuses only on words that are in common, which avoids penalizing sentences that are very long and simply focuses on finding the closest possible match. Therefore cosine similarity is very resilient to data that is of different shapes, since the shape of the data would not necessarily affect the direction of the vector, instead the sentences with the closest ratios of like words would be considered a match.~\cite{ref_book1} This reslience to differently-shaped data is promising for our purposes, and seems to be a good fit for comparing sentences, and we will see in the "Results" section how it performs.
+	\subsection{Cosine Similarity}	
+	[TODO: Add section here]
+	
+<NOTE: This is the direct content, I will clean it up so as not to plagiarize>:
+
+
+"Cosine similarity measures the similarity between two vectors of an inner product space.
+It is measured by the cosine of the angle between two vectors and determines whether
+two vectors are pointing in roughly the same direction. It is often used to measure
+document similarity in text analysis.A document can be represented by thousands of attributes, each recording the frequency of a particular word (such as a keyword) or phrase in the document. Thus,
+each document is an object represented by what is called a term-frequency vector. For
+example, in Table 2.5, we see that Document1 contains five instances of the word team,
+while hockey occurs three times. The word coach is absent from the entire document, as
+indicated by a count value of 0. Such data can be highly asymmetric.
+Term-frequency vectors are typically very long and sparse (i.e., they have many 0 values). Applications using such structures include information retrieval, text document
+clustering, biological taxonomy, and gene feature mapping. The traditional distance
+measures that we have studied in this chapter do not work well for such sparse numeric
+data. For example, two term-frequency vectors may have many 0 values in common,
+meaning that the corresponding documents do not share many words, but this does not
+make them similar. We need a measure that will focus on the words that the two documents do have in common, and the occurrence frequency of such words. In other words,
+we need a measure for numeric data that ignores zero-matches."~\cite{ref_book1}
+
 
 	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
 	A typical seq2seq model consists of 2 major components
@@ -328,38 +340,9 @@ This is also why we carefully scanned each translation for fairness to make sure
 \bibitem{ref_url16}
 How to Develop a Neural Machine Translation System from Scratch, by Jason Brownlee on January 10, 2018, Available at: \url{https://machinelearningmastery.com/develop-neural-machine-translation-system-keras/}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url17}
-SQL Alchemy, Available at: \url{https://www.sqlalchemy.org/}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url18}
-Found in translation: More accurate, fluent sentences in Google Translat, by Catherine Matacic on Sep. 27, 2016,  Available at:  \url{https://www.sciencemag.org/news/2016/09/google-s-new-translation-software-powered-brainlike-artificial-intelligence?r3f 986=https://www.google.com/}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url19}
-What is Euclidean Distance?, On April 1, 2017, Available at:  \url{What is Euclidean Distance?  https://machinelearningtutorials.com/euclidean-distance/}.  Last accessed 25 Mar 2019
-
 \bibitem{ref_book1}
 Jiawei Han, Micheline Kamber and Jian Pei: Data Mining: Concepts and Techniques. 3rd ed. Elsevier Inc., Chapter 2.4.7 - Cosine Similarity, Page 77 (2012)
 
 \end{thebibliography}
-
-
-\appendix
-\section{SQL Queries}
-Select the text and sentence IDs for a language key. Language keys can be EN, PT, or HI for English, Portuguese, or Hindi, respectively. 
-
-\begin{verbatim}
-select text, sentence_id from Sentences where language_key='[Language_Key]'
-\end{verbatim}
-Select every combination of matching translations between all sentences. Storing this query in a dataframe allows us to get all the translations for a sentence just by matching a sentence ID to the input\_sentence\_id column.
-
-\begin{verbatim}
-SELECT a.sentence_id as input_sentence_id, 
-a.language_key as input_language_key, a.text as input_text, 
-b.text as output_text, b.sentence_id as output_sentence_id, 
-b.language_key as output_language_key FROM masters.Translations 
-left join masters.Sentences a on a.sentence_id=Translations.sentence_id_1 
-left join masters.Sentences b on b.sentence_id=Translations.sentence_id_2
-\end{verbatim}
-
-
+	
 \end{document}
