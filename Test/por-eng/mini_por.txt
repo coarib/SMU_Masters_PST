@@ -1,0 +1,5001 @@
+Go.	Vai.
+Go.	Vá.
+Hi.	Oi.
+Run!	Corre!
+Run!	Corra!
+Run!	Corram!
+Run.	Corre!
+Run.	Corra!
+Run.	Corram!
+Who?	Quem?
+Wow!	Uau!
+Wow!	Nossa!
+Wow!	Wow!
+Fire!	Fogo!
+Help!	Ajuda!
+Help!	Socorro!
+Jump!	Pule!
+Jump.	Pulem.
+Jump.	Pule.
+Stop!	Pare!
+Stop!	Parem!
+Wait!	Espere!
+Wait.	Espere!
+Wait.	Esperem.
+Go on.	Vá!
+Hello!	Oi.
+Hello!	Alô.
+Hello!	Olá!
+I ran.	Eu corri.
+I see.	Estou vendo.
+I try.	Eu tento.
+I try.	Tento.
+I won!	Ganhei!
+I won.	Eu venci.
+Oh no!	Ah não!
+Relax.	Relaxe!
+Relax.	Relaxa!
+Smile.	Sorria.
+Smile.	Sorriam.
+Attack!	Atacar!
+Attack!	Ataquem!
+Attack!	Ataque!
+Cheers!	Saúde!
+Get up.	Levante-se!
+Get up.	Levantem-se!
+Get up.	Levanta-te.
+Get up.	Levante-se.
+Get up.	Levanta-te!
+Go now.	Vá agora.
+Got it!	Entendi.
+Got it!	Eu entendi!
+Got it!	Saquei!
+Got it?	Entendeu?
+He ran.	Ele correu.
+He ran.	Ele corria.
+Hug me.	Me abrace.
+I fell.	Eu caí.
+I know.	Eu sei.
+I know.	Sei.
+I left.	Eu saí.
+I paid.	Eu paguei.
+I quit.	Eu me demito.
+I work.	Eu estou trabalhando.
+I'm OK.	Estou bem.
+I'm up.	Estou acordado.
+Listen.	Escute!
+Listen.	Ouça-me!
+Listen.	Escuta!
+Listen.	Escutem!
+Listen.	Ouça isso!
+Listen.	Escutem-me!
+Listen.	Escute.
+Listen.	Escuta.
+Listen.	Escutem.
+Listen.	Escutai.
+No way!	De jeito nenhum!
+No way!	Impossível!
+No way!	De maneira alguma!
+No way!	De modo algum!
+No way!	Sem chance!
+Really?	Sério?
+Really?	É mesmo?
+Really?	Mesmo?
+Really?	É sério?
+Thanks.	Obrigado!
+Thanks.	Obrigada!
+Thanks.	Obrigado.
+Try it.	Tenta-o.
+Try it.	Prove-o.
+Try it.	Prove-a.
+We try.	Tentamos.
+We try.	Nós tentamos.
+We won.	Vencemos.
+We won.	Nós vencemos.
+Why me?	Por que eu?
+Ask Tom.	Pergunte a Tom.
+Ask Tom.	Pergunta para o Tom.
+Ask Tom.	Peça para o Tom.
+Ask Tom.	Peça ao Tom.
+Ask Tom.	Perguntem ao Tom.
+Be calm.	Fique calmo.
+Be cool.	Seja legal.
+Be fair.	Sede justos!
+Be fair.	Sede justas!
+Be fair.	Sejam justos!
+Be fair.	Sejam justas!
+Be fair.	Seja justo!
+Be fair.	Seja justa!
+Be fair.	Sê justo!
+Be fair.	Sê justa!
+Be kind.	Seja gentil.
+Be kind.	Sejam gentis.
+Be kind.	Sede gentis.
+Be kind.	Sê gentil.
+Be nice.	Seja legal.
+Be nice.	Sejam legais.
+Beat it.	Se manda!
+Beat it.	Vaza!
+Call me.	Me liga.
+Call us.	Ligue para a gente.
+Come in.	Entre.
+Come in.	Entre!
+Come in.	Entrem!
+Come in.	Entra.
+Come on!	Vamos!
+Come on!	Venha!
+Come on!	Qual é!
+Come on.	Vamos!
+Drop it!	Solte-o!
+Drop it!	Largue isso.
+Get Tom.	Pegue Tom.
+Get out!	Saia!
+Get out!	Saia daqui!
+Get out!	Fora!
+Get out!	Sai.
+Get out!	Saiam!
+Get out.	Saia.
+Get out.	Sai.
+Go away!	Afaste-se!
+Go away.	Cai fora!
+Go away.	Vá embora!
+Go away.	Fora!
+Go away.	Se manda!
+Go away.	Vá embora.
+Go away.	Afaste-se!
+Go away.	Cai fora daqui!
+Go home.	Vão para casa.
+Go home.	Vá para casa.
+Goodbye!	Tchau!
+Goodbye!	Até mais!
+Goodbye!	Até a vista!
+Goodbye!	Até logo!
+Goodbye!	Até mais ver!
+Goodbye!	Até o rever!
+Hang on!	Aguarde.
+Hang on!	Aguardem.
+Hang on.	Aguarde.
+Hang on.	Aguardem.
+He came.	Ele veio.
+He runs.	Ele corre.
+Help me!	Me ajuda!
+Help me!	Ajude-me!
+Help me!	Ajudem-me!
+Help me.	Me ajude.
+Help me.	Ajude-me.
+Help me.	Ajuda-me.
+Help me.	Ajudem-me.
+Help me.	Me ajuda!
+Help me.	Ajude-me!
+Help me.	Ajudem-me!
+Help us.	Ajudem-nos.
+Help us.	Nos ajude.
+Help us.	Ajude a gente.
+Help us.	Ajude-nos.
+Hi, Tom.	Oi, Tom.
+Hit Tom.	Acerta o Tom.
+Hold it!	Segure isso!
+Hold it!	Segura isso!
+Hug Tom.	Abrace o Tom.
+Hug Tom.	Abracem o Tom.
+I agree.	Eu concordo.
+I agree.	Estou de acordo.
+I agree.	Eu estou de acordo.
+I cried.	Eu chorei.
+I drove.	Eu dirigi.
+I tried.	Eu tentei.
+I tried.	Tentei.
+I waved.	Eu acenei.
+I'll go.	Eu vou.
+I'll go.	Eu vou!
+I'm fat.	Estou gordo.
+I'm fat.	Sou gordo.
+I'm fat.	Eu sou gorda.
+I'm fat.	Eu estou gorda.
+I'm fit.	Estou em forma.
+I'm hot.	Tenho calor.
+I'm hot.	Estou com calor.
+I'm mad.	Estou bravo.
+I'm old.	Eu sou velho.
+I'm old.	Eu sou velha.
+I'm old.	Eu estou velho.
+I'm old.	Eu estou velha.
+I'm sad.	Estou triste.
+I'm sad.	Eu sou triste.
+I'm shy.	Eu sou tímido.
+I'm wet.	Estou molhado.
+I'm wet.	Estou molhada.
+It's OK.	Está tudo bem.
+It's OK.	Tudo bem.
+It's OK.	Está bem.
+It's OK.	Tá bom.
+It's me!	Sou eu.
+It's me.	Sou eu.
+Join us.	Junte-se.
+Join us.	Junte-se a nós!
+Keep it.	Fique com ele.
+Keep it.	Fica com ele.
+Keep it.	Fiquem com ele.
+Keep it.	Fique com ela.
+Keep it.	Fica com ela.
+Keep it.	Fiquem com ela.
+Kiss me.	Me beija.
+Kiss me.	Dê-me um beijo.
+Kiss me.	Beije-me.
+Kiss me.	Me beije.
+Me, too.	Eu também.
+Open up.	Abra.
+Perfect!	Perfeito!
+See you!	Nos vemos!
+See you.	Até mais.
+See you.	Até logo.
+See you.	Nos vemos.
+See you.	A gente se vê.
+Show me.	Mostre-me.
+Show me.	Me mostre.
+Show me.	Me mostra.
+Shut up!	Cale a boca!
+Shut up!	Cala a boca!
+Shut up!	Cala-te!
+Shut up!	Cale-se!
+Shut up!	Calem a boca!
+Shut up!	Calem-se!
+Stop it.	Pare com isso!
+Stop it.	Pare.
+Stop it.	Para com isso.
+Take it.	Pegue-o.
+Take it.	Pega-o.
+Take it.	Peguem-no.
+Take it.	Pegue-a.
+Take it.	Pega-a.
+Take it.	Peguem-na.
+Tell me.	Diga-me.
+Tell me.	Digam-me.
+Tell me.	Diz-me.
+Tom ate.	O Tom comeu.
+Tom ate.	Tom comeu.
+Tom ran.	Tom correu.
+Tom ran.	O Tom correu.
+Tom won.	Tom ganhou.
+Wait up.	Esperem.
+Wait up.	Espere.
+Wake up!	Acorda!
+Wake up!	Acorde!
+Wake up!	Acordem!
+Wake up.	Acorde.
+Wake up.	Acordem.
+Wash up.	Lava-te.
+Wash up.	Lave-se.
+Wash up.	Lavem-se.
+Wash up.	Lave as mãos.
+Wash up.	Lave o rosto.
+We care.	Nós nos importamos.
+We know.	Nós sabemos.
+We lost.	Perdemos.
+We lost.	Nós perdemos.
+Welcome.	Seja bem-vindo!
+Welcome.	Bem-vindo!
+Welcome.	Seja bem-vinda!
+Welcome.	Bem-vinda!
+Who ate?	Quem comeu?
+Who ran?	Quem correu?
+Who won?	Quem ganhou?
+Why not?	Por que não?
+You run.	Você corre.
+You run.	Corra.
+You won.	Você ganhou.
+You won.	Você venceu.
+You won.	Vocês venceram.
+Am I fat?	Estou gordo?
+Am I fat?	Estou gorda?
+Ask them.	Pergunte para eles.
+Ask them.	Pergunte para elas.
+Back off!	Para trás!
+Back off.	Recue.
+Back off.	Recuem.
+Back off.	Recua.
+Be brave.	Seja corajoso.
+Be brave.	Seja valente.
+Be brief.	Seja breve.
+Be still.	Acalme-se.
+Call Tom.	Ligue para o Tom.
+Cheer up!	Ânimo!
+Cool off!	Acalme-se.
+Cool off!	Acalme-se!
+Cuff him.	Algeme-o.
+Don't go.	Não vá.
+Drive on.	Dirija!
+Find Tom.	Encontre o Tom.
+Find Tom.	Encontrem o Tom.
+Fix this.	Conserta isto.
+Get away!	Cai fora!
+Get away!	Fora!
+Get away!	Se manda!
+Get down!	Abaixe-se.
+Get down!	Desça!
+Get down.	Escreva.
+Get down.	Abaixe-se.
+Get down.	Deitem-se.
+Get lost!	Se manda!
+Get lost!	Vai-te embora!
+Get lost!	Vá-se embora!
+Get real!	Acorda!
+Get real!	Cai na real!
+Get real.	Acorda!
+Get real.	Cai na real!
+Go ahead!	Vá em frente!
+Go ahead!	Continue!
+Go ahead.	Continua.
+Go ahead.	Vá em frente!
+Go ahead.	Continue!
+Go ahead.	Continuem.
+Good job!	Bom trabalho!
+Grab Tom.	Pegue o Tom.
+Grab him.	Agarre-o.
+Grab him.	Agarrem-no.
+Have fun.	Diverte-te!
+Have fun.	Divirtam-se!
+Have fun.	Divirta-se!
+He spoke.	Ele falou.
+He tries.	Ele tenta.
+He's wet.	Ele está molhado.
+Help Tom.	Ajude o Tom.
+Help Tom.	Ajuda o Tom.
+Help Tom.	Ajudem o Tom.
+Help him.	Ajude-o!
+Hi, guys.	Olá, pessoal.
+How cute!	Que bonitinho!
+How cute!	Que fofinho!
+How cute!	Que fofinha!
+How cute!	Que bonitinha!
+How deep?	Quão fundo?
+How deep?	Qual a profundidade?
+How deep?	Qual é a profundidade?
+How nice!	Que legal!
+Hurry up.	Apresse-se.
+Hurry up.	Depressa!
+Hurry up.	Apressa-te!
+Hurry up.	Se apressa!
+I agreed.	Eu concordo.
+I am hot.	Tenho calor.
+I am hot.	Estou com calor.
+I burped.	Eu arrotei.
+I danced.	Eu dancei.
+I failed.	Eu fracassei.
+I forgot.	Eu me esqueci.
+I forgot.	Eu esqueci.
+I forgot.	Esqueci.
+I forgot.	Me esqueci.
+I get it.	Eu entendo.
+I got it.	Entendi.
+I got it.	Eu entendi.
+I got up.	Eu me levantei.
+I helped.	Eu ajudei.
+I jumped.	Eu pulei.
+I looked.	Eu olhei.
+I phoned.	Eu telefonei.
+I prayed.	Eu orei.
+I prayed.	Eu rezei.
+I resign.	Eu me demito.
+I saw it.	Eu o vi.
+I smiled.	Eu sorri.
+I smiled.	Dei um sorriso.
+I stayed.	Eu fiquei.
+I talked.	Eu falei.
+I waited.	Eu esperei.
+I winked.	Eu pisquei.
+I yawned.	Eu bocejei.
+I'll pay.	Eu pagarei.
+I'll try.	Tentarei.
+I'll win.	Vou vencer.
+I'm back.	Voltei.
+I'm bald.	Sou careca.
+I'm bald.	Eu sou careca.
+I'm bald.	Estou careca.
+I'm busy.	Estou ocupado.
+I'm busy.	Estou ocupada.
+I'm cold.	Estou com frio.
+I'm cool.	Sou legal.
+I'm deaf.	Sou surdo.
+I'm done.	Já terminei.
+I'm fair.	Eu sou justo.
+I'm fast.	Sou rápido.
+I'm fine.	Estou bem.
+I'm fine.	Eu vou bem.
+I'm fine.	Eu estou bem.
+I'm free.	Eu sou livre.
+I'm free.	Estou livre.
+I'm full.	Estou cheio.
+I'm full.	Estou cheia.
+I'm glad.	Estou contente.
+I'm here.	Estou aqui.
+I'm here.	Eu estou aqui.
+I'm home.	Cheguei.
+I'm hurt.	Estou machucado.
+I'm hurt.	Estou ferido.
+I'm lost.	Estou perdido.
+I'm next.	Sou o próximo.
+I'm next.	Sou a próxima.
+I'm okay.	Estou bem.
+I'm okay.	Eu estou bem.
+I'm poor.	Sou pobre.
+I'm rich.	Eu sou rico.
+I'm rich.	Eu sou rica.
+I'm safe.	Eu estou seguro.
+I'm sure.	Tenho certeza.
+I'm tall.	Eu sou alto.
+I'm thin.	Eu sou magro.
+I'm thin.	Sou magro.
+I'm tidy.	Estou arrumado.
+I'm tidy.	Eu estou arrumado.
+I'm ugly.	Sou feio.
+I'm ugly.	Estou feio.
+I'm ugly.	Sou feia.
+I'm ugly.	Estou feia.
+I'm well.	Estou bem.
+I'm wise.	Eu sou sábio.
+I've won.	Eu venci.
+It helps.	Isso ajuda.
+It hurts.	Isso machuca.
+It works.	Funciona.
+It's Tom.	É o Tom.
+It's fun.	É divertido.
+It's his.	É dele.
+It's hot.	Está quente.
+It's new.	Isso é novo.
+It's new.	Isso está novo.
+It's old.	É velho.
+It's red.	É vermelho.
+It's red.	Isso é vermelho.
+It's red.	É vermelha.
+It's sad.	É triste.
+Keep out!	Não entre.
+Keep out!	Afaste-se!
+Keep out.	Não entre.
+Keep out.	Afaste-se!
+Kiss Tom.	Beije Tom.
+Leave it.	Deixe para lá.
+Leave me.	Me deixe.
+Leave me.	Deixe-me.
+Leave me.	Me deixa.
+Leave us.	Deixe-nos.
+Leave us.	Nos deixe.
+Let's go!	Vamos!
+Let's go.	Vamos!
+Look out!	Preste atenção!
+Look out!	Atenção!
+Look out!	Cuidado!
+Marry me.	Case comigo.
+May I go?	Posso ir?
+Save Tom.	Salve o Tom.
+She came.	Ela veio.
+She died.	Ela morreu.
+She runs.	Ela corre.
+Sit down!	Assente-se!
+Sit down.	Sente-se.
+Sit here.	Senta aqui.
+Sit here.	Sente-se aqui.
+Speak up!	Fale mais alto!
+Speak up!	Falem mais alto!
+Speak up!	Fala mais alto!
+Stand by.	Aguarde.
+Stand by.	Aguardem.
+Stand up!	Levante-se!
+Stand up!	De pé!
+Stand up.	Levante-se.
+Stand up.	Levantem-se.
+Stop Tom.	Pare o Tom.
+Stop Tom.	Parem o Tom.
+Stop Tom.	Impeça o Tom.
+Stop Tom.	Impeçam o Tom.
+Stop Tom.	Interrompa o Tom.
+Stop Tom.	Interrompam o Tom.
+Take Tom.	Leve o Tom.
+Take Tom.	Leva o Tom.
+Tell Tom.	Conte ao Tom.
+Tell Tom.	Contem ao Tom.
+Tell Tom.	Conta para o Tom.
+Terrific!	Fantástico!
+Terrific!	Genial!
+Terrific!	Excelente!
+Terrific!	Magnífico!
+They won.	Eles ganharam.
+They won.	Elas ganharam.
+They won.	Elas venceram.
+They won.	Eles venceram.
+Tom came.	Tom veio.
+Tom died.	Tom morreu.
+Tom died.	O Tom morreu.
+Tom fell.	Tom caiu.
+Tom knew.	Tom sabia.
+Tom lied.	Tom mentiu.
+Tom lies.	Tom mente.
+Tom lost.	O Tom perdeu.
+Tom paid.	O Tom pagou.
+Tom quit.	Tom desistiu.
+Tom swam.	O Tom nadou.
+Tom swam.	Tom nadou.
+Too late.	Tarde demais.
+Trust me.	Confie em mim.
+Try hard.	Esforce-se.
+Try hard.	Se esforça.
+Try some.	Experimenta.
+Try some.	Experimente.
+Try some.	Experimentem.
+Try this.	Experimenta isto.
+Try this.	Experimente isto.
+Try this.	Experimentem isto.
+Use this.	Use isso.
+Warn Tom.	Avise ao Tom.
+Warn Tom.	Avisem ao Tom.
+Warn Tom.	Alerte o Tom.
+Warn Tom.	Fale para o Tom.
+Watch me.	Observe-me.
+We agree.	Concordamos.
+We agree.	Nós concordamos.
+We tried.	Nós tentamos.
+We'll go.	Nós iremos.
+We're OK.	Estamos bem.
+What for?	Para quê?
+What fun!	Que divertido!
+Who am I?	Quem sou eu?
+Who came?	Quem veio?
+Who died?	Quem morreu?
+Who fell?	Quem caiu?
+Who quit?	Quem desistiu?
+Who swam?	Quem nadou?
+Write me.	Escreva-me.
+After you.	Você primeiro.
+Aim. Fire!	Preparar, apontar, fogo!
+Am I late?	Estou atrasado?
+Answer me.	Responda-me.
+Answer me.	Respondam-me.
+Answer me.	Responda-me!
+Answer me.	Respondam-me!
+Answer me.	Me responde!
+Answer me.	Me responda!
+Birds fly.	Pássaros voam.
+Birds fly.	Os pássaros voam.
+Bless you.	Saúde.
+Call home!	Ligue para casa!
+Calm down!	Acalme-se.
+Calm down!	Acalme-se!
+Calm down.	Acalme-se.
+Calm down.	Acalma-te.
+Calm down.	Acalmem-se.
+Calm down.	Te acalma.
+Calm down.	Aquieta o facho.
+Can I eat?	Posso comer?
+Catch Tom.	Pegue o Tom.
+Catch Tom.	Peguem o Tom.
+Catch him.	Pegue-o.
+Come back.	Volte.
+Come back.	Voltem.
+Come here.	Venha aqui.
+Come here.	Vem cá.
+Come home.	Venha para casa.
+Come over!	Vem!
+Come over!	Venham!
+Come over!	Venha.
+Come over.	Venha.
+Come soon.	Venha logo.
+Cool down.	Acalme-se.
+Cool down.	Acalme-se!
+Cool down.	Acalmem-se.
+Cool down.	Se acalme.
+Did I win?	Eu ganhei?
+Dogs bark.	Cães latem.
+Dogs bark.	Cachorros latem.
+Don't ask.	Não pergunte!
+Don't ask.	Não pergunte.
+Don't cry.	Não chore.
+Don't cry.	Não chorem.
+Don't die.	Não morra!
+Don't die.	Não morram!
+Don't lie.	Não minta.
+Don't run.	Não corra.
+Don't run.	Não corram.
+Don't run.	Não corras.
+Excuse me.	Perdão.
+Excuse me.	Com licença.
+Excuse me.	Desculpa!
+Excuse me.	Desculpe!
+Excuse me?	O quê?
+Excuse me?	O que você disse?
+Excuse me?	Perdão?
+Fantastic!	Fantástico!
+Feel this.	Sinta isso.
+Follow me.	Siga-me.
+Follow me.	Sigam-me.
+Follow me.	Me siga!
+Follow me.	Me sigam!
+Follow us.	Siga-nos.
+Follow us.	Sigam-nos.
+Forget it!	Esqueça!
+Forget it!	Esquece!
+Forget it.	Esqueça.
+Forget it.	Esquece.
+Forget it.	Esqueçam.
+Forget it.	Esqueça!
+Forget it.	Esquece!
+Forget it.	Deixa.
+Forget me.	Esqueça-me.
+Get a job.	Arrume um emprego.
+Go for it.	Vá em frente.
+Go inside.	Entre.
+Go inside.	Entra.
+Go inside.	Vá para dentro.
+Go inside.	Vai para dentro.
+Hands off.	Tira as mãos.
+Hands off.	Tire as mãos.
+Hands off.	Tirem as mãos.
+Have some.	Pega um pouco.
+Have some.	Pegue um pouco.
+Have some.	Peguem um pouco.
+He is ill.	Ele está doente.
+He is old.	Ele é velho.
+He shaved.	Ele se barbeou.
+He shaved.	Se barbeou.
+He smiled.	Ele sorriu.
+He's a DJ.	Ele é DJ.
+He's rich.	Ele é rico.
+Here I am.	Aqui estou.
+Here's $5.	Aqui estão 5 dólares.
+Hold this.	Segure isto.
+How awful!	Que horror!
+How awful!	Que terrível!
+How awful!	Que ridículo!
+How is it?	Como é isso?
+How is it?	Como isso é?
+How's Tom?	Como Tom está?
+How's Tom?	Como está o Tom?
+How's Tom?	Como vai o Tom?
+I am Thai.	Sou tailandês.
+I am Thai.	Eu sou tailandês.
+I am busy.	Estou ocupado.
+I am busy.	Estou ocupada.
+I am full.	Estou cheio.
+I am full.	Estou cheia.
+I am here.	Estou aqui.
+I am here.	Eu estou aqui.
+I am lost.	Estou perdido.
+I am okay.	Estou bem.
+I am okay.	Eu estou bem.
+I am sick.	Estou doente.
+I am sick.	Sou doente.
+I am sure.	Tenho certeza.
+I am tall.	Eu sou alto.
+I am tall.	Sou alto.
+I am weak.	Eu sou fraco.
+I am weak.	Eu estou fraco.
+I ate out.	Eu comi fora.
+I blinked.	Eu pisquei.
+I can fly.	Eu sei voar.
+I can run.	Eu posso correr.
+I can run.	Eu sei correr.
+I can ski.	Eu sei esquiar.
+I can win.	Eu posso ganhar.
+I cheated.	Eu trapaceei.
+I coughed.	Eu tossi.
+I escaped.	Eu escapei.
+I fainted.	Eu desmaiei.
+I fainted.	Desmaiei.
+I fear so.	Eu temo que sim.
+I give in.	Eu me rendo.
+I give up.	Eu desisto.
+I got hit.	Fui atingido.
+I got mad.	Fiquei furioso.
+I got mad.	Eu fiquei furioso.
+I grunted.	Eu resmunguei.
+I had fun.	Eu me diverti.
+I hope so.	Assim espero.
+I hope so.	Espero que sim.
+I knew it.	Eu sabia.
+I laughed.	Eu ri.
+I laughed.	Ri.
+I like it.	Eu gosto dele.
+I lost it.	Eu o perdi.
+I love it.	Eu amo isso.
+I may win.	Eu posso ganhar.
+I mean it.	Estou falando sério.
+I mean it.	Eu estou falando sério.
+I miss it.	Saudades.
+I miss it.	Saudades disso.
+I need it.	Eu preciso disso.
+I need it.	Preciso disso.
+I need it.	Eu preciso.
+I need it.	Preciso.
+I noticed.	Eu notei.
+I noticed.	Notei.
+I promise.	Eu prometo.
+I said no.	Eu disse que não.
+I saw Tom.	Eu vi o Tom.
+I saw Tom.	Vi o Tom.
+I saw him.	Eu o vi.
+I saw one.	Eu vi um.
+I saw one.	Eu vi uma.
+I shouted.	Eu gritei.
+I slipped.	Eu escorreguei.
+I sneezed.	Eu espirrei.
+I stopped.	Eu parei.
+I studied.	Eu estudei.
+I tripped.	Eu tropecei.
+I tripped.	Tropecei.
+I want it.	Quero.
+I want it.	Eu quero isso.
+I want it.	Quero isso.
+I was sad.	Eu fiquei triste.
+I was wet.	Eu estava molhado.
+I was wet.	Eu estava molhada.
+I will go.	Eu vou.
+I woke up.	Eu acordei.
+I'd do it.	Eu faria isso.
+I'll call.	Ligarei.
+I'll cook.	Cozinharei.
+I'll live.	Eu vou viver.
+I'll lose.	Vou perder.
+I'll sing.	Cantarei.
+I'll stay.	Ficarei.
+I'll stay.	Eu vou ficar.
+I'll stop.	Eu vou parar.
+I'll wait.	Esperarei.
+I'll walk.	Andarei.
+I'm a man.	Eu sou homem.
+I'm a man.	Sou um homem.
+I'm a pro.	Sou um profissional.
+I'm alive.	Estou vivo.
+I'm alive.	Estou viva.
+I'm alone.	Estou sozinho.
+I'm angry.	Estou com raiva.
+I'm awake.	Estou acordado.
+I'm blind.	Sou cega.
+I'm blind.	Sou cego.
+I'm blind.	Eu sou cega.
+I'm blind.	Eu sou cego.
+I'm bored.	Estou chateado.
+I'm bored.	Eu estou entediado.
+I'm bossy.	Eu sou mandona.
+I'm bossy.	Eu sou mandão.
+I'm brave.	Eu sou corajoso.
+I'm broke.	Estou sem dinheiro.
+I'm broke.	Eu estou duro.
+I'm broke.	Estou duro.
+I'm broke.	Estou falido.
+I'm broke.	Estou quebrado.
+I'm crazy.	Estou bravo.
+I'm drunk.	Estou bêbado.
+I'm drunk.	Estou embriagado.
+I'm drunk.	Eu estou embriagado.
+I'm drunk.	Estou bêbada.
+I'm early.	Estou adiantado.
+I'm going.	Eu vou.
+I'm going.	Estou indo.
+I'm going.	Já vou.
+I'm happy.	Eu sou feliz.
+I'm happy.	Eu estou feliz.
+I'm happy.	Sou feliz.
+I'm happy.	Estou feliz.
+I'm loved.	Eu sou amado.
+I'm loved.	Eu sou amada.
+I'm loved.	Sou amado.
+I'm loyal.	Eu sou leal.
+I'm lucky.	Eu sou sortudo.
+I'm lying.	Estou mentindo.
+I'm naive.	Eu sou ingênua.
+I'm naive.	Eu sou ingênuo.
+I'm naked.	Estou pelado.
+I'm naked.	Estou pelada.
+I'm obese.	Estou obeso.
+I'm picky.	Sou exigente.
+I'm ready!	Estou pronto!
+I'm ready!	Estou pronta!
+I'm ready.	Estou pronto.
+I'm right.	Eu estou certo.
+I'm small.	Eu sou pequena.
+I'm small.	Eu sou pequeno.
+I'm sober.	Estou sóbrio.
+I'm sorry.	Desculpa!
+I'm sorry.	Desculpe!
+I'm sorry.	Lamento.
+I'm sorry.	Me desculpe.
+I'm sorry.	Sinto muito.
+I'm stuck.	Estou preso.
+I'm stuck.	Eu estou presa.
+I'm stuck.	Eu estou preso.
+I'm stuck.	Estou presa.
+I'm timid.	Eu sou tímido.
+I'm tired.	Estou cansado.
+I'm upset.	Estou chateado.
+I'm upset.	Estou chateada.
+I'm upset.	Eu estou chateado.
+I'm wrong.	Estou errado.
+I'm wrong.	Estou errada.
+I'm young.	Eu sou jovem.
+I'm young.	Sou jovem.
+I'm yours.	Sou seu.
+I'm yours.	Eu sou seu.
+I'm yours.	Eu sou sua.
+I'm yours.	Sou sua.
+Is Tom OK?	O Tom está bem?
+Is Tom in?	O Tom está dentro?
+Is he Tom?	Ele é o Tom?
+Is he Tom?	É ele o Tom?
+Is it bad?	É grave?
+Is it far?	É longe?
+Is it hot?	Está calor?
+Is it you?	É você?
+It burned.	Queimou.
+It failed.	Falhou.
+It rained.	Estava chovendo.
+It snowed.	Nevou.
+It stinks.	Isso fede.
+It was OK.	Foi bonzinho.
+It worked.	Funcionou!
+It's 3:30.	São 3h30.
+It's 7:45.	São 7h45.
+It's 8:30.	São 8h30.
+It's 9:15.	São 9h15.
+It's a TV.	É uma TV.
+It's a TV.	Isso é uma TV.
+It's a TV.	Isto é uma TV.
+It's cool.	É legal.
+It's done!	Pronto, já está!
+It's done!	Está pronto!
+It's done.	Está pronto.
+It's done.	Está pronta.
+It's easy.	É fácil.
+It's fair.	É justo.
+It's fine.	Está bem.
+It's food.	É comida.
+It's free.	É de graça.
+It's free.	É gratuito.
+It's here.	Está aqui.
+It's here.	É aqui.
+It's hers.	É dela.
+It's hers.	Isso é dela.
+It's huge.	É enorme.
+It's late.	Está tarde.
+It's late.	É tarde.
+It's mine.	É meu.
+It's mine.	É minha.
+It's okay.	Está bem.
+It's open.	Está aberto.
+It's ours.	É nosso.
+It's over.	Acabou.
+It's time.	Está na hora.
+It's true!	É verdade!
+It's true.	É verdade.
+It's work.	É trabalho.
+Keep away.	Mantenha-se afastado.
+Keep back.	Afaste-se.
+Keep back.	Fique afastado.
+Keep calm.	Acalme-se.
+Keep cool.	Mantenha a calma.
+Keep cool.	Te acalma.
+Keep that.	Fique com isso.
+Keep them.	Fique com eles.
+Keep them.	Fique com elas.
+Keep this.	Fique com isto.
+Keep warm.	Mantenha aquecido.
+Leave Tom.	Deixe o Tom.
+Leave now!	Saia agora!
+Leave now.	Vá embora agora.
+Let me go!	Deixe-me ir embora!
+Let me in.	Deixe-me entrar.
+Let us in.	Deixe-nos entrar.
+Let's see.	Vejamos.
+Listen up.	Escute.
+Listen up.	Escutem.
+Look back!	Olhe para trás!
+Look back!	Olhem para trás!
+Look back!	Olha pra trás!
+Look back.	Olhe para trás!
+Look back.	Olhem para trás!
+Look here.	Olhe aqui.
+May I eat?	Posso comer?
+Move over.	Chegue para frente.
+Move over.	Chega para frente.
+Nice shot!	Belo tiro!
+Of course!	Claro!
+Of course!	Claro que sim!
+Of course!	É claro!
+Of course.	É claro.
+Of course.	Pois sim.
+Open fire!	Abrir fogo!
+Pardon me?	O que você disse?
+Pardon me?	Perdão?
+Put it on.	Coloque-o.
+Read this.	Leia isso.
+Read this.	Leiam isso.
+Say hello.	Diga olá.
+Say hello.	Cumprimenta.
+See above.	Vejam acima.
+Seize him!	Agarre-o!
+Seriously?	Sério?
+Seriously?	É mesmo?
+Seriously?	Mesmo?
+Seriously?	É sério?
+She cried.	Ela chorou.
+She cried.	Ela chorava.
+She tried.	Ela tentou.
+She tried.	Ela tentava.
+She walks.	Ela anda.
+She walks.	Ela caminha.
+She's hot.	Ela é gata.
+She's hot.	Ela está com calor.
+Sign here.	Assine aqui.
+Sign here.	Assina aqui.
+Sign this.	Assine isso.
+Sign this.	Assinem isso.
+Sign this.	Assine.
+Sit still.	Fique parado.
+Sit still.	Fique parada.
+Sit there.	Senta aí.
+Sit there.	Sente-se aí.
+Sit tight.	Peraí.
+Sit tight.	Aguenta firme
+Slow down.	Vá mais devagar.
+Slow down.	Devagar.
+Start now.	Comece agora.
+Stay away.	Fique longe.
+Stay calm.	Fique calmo.
+Stay calm.	Fique calma.
+Stay cool.	Fique calmo.
+Stay down!	Fique abaixado!
+Stay down!	Fiquem abaixados!
+Stay down.	Fique abaixado!
+Stay down.	Fiquem abaixados!
+Stay here.	Fiquem aqui.
+Stay here.	Fique aqui.
+Step back.	Para trás.
+Stop here.	Pare aqui.
+Stop that!	Pare com isso!
+Stop that!	Parem com isso!
+Stop that.	Pare com isso.
+Stop that.	Parem com isso.
+Stop them.	Detenha-nos.
+Stop them.	Detenham-nos.
+Take care!	Toma cuidado!
+Take care!	Te cuida!
+Take care!	Cuide-se!
+Take care!	Tome cuidado!
+Take care!	Se cuida!
+Take care.	Cuide-se!
+Take care.	Se cuida.
+Take mine.	Pegue o meu.
+Take mine.	Pegue a minha.
+Take this.	Pegue isso.
+Thank you.	Obrigado!
+Thank you.	Obrigada!
+Thank you.	Obrigado.
+That's OK.	Está tudo bem.
+That's OK.	Está tudo ok.
+That's it.	É isso.
+That's me.	Sou eu.
+Then what?	E daí?
+Then what?	E agora?
+Then what?	E então?
+They fell.	Eles sentiram.
+They fell.	Elas sentiram.
+They fell.	Sentiram.
+They left.	Eles saíram.
+They lied.	Eles mentiram.
+They lost.	Eles perderam.
+They swam.	Eles nadaram.
+They swam.	Elas nadaram.
+Tom cares.	Tom se importa.
+Tom cried.	Tom chorou.
+Tom dozed.	Tom cochilou.
+Tom drove.	Tom dirigiu.
+Tom is OK.	Tom está bem.
+Tom is in.	Tom está dentro.
+Tom knows.	Tom sabe.
+Tom moved.	Tom se mudou.
+Tom rocks.	Tom arrebenta.
+Tom spoke.	Tom falou.
+Tom stood.	O Tom levantou.
+Tom swims.	Tom nada.
+Tom swore.	Tom jurou.
+Tom tried.	O Tom tentou.
+Tom tries.	O Tom tenta.
+Tom voted.	Tom votou.
+Tom walks.	Tom caminha.
+Tom waved.	Tom acenou.
+Tom works.	Tom trabalha.
+Tom'll go.	Tom vai.
+Tom's sad.	Tom está triste.
+Tom's shy.	Tom é tímido.
+Trust Tom.	Confie em Tom.
+Try again.	Tente mais uma vez.
+Try again.	Tenta de novo.
+Try again.	Tentem de novo.
+Try again.	Tente de novo.
+Try it on.	Experimente-a.
+Try it on.	Experimente-o.
+Turn left.	Vire à esquerda.
+Wait here.	Esperem aqui.
+Wait here.	Espere aqui.
+Watch Tom.	Olha o Tom.
+Watch out!	Cuidado!
+We agreed.	Concordamos.
+We agreed.	Nós concordamos.
+We did it!	Nós conseguimos!
+We failed.	Falhamos.
+We failed.	Nós falhamos.
+We forgot.	Nós esquecemos.
+We forgot.	Esquecemos.
+We talked.	Conversamos.
+We talked.	Nós conversamos.
+We waited.	Esperamos.
+We waited.	Nós esperamos.
+We'll see.	Veremos.
+We'll see.	Nós veremos.
+We'll try.	Tentaremos.
+We'll try.	Nós vamos tentar.
+We'll try.	Nós tentaremos.
+We'll try.	A gente vai tentar.
+We'll win.	Venceremos.
+We'll win.	Nós venceremos.
+We're hot.	Estamos com calor.
+We're hot.	Nós estamos com calor.
+We're sad.	Nós estamos tristes.
+We're shy.	Somos tímidos.
+We're shy.	Somos tímidas.
+We've won!	Vencemos!
+We've won!	Nós vencemos!
+Well done!	Parabéns!
+Well done!	Bom trabalho!
+Well done!	Bem feito!
+Well done.	Bravo!
+Well done.	Bem feito!
+What else?	O que mais?
+What's up?	E aí?
+What's up?	Tudo em cima?
+Who cares?	Quem se importa?
+Who cares?	Quem liga?
+Who is he?	Quem é ele?
+Who is it?	Quem é?
+Who knows?	Quem sabe?
+Who spoke?	Quem falou?
+Who stood?	Quem estava de pé?
+Who'll go?	Quem vai?
+Who's Tom?	Quem é o Tom?
+Who's she?	Quem é ela?
+Wonderful!	Que maravilha!
+Wonderful!	Maravilhoso!
+Wonderful!	Magnífico!
+You drive.	Você dirige.
+You idiot!	Seu idiota!
+You idiot!	Idiota!
+You start.	Você começa.
+You stink.	Você fede.
+You tried.	Você tentou.
+You tried.	Vocês tentaram.
+You're OK.	Você está bem.
+Aim higher.	Mire mais alto.
+All aboard!	Todos a bordo!
+Am I dying?	Estou morrendo?
+Am I dying?	Eu estou morrendo?
+Am I early?	Cheguei cedo?
+Am I early?	Eu cheguei cedo?
+Am I fired?	Estou demitido?
+Am I hired?	Estou contratado?
+Am I right?	Eu estou certo?
+Am I right?	Eu estou certa?
+Am I right?	Tenho razão?
+Am I wrong?	Estou errada?
+Am I wrong?	Estou errado?
+Answer Tom.	Responda ao Tom.
+Are you 18?	Você tem 18?
+Are you 18?	Você tem 18 anos?
+Are you 18?	Você tem 18 anos de idade?
+Are you 18?	Vocês têm 18?
+Are you 18?	Vocês têm 18 anos?
+Are you OK?	Você está bem?
+Are you OK?	Vocês estão bem?
+Are you in?	Você está dentro?
+Ask around.	Pergunte por aí.
+Ask around.	Perguntem por aí.
+Be careful!	Toma cuidado!
+Be careful!	Tenha cuidado!
+Be careful!	Tome cuidado!
+Be careful.	Toma cuidado!
+Be careful.	Cuidado!
+Be careful.	Tome cuidado!
+Be content.	Fique contente.
+Be patient.	Tenha paciência.
+Be serious.	Fique sério.
+Be serious.	Fique séria.
+Be serious.	Fiquem sérios.
+Be serious.	Fiquem sérias.
+Be serious.	Fica sério.
+Be serious.	Fica séria.
+Birds sing.	Pássaros cantam.
+Birds sing.	Os pássaros cantam.
+Bring food.	Traga comida.
+Bring food.	Tragam comida.
+Bring help.	Traga ajuda.
+Bring help.	Tragam ajuda.
+Bring wine.	Traga vinho.
+Bring wine.	Tragam vinho.
+Can I come?	Posso vir?
+Can I help?	Posso ajudar?
+Can I help?	Posso dar uma mãozinha?
+Can I stay?	Eu posso ficar?
+Carry this.	Carregue isso.
+Check that.	Verifique isso.
+Check that.	Verifica isso.
+Check that.	Verifiquem isso.
+Check this.	Verifique isto.
+Check this.	Verifica isto.
+Check this.	Verifiquem isto.
+Choose one.	Escolha um.
+Choose one.	Escolha uma.
+Come alone.	Venha sozinha.
+Come alone.	Venha sozinho.
+Come along.	Venha com a gente.
+Come along.	Venha conosco.
+Come along.	Vem com a gente.
+Come on in!	Entre!
+Come on in.	Entre.
+Come quick!	Venha rápido!
+Come quick!	Venha logo!
+Come quick!	Vem logo!
+Come to us.	Venha até nós.
+Cut it out!	Pare com isso.
+Cut it out!	Para com isso.
+Cut it out!	Parem com isso!
+Did Tom go?	O Tom foi?
+Did we win?	Vencemos?
+Did we win?	Ganhamos?
+Don't come.	Não venha.
+Don't come.	Não venham.
+Don't come.	Não venhas.
+Don't jump!	Não pule!
+Don't move!	Não se mova!
+Don't move!	Não se mexa!
+Don't move.	Não se mova.
+Don't move.	Não se mexa.
+Don't move.	Não se mova!
+Don't move.	Não se mexa!
+Don't push.	Não empurre.
+Don't push.	Não empurrem.
+Don't push.	Não empurres.
+Don't sing.	Não cante.
+Don't sing.	Não cantes.
+Don't sing.	Não cantem.
+Don't stop.	Não pare.
+Don't talk!	Não fale!
+Don't wait.	Não espere.
+Eat slowly.	Coma devagar.
+Fill it up.	Encha o tanque.
+Fire burns.	O fogo queima.
+Follow Tom.	Siga o Tom.
+Follow Tom.	Sigam o Tom.
+Follow him.	Siga-o.
+Follow him.	Sigam-no!
+Forget Tom.	Esqueça o Tom.
+Forget Tom.	Esqueçam o Tom.
+Forget him.	Esqueça-o.
+Forgive me.	Perdoe-me.
+Forgive us.	Perdoe-nos.
+Forgive us.	Nos perdoe.
+Get moving.	Mexa-se.
+God exists.	Deus existe.
+Good night.	Boa noite.
+Have faith.	Tenha fé.
+Have faith.	Tenham fé.
+He ate out.	Ele comeu fora.
+He coughed.	Ele tossiu.
+He gave in.	Ele cedeu.
+He gave up.	Ele desistiu.
+He hung up.	Ele desligou.
+He is a DJ.	Ele é DJ.
+He is kind.	Ele é generoso.
+He is lazy.	Ele é preguiçoso.
+He is nice.	Ele é legal.
+He is sick.	Ele está doente.
+He is tall.	Ele é alto.
+He is tall.	Ele é grande.
+He laughed.	Ele estava rindo.
+He laughed.	Ele riu.
+He's Swiss.	Ele é suíço.
+He's broke.	Ele está duro.
+He's cruel.	Ele é cruel.
+He's happy.	Ele é feliz.
+He's lying.	Ele está mentindo.
+He's lying.	Ele mente.
+He's smart.	Ele é inteligente.
+Here he is!	Aqui está ele!
+Here it is.	Aqui está.
+Hey, relax.	Ei, relaxa.
+Hey, relax.	Ei, relaxe.
+Hey, relax.	Ei, relaxem.
+How absurd!	Que absurdo!
+How clever!	Que esperto!
+How is Tom?	Como Tom está?
+How is Tom?	Como vai o Tom?
+How lovely!	Que amável!
+How tragic!	Que trágico!
+Hurry home.	Corra para casa.
+I admit it.	Eu admito.
+I am a boy.	Sou menino.
+I am a boy.	Eu sou um menino.
+I am a boy.	Eu sou um garoto.
+I am a boy.	Sou um menino.
+I am a boy.	Sou um garoto.
+I am a man.	Eu sou homem.
+I am going.	Vou-me embora.
+I am happy.	Eu sou feliz.
+I am happy.	Eu estou feliz.
+I am happy.	Estou contente.
+I am happy.	Sou feliz.
+I am happy.	Estou feliz.
+I am happy.	Me sinto feliz.
+I am human.	Eu sou humano.
+I am human.	Sou humano.
+I am ready.	Estou pronto.
+I am smart.	Eu sou inteligente.
+I am tired.	Estou cansado.
+I am tired.	Eu estou cansada.
+I built it.	Eu o construí.
+I can cook.	Eu posso cozinhar.
+I can jump.	Eu posso pular.
+I can read.	Eu sei ler.
+I can sing.	Eu sei cantar.
+I can swim.	Eu sei nadar.
+I can wait.	Eu posso esperar.
+I did well.	Eu fui bem.
+I disagree.	Eu discordo.
+I disagree.	Discordo.
+I doubt it.	Eu duvido.
+I eat here.	Eu como aqui.
+I eat meat.	Eu como carne.
+I envy her.	Eu a invejo.
+I envy him.	Eu o invejo.
+I feel old.	Sinto-me velho.
+I feel old.	Sinto-me velha.
+I felt bad.	Eu me senti mal.
+I felt ill.	Eu me senti mal.
+I fixed it.	Eu o consertei.
+I fixed it.	Eu a consertei.
+I found it.	Encontrei!
+I found it.	Achei!
+I found it.	Eu a encontrei.
+I found it.	Eu o encontrei.
+I found it.	Encontrei-a.
+I found it.	Eu encontrei.
+I found it.	Encontrei.
+I found it.	Achei.
+I found it.	Eu achei.
+I got lost.	Eu me perdi.
+I got sick.	Eu fiquei doente.
+I had help.	Eu tive ajuda.
+I hate Tom.	Odeio Tom.
+I hate you.	Te odeio.
+I hate you.	Eu te detesto.
+I hate you.	Eu te odeio.
+I have OCD.	Eu tenho TOC.
+I have one.	Eu tenho um.
+I have won.	Eu venci.
+I hear you.	Estou te ouvindo.
+I hear you.	Eu te ouço.
+I hope not.	Espero que não.
+I hope not.	Eu espero que não.
+I just ate.	Acabei de comer.
+I know Tom.	Eu conheço o Tom.
+I know Tom.	Conheço o Tom.
+I know him.	Eu conheço-o.
+I know now.	Agora sei.
+I know you.	Eu te conheço.
+I left Tom.	Eu deixei Tom.
+I like Tom.	Eu gosto do Tom.
+I like him.	Eu gosto dele.
+I like tea.	Eu gosto de chá.
+I like you.	Eu gosto de você.
+I like you.	Gosto de você.
+I like you.	Eu gosto de vocês.
+I like you.	Gosto de vocês.
+I liked it.	Eu gostei.
+I love Tom.	Eu amo Tom.
+I love her.	Eu a amo.
+I love her.	Amo-a.
+I love him.	Eu gosto dele.
+I love him.	Amo-o.
+I love tea.	Eu adoro chá.
+I love you.	Eu te amo.
+I love you.	Eu amo você.
+I love you.	Eu a amo.
+I love you.	Eu te amo!
+I love you.	Eu amo vocês.
+I love you.	Eu vos amo.
+I love you.	Amo você.
+I love you.	Amo-vos.
+I love you.	Amo-te.
+I love you.	Amo a ti.
+I love you.	Amo a vós.
+I love you.	Amo-o.
+I love you.	Eu o amo.
+I love you.	Te amo!
+I love you.	Amo-a.
+I made two.	Eu fiz dois.
+I made two.	Eu fiz duas.
+I miss Tom.	Eu sinto saudades do Tom.
+I miss Tom.	Sinto saudades do Tom.
+I miss you.	Estou com saudades de você.
+I miss you.	Saudades.
+I miss you.	Sinto a tua falta.
+I miss you.	Tenho saudades tuas.
+I need air.	Eu preciso de ar.
+I need you.	Eu preciso de você.
+I need you.	Eu preciso de vocês.
+I need you.	Preciso de você.
+I need you.	Preciso de ti.
+I paid Tom.	Eu paguei Tom.
+I panicked.	Eu entrei em pânico.
+I promised.	Prometi.
+I ran home.	Corri para casa.
+I remember.	Eu me lembro.
+I remember.	Eu lembro.
+I remember.	Lembro.
+I remember.	Me lembro.
+I remember.	Eu me recordo.
+I resigned.	Eu renunciei.
+I said yes.	Eu disse sim.
+I said yes.	Disse sim.
+I sat down.	Eu me sentei.
+I saw that.	Eu o vi.
+I saw that.	Eu vi.
+I saw them.	Eu os vi.
+I screamed.	Eu gritei.
+I screamed.	Gritei.
+I see that.	Estou vendo.
+I survived.	Eu sobrevivi.
+I think so.	Eu acho que sim.
+I think so.	Acredito que sim.
+I think so.	Acho que sim.
+I threw up.	Eu vomitei.
+I told Tom.	Eu disse a Tom.
+I use this.	Eu uso isto.
+I use this.	Eu uso isso.
+I want Tom.	Eu quero o Tom
+I want Tom.	Quero o Tom.
+I want one!	Quero um!
+I want one.	Quero um!
+I want one.	Eu quero um.
+I want one.	Eu quero uma.
+I want you.	Eu te quero.
+I want you.	Quero-te.
+I want you.	Eu a quero.
+I want you.	Eu o quero.
+I was cold.	Eu estava com frio.
+I was full.	Eu estava cheio.
+I was good.	Eu era bom.
+I was lost.	Eu estava perdido.
+I was sick.	Eu estava doente.
+I whistled.	Eu dei um assobio.
+I whistled.	Eu assobiei.
+I will try.	Vou tentar.
+I will try.	Eu tentarei.
+I will try.	Eu vou tentar.
+I won't go.	Não irei.
+I won't go.	Eu não irei.
+I'll be OK.	Eu vou ficar bem.
+I'll check.	Verificarei.
+I'll drive.	Dirigirei.
+I'll go in.	Eu vou entrar.
+I'll go in.	Vou entrar.
+I'll leave.	Eu vou embora.
+I'll leave.	Vou embora.
+I'll shoot.	Eu vou atirar.
+I'll start.	Começarei.
+I'm 30 now.	Eu tenho 30 anos agora.
+I'm a cook.	Sou cozinheiro.
+I'm a cook.	Sou cozinheira.
+I'm a hero.	Sou herói.
+I'm a hero.	Sou um herói.
+I'm a hero.	Eu sou uma heroína.
+I'm a mess.	Eu sou uma bagunça.
+I'm a poet.	Sou poeta.
+I'm afraid.	Estou com medo.
+I'm better.	Eu sou melhor.
+I'm better.	Estou melhor.
+I'm bushed.	Estou exausto.
+I'm bushed.	Eu estou exausto.
+I'm chubby.	Sou gordinho.
+I'm clumsy.	Sou desastrado.
+I'm clumsy.	Sou desajeitado.
+I'm coming.	Estou vindo.
+I'm coming.	Estou chegando.
+I'm coming.	Eu estou vindo.
+I'm coming.	Eu estou chegando.
+I'm eating.	Estou comendo.
+I'm eating.	Estou a comer.
+I'm eating.	Eu estou comendo.
+I'm famous.	Estou famoso.
+I'm faster.	Eu sou mais rápido.
+I'm faster.	Eu sou mais rápida.
+I'm guilty.	Eu sou culpado.
+I'm guilty.	Eu sou culpada.
+I'm hiding.	Eu estou me escondendo.
+I'm honest.	Eu sou honesto.
+I'm humble.	Sou humilde.
+I'm hungry!	Estou com fome!
+I'm hungry!	Estou faminto!
+I'm hungry!	Quero comer.
+I'm hungry!	Tenho fome.
+I'm hungry!	Estou com fome.
+I'm hungry.	Estou com fome.
+I'm in bed.	Estou na cama.
+I'm inside.	Estou dentro.
+I'm inside.	Eu estou dentro.
+I'm joking.	Estou brincando.
+I'm lonely.	Eu me sinto só.
+I'm losing.	Estou perdendo.
+I'm mature.	Eu sou maturo.
+I'm normal.	Eu sou normal.
+I'm not OK.	Eu não estou bem.
+I'm not in.	Eu não estou dentro.
+I'm not in.	Não estou dentro.
+I'm scared.	Estou assustado.
+I'm sleepy.	Estou com sono.
+I'm sneaky.	Sou sorrateiro.
+I'm so fat.	Estou tão gorda.
+I'm so fat.	Eu sou muito gordo.
+I'm so fat.	Estou tão gordo.
+I'm so fat.	Eu sou tão gordo.
+I'm so fat.	Sou muito gordo.
+I'm strong.	Eu sou forte.
+I'm strong.	Sou forte.
+I'm thirty.	Tenho trinta anos.
+I'm thirty.	Eu tenho trinta anos.
+I'm trying.	Eu estou tentando.
+I'm trying.	Estou tentando.
+I'm untidy.	Sou desorganizado.
+I'm untidy.	Sou desorganizada.
+I've eaten.	Eu comi.
+I've tried.	Eu tentei.
+Ignore Tom.	Ignora o Tom.
+Ignore Tom.	Ignore o Tom.
+Ignore him.	Ignore-o.
+Ignore him.	Ignore ele.
+Ignore him.	Ignora ele.
+Is Tom ill?	O Tom está doente?
+Is Tom out?	O Tom está fora?
+Is he busy?	Ele está ocupado?
+Is he tall?	Ele é alto?
+Is it blue?	É azul?
+Is it free?	É de graça?
+Is it good?	É bom?
+Is it good?	Isso é bom?
+Is it here?	É aqui?
+Is it safe?	É seguro?
+Is it time?	Está na hora?
+Is it true?	É verdade?
+Is that OK?	Está ok?
+Is that it?	É isso?
+Is that me?	Esse sou eu?
+Is this OK?	Está ok?
+Is this it?	É isso?
+It happens.	Acontece.
+It happens.	Isso acontece.
+It is 7:45.	São sete e quarenta e cinco.
+It is 7:45.	São sete horas e quarenta e cinco minutos.
+It matters.	Isso importa.
+It matters.	Importa.
+It was Tom.	Foi o Tom.
+It was Tom.	Era o Tom.
+It was fun.	Foi divertido.
+It was sad.	Foi triste.
+It was wet.	Estava molhado.
+It was wet.	Estava molhada.
+It'll work.	Isso vai funcionar.
+It'll work.	Vai funcionar.
+It's Tom's.	É do Tom.
+It's alive.	Ele está vivo.
+It's alive.	Ela está viva.
+It's blank.	Está em branco.
+It's clear.	É claro.
+It's clear.	Está claro.
+It's close.	Está perto.
+It's empty.	Está vazio.
+It's funny.	Isso é engraçado.
+It's my CD.	É o meu CD.
+It's stuck.	Está emperrado.
+It's stuck.	Está emperrada.
+It's sweet.	É doce.
+It's sweet.	Isso é doce.
+It's sweet.	Está doce.
+It's there.	Está lá.
+It's wrong.	Está errado.
+Jesus wept.	Jesus chorou.
+Just relax.	Apenas relaxem.
+Just relax.	Apenas relaxe.
+Keep going.	Continue.
+Keep it up!	Continue!
+Keep it up!	Continua!
+Keep quiet!	Fique quieta.
+Keep quiet!	Fique quieto.
+Keep quiet.	Fique quieta.
+Keep quiet.	Fique quieto.
+Keep quiet.	Fica quieto.
+Keep quiet.	Fica quieta.
+Leave town.	Deixe a cidade.
+Leave town.	Deixem a cidade.
+Let him in.	Deixe-o entrar.
+Let me die.	Deixem-me morrer.
+Let me die.	Deixe-me morrer.
+Let me out!	Deixa-me sair!
+Let me out!	Deixe-me sair!
+Let me out.	Deixa-me sair!
+Let me out.	Deixe-me sair!
+Let me see.	Deixe-me ver.
+Let me see.	Deixem-me ver.
+Let me see.	Deixe-me olhar.
+Let me see.	Deixa-me ver.
+Let me try.	Deixe-me tentar.
+Let's chat.	Vamos conversar.
+Let's play.	Vamos jogar.
+Let's play.	Joguemos.
+Let's play.	Vamos brincar.
+Let's play.	Vamos tocar.
+Let's quit.	Vamos embora.
+Let's swim.	Nademos.
+Let's swim.	Vamos nadar.
+Lift it up.	Levante-o.
+Lighten up.	Relaxe!
+Lighten up.	Relaxa!
+Look again.	Olhe novamente.
+Look alive.	Ande!
+Look alive.	Se apresse!
+Look at us.	Olhe para nós.
+Look there.	Olha ali.
+Look there.	Olha lá.
+Love hurts.	O amor machuca.
+Love lasts.	O amor dura.
+Mama cried.	Mamãe chorou.
+May I sing?	Eu posso cantar?
+May I sing?	Posso cantar?
+Never mind!	Não se preocupe.
+Never mind!	Esqueça.
+Never mind!	Tudo bem.
+Never mind!	Esquece!
+No comment.	Sem comentários.
+No kidding?	Sério?
+No kidding?	Sem brincadeira?
+No problem.	Sem problema.
+No problem.	Problema nenhum.
+No problem.	Não há problema.
+Once again.	Outra vez.
+Once again.	Mais uma vez.
+Pick it up.	Apanhe-o.
+Please sit.	Por favor, sente-se.
+Please sit.	Por favor, sentem-se.
+Replace it.	Substitua.
+Say cheese.	Sorria.
+Say please.	Diga "por favor".
+Say please.	Falem, por favor.
+She is old.	Ela é velha.
+She smiled.	Ela sorriu.
+She smiled.	Ela sorria.
+Sing along.	Cante junto.
+Smell this.	Cheire isto.
+Start here.	Comece aqui.
+Start over.	Recomece.
+Stay alert.	Se mantenha alerta.
+Stay awake.	Fique acordado.
+Stay close.	Fique perto.
+Stay still.	Não se mova.
+Stay there.	Fique aí.
+Stay there.	Fica aí.
+Step aside.	Se afaste.
+Step aside.	Afaste-se.
+Stop lying.	Pare de mentir.
+Stop there.	Pare ali.
+Study hard.	Estude muito.
+Study hard.	Estudem muito.
+Take a bus.	Pegue um ônibus.
+Take a bus.	Peguem um ônibus.
+Take a nap.	Tire um cochilo.
+Take cover!	Protejam-se!
+Take these.	Leve esses.
+Talk to me!	Fale comigo!
+Talk to us.	Converse com a gente.
+Talk to us.	Fale conosco.
+Taste this.	Experimenta isto.
+Taste this.	Experimente isto.
+Taste this.	Experimentem isto.
+Taste this.	Prove isto.
+Taste this.	Provem isto.
+That hurts.	Isso machuca.
+That works.	Funciona.
+That'll do.	Isso vai servir.
+That's Tom.	Esse é o Tom.
+That's Tom.	Aquele é o Tom.
+That's all.	Isso é tudo.
+That's fun.	É divertido.
+That's fun.	Isso é divertido!
+That's her.	É dela.
+That's her.	É ela.
+That's him.	É ele.
+That's his.	É dele.
+That's new.	Isso é novo.
+That's odd.	É bizarro.
+That's odd.	Isso é bizarro.
+They agree.	Eles concordam.
+They agree.	Elas concordam.
+They agree.	Concordam.
+They cheat.	Eles trapacearam.
+They tried.	Eles tentaram.
+They voted.	Eles votaram.
+They voted.	Elas votaram.
+They voted.	Votaram.
+They're in.	Eles estão dentro.
+They're in.	Elas estão dentro.
+They're in.	Estão dentro.
+This is OK.	Está tudo bem.
+This is OK.	Está bem.
+This is OK.	Está ok.
+This is it.	É isso.
+This is me.	Este sou eu.
+This works.	Isto funciona.
+Time flies.	O tempo voa.
+Time is up.	O tempo acabou.
+Tom agreed.	Tom concordou.
+Tom agrees.	Tom concorda.
+Tom ate it.	Tom o comeu.
+Tom burped.	Tom arrotou.
+Tom called.	Tom ligou.
+Tom cheats.	Tom trapaceia.
+Tom danced.	Tom dançou.
+Tom dances.	Tom dança.
+Tom drinks.	Tom bebe.
+Tom drives.	Tom dirige.
+Tom failed.	Tom falhou.
+Tom forgot.	Tom esqueceu.
+Tom forgot.	Tom se esqueceu.
+Tom fought.	Tom lutou.
+Tom gasped.	Tom arfou.
+Tom has it.	Tom tem.
+Tom has it.	O Tom tem.
+Tom has it.	Tom tem isso.
+Tom has it.	O Tom tem isso.
+Tom helped.	Tom ajudou.
+Tom is bad.	Tom é mau.
+Tom is mad.	Tom está louco.
+Tom is mad.	Tom está insano.
+Tom is odd.	Tom é esquisito.
+Tom is old.	O Tom está velho.
+Tom is old.	O Tom é velho.
+Tom is out.	Tom está fora.
+Tom is sad.	Tom está triste.
+Tom is shy.	Tom é tímido.
+Tom is wet.	Tom está molhado.
+Tom jumped.	Tom pulou.
+Tom looked.	Tom olhou.
+Tom moaned.	Tom gemeu.
+Tom nodded.	Tom acenou.
+Tom obeyed.	Tom obedeceu.
+Tom phoned.	Tom telefonou.
+Tom prayed.	Tom rezou.
+Tom saw it.	O Tom o viu.
+Tom saw me.	Tom me viu.
+Tom shaved.	Tom barbeou-se.
+Tom shaved.	Tom fez a barba.
+Tom sighed.	Tom suspirou.
+Tom smiled.	Tom sorriu.
+Tom smokes.	Tom fuma.
+Tom snores.	Tom ronca.
+Tom stayed.	O Tom ficou.
+Tom stayed.	Tom ficou.
+Tom talked.	Tom falou.
+Tom waited.	Tom esperou.
+Tom walked.	Tom caminhou.
+Tom was OK.	Tom estava bem.
+Tom winked.	O Tom piscou.
+Tom worked.	Tom trabalhou.
+Tom yawned.	Tom bocejou.
+Tom yelled.	Tom gritou.
+Tom'll cry.	Tom irá chorar.
+Tom'll cry.	Tom vai chorar.
+Tom'll die.	Tom vai morrer.
+Tom'll pay.	Tom irá pagar.
+Tom's busy.	Tom está ocupado.
+Tom's deaf.	O Tom é surdo.
+Tom's deaf.	Tom é surdo.
+Tom's fast.	Tom é rápido.
+Tom's glad.	Tom está contente.
+Tom's gone.	Tom se foi.
+Tom's sick.	Tom está doente.
+Tom's ugly.	Tom é feio.
+Tom's well.	O Tom está bem.
+Turn it on.	Ligue-o.
+Turn it on.	Ligue-a.
+Turn right.	Vire à direita.
+Turn right.	Dobre à direita.
+Wait a bit.	Espere um minuto.
+Wait a bit.	Espera um minuto.
+Was he Tom?	Aquele era Tom?
+Was it fun?	Foi divertido?
+Watch this.	Olhe isso.
+Watch this.	Veja isto.
+Watch this.	Observem isto.
+We all die.	Todos nós morremos.
+We are men.	Somos homens.
+We are men.	Nós somos homens.
+We buy CDs.	Compramos CDs.
+We can pay.	A gente pode pagar.
+We can pay.	Nós podemos pagar.
+We had fun.	Nós nos divertimos.
+We laughed.	Nós rimos.
+We like it.	Nós gostamos.
+We like it.	Gostamos.
+We like it.	Nós gostamos disso.
+We like it.	Gostamos disso.
+We want it.	Nós queremos.
+We want it.	Queremos.
+We want it.	Nós queremos isso.
+We want it.	Queremos isso.
+We'll cook.	Nós cozinharemos.
+We'll help.	Ajudaremos.
+We'll help.	Nós ajudaremos.
+We'll help.	Nós vamos ajudar.
+We'll obey.	Nós obedeceremos.
+We'll pass.	Nós passaremos.
+We'll sing.	Cantaremos.
+We'll wait.	Esperaremos.
+We'll wait.	Nós vamos esperar.
+We'll wait.	Nós esperaremos.
+We're busy.	Estamos ocupados.
+We're calm.	Nós somos calmos.
+We're calm.	Nós somos tranquilos.
+We're calm.	Estamos calmos.
+We're calm.	Estamos tranquilos.
+We're cold.	Estamos com frio.
+We're even.	Estamos quites.
+We're fair.	Nós somos justos.
+We're fine.	Estamos bem.
+We're free!	Estamos livres!
+We're free!	Somos livres!
+We're here.	Estamos aqui.
+We're here.	Nós estamos aqui.
+We're late.	Estamos atrasados.
+We're lazy.	Nós somos preguiçosos.
+We're lazy.	Nós somos preguiçosas.
+We're lost.	Estamos perdidos.
+We're lost.	Estamos perdidas.
+We're poor.	Somos pobres.
+We're rich.	Nós somos ricos.
+We're safe.	Estamos salvos.
+We're sick.	Nós estamos doentes.
+We're weak.	Nós somos fracos.
+We're weak.	Nós estamos fracos.
+What a day!	Que dia!
+What is it?	O que é?
+What's new?	Que novidade há?
+What's new?	Que há de novo?
+What's new?	Quais as novas?
+Where am I?	Onde estou?
+Where am I?	Onde é que estou?
+Who are we?	Quem nós somos?
+Who did it?	Quem o fez?
+Who has it?	Quem tem?
+Who is Tom?	Quem é Tom?
+Who is she?	Quem é ela?
+Who phoned?	Quem ligou?
+Who phoned?	Quem telefonou?
+Who phoned?	Quem chamou?
+Who saw me?	Quem me viu?
+Who stayed?	Quem ficou?
+Who talked?	Quem falou?
+Who yelled?	Quem gritou?
+Who's here?	Quem está aqui?
+Who's next?	Quem é o próximo?
+Who's that?	Quem é?
+Who's that?	Quem é aquele?
+Who's that?	Quem é aquela?
+Wood burns.	A madeira queima.
+You called?	Você ligou?
+You can go.	Você pode ir.
+You did it!	Você o fez!
+You may go.	Você pode ir.
+You missed.	Você perdeu.
+You missed.	Vocês perderam.
+You owe me.	Você me deve.
+You'll see.	Você verá.
+You're bad.	Você é mau.
+You're old.	Você está velho.
+You're old.	Você é velho.
+You're old.	Tu és velho.
+You're old.	Tu és velha.
+You're old.	És velho.
+You're old.	És velha.
+You're old.	Tu estás velho.
+You're old.	Tu estás velha.
+You're old.	Você é velha.
+You're old.	Você está velha.
+You're old.	Vós sois velhos.
+You're old.	Vós sois velhas.
+You're old.	Estais velhos.
+You're old.	Estais velhas.
+You're old.	Vocês são velhos.
+You're old.	Vocês são velhas.
+You're old.	Vocês estão velhos.
+You're old.	Vocês estão velhas.
+You're old.	O senhor é velho.
+You're old.	O senhor está velho.
+You're old.	A senhora é velha.
+You're old.	A senhora está velha.
+You're old.	Os senhores são velhos.
+You're old.	Os senhores estão velhos.
+You're old.	As senhoras são velhas.
+You're old.	As senhoras estão velhas.
+You're old.	Sois velhos.
+You're old.	Sois velhas.
+You're sad.	Você está triste.
+You're sad.	Vocês estão tristes.
+You're shy.	Você é tímido.
+You're shy.	Você é tímida.
+You're shy.	Vocês são tímidos.
+You're shy.	Vocês são tímidas.
+You're shy.	Você está tímido.
+You're shy.	Você está tímida.
+You're shy.	Vocês estão tímidos.
+You're shy.	Vocês estão tímidas.
+You're shy.	Tu és tímido.
+You've won!	Você ganhou!
+You've won!	Vocês ganharam!
+You've won!	Você venceu!
+You've won!	Vocês venceram!
+You've won.	Você ganhou.
+You've won.	Você venceu.
+All is well.	Está tudo bem.
+All is well.	Tudo está bem.
+Am I hungry!	Estou com fome!
+Anyone home?	Tem alguém em casa?
+Anyone hurt?	Alguém machucado?
+Are we done?	Terminamos?
+Are we lost?	Estamos perdidos?
+Are we lost?	Nós estamos perdidos?
+Are we safe?	Estamos seguros?
+Are we safe?	Nós estamos seguros?
+Are you Tom?	Você é o Tom?
+Are you fat?	Você é gordo?
+Are you fat?	Você é gorda?
+Are you fit?	Você está em forma?
+Are you mad?	Você é louco?
+Are you mad?	Você está com raiva?
+Are you mad?	Estás tolo?
+Are you mad?	Estás tola?
+Are you new?	Você é novo?
+Are you new?	Vocês são novos?
+Are you sad?	Você está triste?
+Are you shy?	Você é tímido?
+Ask anybody.	Pergunte a alguém.
+Ask anybody.	Perguntem a alguém.
+Ask anybody.	Pergunta a alguém.
+Be creative.	Seja criativo.
+Be creative.	Seja criativa.
+Be creative.	Sejam criativos.
+Be creative.	Sejam criativas.
+Be creative.	Sê criativo.
+Be creative.	Sê criativa.
+Be creative.	Sede criativos.
+Be creative.	Sede criativas.
+Be discreet.	Seja discreto.
+Be discreet.	Seja discreta.
+Be discreet.	Sejam discretos.
+Be discreet.	Sejam discretas.
+Be discreet.	Sê discreto.
+Be discreet.	Sê discreta.
+Be discreet.	Sede discretos.
+Be discreet.	Sede discretas.
+Be friendly.	Seja amigável.
+Be friendly.	Sejam amigáveis.
+Be friendly.	Sê amigável.
+Be friendly.	Sede amigáveis.
+Be prepared.	Esteja preparado.
+Be prepared.	Estejam preparados.
+Be prepared.	Esteja preparada.
+Be prepared.	Estejam preparadas.
+Be punctual.	Seja pontual.
+Be punctual.	Sejam pontuais.
+Be ruthless.	Seja impiedoso.
+Be sensible.	Tenha bom senso.
+Be sensible.	Tenham bom senso.
+Be sensible.	Tem bom senso.
+Be sensible.	Tende bom senso.
+Be specific.	Seja específico.
+Be tolerant.	Seja tolerante.
+Be tolerant.	Sejam tolerantes.
+Be tolerant.	Sê tolerante.
+Be tolerant.	Sede tolerantes.
+Be yourself.	Seja você mesmo.
+Can I begin?	Posso começar?
+Can we talk?	Podemos conversar?
+Can you see?	Dá para ver?
+Check again.	Confira de novo.
+Check again.	Verifique de novo.
+Come closer.	Chegue mais perto.
+Come closer.	Cheguem mais perto.
+Come closer.	Chega mais perto.
+Come inside.	Entre.
+Come inside.	Entrem.
+Come inside.	Entra.
+Come off it.	Esqueça.
+Come off it.	Desista.
+Contact Tom.	Contactem o Tom.
+Contact Tom.	Contacte o Tom.
+Count me in.	Conte comigo!
+Did Tom cry?	O Tom chorou?
+Did Tom die?	O Tom morreu?
+Did Tom eat?	O Tom comeu?
+Did Tom win?	O Tom ganhou?
+Did Tom win?	O Tom venceu?
+Did it work?	Funcionou?
+Do it again!	Faça de novo!
+Do it again!	Faz outra vez!
+Do you fish?	Você pesca?
+Do you mind?	Você se importa?
+Don't argue.	Não discuta.
+Don't argue.	Não discutas.
+Don't argue.	Não discutam.
+Don't cheat.	Não cole.
+Don't cheat.	Não colem.
+Don't do it!	Não faça isso.
+Don't do it!	Não o faça!
+Don't do it.	Não faça isso.
+Don't fight.	Não lute.
+Don't fight.	Não lutem.
+Don't fight.	Não lutes.
+Don't go in.	Não entre.
+Don't go in.	Não entrem.
+Don't laugh.	Não ria.
+Don't laugh.	Não riam.
+Don't laugh.	Não rias.
+Don't laugh.	Não ria!
+Don't leave!	Não saia!
+Don't leave!	Não vá embora!
+Don't leave.	Não saia!
+Don't leave.	Não vá embora!
+Don't panic!	Não entre em pânico!
+Don't shoot!	Não atire!
+Don't shoot.	Não atire.
+Don't shoot.	Não atirem.
+Don't shout.	Não grite.
+Don't shout.	Não grites.
+Don't smile.	Não sorria.
+Don't smile.	Não sorrias.
+Don't smoke.	Não fume.
+Don't smoke.	Não fumem.
+Don't speak.	Não fale.
+Don't speak.	Não fales.
+Don't speak.	Não falem.
+Don't stare.	Não encara.
+Don't worry.	Não se preocupe.
+Don't worry.	Não se preocupe!
+Finish this.	Termine isso.
+Forgive Tom.	Perdoem o Tom.
+Get dressed.	Vista-se.
+Get dressed.	Vistam-se.
+Get serious!	Fique sério.
+Get serious.	Fique sério.
+Get serious.	Fale sério.
+Get started.	Comece.
+Get started.	Comecem.
+Get started.	Começa.
+Go find Tom.	Vai encontrar Tom.
+Go find Tom.	Vai achar o Tom.
+Go home now.	Vai para casa agora.
+Go to sleep.	Vá dormir.
+Go with Tom.	Vá com o Tom.
+Has he come?	Ele veio?
+Have a beer.	Toma uma cerveja.
+Have a look.	Dê uma olhada.
+Have a look.	Dá uma olhada.
+Have a look.	Dá uma vista de olhos.
+Have a look.	Dá uma olhadela.
+Have a look.	Vê.
+Have a look.	Veja.
+Have a look.	Dê uma olhadela.
+Have a look.	Dê uma vista de olhos.
+Have a seat.	Sente-se.
+Have a seat.	Senta-te.
+Have a seat.	Sentem-se.
+He can read.	Ele sabe ler.
+He can read.	Ele consegue ler.
+He can swim.	Ele sabe nadar.
+He can swim.	Ele pode nadar.
+He can swim.	Ele consegue nadar.
+He got away.	Ele afastou-se.
+He got away.	Ele se afastou.
+He has come!	Ele veio!
+He has guts.	Ele tem coragem.
+He has guts.	Ele tem culhão.
+He has wine.	Ele tem vinho.
+He is alone.	Ele está sozinho.
+He is drunk.	Ele está embriagado.
+He is drunk.	Ele está bêbado.
+He is eight.	Ele tem oito anos.
+He is eight.	Ele tem oito anos de idade.
+He is happy.	Ele é feliz.
+He is happy.	Ele está feliz.
+He is hated.	Ele é odiado.
+He is lying.	Ele está mentindo.
+He is tired.	Ele está cansado.
+He resigned.	Ele renunciou.
+He stood up.	Ele se levantou.
+He was busy.	Ele estava ocupado.
+He's a liar.	Ele mente.
+He's asleep.	Está adormecido.
+He's asleep.	Ele está dormindo.
+He's coming.	Ele está vindo.
+He's coming.	Ele está chegando.
+He's my age.	Ele tem a minha idade.
+He's not in.	Ele não está.
+He's skinny.	Ele é magro.
+He's strong.	Ele é forte.
+He's stupid.	Ele é burro.
+He's stupid.	Ele é estúpido.
+Help me out.	Me ajude.
+Help me out.	Ajude-me.
+Help me out.	Ajude-me a sair.
+Here I come.	Estou vindo.
+Here I come.	Eu venho.
+Here I come.	Estou chegando.
+Here I come.	Aqui vou eu!
+Here she is!	Aqui está ela!
+Here we are!	Estamos aqui!
+Here we are!	Aqui estamos!
+Here we are!	Eis-nos aqui!
+Here we are.	Estamos aqui!
+Here we are.	Aqui estamos.
+Here we are.	Aqui estamos!
+Here we are.	Eis-nos aqui!
+Hi, I'm Tom.	Oi, eu sou o Tom.
+Hi, I'm Tom.	Oi, sou o Tom.
+Hi, I'm Tom.	Olá, sou o Tom.
+How are you?	Como você está?
+How are you?	Como vai?
+How are you?	Como vai você?
+How are you?	Quem és tu?
+How curious!	Que curioso!
+How strange!	Que estranho!
+How strange!	Que estranho.
+How was Tom?	Como Tom estava?
+I also went.	Eu também fui.
+I also went.	Eu fui, também.
+I am a cook.	Eu sou cozinheiro.
+I am a cook.	Sou cozinheiro.
+I am a monk.	Sou um monge.
+I am better.	Eu sou melhor.
+I am better.	Estou melhor.
+I am coming.	Estou vindo.
+I am coming.	Estou chegando.
+I am coming.	Eu estou vindo.
+I am coming.	Eu estou chegando.
+I am eating.	Estou comendo.
+I am eating.	Estou a comer.
+I am eating.	Eu estou comendo.
+I am hungry.	Estou faminto!
+I am hungry.	Quero comer.
+I am hungry.	Tenho fome.
+I am hungry.	Estou com fome.
+I am online.	Estou online.
+I am online.	Eu estou online.
+I am single.	Sou solteiro.
+I am single.	Estou solteiro.
+I am taller.	Eu sou mais alto.
+I am trying.	Eu estou tentando.
+I apologize.	Perdão.
+I apologize.	Peço perdão.
+I bought it.	Eu comprei.
+I can dance.	Eu sei dançar.
+I can do it.	Posso fazê-lo.
+I can't eat.	Eu não consigo comer.
+I can't fly.	Não consigo voar.
+I can't fly.	Eu não posso voar.
+I can't say.	Não posso dizer.
+I can't see.	Não consigo ver.
+I can't see.	Não posso ver.
+I can't see.	Eu não posso ver.
+I can't see.	Eu não consigo ver.
+I can't ski.	Eu não sei esquiar.
+I can't win.	Eu não posso vencer.
+I can't win.	Eu não consigo vencer.
+I confessed.	Eu confessei.
+I disagreed.	Eu discordei.
+I don't cry.	Eu não choro.
+I don't lie.	Eu não minto.
+I drank tea.	Eu tomei chá.
+I eat a lot.	Eu como muito.
+I eat bread.	Eu como pão.
+I eat bread.	Como pão.
+I exercised.	Eu me exercitei.
+I exercised.	Me exercitei.
+I feel blue.	Estou triste.
+I feel cold.	Estou com frio.
+I feel cold.	Sinto frio.
+I feel cold.	Tenho frio.
+I feel lost.	Me sinto perdido.
+I feel lost.	Eu me sinto perdido.
+I feel safe.	Eu me sinto em segurança.
+I feel sick.	Sinto-me mal.
+I feel sick.	Estou mal.
+I felt cold.	Eu fiquei com frio.
+I felt cold.	Fiquei com frio.
+I felt that.	Eu senti aquilo.
+I fired Tom.	Eu demiti Tom.
+I forgot it.	Eu me esqueci disso.
+I forgot it.	Eu esqueci.
+I forgot it.	Esqueci.
+I forgot it.	Me esqueci disso.
+I found you.	Encontrei você.
+I found you.	Eu encontrei você.
+I found you.	Eu te encontrei.
+I found you.	Te encontrei.
+I got bored.	Eu fiquei entediado.
+I got bored.	Eu fiquei entediada.
+I got fired.	Eu fui demitido.
+I got stuck.	Eu fiquei preso.
+I got stuck.	Emperrei.
+I got upset.	Eu fiquei chateado.
+I had to go.	Tive que ir.
+I hate cats.	Eu odeio gatos.
+I hate dogs.	Odeio cachorros.
+I hate dogs.	Eu odeio cachorros.
+I hate fish.	Eu odeio peixe.
+I hate golf.	Eu odeio golfe.
+I hate math.	Eu detesto matemática.
+I hate milk.	Eu odeio leite.
+I hate rats.	Eu odeio ratos.
+I hate sand.	Eu odeio areia.
+I hate that.	Odeio isso.
+I hate them.	Eu os odeio.
+I hate this.	Eu odeio isto.
+I have $300.	Tenho US$ 300.
+I have cash.	Eu tenho dinheiro.
+I have eyes.	Eu tenho olhos.
+I have food.	Eu tenho comida.
+I have news.	Tenho novidades.
+I have time.	Eu tenho tempo.
+I hear that.	Escuto aquilo.
+I heard you.	Eu te escutei.
+I hired Tom.	Eu contratei o Tom.
+I hired Tom.	Contratei o Tom.
+I knew that.	Eu sabia disso.
+I know that.	Eu sei disso.
+I know them.	Eu os conheço.
+I like beef.	Eu gosto de carne de boi.
+I like blue.	Eu gosto de azul.
+I like blue.	Gosto de azul.
+I like both.	Eu gosto dos dois.
+I like both.	Eu gosto de ambos.
+I like cake.	Eu gosto de bolo.
+I like cats.	Eu adoro gatos.
+I like cats.	Eu gosto de gatos.
+I like dogs.	Eu gosto de cachorro.
+I like dogs.	Gosto de cachorros.
+I like fish.	Eu gosto de peixe.
+I like jazz.	Eu gosto de jazz.
+I like math.	Eu gosto de matemática.
+I like milk.	Eu gosto de leite.
+I like rice.	Eu gosto de arroz.
+I like rice.	Gosto de arroz.
+I like snow.	Eu gosto de neve.
+I like that.	Eu gosto dele.
+I like that.	Gosto disso.
+I like that.	Eu gosto disso.
+I like that.	Curto isso.
+I like that.	Eu gosto disto.
+I like that.	Gosto.
+I like that.	Eu gosto.
+I like them.	Eu gosto deles.
+I like this.	Eu gosto disto.
+I like wine.	Eu gosto de vinho.
+I liked Tom.	Eu gostei de Tom.
+I liked Tom.	Gostei de Tom.
+I live here.	Eu moro aqui.
+I live here.	Eu vivo aqui.
+I live here.	Moro aqui.
+I lost hope.	Eu perdi a esperança.
+I love Mary.	Eu amo Maria.
+I love beer.	Eu adoro cerveja.
+I love cake.	Eu adoro bolo.
+I love cats.	Eu adoro gatos.
+I love cats.	Amo gatos.
+I love cats.	Eu amo gatos.
+I love cats.	Adoro gatos.
+I love dogs.	Eu amo cães.
+I love fish.	Eu adoro peixe.
+I love golf.	Eu adoro golfe.
+I love math.	Eu adoro matemática.
+I love rock.	Eu amo rock.
+I love rock.	Eu gosto de rock.
+I love rock.	Eu adoro rock.
+I love snow.	Eu adoro neve.
+I love them.	Eu as amo.
+I loved you.	Eu te amava.
+I loved you.	Eu te amei.
+I loved you.	Amava-te.
+I loved you.	Amei-te.
+I loved you.	Amava-o.
+I loved you.	Amava-a.
+I loved you.	Amei-a.
+I loved you.	Amei-o.
+I made rice.	Eu fiz arroz.
+I made that.	Eu fiz aquilo.
+I missed it.	Perdi isso.
+I nailed it.	Está no papo.
+I need glue.	Eu preciso de cola.
+I need help.	Preciso de ajuda.
+I need mine.	Preciso do meu.
+I need mine.	Preciso da minha.
+I need more.	Preciso de mais.
+I need that.	Eu preciso disso.
+I never win.	Eu não ganho nunca.
+I often ski.	Eu esquio com frequência.
+I often ski.	Esquio com frequência.
+I overslept.	Eu dormi demais.
+I overslept.	Dormi mais do que devia.
+I overslept.	Dormi demais.
+I pay taxes.	Eu pago os impostos.
+I pay taxes.	Pago os impostos.
+I read lips.	Leio lábios.
+I recovered.	Eu me recuperei.
+I regret it.	Eu me arrependo.
+I regret it.	Me arrependo.
+I said that.	Eu disse isso.
+I saved Tom.	Eu salvei Tom.
+I saw a UFO.	Eu vi um óvni.
+I saw a UFO.	Eu vi um objeto voador não identificado.
+I saw a dog.	Eu vi um cachorro.
+I saw a dog.	Vi um cachorro.
+I sell cars.	Eu vendo carros.
+I should go.	Eu deveria ir embora.
+I surrender.	Eu me rendo.
+I surrender.	Me rendo.
+I talk fast.	Eu falo rápido.
+I talk fast.	Falo rápido.
+I trust Tom.	Eu confio em Tom.
+I trust you.	Confio em você.
+I walk fast.	Eu ando rápido.
+I want Mary.	Eu quero a Mary.
+I want Mary.	Quero a Mary.
+I want cash.	Quero dinheiro.
+I want cash.	Eu quero dinheiro.
+I want mine.	Eu quero a minha.
+I want mine.	Eu quero o meu.
+I want mine.	Quero o meu.
+I want mine.	Quero a minha.
+I want soup.	Eu quero sopa.
+I want soup.	Quero sopa.
+I want that.	Eu quero isso.
+I want that.	Quero isso.
+I want that.	Eu quero aquilo.
+I want that.	Quero aquilo.
+I want this.	Eu quero isso.
+I want this.	Quero isso.
+I want time.	Eu quero tempo.
+I want time.	Quero tempo!
+I was alone.	Eu estava sozinho.
+I was angry.	Eu estava bravo.
+I was awake.	Eu estava acordado.
+I was bored.	Eu estava entediado.
+I was bored.	Eu estava entediada.
+I was dizzy.	Eu estava tonto.
+I was drunk.	Eu estava bêbado.
+I was drunk.	Eu estava embriagado.
+I was fired.	Eu fui demitido.
+I was fired.	Despediram-me.
+I was happy.	Eu era feliz.
+I was hired.	Eu fui contratado.
+I was lucky.	Eu tive sorte.
+I was lucky.	Tive sorte.
+I was right.	Eu estava certo.
+I was right.	Eu tinha razão.
+I was there.	Eu estava lá.
+I was tired.	Eu estava cansado.
+I was wrong.	Eu me enganei.
+I was wrong.	Eu errei.
+I was wrong.	Eu estava errado.
+I washed it.	Eu o lavei.
+I went home.	Eu fui para casa.
+I went, too.	Eu fui, também.
+I will come.	Eu virei.
+I will help.	Eu vou ajudar.
+I will obey.	Eu vou obedecer.
+I will obey.	Eu irei obedecer.
+I will obey.	Obedecerei.
+I will stay.	Eu vou ficar.
+I will wait.	Eu vou esperar.
+I will wait.	Vou esperar.
+I will wait.	Eu irei esperar.
+I will wait.	Irei esperar.
+I will work.	Eu vou trabalhar.
+I will work.	Vou trabalhar.
+I won't cry.	Eu não vou chorar.
+I won't die.	Eu não vou morrer.
+I won't die.	Não vou morrer.
+I won't lie.	Eu não vou mentir.
+I won't lie.	Não vou mentir.
+I won't run.	Eu não vou correr.
+I work here.	Eu trabalho aqui.
+I'll cancel.	Cancelarei.
+I'll change.	Mudarei.
+I'll decide.	Decidirei.
+I'll fix it.	Irei consertá-lo.
+I'll get in.	Eu vou entrar.
+I'll get in.	Vou entrar.
+I'll get it.	Eu o pegarei.
+I'll get up.	Eu vou me levantar.
+I'll get up.	Vou me levantar.
+I'll manage.	Conseguirei.
+I'll try it.	Eu vou tentar.
+I'll try it.	Eu vou experimentar.
+I'm a baker.	Eu sou padeiro.
+I'm a klutz.	Eu sou um desastrado.
+I'm a klutz.	Sou um desastrado.
+I'm a pilot.	Sou piloto.
+I'm a vegan.	Eu sou vegano.
+I'm a vegan.	Eu sou vegana.
+I'm a woman.	Sou mulher.
+I'm a woman.	Eu sou mulher.
+I'm a woman.	Eu sou uma mulher.
+I'm adopted.	Eu sou adotado.
+I'm at home.	Estou em casa.
+I'm at work.	Estou no trabalho.
+I'm at work.	Eu estou no trabalho.
+I'm bipolar.	Sou bipolar.
+I'm certain.	Tenho certeza.
+I'm certain.	Estou seguro.
+I'm cooking.	Estou cozinhando.
+I'm correct.	Eu tenho razão.
+I'm curious.	Eu sou curioso.
+I'm curious.	Eu sou curiosa.
+I'm curious.	Quero saber.
+I'm dancing.	Eu estou dançando.
+I'm dieting.	Estou de dieta.
+I'm excited.	Estou excitado.
+I'm fasting.	Eu estou em jejum.
+I'm fasting.	Estou jejuando.
+I'm finicky.	Eu sou exigente.
+I'm furious.	Estou furioso.
+I'm furious.	Estou furiosa.
+I'm healthy.	Estou com a saúde em dia.
+I'm healthy.	Estou saudável.
+I'm in Rome.	Eu estou em Roma.
+I'm in Rome.	Estou em Roma.
+I'm in here.	Estou aqui dentro.
+I'm in pain.	Estou com dor.
+I'm jealous.	Eu sou ciumento.
+I'm jealous.	Sou ciumenta.
+I'm kidding.	Eu estou brincando.
+I'm leaving.	Estou indo.
+I'm married.	Eu sou casado.
+I'm married.	Eu sou casada.
+I'm married.	Sou casado.
+I'm nervous.	Estou nervoso.
+I'm nervous.	Estou nervosa.
+I'm nervous.	Eu estou nervoso.
+I'm neutral.	Eu sou neutro.
+I'm no fool.	Eu não sou idiota.
+I'm no fool.	Não sou idiota.
+I'm no liar.	Eu não sou mentiroso.
+I'm no liar.	Não sou mentiroso.
+I'm not Tom.	Eu não sou o Tom.
+I'm not fat.	Eu não sou gorda.
+I'm not mad.	Eu não sou louco.
+I'm not old.	Eu não sou velho.
+I'm not shy.	Não sou tímido.
+I'm not you.	Eu não sou você.
+I'm not you.	Não sou você.
+I'm packing.	Estou fazendo as malas.
+I'm popular.	Eu sou popular.
+I'm prudent.	Sou prudente.
+I'm prudent.	Eu sou prudente.
+I'm puzzled.	Estou intrigado.
+I'm puzzled.	Eu estou intrigado.
+I'm relaxed.	Estou relaxado.
+I'm relaxed.	Estou relaxada.
+I'm resting.	Estou descansando.
+I'm retired.	Estou aposentado.
+I'm retired.	Sou aposentado.
+I'm retired.	Eu estou aposentado.
+I'm selfish.	Eu sou egoísta.
+I'm serious.	Estou falando sério.
+I'm serious.	Eu estou falando sério.
+I'm shocked.	Eu estou chocado.
+I'm sincere.	Eu sou sincero.
+I'm so full.	Estou tão cheio.
+I'm so glad.	Estou tão feliz.
+I'm special.	Eu sou especial.
+I'm starved.	Estou morto de fome.
+I'm staying.	Eu fico.
+I'm stuffed!	Estou cheio!
+I'm stuffed!	Estou cheia!
+I'm stuffed.	Estou cheio.
+I'm stuffed.	Estou cheia.
+I'm stunned.	Eu estou pasmado.
+I'm the law.	Eu sou a lei!
+I'm thirsty.	Estou com sede.
+I'm thirsty.	Tenho sede.
+I'm thirsty.	Estou sedento.
+I'm through.	Terminei.
+I'm through.	Acabei.
+I'm too fat.	Eu sou gordo demais.
+I'm trapped.	Estou preso.
+I'm trapped.	Eu estou presa.
+I'm up here.	Estou aqui em cima!
+I'm useless.	Eu sou inútil.
+I'm waiting.	Eu estou esperando.
+I'm waiting.	Estou esperando.
+I'm wealthy.	Eu sou rico.
+I'm winning.	Estou vencendo.
+I'm winning.	Estou ganhando.
+I'm working.	Eu estou trabalhando.
+I'm working.	Estou trabalhando.
+I'm worried.	Estou preocupada.
+I've failed.	Eu fracassei.
+Ignore that.	Ignore isso.
+Ignore that.	Ignore-o.
+Ignore that.	Ignore.
+Ignore them.	Ignore-os.
+Ignore them.	Ignore-as.
+Ignore them.	Ignorem-nos.
+Ignore them.	Ignorem-nas.
+Is Tom busy?	Tom está ocupado?
+Is Tom good?	Tom é bom?
+Is Tom here?	Tom está aqui?
+Is Tom lost?	O Tom está perdido?
+Is Tom safe?	O Tom está seguro?
+Is Tom sick?	O Tom está doente?
+Is Tom tall?	O Tom é alto?
+Is he right?	Ele está certo?
+Is it Tom's?	Isso é do Tom?
+Is it Tom's?	É do Tom?
+Is it clean?	Está limpo?
+Is it clear?	Está claro?
+Is it dirty?	Isso está sujo?
+Is it dirty?	Está sujo?
+Is it rainy?	O tempo está chuvoso?
+Is it ready?	Está pronto?
+Is it there?	Está lá?
+Is it to go?	Pra viagem?
+Is it white?	É branco?
+Is it windy?	Está ventando?
+Is it yours?	É seu?
+Is it yours?	É teu?
+Is it yours?	Isso é seu?
+Is she nice?	Ela é agradável?
+Is that Tom?	Aquele é o Tom?
+Is that Tom?	É o Tom?
+Is that all?	Isso é tudo?
+Is that all?	É tudo?
+Is that you?	É você?
+Is this Tom?	Este é Tom?
+Is this art?	Isto é arte?
+It can't be!	Não pode ser!
+It can't be!	Mentira!
+It can't be!	Impossível!
+It can't be!	Não é possível!
+It happened.	Aconteceu.
+It is dusty.	Está empoeirado.
+It may rain.	Pode chover.
+It may rain.	Pode ser que chova.
+It may rain.	Talvez chova.
+It may snow.	Pode nevar.
+It saved me.	Ele me salvou.
+It suits me.	Isso me serve bem.
+It suits me.	Fica-me bem.
+It was cold.	Estava frio.
+It was cool.	Foi legal.
+It was dark.	Estava escuro.
+It was fair.	Aquilo foi justo.
+It was here.	Estava aqui.
+It was mine.	Era meu.
+It was nice.	Foi legal.
+It'd be bad.	Isso seria ruim.
+It'll be OK.	Vai ficar tudo bem.
+It's 50 yen.	Custa 50 ienes.
+It's Monday.	É segunda.
+It's Monday.	É segunda-feira.
+It's a date.	É um encontro.
+It's a doll.	É uma boneca.
+It's a fake.	É uma imitação.
+It's a fish.	Isto é um peixe.
+It's a gift.	É um presente.
+It's a pity.	É uma pena.
+It's a trap.	É uma emboscada.
+It's a vice.	É um vício.
+It's broken.	Está quebrado.
+It's cloudy.	Está nublado.
+It's for me.	Isso é para mim.
+It's for me.	É para mim.
+It's locked.	Está trancado.
+It's my bus.	É o meu ônibus.
+It's my job.	É o meu trabalho.
+It's not us.	Não somos nós.
+It's poison.	É veneno.
+It's secret.	É segredo.
+It's so big.	É tão grande!
+It's so big.	Isso é tão grande!
+It's so big.	É muito grande!
+It's so sad.	É tão triste.
+It's spring.	É primavera.
+It's stupid.	Isso é estúpido!
+It's stupid.	Ele é estúpido.
+It's urgent.	É urgente!
+Keep moving.	Continue andando.
+Keep moving.	Continue se mexendo.
+Keep trying.	Continue tentando.
+Let me help.	Deixe-me ajudar.
+Let me sing.	Deixe-me cantar.
+Let me swim.	Deixe-me nadar.
+Let's begin.	Vamos começar.
+Let's begin.	Comecemos!
+Let's dance.	Dancemos.
+Let's hurry.	Vamos nos apressar.
+Let's hurry.	Apressemo-nos.
+Let's hurry.	Devemos nos apressar.
+Let's leave.	Vamos embora.
+Let's party!	Vamos festejar!
+Let's split.	Vamos dividir.
+Let's start!	Vamos começar.
+Let's start!	Comecemos!
+Let's start.	Vamos começar.
+Life is fun.	A vida é divertida.
+Look around.	Olhe ao seu redor.
+Look around.	Dá uma olhada em volta!
+Look at him.	Olhe para ele.
+Look closer.	Olhe mais de perto.
+Look closer.	Olhem mais de perto.
+Make a wish.	Faça um desejo.
+Many thanks.	Muito obrigado!
+Many thanks.	Muito obrigada!
+May I begin?	Posso começar?
+May I smoke?	Posso fumar?
+Memorize it.	Memorize.
+Money talks.	O dinheiro é rei.
+Money talks.	O dinheiro fala mais alto.
+Money talks.	O dinheiro manda.
+Nice timing.	Na mosca!
+No means no.	Não quer dizer não.
+No one came.	Ninguém veio.
+No one died.	Ninguém morreu.
+Nobody came.	Ninguém veio.
+Nobody came.	Não veio ninguém.
+Nobody died.	Ninguém morreu.
+Nobody lied.	Ninguém mentiu.
+Now I'm sad.	Agora estou triste.
+Now get out.	Agora, caia fora.
+Now go home.	Agora vá para casa.
+Now you try.	Agora tente você.
+Oh, come on.	Ah, vamos.
+Pick a card.	Escolha uma carta.
+Pick him up.	Pegue-o.
+Plants grow.	As plantas crescem.
+Please come.	Venha, por favor.
+Please come.	Vem, por favor.
+Please come.	Venham, por favor.
+Please sing.	Cante, por favor!
+Please sing.	Cantem, por favor.
+Please sing.	Por favor, cante.
+Please stay.	Por favor, fique.
+Please stay.	Fique, por favor.
+Please stop.	Pare, por favor.
+Please stop.	Por favor, pare.
+Please wait.	Por favor, espere.
+Please wait.	Espere, por favor.
+Pray for me.	Reze por mim.
+Pray for me.	Rezem por mim.
+Release Tom.	Solte o Tom.
+Release him.	Liberte-o.
+Remember it.	Lembre disso.
+Say goodbye.	Diga adeus!
+Settle down!	Acalme-se!
+She bit him.	Ela o mordeu.
+She blushed.	Ela corou.
+She hit him.	Ela bateu nele.
+She is dead.	Ela está morta.
+She slipped.	Ela escorregou.
+She woke up.	Ela acordou.
+She's happy.	Ela está feliz.
+Should I go?	Devo ir?
+Show him in.	Mande-o entrar.
+Show him in.	Faça-o entrar.
+Shut it off.	Desligue-o!
+Shut it off.	Desligue-a!
+Sit with me.	Sente-se comigo.
+Sleep tight.	Durma bem.
+Stand aside!	Afaste-se!
+Stand aside.	Afaste-se!
+Stand still!	Fique parado!
+Stand still!	Fique parada!
+Start again.	Comece de novo.
+Start again.	Começa de novo.
+Start again.	Comecem de novo.
+Step inside.	Dê um passo adentro.
+Stop crying.	Pare de chorar.
+Stop crying.	Parem de chorar.
+Stop moving!	Pare de se mexer.
+Stop moving!	Parem de se mexer.
+Stop moving!	Para de se mexer!
+Stop moving.	Pare de se mexer.
+Stop moving.	Parem de se mexer.
+Stop trying.	Pare de tentar.
+Stop trying.	Parem de tentar.
+Take a look.	Olhe.
+Take a look.	Dê uma olhada.
+Take a look.	Olha.
+Take a rest.	Descansem.
+Take a rest.	Descanse.
+Take a seat.	Sente-se!
+Take a seat.	Sente-se.
+Take action.	Tome uma atitude.
+Take action.	Tomem uma atitude.
+Take it all.	Leve tudo.
+Talk slower.	Fale mais devagar.
+Talk to Tom.	Conversa com o Tom.
+Tea, please.	Chá, por favor.
+That helped.	Isso ajudou.
+That worked.	Aquilo funcionou.
+That's cool.	Isso é legal.
+That's fair.	É justo.
+That's fine.	Está bem.
+That's free.	É de graça.
+That's good.	Isso é bom.
+That's hers.	É dela.
+That's icky.	Isso é desagradável.
+That's life.	É a vida.
+That's mine.	Isso é meu.
+That's mine.	É meu.
+That's mine.	É minha.
+That's mine.	Essa é minha.
+That's okay.	Está ok.
+That's over.	Acabou.
+That's true.	É verdade.
+That's true.	Isso é verdade.
+That's true.	Isso é verídico.
+The TV's on.	A televisão está ligada.
+There he is.	Lá vem ele.
+There it is!	Aqui está!
+There it is.	Aqui está.
+There's Tom.	Ali está o Tom.
+They called.	Eles ligaram.
+They called.	Elas ligaram.
+They called.	Ligaram.
+They danced.	Eles dançaram.
+They danced.	Elas dançaram.
+They danced.	Dançaram.
+They hugged.	Eles se abraçaram.
+They hugged.	Elas se abraçaram.
+They kissed.	Eles se beijaram.
+They obeyed.	Eles obedeceram.
+They smiled.	Eles sorriram.
+They waited.	Eles esperaram.
+They waited.	Esperaram.
+They walked.	Eles caminharam.
+They walked.	Elas caminharam.
+They walked.	Caminharam.
+They yelled.	Eles gritaram.
+They're bad.	Eles são ruins.
+They're new.	Eles são novos.
+They're old.	Eles são velhos.
+Think again.	Pense de novo.
+Think again.	Pensa de novo.
+This is Tom.	Esse é o Tom.
+This is big.	Isto é grande.
+This is his.	Isto é dele.
+This is new.	Isso é novo.
+This is new.	Isso está novo.
+This stinks.	Isto fede.
+Tom arrived.	Tom chegou.
+Tom blinked.	Tom piscou.
+Tom blushed.	Tom morreu de vergonha.
+Tom can win.	Tom pode ganhar.
+Tom changed.	Tom mudou?
+Tom cheated.	O Tom trapaceou.
+Tom cheered.	Tom aplaudiu.
+Tom clapped.	Tom aplaudiu.
+Tom coughed.	Tom tossiu.
+Tom crashed.	Tom sofreu um acidente.
+Tom cringed.	Tom se encolheu.
+Tom decided.	Tom decidiu.
+Tom drowned.	Tom se afogou.
+Tom escaped.	Tom escapou.
+Tom exhaled.	Tom exalou.
+Tom fainted.	Tom desmaiou.
+Tom frowned.	Tom franziu a testa.
+Tom gave up.	Tom desistiu.
+Tom giggled.	Tom deu uma risadinha.
+Tom gloated.	Tom vangloriou-se.
+Tom got fat.	Tom engordou.
+Tom got mad.	Tom ficou furioso.
+Tom grinned.	Tom sorriu forçadamente.
+Tom groaned.	Tom gemeu.
+Tom grunted.	Tom resmungou.
+Tom grunted.	Tom grunhiu.
+Tom had fun.	Tom se divertiu.
+Tom has OCD.	Tom tem TOC.
+Tom hurt me.	Tom me machucou.
+Tom inhaled.	Tom inalou.
+Tom is bald.	O Tom é careca.
+Tom is calm.	Tom é calmo.
+Tom is calm.	Tom está calmo.
+Tom is deaf.	O Tom é surdo.
+Tom is deaf.	Tom é surdo.
+Tom is fair.	Tom é justo.
+Tom is fine.	O Tom está bem.
+Tom is gone.	Tom se foi.
+Tom is home.	Tom está em casa.
+Tom is hurt.	Tom está ferido.
+Tom is hurt.	Tom está machucado.
+Tom is late.	O Tom está atrasado.
+Tom is lazy.	Tom é preguiçoso.
+Tom is neat.	Tom é legal.
+Tom is next.	Tom é o próximo.
+Tom is nosy.	Tom é intrometido.
+Tom is numb.	Tom é insensível.
+Tom is nuts.	Tom está biruta.
+Tom is nuts.	Tom está com um parafuso solto.
+Tom is nuts.	Tom tem um parafuso solto.
+Tom is pale.	Tom está pálido.
+Tom is rich.	Tom é rico.
+Tom is rich.	Tom está rico.
+Tom is safe.	Tom está seguro.
+Tom is sexy.	Tom é sexy.
+Tom is sick.	Tom está doente.
+Tom is slow.	Tom é lento.
+Tom is thin.	Tom é magro.
+Tom is ugly.	Tom é feio.
+Tom is wary.	Tom está desconfiado.
+Tom is weak.	Tom é fraco.
+Tom is weak.	Tom está fraco.
+Tom is wise.	Tom é sábio.
+Tom kneeled.	Tom se ajoelhou.
+Tom knew it.	Tom sabia.
+Tom laughed.	Tom riu.
+Tom listens.	Tom escuta.
+Tom noticed.	Tom notou.
+Tom paid me.	Tom me pagou.
+Tom prepaid.	Tom preparou.
+Tom refused.	Tom recusou.
+Tom relaxed.	Tom relaxou.
+Tom retired.	Tom se aposentou.
+Tom said no.	Tom disse não.
+Tom saw you.	Tom te viu.
+Tom slipped.	Tom escorregou.
+Tom sneezed.	Tom espirrou.
+Tom stopped.	O Tom parou.
+Tom stopped.	Tom parou.
+Tom sweated.	Tom suava.
+Tom teaches.	Tom ensina.
+Tom told me.	Tom me disse.
+Tom told us.	Tom nos disse.
+Tom told us.	Tom nos contou.
+Tom took it.	O Tom pegou.
+Tom tripped.	Tom disparou.
+Tom vomited.	O Tom vomitou.
+Tom was hit.	Tom foi atingido.
+Tom was old.	Tom era velho.
+Tom was old.	Tom era idoso.
+Tom was sad.	O Tom estava triste.
+Tom was wet.	Tom estava molhado.
+Tom will go.	Tom irá.
+Tom woke up.	Tom acordou.
+Tom'll call.	Tom irá ligar.
+Tom'll come.	Tom virá.
+Tom'll come.	Tom vai vir.
+Tom'll help.	Tom ajudará.
+Tom'll know.	Tom vai saber.
+Tom'll lose.	Tom vai perder.
+Tom'll stay.	Tom vai ficar.
+Tom'll talk.	Tom irá falar.
+Tom'll talk.	Tom vai falar.
+Tom'll talk.	Tom falará.
+Tom'll wait.	Tom vai esperar.
+Tom's alive.	Tom está vivo.
+Tom's alone.	Tom está sozinho.
+Tom's angry.	Tom está nervoso.
+Tom's angry.	Tom está com raiva.
+Tom's awake.	O Tom está acordado.
+Tom's bored.	Tom está entediado.
+Tom's crazy.	O Tom é louco.
+Tom's dying.	Tom está morrendo.
+Tom's early.	Tom está adiantado.
+Tom's early.	O Tom está adiantado.
+Tom's funny.	Tom é engraçado.
+Tom's happy.	Tom está feliz.
+Tom's happy.	Tom é feliz.
+Tom's lying.	Tom está mentindo.
+Tom's pushy.	Tom é insistente.
+Tom's right.	Tom tem razão.
+Tom's smart.	Tom é inteligente.
+Tom's tired.	O Tom está cansado.
+Tom's upset.	O Tom está triste.
+Tom's weird.	O Tom está estranho.
+Tom's wrong.	O Tom está errado.
+Tom's young.	O Tom está jovem.
+Tom's young.	O Tom é jovem.
+Trust in me.	Confie em mim.
+Trust in me.	Confia em mim.
+Try to rest.	Tente descansar.
+Turn around.	Dê uma volta.
+Turn it off.	Desliga-o.
+Turn it off.	Desligue-o.
+Turn it off.	Desligue.
+Turn on CNN.	Ligue na CNN!
+Vote for me!	Vote em mim!
+Vote for me!	Vote a meu favor!
+Walk slowly.	Ande devagar!
+War is evil.	A guerra é má.
+War is evil.	A guerra é ruim.
+War is hell.	A guerra é um inferno.
+Was I wrong?	Eu estava errado?
+Was it cold?	Era frio?
+Was it cold?	Estava frio?
+Was it cold?	Estava fazendo frio?
+Was it good?	Estava bom?
+We all know.	Todos nós sabemos.
+We all quit.	Nós todos saímos.
+We all quit.	Fomos todos embora.
+We are boys.	Somos meninos.
+We are free!	Estamos livres!
+We are free!	Somos livres!
+We are late.	Estamos atrasados.
+We are sick.	Nós estamos doentes.
+We broke up.	Nós terminamos.
+We can swim.	Nós sabemos nadar.
+We can swim.	A gente sabe nadar.
+We can swim.	Sabemos nadar.
+We can't go.	Nós não podemos ir.
+We feel bad.	Nos sentimos mal.
+We found it.	Nós encontramos.
+We got lost.	Enganámo-nos no caminho.
+We hate Tom.	Nós odiamos Tom.
+We just met.	Acabamos de nos conhecer.
+We know Tom.	Nós conhecemos Tom.
+We know why.	Sabemos por quê.
+We like Tom.	Nós gostamos do Tom.
+We like Tom.	Gostamos do Tom.
+We love Tom.	Nós amamos o Tom.
+We love you.	Nós te amamos.
+We miss Tom.	Nós sentimos saudades do Tom.
+We miss Tom.	Sentimos saudades do Tom.
+We miss you.	Nós sentimos saudades de você.
+We miss you.	Sentimos saudades de você,
+We miss you.	Nós estamos com saudade de você.
+We miss you.	Estamos com saudade de você.
+We must act.	Nós precisamos agir.
+We must try.	Devemos tentar.
+We need Tom.	Nós precisamos do Tom.
+We need Tom.	Precisamos do Tom.
+We promised.	Prometemos.
+We promised.	Nós prometemos.
+We remember.	Lembramos.
+We remember.	Nós lembramos.
+We remember.	Nós estamos lembrados.
+We remember.	Nós nos lembramos.
+We sat down.	Nós nos sentamos.
+We sat down.	Nos sentamos.
+We survived!	Nós sobrevivemos!
+We survived!	Sobrevivemos!
+We survived.	Sobrevivemos.
+We survived.	Nós sobrevivemos.
+We think so.	Nós achamos que sim.
+We want Tom.	Queremos o Tom!
+We want Tom.	Nós queremos o Tom!
+We want one.	Nós queremos um.
+We want one.	Nós queremos uma.
+We went out.	Nós saímos.
+We'll be OK.	Nós vamos ficar bem.
+We'll be OK.	Vamos ficar bem.
+We'll check.	Nós verificaremos.
+We'll dance.	Dançaremos.
+We'll dance.	Nós dançaremos.
+We'll dance.	Nós vamos dançar.
+We'll do it.	Nós faremos isso.
+We'll do it.	Faremos isso.
+We'll do it.	Nós faremos.
+We'll do it.	Faremos.
+We'll do it.	Nós o faremos.
+We'll drive.	Nós vamos dirigir.
+We'll drive.	Vamos dirigir.
+We'll fight.	Nós vamos lutar.
+We'll fight.	Nós lutaremos.
+We'll share.	Compartilharemos.
+We'll share.	Nós vamos compartilhar.
+We'll share.	Nós compartilharemos.
+We'll share.	A gente vai compartilhar.
+We'll shoot.	Nós vamos atirar.
+We'll stand.	Nós estaremos de pé.
+We'll start.	Vamos começar.
+We'll start.	Nós vamos começar.
+We'll start.	Nós iremos começar.
+We'll start.	Nós começaremos.
+We'll start.	Iremos começar.
+We're angry.	Nós estávamos bravos.
+We're angry.	Nós estamos bravos.
+We're armed.	Nós estamos armados.
+We're awake.	Estamos acordados.
+We're awake.	Nós estamos acordados.
+We're crazy.	A gente é maluco.
+We're crazy.	Somos malucas.
+We're crazy.	Somos malucos.
+We're dizzy.	Estamos tontos.
+We're dizzy.	Nós estamos tontos.
+We're dying.	Estamos morrendo.
+We're early.	Estamos adiantados.
+We're going.	Nós estamos indo.
+We're happy.	Somos felizes.
+We're happy.	Nós somos felizes.
+We're ready.	Nós estamos prontos.
+We're right.	Nós estamos certos.
+We're right.	Estamos certos.
+We're saved.	Estamos salvos.
+We're saved.	Nós estamos salvos.
+We're smart.	Nós somos espertos.
+We're sorry.	Nos desculpe.
+We're timid.	Nós somos tímidos.
+We're tired.	Estamos cansados.
+We're tired.	Nós estamos cansados.
+We're twins.	Nós somos gêmeos.
+We're twins.	Somos gêmeos.
+We're upset.	Estamos chateados.
+We're upset.	Nós estamos chateados.
+We're young.	Somos jovens.
+We're young.	Nós somos jovens.
+What a drag!	Que chatice!
+What a drag!	Que chato!
+What a jerk!	Que idiota!
+What a mess!	Que bagunça!
+What a pain!	Que dor!
+What a pity!	Que pena.
+What a pity!	Que pena!
+What a pity!	Pena!
+What a pity!	Que lástima!
+What is new?	O que há de novo?
+What's that?	O que é aquilo?
+What's that?	O que que é isso?
+What's that?	O que que é aquilo?
+Where is he?	Onde ele está?
+Where is he?	Onde está ele?
+Where is it?	Onde está?
+Where is it?	Cadê?
+Who are you?	Quem é você?
+Who are you?	Quem são vocês?
+Who cheated?	Quem trapaceou?
+Who cheered?	Quem aplaudiu?
+Who drew it?	Quem desenhou?
+Who escaped?	Quem escapou?
+Who made it?	Quem fez isso?
+Who said it?	Quem disse isso?
+Who saw you?	Quem te viu?
+Who stopped?	Quem parou?
+Who'll cook?	Quem vai cozinhar?
+Who'll cook?	Quem cozinhará?
+Who's dying?	Quem está morrendo?
+Who's first?	Quem é o primeiro?
+Who's first?	Quem é a primeira?
+Who's right?	Quem está certo?
+Who's there?	Quem está lá?
+Who's there?	Quem está aí?
+Who's wrong?	Quem está errado?
+Whose is it?	De quem é?
+Will he die?	Ele vai morrer?
+Will he die?	Ele morrerá?
+Will you go?	Você vai?
+Wood floats.	A madeira boia.
+Work slowly.	Trabalhe devagar.
+Write to me.	Escreva-me.
+You are big.	Você é grande.
+You are mad.	Você é louco.
+You cheated.	Você trapaceou.
+You cheated.	Vocês trapacearam.
+You fainted.	Você desmaiou.
+You fainted.	Vocês desmaiaram.
+You hurt me.	Você me machucou.
+You know me.	Você me conhece.
+You made it.	Você conseguiu!
+You must go.	Você deve ir.
+You must go.	Tu deves partir.
+You need me.	Você precisa de mim.
+You need me.	Vocês precisam de mim.
+You used me.	Você me usou.
+You woke me.	Você me acordou.
+You'll lose.	Você vai perder.
+You're cute.	Você é bonito.
+You're cute.	Você é bonita.
+You're cute.	Vocês são bonitos.
+You're cute.	Vocês são bonitas.
+You're cute.	Tu és bonito.
+You're cute.	Tu és bonita.
+You're cute.	O senhor é bonito.
+You're cute.	A senhora é bonita.
+You're cute.	Os senhores são bonitos.
+You're cute.	As senhoras são bonitas.
+You're fair.	Você é justo.
+You're fine.	Você está bem.
+You're good.	Você é bom.
+You're good.	Você é boa.
+You're kind.	Você é simpático.
+You're kind.	Você é simpática.
+You're late.	Você está atrasado.
+You're lost.	Você está perdido.
+You're lost.	Você está perdida.
+You're lost.	Vocês estão perdidos.
+You're lost.	Vocês estão perdidas.
+You're mine.	Você é minha!
+You're next.	Você é o próximo.
+You're nuts!	Está doido!
+You're nuts!	Está maluco!
+You're nuts!	Está louco!
+You're nuts!	Estás doido!
+You're nuts!	Estás maluco!
+You're nuts!	Estás louco!
+You're nuts.	Estás doido!
+You're nuts.	Estás maluco!
+You're nuts.	Estás louco!
+You're nuts.	Você está maluco!
+You're rich.	Você é rica.
+You're rich.	Você é rico.
+You're safe.	Você está seguro.
+You're safe.	Tu estás seguro.
+You're sick!	Vocês estão doentes!
+You're sick!	Você está doente!
+You're sick!	Você é doente!
+You're weak.	Você está fraco.
+You're weak.	Você é fraco.
+You're weak.	Tu és fraco.
+You're weak.	Tu estás fraco.
+You're wise.	Você é sábio.
+You're wise.	Tu és sábio.
+Abandon ship!	Abandonar o navio!
+Abandon ship.	Abandonar o navio!
+Act your age.	Aja de acordo com a sua idade.
+All is quiet.	Tudo está calmo.
+All is quiet.	Tudo está quieto.
+All is still.	Tudo está calmo.
+All is still.	Tudo está quieto.
+Am I in love?	Estou amando?
+Am I invited?	Eu estou convidado?
+Anybody here?	Tem alguém aqui?
+Anybody home?	Tem alguém em casa?
+Anybody hurt?	Alguém machucado?
+Anything new?	Algo de novo?
+Anything new?	Alguma novidade?
+Are we alone?	Nós estamos sozinhos?
+Are we alone?	Estamos sozinhos?
+Are you busy?	Estás ocupado?
+Are you busy?	Estás ocupada?
+Are you cops?	Vocês são policiais?
+Are you deaf?	Você é surdo?
+Are you done?	Terminou?
+Are you free?	Está livre?
+Are you free?	Você está livre?
+Are you full?	Você está cheio?
+Are you here?	Você está aqui?
+Are you home?	Estás em casa?
+Are you home?	Você está em casa?
+Are you home?	Vocês estão em casa?
+Are you hurt?	Você está ferido?
+Are you hurt?	Vocês se machucaram?
+Are you lost?	Vocês estão perdidos?
+Are you lost?	Você está perdido?
+Are you lost?	O senhor está perdido?
+Are you lost?	Vocês estão perdidas?
+Are you nuts?	Estás louco?
+Are you nuts?	Você é louco?
+Are you okay?	Você está bem?
+Are you okay?	Tudo bem contigo?
+Are you rich?	Você é rico?
+Are you sure?	Tem certeza?
+Are you sure?	Você está certo disso?
+Are you sure?	Vocês têm certeza?
+Are you sure?	Você tem certeza?
+Are you tall?	Você é alto?
+Are you tall?	Você é alta?
+Are you well?	Você está bem?
+Are you well?	Vocês estão bem?
+Ask Mary out.	Chame a Mary para sair.
+Be confident.	Seja confiante.
+Be confident.	Sejam confiantes.
+Be confident.	Sê confiante.
+Be confident.	Sede confiantes.
+Be merciless.	Seja piedoso.
+Be merciless.	Seja piedosa.
+Be objective.	Seja objetivo.
+Be objective.	Seja objetiva.
+Be objective.	Sejam objetivos.
+Be quiet now.	Fique quieto agora.
+Be realistic!	Seja realista!
+Be realistic.	Seja realista!
+Beef, please.	Carne, por favor.
+Beer is beer.	Cerveja é cerveja.
+Blood is red.	O sangue é vermelho.
+Boil one egg.	Cozinhe um ovo.
+Bring backup.	Traga reforço.
+Bring backup.	Traga reforços.
+Bring backup.	Tragam reforço.
+Bring backup.	Tragam reforços.
+Bring him in.	Traga-o para dentro.
+Bring my hat.	Traga o meu chapéu.
+Can I try it?	Posso tentar?
+Can I try it?	Posso provar?
+Can I use it?	Posso usar isso?
+Can Tom cook?	O Tom sabe cozinhar?
+Can Tom sing?	O Tom sabe cantar?
+Can Tom swim?	Tom sabe nadar?
+Can Tom walk?	O Tom sabe andar?
+Can he do it?	Ele consegue fazer isso?
+Can he do it?	Ele pode fazer isso?
+Can he do it?	Ele sabe fazer isso?
+Can we start?	Podemos começar?
+Can you come?	Você pode vir?
+Can you come?	Vocês podem vir?
+Can you hear?	Consegue ouvir?
+Can you swim?	Você sabe nadar?
+Can you swim?	Sabes nadar?
+Can you swim?	Sabe nadar?
+Come and see.	Venha ver!
+Come anytime.	Venha quando quiser.
+Come anytime.	Venha a qualquer hora.
+Come at once.	Venha logo de uma vez.
+Come at once.	Venha aqui imediatamente.
+Come forward.	Venha adiante.
+Come outside.	Venha aqui fora.
+Come quickly!	Venha rápido!
+Come quickly!	Venha depressa.
+Come quickly!	Venha rápido.
+Come quickly!	Vem logo!
+Come quickly.	Venha rápido!
+Come quickly.	Venha depressa.
+Come quickly.	Venham rápido.
+Come quickly.	Vem logo!
+Come with me.	Venha comigo.
+Come with me.	Vem comigo.
+Come with me.	Venha comigo!
+Come with us.	Venha com a gente.
+Come with us.	Venha conosco.
+Come with us.	Venham conosco.
+Could we sit?	Poderíamos sentar?
+Count to ten.	Conte até dez.
+Describe Tom.	Descreva o Tom.
+Describe Tom.	Descrevam o Tom.
+Did Tom call?	Tom ligou?
+Did Tom come?	Tom veio?
+Did Tom fall?	O Tom caiu?
+Did Tom help?	O Tom ajudou?
+Did Tom pray?	O Tom rezou?
+Did Tom swim?	O Tom nadou?
+Did Tom vote?	Tom votou?
+Did you call?	Você ligou?
+Did you help?	Você ajudou?
+Did you lose?	Você perdeu?
+Did you sign?	Você assinou?
+Did you sing?	Vocês cantaram?
+Did you swim?	Você nadou?
+Did you swim?	Vocês nadaram?
+Did you vote?	Você votou?
+Do it anyway.	Faça de qualquer forma.
+Do it anyway.	Faça mesmo assim.
+Do it for me.	Façam isso para mim.
+Do it for me.	Faça isso para mim.
+Do it gently.	Faz com gentileza.
+Do they know?	Eles sabem?
+Do they know?	Elas sabem?
+Do you agree?	Você concorda?
+Do you agree?	Está de acordo?
+Do you agree?	Vocês concordam?
+Do you dance?	Quer dançar?
+Do you drink?	Você bebe?
+Do you drink?	Vocês bebem?
+Do you smoke?	Você fuma?
+Do you smoke?	Vocês fumam?
+Do you snore?	Você ronca?
+Do your best!	Dê o melhor de si!
+Do your best!	Faça o seu melhor!
+Do your best!	Faça o melhor possível!
+Do your best.	Dê o melhor de si!
+Do your best.	Faça o seu melhor!
+Does it work?	Isso funciona?
+Don't ask me.	Não me pergunte.
+Don't be sad.	Não fique triste.
+Don't be shy.	Não seja tímido.
+Don't be shy.	Não fique com vergonha.
+Don't be shy.	Não seja tímida.
+Don't be shy.	Não sejas tímido.
+Don't forget.	Não esqueça.
+Don't forget.	Não se esqueça.
+Don't get up.	Não se levante.
+Don't kid me!	Não brinque comigo!
+Don't let go.	Não solta.
+Don't litter!	Não jogue lixo!
+Don't scream.	Não grite.
+Don't scream.	Não grites.
+Don't scream.	Não gritem.
+Don't try me.	Não me tente.
+Drive faster.	Dirija rápido.
+Drive safely.	Dirija com cuidado.
+Drive slowly.	Dirija devagar.
+Examine them.	Examine-os.
+Fight or die.	Lute ou morra.
+Fish, please.	Peixe, por favor.
+Get upstairs.	Sobe.
+Get upstairs.	Suba.
+Get upstairs.	Subam.
+Get your own.	Pegue o seu próprio.
+Ghosts exist.	Fantasmas existem.
+Go away, Tom.	Vá embora, Tom!
+Go to school.	Vá para a escola.
+Go to school.	Vai à escola.
+Good evening.	Boa noite!
+Good morning.	Bom dia!
+Grab my hand.	Segure a minha mão.
+Happy Easter!	Feliz Páscoa!
+Happy Easter!	Feliz Páscoa.
+Has Tom come?	Tom veio?
+Has Tom gone?	O Tom foi?
+Has she come?	Ela veio?
+Have another.	Tome outro.
+Have another.	Tome outra.
+Have another.	Toma outro.
+Have another.	Toma outra.
+Have another.	Tomem outro.
+Have another.	Tomem outra.
+Have courage.	Tenha coragem.
+Have courage.	Tenham coragem.
+He avoids me.	Ele evita-me.
+He avoids me.	Ele me evita.
+He could die.	Ele poderia morrer.
+He dozed off.	Ele adormeceu.
+He got angry.	Ele ficou com raiva.
+He got angry.	Ele se enraiveceu.
+He has a car.	Ele tem um carro.
+He has a car.	Ele possui um carro.
+He has a car.	Ele tem um automóvel.
+He is French.	Ele é francês.
+He is a poet.	Ele é poeta.
+He is asleep.	Ele está dormindo.
+He is cranky.	Ele é ranzinza.
+He is eating.	Está comendo.
+He is eating.	Ele está a comer.
+He is heroic.	Ele é heroico.
+He is not in.	Ele não está dentro.
+He just left.	Ele acabou de sair.
+He kicked it.	Ele o chutou.
+He kicked it.	Ele chutou.
+He likes tea.	Ele gosta de chá.
+He lost face.	Ele perdeu prestígio.
+He lost face.	Ele perdeu a dignidade.
+He lost face.	Ele perdeu o respeito.
+He loved her.	Ele a amava.
+He loves her.	Ele a ama.
+He mocked me.	Ele zombou de mim.
+He needs you.	Ele precisa de você.
+He needs you.	Ele precisa de ti.
+He runs fast.	Ele corre rápido.
+He seems ill.	Ele parece doente.
+He shall die.	Ele deve morrer.
+He turned 16.	Ele fez dezesseis.
+He wants one.	Ele quer um.
+He was alone.	Ele estava só.
+He was alone.	Ele estava sozinho.
+He will come.	Ele virá.
+He will walk.	Ele vai caminhar.
+He will walk.	Ele irá caminhar.
+He's out now.	Ele não está aqui agora.
+He's too old.	Ele é muito velho.
+Hello, girls.	Oi, garotas.
+Hello, girls.	Oi, meninas.
+Hello, girls.	Olá, garotas.
+Hello, girls.	Olá, meninas.
+Help Tom out.	Ajude o Tom.
+Help Tom out.	Ajuda o Tom.
+Help me, Tom.	Ajude-me, Tom.
+Help us, Tom.	Ajude-nos, Tom.
+Here you are.	Aqui está você.
+Hey, it's me.	Ei, sou eu.
+How annoying!	Que chato!
+How arrogant!	Que arrogante!
+How barbaric!	Que bárbaro!
+How exciting!	Que massa!
+How pathetic!	Que patético!
+How romantic!	Que romântico!
+How touching!	Que tocante!
+How's school?	Como vai a escola?
+I admire you.	Eu te admiro.
+I almost won.	Eu quase ganhei.
+I always win.	Eu sempre ganho.
+I am Chinese.	Eu sou chinês.
+I am Chinese.	Sou chinês.
+I am a nurse.	Eu sou enfermeiro.
+I am a woman.	Sou mulher.
+I am a woman.	Eu sou uma mulher.
+I am at home.	Estou em casa.
+I am curious.	Eu sou curioso.
+I am curious.	Eu sou curiosa.
+I am curious.	Quero saber.
+I am in pain.	Estou com dor.
+I am injured.	Estou machucado.
+I am injured.	Estou machucada.
+I am married.	Eu sou casado.
+I am thirsty.	Tenho sede.
+I am thirsty.	Estou sedento.
+I am working.	Eu estou trabalhando.
+I am working.	Estou trabalhando.
+I ate apples.	Eu comi maçãs.
+I ate caviar.	Eu comi caviar.
+I bit my lip.	Eu mordo o lábio.
+I called Tom.	Eu liguei para o Tom.
+I came alone.	Eu vim sozinho.
+I came alone.	Eu vim sozinha.
+I can't cook.	Eu não sei cozinhar.
+I can't read.	Eu não sei ler.
+I can't stay.	Eu não posso ficar.
+I can't stop.	Não posso parar.
+I can't surf.	Eu não sei surfar.
+I can't swim.	Eu não sei nadar.
+I can't talk.	Não posso falar.
+I could help.	Eu pude ajudar.
+I could help.	Eu poderia ajudar.
+I cried, too.	Eu chorei também.
+I cry easily.	Eu choro facilmente.
+I cut myself.	Eu me cortei.
+I didn't ask.	Eu não perguntei.
+I didn't ask.	Eu não pedi.
+I didn't cry.	Eu não chorei.
+I didn't lie.	Eu não menti.
+I didn't pay.	Eu não paguei.
+I didn't win.	Eu não ganhei.
+I didn't win.	Eu não venci.
+I do hope so.	Eu realmente espero.
+I do hope so.	Realmente espero.
+I do my best.	Eu faço o que posso.
+I do want it.	Quero muito.
+I do want it.	Eu quero muito isso.
+I do want it.	Quero muito isso.
+I do want it.	Eu quero muito.
+I don't bite.	Eu não mordo.
+I don't bite.	Não mordo.
+I don't care.	Eu não me importo.
+I don't care.	Não estou nem aí.
+I don't cook.	Eu não cozinho.
+I don't know.	Eu não sei.
+I don't mind.	Eu não me importo.
+I don't mind.	Não me importo.
+I don't mind.	Eu não ligo.
+I don't read.	Eu não leio.
+I don't sing.	Eu não canto.
+I don't work.	Eu não trabalho.
+I drank milk.	Eu bebia leite.
+I drank milk.	Bebi leite.
+I drank milk.	Eu bebi leite.
+I drink milk.	Eu tomo leite.
+I drink wine.	Eu bebo vinho.
+I drive fast.	Eu dirijo rápido.
+I dug a hole.	Eu cavei um buraco.
+I enjoy that.	Eu gosto disso.
+I feel alive.	Sinto-me vivo.
+I feel dizzy.	Estou tonto.
+I feel happy.	Sinto-me feliz.
+I feel happy.	Eu me sinto feliz.
+I feel happy.	Me sinto feliz.
+I feel silly.	Eu me sinto idiota.
+I feel silly.	Me sinto idiota.
+I feel tired.	Sinto-me cansado.
+I feel tired.	Me sinto cansado.
+I fooled Tom.	Eu enganei Tom.
+I go to work.	Vou ao trabalho.
+I got caught.	Fui pego.
+I got hungry.	Eu fiquei com fome.
+I got scared.	Eu fiquei com medo.
+I got scared.	Fiquei com medo.
+I got soaked.	Eu fiquei ensopado.
+I had doubts.	Eu tinha dúvidas.
+I had to run.	Eu tive de correr.
+I handled it.	Eu lidei com isso.
+I hate beans.	Eu odeio feijão.
+I hate chess.	Eu detesto o xadrez.
+I hate opera.	Eu odeio ópera.
+I hate rules.	Eu odeio regras.
+I have a car.	Eu tenho um carro.
+I have a car.	Tenho um carro.
+I have a car.	Eu tenho carro.
+I have a cat.	Eu tenho um gato.
+I have a dog.	Eu tenho um cachorro.
+I have a pen.	Tenho uma caneta.
+I have a pen.	Eu tenho uma caneta.
+I have a son.	Eu tenho um filho.
+I have a son.	Tenho filho.
+I have money.	Eu tenho dinheiro.
+I have needs.	Eu tenho necessidades.
+I have plans.	Eu tenho planos.
+I have proof.	Eu tenho prova.
+I have to go.	Tenho de ir.
+I have twins.	Eu tenho gêmeos.
+I helped out.	Eu ajudei.
+I helped out.	Ajudei.
+I hope I win.	Eu espero que eu ganhe.
+I hope I win.	Eu espero que eu vença.
+I improvised.	Eu improvisei.
+I keep a dog.	Eu tenho um cachorro.
+I keep a dog.	Eu crio um cachorro.
+I kissed Tom.	Eu beijei Tom.
+I like China.	Eu gosto da China.
+I like candy.	Eu gosto de doce.
+I like chess.	Eu gosto de xadrez.
+I like chess.	Gosto de xadrez.
+I like fruit.	Eu gosto de fruta.
+I like fruit.	Eu gosto de frutas.
+I like girls.	Gosto de meninas.
+I like girls.	Gosto de garotas.
+I like girls.	Eu gosto de meninas.
+I like girls.	Eu gosto de garotas.
+I like music.	Eu gosto de música.
+I like pizza.	Eu gosto de pizza.
+I like sushi.	Eu gosto de sushi.
+I like these.	Gosto desses.
+I like these.	Eu gosto desses.
+I like women.	Eu gosto de mulheres.
+I live alone.	Eu moro sozinho.
+I live alone.	Eu moro sozinha.
+I lost again.	Eu perdi de novo.
+I love books.	Eu adoro livros.
+I love bread.	Eu amo pão.
+I love jokes.	Eu adoro piadas.
+I love pizza.	Eu amo pizza.
+I love trips.	Amo viagens.
+I made a bet.	Eu fiz uma aposta.
+I made it up.	Eu inventei.
+I met a girl.	Eu conheci uma garota.
+I missed you.	Senti sua falta.
+I missed you.	Senti saudade.
+I missed you.	Senti saudade!
+I missed you.	Senti sua falta!
+I missed you.	Senti tua falta!
+I must study.	Eu preciso estudar.
+I need a bag.	Preciso de uma bolsa.
+I need a car.	Eu preciso de um carro.
+I need a hat.	Preciso de um chapéu.
+I need a hug.	Eu preciso de um abraço.
+I need a hug.	Preciso de um abraço.
+I need a job.	Preciso de um trabalho.
+I need a job.	Eu preciso de um trabalho.
+I need a job.	Eu preciso de um emprego.
+I need a job.	Preciso de um emprego.
+I need a map.	Preciso de um mapa.
+I need a map.	Eu preciso de um mapa.
+I need a nap.	Preciso de um cochilo.
+I need a nap.	Eu preciso de um cochilo.
+I need a pen.	Eu preciso de uma caneta.
+I need money.	Eu preciso de dinheiro.
+I need money.	Necessito de dinheiro.
+I need money.	Preciso de dinheiro.
+I need money.	Eu necessito de dinheiro.
+I need paint.	Eu preciso de tinta.
+I need space.	Preciso de espaço.
+I need space.	Eu preciso de espaço.
+I need sugar.	Preciso de açúcar.
+I need sugar.	Eu preciso de açúcar.
+I need water.	Eu preciso de água.
+I needed Tom.	Eu precisava de Tom.
+I often read.	Eu leio frequentemente.
+I often read.	Leio frequentemente.
+I phoned him.	Eu liguei para ele.
+I phoned him.	Liguei para ele.
+I play piano.	Eu toco piano.
+I raised Tom.	Eu criei Tom.
+I rarely cry.	Eu raramente choro.
+I read a lot.	Leio muito.
+I read a lot.	Eu leio muito.
+I said maybe.	Eu disse talvez.
+I scared Tom.	Eu assustei Tom.
+I see a book.	Vejo um livro.
+I see a rose.	Vejo a rosa.
+I see a rose.	Vejo uma rosa.
+I see a rose.	Estou vendo uma rosa.
+I see a star.	Vejo uma estrela.
+I see a star.	Estou vendo uma estrela.
+I sell shoes.	Vendo sapatos.
+I sell shoes.	Eu vendo sapatos.
+I set a trap.	Eu coloquei uma armadilha.
+I set a trap.	Coloquei uma armadilha.
+I shoved Tom.	Eu empurrei o Tom.
+I slept fine.	Eu dormi bem.
+I still care.	Eu ainda me importo.
+I suppose so.	Suponho que sim.
+I sympathize.	Eu me simpatizo.
+I sympathize.	Me simpatizo.
+I talk a lot.	Eu falo muito.
+I teach here.	Eu leciono aqui.
+I teach here.	Eu dou aulas aqui.
+I took a cab.	Eu peguei um táxi.
+I understand.	Eu entendo.
+I understand.	Eu compreendo.
+I understand.	Entendo.
+I understand.	Compreendo!
+I understood.	Entendi.
+I understood.	Eu entendi.
+I want a dog.	Eu quero um cachorro.
+I want money.	Eu quero dinheiro.
+I want these.	Eu quero aqueles.
+I want these.	Quero aqueles.
+I want these.	Quero aquelas.
+I want to go.	Quero ir.
+I was afraid.	Eu estava com medo.
+I was asleep.	Eu estava dormindo.
+I was hiding.	Eu estava me escondendo.
+I was hungry.	Eu estava com fome.
+I was joking.	Eu estava brincando.
+I was robbed.	Eu fui roubado.
+I was sleepy.	Eu estava com sono.
+I was square.	Eu era quadrado.
+I was stupid.	Eu fui estúpido.
+I went there.	Eu fui lá.
+I went twice.	Eu fui duas vezes.
+I will fight.	Eu vou lutar.
+I will learn.	Eu vou aprender.
+I will learn.	Vou aprender.
+I will learn.	Eu irei aprender.
+I will learn.	Irei aprender.
+I will learn.	Eu aprenderei.
+I will learn.	Aprenderei.
+I will shoot.	Eu vou atirar.
+I will shoot.	Eu irei atirar.
+I will shoot.	Vou atirar.
+I will shoot.	Irei atirar.
+I won't bite.	Eu não vou morder.
+I won't bite.	Não vou morder.
+I won't bite.	Eu não irei morder.
+I won't bite.	Não irei morder.
+I won't come.	Eu não irei.
+I won't lose!	Eu não vou perder!
+I won't tell.	Eu não vou dizer.
+I won't tell.	Eu não vou contar.
+I work a lot.	Trabalho muito.
+I'd buy that.	Eu compraria aquilo.
+I'd buy that.	Eu compraria aquele.
+I'll ask Tom.	Eu vou perguntar para o Tom.
+I'll ask Tom.	Vou perguntar para o Tom.
+I'll ask Tom.	Eu perguntarei ao Tom.
+I'll ask Tom.	Perguntarei ao Tom.
+I'll ask Tom.	Eu irei perguntar ao Tom.
+I'll ask Tom.	Irei perguntar ao Tom.
+I'll ask him.	Irei perguntá-lo.
+I'll be back.	Eu já volto.
+I'll be fine.	Eu vou ficar bem.
+I'll be fine.	Vou ficar bem.
+I'll be here.	Estarei aqui.
+I'll be late.	Eu vou me atrasar.
+I'll be late.	Vou me atrasar.
+I'll do that.	Farei isto.
+I'll do this.	Eu vou fazer.
+I'll do this.	Vou fazer.
+I'll do this.	Vou fazer isso.
+I'll do this.	Eu vou fazer isso.
+I'll do this.	Eu o farei.
+I'll explain.	Explicarei.
+I'll get ice.	Eu vou pegar gelo.
+I'll get ice.	Vou pegar gelo.
+I'll get you.	Vou te pegar.
+I'll go back.	Eu voltarei.
+I'll go back.	Eu vou voltar.
+I'll go home.	Eu vou para casa.
+I'll kill it.	Eu o matarei.
+I'll open it.	Eu vou abrir.
+I'll pay you.	Eu vou te pagar.
+I'll pay you.	Vou te pagar.
+I'll pay you.	Irei te pagar.
+I'll pay you.	Eu irei te pagar.
+I'll read it.	Eu vou ler.
+I'll see Tom.	Eu vou ver o Tom.
+I'll see Tom.	Eu verei o Tom.
+I'll sue you.	Eu vou te processar.
+I'm Canadian.	Eu sou canadense.
+I'm a client.	Eu sou cliente.
+I'm a doctor.	Eu sou médico.
+I'm a doctor.	Sou médico.
+I'm a farmer.	Eu sou um agricultor.
+I'm a farmer.	Eu sou um fazendeiro.
+I'm a farmer.	Sou um agricultor.
+I'm a farmer.	Sou um fazendeiro.
+I'm a father.	Sou um pai.
+I'm a father.	Sou pai.
+I'm a father.	Eu sou um pai.
+I'm a father.	Eu sou pai.
+I'm a genius.	Eu sou um gênio.
+I'm a purist.	Sou um purista.
+I'm a writer.	Eu sou escritor.
+I'm addicted.	Estou viciado.
+I'm all ears.	Sou todo ouvidos.
+I'm an actor.	Sou ator.
+I'm an adult.	Eu sou adulto.
+I'm an adult.	Eu sou adulta.
+I'm athletic.	Eu sou atlético.
+I'm athletic.	Sou atlético.
+I'm autistic.	Eu sou autista.
+I'm autistic.	Sou autista.
+I'm bleeding.	Estou sangrando.
+I'm bluffing.	Estou blefando.
+I'm busy now.	Estou ocupado agora.
+I'm confused.	Estou confuso.
+I'm creative.	Eu sou criativo.
+I'm creative.	Sou criativo.
+I'm decisive.	Sou decisivo.
+I'm diabetic.	Eu sou diabético.
+I'm diabetic.	Sou diabético.
+I'm doing OK.	Estou bem.
+I'm doing OK.	Eu estou bem.
+I'm drowning.	Estou me afogando.
+I'm dyslexic.	Eu sou disléxico.
+I'm dyslexic.	Sou disléxico.
+I'm escaping.	Eu estou escapando.
+I'm escaping.	Eu estou fugindo.
+I'm fighting.	Eu estou lutando.
+I'm fine now.	Estou bem agora.
+I'm fine now.	Eu estou bem agora.
+I'm finished.	Já terminei.
+I'm free now.	Eu estou livre agora.
+I'm free now.	Agora eu sou livre.
+I'm freezing.	Estou congelando.
+I'm grounded.	Estou de castigo.
+I'm homeless.	Sou desabrigado.
+I'm homesick.	Estou com saudade de casa.
+I'm horrible.	Eu sou horrível!
+I'm horrible.	Sou horrível!
+I'm horrible.	Eu estou horrível!
+I'm horrible.	Estou horrível!
+I'm in Paris.	Estou em Paris.
+I'm in Paris.	Eu estou em Paris.
+I'm in Perth.	Estou em Perth.
+I'm innocent.	Eu sou inocente.
+I'm involved.	Eu estou envolvido.
+I'm involved.	Estou envolvido.
+I'm like Tom.	Sou como o Tom.
+I'm like Tom.	Eu sou como o Tom.
+I'm managing.	Estou conseguindo.
+I'm not bald.	Não sou careca.
+I'm not bald.	Eu não sou careca.
+I'm not busy.	Eu não estou ocupado.
+I'm not cool.	Eu não sou legal.
+I'm not dead.	Eu não estou morto.
+I'm not dead.	Não estou morto.
+I'm not deaf.	Eu não sou surdo.
+I'm not deaf.	Não sou surdo.
+I'm not done.	Eu ainda não estou pronto.
+I'm not done.	Ainda não estou pronto.
+I'm not dumb.	Eu não sou burro.
+I'm not free.	Não estou livre.
+I'm not free.	Eu não sou livre.
+I'm not here.	Eu não estou aqui.
+I'm not home.	Não estou em casa.
+I'm not lazy.	Não sou preguiçoso.
+I'm not poor.	Não sou pobre.
+I'm not poor.	Não estou pobre.
+I'm not rich.	Eu não estou rico.
+I'm not rich.	Não sou rico.
+I'm not safe.	Eu não estou seguro.
+I'm not sick.	Eu não estou doente.
+I'm not sure.	Eu não tenho certeza.
+I'm not tall.	Não sou alto.
+I'm not tall.	Eu não sou alto.
+I'm not ugly.	Eu não sou feio.
+I'm not ugly.	Não sou feio.
+I'm not well.	Eu não estou me sentindo bem.
+I'm offended.	Estou ofendido.
+I'm on leave.	Estou de partida.
+I'm out here.	Estou aqui fora.
+I'm pregnant.	Eu estou grávida.
+I'm prepared.	Estou preparado.
+I'm prepared.	Estou preparada.
+I'm punctual.	Sou pontual.
+I'm rational.	Eu sou racional.
+I'm reliable.	Eu sou confiável.
+I'm reserved.	Eu sou reservado.
+I'm safe now.	Estou seguro agora.
+I'm safe now.	Eu estou seguro agora.
+I'm sleeping.	Estou dormindo.
+I'm so bored.	Estou muito entediado.
+I'm so bored.	Eu estou muito entediado.
+I'm so happy.	Estou tão feliz.
+I'm so happy.	Eu sou tão feliz.
+I'm so happy.	Estou muito feliz.
+I'm so happy.	Eu sou muito feliz.
+I'm so sorry.	Eu sinto muito.
+I'm so tired!	Estou tão cansado!
+I'm sociable.	Eu sou sociável.
+I'm speaking.	Eu estou falando.
+I'm standing.	Eu estou de pé.
+I'm starving!	Estou morrendo de fome!
+I'm starving!	Estou morrendo de fome.
+I'm starving!	Estou faminto!
+I'm starving!	Eu estou morrendo de fome!
+I'm the best.	Eu sou o melhor.
+I'm the last.	Eu sou o último.
+I'm thinking.	Estou pensando.
+I'm ticklish.	Eu sinto cócegas.
+I'm too busy.	Estou muito ocupado.
+I'm very fat.	Sou muito gordo.
+I'm very fat.	Sou muito gorda.
+I'm very sad.	Estou muito triste.
+I'm very sad.	Eu estou muito triste.
+I'm very shy.	Eu sou muito tímido.
+I'm very shy.	Sou muito tímido.
+I'm with NTT.	Eu trabalho na NTT.
+I'm with Tom.	Eu estou com o Tom.
+I'm with Tom.	Estou com o Tom.
+I'm with Tom.	Eu estou com Tom.
+I'm with Tom.	Estou com Tom.
+I'm with him.	Estou com ele.
+I'm worn out.	Estou exausto.
+I'm your age.	Tenho a sua idade.
+I've changed.	Eu mudei.
+I've decided.	Eu decidi.
+I've decided.	Decidi.
+I've done it.	Eu o fiz.
+I've done it.	Eu fiz.
+I've lost it.	Eu o perdi.
+I've lost it.	Perdi-o.
+I've no idea.	Não faço ideia.
+I've no idea.	Não tenho ideia.
+I've seen it.	Eu o vi.
+I've seen it.	Eu vi isso.
+Iron is hard.	O ferro é duro.
+Is Tom alive?	O Tom está vivo?
+Is Tom alone?	O Tom está sozinho?
+Is Tom awake?	O Tom está acordado?
+Is Tom cured?	O Tom está curado?
+Is Tom drunk?	O Tom está bêbado?
+Is Tom happy?	Tom está feliz?
+Is Tom lying?	O Tom está mentindo?
+Is Tom ready?	Tom está pronto?
+Is Tom there?	O Tom está lá?
+Is it a joke?	É uma piada?
+Is it a trap?	É uma armadilha?
+Is it a wolf?	É um lobo?
+Is it a wolf?	Isso é um lobo?
+Is it an elk?	É um alce?
+Is it broken?	Está quebrado?
+Is it broken?	Tá quebrado?
+Is it cancer?	É câncer?
+Is it cloudy?	Está nublado?
+Is it for me?	É para mim?
+Is it for me?	Isso é pra mim?
+Is it for me?	Isso é para mim?
+Is it normal?	Isso é normal?
+Is that a no?	Isso é um não?
+Is that mine?	Isso é meu?
+Is that mine?	Esse é o meu?
+Is that mine?	Essa é minha?
+Is that mine?	Essa é a minha?
+Is that okay?	Tudo bem?
+Is that okay?	Está bem?
+Is this cool?	Isto é legal?
+Is this love?	Isso é o amor?
+Is this mine?	Isso é meu?
+Is this mine?	Esse é o meu?
+Is this mine?	Essa é minha?
+Is this mine?	Essa é a minha?
+Is this nice?	Isto é legal?
+Is this real?	Isso é de verdade?
+Is this real?	Isso é real?
+Is this true?	É verdade?
+Is this true?	Isso é verdade?
+Is this true?	Isto é verdade?
+Isn't it fun?	Não é divertido?
+It amazed me.	Surpreendeu-me.
+It has begun.	Começou.
+It is a book.	Isso é um livro.
+It is a book.	Este é um livro.
+It is my cat.	Este é o meu gato.
+It is my cat.	É o meu gato.
+It is not so.	Não é assim.
+It is unfair.	Isso é injusto.
+It isn't Tom.	Esse não é o Tom.
+It isn't Tom.	Não é o Tom.
+It scared me.	Assustou-me.
+It scares me.	Isso me assusta.
+It was Tom's.	Era de Tom.
+It was a bet.	Era uma aposta.
+It was empty.	Estava vazio.
+It was funny.	Foi engraçado.
+It was magic.	Foi mágico.
+It was night.	Era noite.
+It was weird.	Foi estranho.
+It was white.	Era branco.
+It was worse.	Foi pior.
+It wasn't me.	Não fui eu.
+It will burn.	Vai queimar.
+It will burn.	Isso vai queimar.
+It will work.	Vai funcionar.
+It'll be fun.	Será divertido.
+It'll happen.	Isso vai acontecer.
+It'll happen.	Isso irá acontecer.
+It's a curse.	Isso é uma maldição.
+It's a curse.	É uma maldição.
+It's a fruit.	É uma fruta.
+It's a plant.	É uma planta.
+It's a rumor.	É um boato.
+It's a rumor.	É boato.
+It's a shame.	É uma vergonha.
+It's a steal.	É um roubo.
+It's a steal.	Isso é um roubo.
+It's a trick.	É um truque.
+It's a waste.	É um desperdício.
+It's all wet.	Está tudo molhado.
+It's amazing.	Isso é incrível!
+It's an omen.	É um presságio.
+It's at home.	Está em casa.
+It's awesome.	É demais!
+It's awkward.	É constrangedor.
+It's bizarre.	É bizarro.
+It's for Tom.	É para Tom.
+It's for you.	É para você.
+It's for you.	Isso é para você.
+It's for you.	Isso é para vocês.
+It's for you.	É para vocês.
+It's garbage.	É lixo.
+It's hailing.	Está chovendo granizo.
+It's missing.	Está faltando.
+It's my book.	Esse é meu livro.
+It's my book.	Este é meu livro.
+It's my life.	É minha vida.
+It's my ship.	É o meu navio.
+It's no good.	Não é bom.
+It's not Tom.	Esse não é o Tom.
+It's not Tom.	Não é o Tom.
+It's nothing.	Isso não é nada.
+It's our car.	É o nosso carro.
+It's perfect.	Está perfeito.
+It's perfect.	Isto é perfeito.
+It's perfect.	É perfeito.
+It's perfect.	Isso é perfeito.
+It's perfect.	Isso está perfeito.
+It's serious.	Isto é sério.
+It's similar.	É parecida.
+It's similar.	É parecido.
+It's snowing.	Está nevando.
+It's so cute.	É tão fofo.
+It's so dark.	Está tão escuro.
+It's so dark.	É tão escuro.
+It's strange.	É bizarro.
+It's the law.	É a lei.
+It's too big.	É muito grande.
+It's too far.	É longe demais.
+It's too far.	Está longe demais.
+It's too far.	Isso é longe demais.
+It's too far.	Isso está longe demais.
+It's too far.	Isto está longe demais.
+It's too hot.	Está quente demais.
+It's too hot.	Está muito quente.
+It's unusual.	É incomum.
+It's working.	Está funcionando.
+Just do that.	Apenas faça.
+Keep dancing.	Continue dançando.
+Keep dancing.	Continuem dançando.
+Keep digging.	Continue cavando.
+Keep digging.	Continuem cavando.
+Keep driving.	Continue dirigindo.
+Keep focused.	Mantenha-se focado.
+Keep focused.	Mantenha o foco.
+Keep looking.	Fique olhando.
+Keep reading.	Continue lendo.
+Keep running.	Continue correndo.
+Keep singing.	Continue cantando.
+Keep smiling.	Continue sorrindo.
+Keep talking.	Continue falando.
+Keep walking.	Continue caminhando.
+Keep walking.	Continuem caminhando.
+Keep working.	Continue trabalhando.
+Keep working.	Continuem trabalhando.
+Keep writing.	Continue escrevendo.
+Keep writing.	Continuem escrevendo.
+Ladies first.	Primeiro as damas.
+Ladies first.	As damas primeiro.
+Let Tom rest.	Deixe Tom descansar.
+Let go of it.	Solte isso.
+Let go of me!	Solte-me!
+Let go of me.	Solte-me!
+Let me alone.	Me deixa quieto.
+Let me alone.	Deixa-me em paz.
+Let me leave!	Deixa-me sair!
+Let me leave!	Deixe-me ir embora!
+Let me sleep.	Deixe-me dormir.
+Let me speak.	Deixe-me falar.
+Let's go eat.	Vamos comer.
+Let's go out.	Vamos sair.
+Let's listen.	Vamos ouvir.
+Let's review.	Vamos revisar.
+Let's see it.	Vamos ver.
+Let's try it.	Vamos tentar.
+Life is good.	A vida é boa.
+Life is hard.	A vida é dura.
+Life's short.	A vida é curta.
+Look at that.	Olhe para aquilo.
+Look at that.	Olhe para isso.
+Look at that.	Olhem para aquilo.
+Look at that.	Olhem para isso.
+Look closely.	Olhe de perto.
+Mary came in.	Mary entrou.
+Mary giggled.	Maria deu risadinhas.
+Mary giggled.	Mary ria à socapa.
+Mary giggled.	Mary riu-se à socapa.
+Mary is mine.	A Mary é minha.
+Mary is mine.	Mary é minha.
+Mary is tall.	Mary é alta.
+Math is hard.	Matemática é difícil.
+Meat, please.	Carne, por favor.
+Men cry, too.	Homens também choram.
+Move quietly.	Saia sem fazer ruído.
+Must I hurry?	Devo me apressar?
+My arm hurts.	O meu braço está doendo.
+My eyes hurt.	Meus olhos estão doendo.
+My eyes hurt.	Meus olhos doem.
+My eyes hurt.	Doem-me os olhos.
+My eyes hurt.	Os meus olhos estão doendo.
+My eyes itch.	Meus olhos coçam.
+My feet hurt.	Os meus pés estão doendo.
+My feet hurt.	Meus pés doem.
+My hip hurts.	O meu quadril está doendo.
+My jaw hurts.	Minha mandíbula dói.
+My leg hurts.	Minha perna dói.
+My legs hurt.	As minhas pernas estão doendo.
+No objection.	Sem objeções.
+No one cared.	Ninguém ligou.
+No one cared.	Ninguém se importou.
+No one cares.	Ninguém está nem aí.
+No one cares.	Ninguém se importa.
+No one knows.	Ninguém sabe.
+No one knows.	Ninguém faz ideia.
+Nobody asked.	Ninguém perguntou.
+Nobody cares.	Ninguém está nem aí.
+Nobody cares.	Ninguém se importa.
+Nobody knows.	Ninguém sabe.
+Nobody slept.	Ninguém dormiu.
+Now I get it.	Agora eu entendi.
+Now I'm sure.	Agora eu tenho certeza.
+Now I'm sure.	Agora estou convicto.
+Now leave me.	Agora me deixe.
+Now sit down.	Agora sente.
+Now sit down.	Agora senta.
+Now sit down.	Agora sente-se.
+Open the box.	Abre a caixa.
+Pick that up.	Pegue aquele.
+Please hurry!	Por favor, apresse-se!
+Please hurry!	Por favor, apressem-se!
+Please hurry.	Por favor, apresse-se!
+Please hurry.	Por favor, apressem-se!
+Please hurry.	Apresse-se, por favor!
+Please hurry.	Apressem-se, por favor!
+Please hurry.	Despacha-te, por favor.
+Please hurry.	Despachem-se, por favor.
+Please leave.	Saia, por favor.
+Please leave.	Abandone o recinto, por favor.
+Please leave.	Vá embora, por favor.
+Please relax.	Por favor, acalme-se.
+Please relax.	Por favor, relaxe.
+Please smile.	Sorria, por favor.
+Please smile.	Por favor, sorria!
+Point it out.	Indique.
+Put it there.	Coloque-o ali.
+Recess ended.	O recreio terminou.
+Run and hide.	Corre e esconde-te.
+Run and hide.	Corra e esconda-se.
+Say it again.	Repita.
+See you soon!	Até logo!
+Set Tom free.	Liberte Tom.
+Set Tom free.	Libertem Tom.
+She can swim.	Ela pode nadar.
+She can swim.	Ela consegue nadar.
+She is eight.	Ela tem oito anos.
+She is happy.	Ela está feliz.
+She is happy.	Ela é feliz.
+She is lucky.	Ela tem sorte.
+She is wrong.	Ela está errada.
+She is wrong.	Ela está equivocada.
+She is young.	Ela é jovem.
+She knows me.	Ela me conhece.
+She loves us.	Ela nos ama.
+She may come.	Pode que ela venha.
+She needs it.	Ela precisa disso.
+She shot him.	Ela atirou nele.
+She sued him.	Ela o processou.
+She was busy.	Ela estava ocupada.
+She's pretty.	É bonita.
+She's stupid.	Ela é burra.
+Should we go?	Nós deveríamos ir?
+Shut it down.	Desliga isso.
+Shut it down.	Desliga.
+Sing with us.	Cante conosco.
+Someone came.	Alguém veio.
+Speak slower.	Fale mais devagar.
+Stay a while.	Fique um pouco.
+Stay focused.	Mantenha-se focado.
+Stay focused.	Se mantenha focado.
+Stay with us.	Fique conosco.
+Stay with us.	Fiquem conosco.
+Step forward.	Um passo à frente.
+Stop arguing.	Pare de discutir.
+Stop gawking.	Não fique aí babando.
+Stop reading.	Pare de ler.
+Stop singing.	Pare de cantar.
+Stop smoking.	Pare de fumar.
+Stop smoking.	Parem de fumar.
+Stop smoking.	Para de fumar.
+Stop staring.	Pare de encarar.
+Stop talking.	Pare de falar.
+Stop talking.	Para de falar.
+Stop whining.	Pare de choramingar.‎
+Stop yelling!	Pare de gritar!
+Stop yelling.	Pare de gritar.
+Stop yelling.	Para de gritar.
+Sweet dreams!	Bons sonhos!
+Take a whiff.	Dê uma cheirada.
+Take command.	Assuma o comando.
+Take command.	Assuma o controle.
+Take it away.	Tire isso!
+Take it easy!	Pega leve.
+Take it easy!	Tenha calma!
+Take it easy.	Pega leve.
+Take it easy.	Pegue leve.
+Take it easy.	Acalme-se!
+Take the bus.	Vá de ônibus.
+Tell Tom why.	Diga a Tom o porquê.
+Tell me more.	Fale mais.
+Tell me more.	Conte-me mais!
+Thanks a lot.	Muito obrigado.
+Thanks a lot.	Muito obrigada.
+Thanks again.	Obrigado novamente.
+That does it.	Tom faz.
+That does it.	Tom faz isso.
+That does it.	O Tom faz.
+That does it.	O Tom faz isso.
+That is mine.	Isso é meu.
+That was odd.	Isso foi estranho.
+That was odd.	Foi estranho.
+That will do.	Isso bastará.
+That'll help.	Isso vai ajudar.
+That's a lie.	Isso é mentira.
+That's a lie.	Aquilo é mentira.
+That's a lot!	É muito!
+That's crazy!	Que loucura!
+That's crazy!	Isso é loucura!
+That's cruel.	Isso é cruel.
+That's great!	Que bom!
+That's great.	Que bom!
+That's my CD.	É o meu CD.
+That's right.	Exatamente!
+That's trash.	Isso é lixo.
+That's trash.	É lixo.
+That's weird.	Isso é esquisito.
+They approve.	Elas aprovam.
+They approve.	Eles aprovam.
+They approve.	Aprovam.
+They are big.	Eles são grandes.
+They are big.	Elas são grandes.
+They came in.	Eles entraram.
+They cheered.	Elas aplaudiram.
+They cheered.	Eles aplaudiram.
+They crashed.	Eles colidiram.
+They crashed.	Elas colidiram.
+They crashed.	Eles bateram.
+They crashed.	Elas bateram.
+They escaped.	Eles escaparam.
+They escaped.	Escaparam.
+They gave up.	Eles desistiram.
+They gave up.	Elas desistiram.
+They hate me.	Eles me odeiam.
+They hate me.	Elas me odeiam.
+They hate me.	Me odeiam.
+They know me.	Eles me conhecem.
+They know us.	Eles nos conhecem.
+They know us.	Elas nos conhecem.
+They laughed.	Eles riram.
+They love me.	Eles me amam.
+They refused.	Eles recusaram.
+They said no.	Eles disseram que não.
+They saw Tom.	Ele viram Tom.
+They saw you.	Eles viram você.
+They saw you.	Eles viram vocês.
+They stopped.	Eles pararam.
+They sweated.	Eles suaram.
+They want me.	Eles me querem.
+They want me.	Elas me querem.
+They'll call.	Eles vão chamar.
+They'll call.	Eles chamarão.
+They'll fail.	Eles fracassarão.
+They'll fail.	Elas fracassarão.
+They'll grow.	Eles crescerão.
+They'll grow.	Elas crescerão.
+They'll know.	Eles vão saber.
+They'll know.	Eles saberão.
+They're back.	Eles voltaram.
+They're back.	Elas voltaram.
+They're boys.	Eles são meninos.
+They're boys.	São meninos.
+They're busy.	Eles estão ocupados.
+They're busy.	Elas estão ocupadas.
+They're cool.	Eles são legais.
+They're cool.	Elas são legais.
+They're evil.	Eles são maus.
+They're evil.	Elas são más.
+They're fast.	Eles são rápidos.
+They're fast.	Elas são rápidas.
+They're fine.	Eles estão bem.
+They're gone.	Elas foram embora.
+They're gone.	Eles foram embora.
+They're gone.	Eles se foram.
+They're gone.	Elas se foram.
+They're here.	Elas estão aqui.
+They're home.	Elas estão em casa.
+They're home.	Eles estão em casa.
+They're kids.	São crianças.
+They're kids.	Eles são crianças.
+They're kids.	Elas são crianças.
+They're late.	Eles estão atrasados.
+They're lost.	Eles estão perdidos.
+They're mine.	São meus.
+They're mine.	Eles são meus.
+They're safe.	Eles estão seguros.
+They're ugly.	Eles são feios.
+They're weak.	Eles são fracos.
+They've gone.	Eles se foram.
+They've gone.	Elas se foram.
+This is cool.	Isto é legal.
+This is easy.	Isso é fácil.
+This is easy.	É fácil.
+This is easy.	Isto é fácil.
+This is fine.	Está perfeito.
+This is food.	Isso é comida.
+This is free.	É de graça.
+This is free.	É grátis.
+This is free.	É gratuito.
+This is free.	Isso é de graça.
+This is gold.	Isso é ouro.
+This is hard.	Isto é difícil.
+This is hers.	Isso é dela.
+This is mine.	Isso é meu.
+This is mine.	Isto é meu.
+This is nice.	Isso é legal.
+This is nice.	É legal.
+This is ours.	Isso é nosso.
+This is real.	É real.
+This is real.	Isso é real.
+This was fun.	Isto foi divertido.
+This'll help.	Isso vai ajudar.
+This'll work.	Isso vai funcionar.
+Tom answered.	Tom respondeu.
+Tom approved.	O Tom aprovou.
+Tom approves.	Tom aprova.
+Tom broke it.	Tom quebrou isso.
+Tom broke it.	O Tom quebrou isso.
+Tom broke it.	Tom quebrou-o.
+Tom can cook.	Tom sabe cozinhar.
+Tom can sing.	Tom sabe cantar.
+Tom can talk.	Tom sabe falar.
+Tom can walk.	Tom sabe andar.
+Tom can't go.	Tom não pode ir.
+Tom canceled.	Tom cancelou.
+Tom chuckled.	Tom deu uma risada discreta.
+Tom did that.	Tom fez aquilo.
+Tom did this.	Tom fez isto.
+Tom enlisted.	Tom se alistou.
+Tom felt sad.	Tom se sentiu triste.
+Tom finished.	Tom terminou.
+Tom finished.	O Tom terminou.
+Tom fired me.	O Tom me despediu.
+Tom flinched.	Tom recuou.
+Tom got away.	Tom fugiu.
+Tom got lost.	Tom se perdeu.
+Tom got sick.	Tom adoeceu.
+Tom got sick.	Tom ficou doente.
+Tom grimaced.	Tom fez uma careta.
+Tom grumbled.	Tom resmungou.
+Tom has come.	O Tom veio.
+Tom has left.	Tom foi embora.
+Tom has time.	Tom tem tempo.
+Tom hates TV.	O Tom detesta TV.
+Tom hates TV.	Tom detesta TV.
+Tom hates it.	O Tom odeia isso.
+Tom hates it.	Tom odeia.
+Tom hates me.	Tom me odeia.
+Tom helps us.	Tom nos ajuda.
+Tom insisted.	Tom insistiu.
+Tom is a fan.	Tom é um fã.
+Tom is a pig.	Tom é um porco!
+Tom is a pro.	Tom é profissional.
+Tom is a spy.	O Tom é espião.
+Tom is a vet.	Tom é um veterano.
+Tom is alive.	Tom está vivo.
+Tom is alone.	Tom está sozinho.
+Tom is angry.	Tom está com raiva.
+Tom is awake.	O Tom está acordado.
+Tom is blind.	Tom é cego.
+Tom is blind.	O Tom é cego.
+Tom is bored.	Tom está entediado.
+Tom is crazy.	O Tom é louco.
+Tom is drunk.	Tom está bêbado.
+Tom is drunk.	Tom está embriagado.
+Tom is dying.	Tom está morrendo.
+Tom is early.	Tom está adiantado.
+Tom is early.	O Tom está adiantado.
+Tom is funny.	Tom é engraçado.
+Tom is fussy.	Tom é muito exigente.
+Tom is going.	Tom está indo.
+Tom is happy.	Tom está feliz.
+Tom is happy.	Tom é feliz.
+Tom is heavy.	Tom é pesado.
+Tom is heavy.	Tom está pesado.
+Tom is lucky.	Tom é sortudo.
+Tom is lucky.	O Tom tem sorte.
+Tom is lying.	Tom está mentindo.
+Tom is my ex.	Tom é meu ex.
+Tom is naive.	Tom é ingênuo.
+Tom is naked.	O Tom está nu.
+Tom is nasty.	O Tom é repugnante.
+Tom is on TV.	Tom está na TV.
+Tom is picky.	Tom é exigente.
+Tom is pushy.	Tom é agressivo.
+Tom is scary.	Tom é assustador.
+Tom is short.	O Tom é baixo.
+Tom is small.	Tom é pequeno.
+Tom is smart.	Tom é inteligente.
+Tom is there.	Tom está lá.
+Tom is there.	O Tom está lá.
+Tom is timid.	Tom é tímido.
+Tom is tired.	O Tom está cansado.
+Tom is tired.	Tom está cansado.
+Tom is upset.	Tom está chateado.
+Tom is weird.	O Tom está estranho.
+Tom is witty.	Tom é espirituoso.
+Tom is wrong.	O Tom está errado.
+Tom is young.	O Tom está jovem.
+Tom is young.	O Tom é jovem.
+Tom isn't OK.	Tom não está bem.
+Tom isn't in.	Tom não está dentro.
+Tom isn't in.	O Tom não está dentro.
+Tom knows me.	Tom me conhece.
+Tom knows us.	Tom nos conhece.
+Tom liked it.	Tom gostou.
+Tom likes it.	O Tom gosta disso.
+Tom likes it.	Tom gosta disso.
+Tom likes it.	Tom gosta.
+Tom likes it.	O Tom gosta,
+Tom likes me.	Tom gosta de mim.
+Tom likes me.	O Tom gosta de mim.
+Tom listened.	Tom escutou.
+Tom loves me.	Tom me ama.
+Tom met Mary.	Tom conheceu Mary.
+Tom needs me.	Tom precisa de mim.
+Tom panicked.	Tom entrou em pânico.
+Tom promised.	Tom prometeu.
+Tom resigned.	Tom renunciou.
+Tom said yes.	Tom disse sim.
+Tom said yes.	Tom disse que sim.
+Tom said yes.	O Tom disse sim.
+Tom said yes.	O Tom disse que sim.
+Tom saved me.	Tom me salvou.
+Tom saw Mary.	Tom viu Maria.
+Tom saw them.	Tom viu eles.
+Tom saw them.	Tom viu elas.
+Tom screamed.	Tom gritou.
+Tom shot her.	Tom atirou nela.
+Tom shrugged.	Tom deu de ombros.
+Tom stutters.	Tom gagueja.
+Tom survived.	Tom sobreviveu.
+Tom told him.	Tom disse a ele.
+Tom told him.	Tom contou para ele.
+Tom took off.	O Tom foi embora.
+Tom vanished.	Tom desapareceu.
+Tom wants it.	Tom quer.
+Tom wants it.	O Tom quer.
+Tom wants it.	Tom quer isso.
+Tom wants it.	O Tom quer isso.
+Tom was busy.	Tom estava ocupado.
+Tom was fast.	Tom foi rápido.
+Tom was gone.	O Tomás foi-se embora.
+Tom was kind.	Tom foi gentil.
+Tom was late.	Tom estava atrasado.
+Tom was rude.	Tom foi grosseiro.
+Tom was sick.	Tom estava doente.
+Tom went out.	Tom saiu.
+Tom whistled.	Tom assobiou.
+Tom will cry.	Tom vai chorar.
+Tom will die.	Tom vai morrer.
+Tom will pay.	Tom vai pagar.
+Tom will try.	Tom vai tentar.
+Tom will win.	Tom vai vencer.
+Tom'll speak.	Tom vai falar.
+Tom's afraid.	Tom está com medo.
+Tom's asleep.	O Tom está dormindo.
+Tom's asleep.	Tom está dormindo.
+Tom's coming.	Tom está vindo.
+Tom's coming.	Tom virá.
+Tom's crying.	Tom está chorando.
+Tom's eating.	Tom está comendo.
+Tom's eating.	O Tom está comendo.
+Tom's famous.	Tom é famoso.
+Tom's greedy.	Tom é ganancioso.
+Tom's groggy.	Tom está grogue.
+Tom's hungry.	Tom está com fome.
+Tom's lonely.	O Tom está solitário.
+Tom's not in.	Tom não está dentro.
+Tom's not in.	O Tom não está dentro.
+Tom's polite.	Tom é educado.
+Tom's polite.	O Tom é educado.
+Tom's skiing.	Tom está esquiando.
+Tom's stoned.	Tom está chapado.
+Tom's strong.	Tom é forte.
+Tom's thirty.	O Tom tem trinta anos.
+Tom's unsure.	O Tom está em dúvida.
+Tom, wake up.	Tom, acorde.
+Tom, wake up.	Tom, acorda.
+Trust in God.	Confia em Deus.
+Trust in God.	Confie em Deus.
+Trust no one.	Não confie em ninguém.
+Try the cake.	Experimente o bolo.
+Try to relax.	Tente relaxar.
+Try to sleep.	Tente dormir.
+Turn it over.	Vire ao contrário.
+Unbelievable!	Incrível!
+Unbelievable!	Inacreditável!
+Vote for Tom.	Vote em Tom.
+Wait a while.	Espere um momento.
+Wait a while.	Esperem um momento.
+Wait in here.	Espere aqui.
+Wait outside.	Espere lá fora.
+Wait outside.	Esperem lá fora.
+Wait outside.	Espera lá fora.
+Wake them up.	Acorde-os.
+Wake up, Tom.	Acorda, Tom.
+Wake up, Tom.	Acorde, Tom.
+Was Tom busy?	Tom estava ocupado?
+Was she seen?	Ela foi vista?
+We all cried.	Todos nós choramos.
+We all do it.	Todos nós fazemos isso.
+We apologize.	Desculpamos.
+We apologize.	Nós desculpamos.
+We are Arabs.	Somos árabes.
+We are happy.	Somos felizes.
+We are happy.	Nós somos felizes.
+We can begin.	Podemos começar.
+We can do it.	Nós podemos fazer isso.
+We can do it.	Podemos fazer isso.
+We can't sue.	Nós não podemos processar.
+We found one.	Nós encontramos um.
+We found one.	Nós encontramos uma.
+We got ready.	Nós nos preparamos.
+We got ready.	Nos preparamos.
+We had lunch.	Almoçamos.
+We have food.	Temos comida.
+We have food.	Temos alimento.
+We have hope.	Temos esperança.
+We have room.	Temos espaço.
+We have some.	Temos algum.
+We have time.	Temos tempo.
+We have wine.	Temos vinho.
+We heard you.	Ouvimos você.
+We heard you.	Ouvimos vocês.
+We knew that.	Sabíamos disso.
+We knew this.	Nós sabíamos disso.
+We knew this.	Sabíamos disto.
+We know that.	Sabemos disso.
+We know that.	Nós sabemos disso.
+We liked Tom.	Nós gostamos do Tom.
+We live here.	Nós moramos aqui.
+We love them.	Nós os amamos.
+We loved Tom.	Amávamos o Tomás.
+We loved Tom.	Adorávamos o Tomás.
+We loved you.	Nós amávamos você.
+We met today.	Nós nos encontramos hoje.
+We met today.	Nós nos conhecemos hoje.
+We need help.	Precisamos de ajuda.
+We need more.	Precisamos de mais.
+We need them.	Nós precisamos deles.
+We need them.	Nós precisamos delas.
+We need them.	A gente precisa deles.
+We need them.	A gente precisa delas.
+We need this.	Nós precisamos disto.
+We need time.	Nós precisamos de tempo.
+We need time.	Precisamos de tempo.
+We overslept.	Dormimos demais.
+We sat there.	Nós nos sentamos ali.
+We succeeded!	Nós conseguimos!
+We succeeded.	Nós conseguimos!
+We surrender.	Nós desistimos.
+We trust him.	Confiamos nele.
+We want meat.	Nós queremos carne.
+We watch PBS.	Assistimos PBS.
+We were busy.	Estávamos ocupados.
+We were busy.	Nós estávamos ocupados.
+We were cold.	Nós estávamos com frio.
+We were cold.	Estávamos com frio.
+We were lost.	Nós estávamos perdidos.
+We were lost.	Nós estávamos perdidas.
+We were sick.	Nós estávamos doentes.
+We won't win.	Nós não vamos vencer.
+We'll attack.	Nós iremos atacar.
+We'll attack.	Nós vamos atacar.
+We'll attack.	Iremos atacar.
+We'll attack.	Vamos atacar.
+We'll attack.	Nós atacaremos.
+We'll attack.	Atacaremos.
+We'll decide.	Decidiremos.
+We'll decide.	Nos vamos decidir.
+We'll decide.	Nós decidiremos.
+We'll follow.	Nós seguiremos.
+We'll get it.	Nós vamos buscá-lo.
+We'll get it.	Vamos buscá-lo.
+We'll go out.	Vamos sair.
+We'll go out.	Nós vamos sair.
+We'll scream.	Nós iremos gritar.
+We'll scream.	Nós vamos gritar.
+We'll scream.	Nós gritaremos.
+We'll starve.	Nós vamos morrer de fome.
+We're adults.	Nós somos adultos.
+We're afraid.	Estamos com medo.
+We're all OK.	Estamos todos bem.
+We're better.	Estamos melhor.
+We're better.	Nós estamos melhor.
+We're buying.	Nós estamos comprando.
+We're coming.	Nós estamos vindo.
+We're dating.	Estamos namorando.
+We're famous.	Somos famosos.
+We're greedy.	Nós somos gananciosos.
+We're hiding.	Nós estamos nos escondendo.
+We're hungry.	Nós estamos com fome.
+We're hungry.	Estamos famintos.
+We're inside.	Nós estamos dentro.
+We're inside.	Estamos dentro.
+We're joking.	Estamos brincando.
+We're losers.	Somos perdedores.
+We're mature.	Estamos maduros.
+We're mature.	Nós estamos maduros.
+We're mature.	Nós somos maduros.
+We're mature.	Somos maduros.
+We're paying.	Nós estamos pagando.
+We're sleepy.	Nós estamos com sono.
+We're strong.	Nós somos fortes.
+Welcome back.	Bem-vindo de volta.
+Welcome home.	Bem-vindo a casa.
+Welcome home.	Bem-vindo a casa!
+Welcome home.	Bem-vindo ao lar.
+Welcome home.	Bem-vindos à casa.
+What a feast!	Que banquete!
+What a loser!	Que perdedor!
+What a loser!	Que perdedora!
+What a night!	Que noite!
+What a phony!	Que hipócrita!
+What a shame!	Que vergonha.
+What a shame!	Que pena!
+What a shock!	Que choque!
+What a waste!	Que disperdício!
+What a woman!	Que mulher!
+What an idea!	Que ideia!
+What is love?	Que é o amor?
+What is love?	O que é o amor?
+What is that?	O que é aquilo?
+What's wrong?	O que está errado?
+Where are we?	Onde nós estamos?
+Where is she?	Cadê ela?
+Where is she?	Onde está ela?
+Where was it?	Onde estava?
+Who are they?	Quem são eles?
+Who are they?	Quem são elas?
+Who built it?	Quem o construiu?
+Who built it?	Quem a construiu?
+Who canceled?	Quem cancelou?
+Who did that?	Quem foi que fez isso?
+Who is there?	Quem está aí?
+Who listened?	Quem escutou?
+Who panicked?	Quem entrou em pânico?
+Who ran away?	Quem fugiu?
+Who resigned?	Quem renunciou?
+Who stole it?	Quem roubou?
+Who stole it?	Quem o roubou?
+Who stole it?	Quem a roubou?
+Who survived?	Quem sobreviveu?
+Who told you?	Quem lhe contou?
+Who vanished?	Quem desapareceu?
+Who was here?	Quem estava aqui?
+Who was that?	Quem era esse?
+Who was that?	Quem era essa?
+Who will pay?	Quem vai pagar?
+Who will pay?	Quem pagará?
+Who will win?	Quem vai ganhar?
+Who will win?	Quem ganhará?
+Who wrote it?	Quem escreveu isso?
+Who'll drive?	Quem vai dirigir?
+Who'll fight?	Quem lutará?
+Who'll start?	Quem vai começar?
+Who's buying?	Quem está comprando?
+Who's coming?	Quem está vindo?
+Who's hungry?	Quem está com fome?
+Who's paying?	Quem vai pagar?
+Who's paying?	Quem está pagando?
+Why not both?	Por que não ambos?
+Why not both?	Por que não ambas?
+Why not both?	Por que não os dois?
+Why not both?	Por que não as duas?
+Will Tom die?	O Tom vai morrer?
+Will he live?	Ele vai viver?
+Wish me luck.	Deseje-me sorte.
+Won't you go?	Você não vai?
+Write to Tom.	Escreva para o Tom.
+Years passed.	Passaram os anos.
+Years passed.	Anos se passaram.
+You amuse me.	Você me diverte.
+You are late.	Você está atrasado.
+You are ugly.	Você é feio.
+You are ugly.	Você é feia.
+You are ugly.	Vocês são feios.
+You are ugly.	Vocês são feias.
+You are ugly.	Tu és feio.
+You are ugly.	Tu és feia.
+You can come.	Vocês podem vir.
+You can come.	Você pode vir.
+You can't go.	Você não pode ir.
+You did this.	Você fez isso.
+You go first.	Você primeiro.
+You go first.	Tu primeiro.
+You go first.	Por nada.
+You hurt him.	Você o feriu.
+You hurt him.	Tu o feriste.
+You know her.	Você a conhece.
+You know her.	Vocês a conhecem.
+You look sad.	Você parece triste.
+You may stay.	Você pode ficar.
+You may stay.	Pode ficar.
+You may stay.	Tu podes ficar.
+You may stay.	Podes ficar.
+You may stay.	Vós podeis ficar.
+You may stay.	Podeis ficar.
+You may stay.	Vocês podem ficar.
+You may stay.	Podem ficar.
+You may stay.	O senhor pode ficar.
+You may stay.	A senhora pode ficar.
+You may stay.	Os senhores podem ficar.
+You may stay.	As senhoras podem ficar.
+You may swim.	Pode nadar.
+You may swim.	Podes nadar.
+You may swim.	Podem nadar.
+You must eat.	Você deve comer.
+You promised.	Você prometeu.
+You promised.	Vocês prometeram.
+You scare me.	Você me assusta.
+You scare me.	Vocês me assustam.
+You scare me.	Você me dá medo.
+You survived.	Você sobreviveu.
+You survived.	Vocês sobreviveram.
+You will die.	Você vai morrer.
+You will die.	Você morrerá.
+You will see.	Você verá.
+You'll be OK.	Você ficará bem.
+You'll do it.	Vocês vão fazer.
+You'll do it.	Vocês vão fazer isso.
+You'll do it.	Você vai fazer.
+You'll do it.	Você vai fazer isso.
+You'll do it.	Você o fará.
+You're brave.	Você é valente.
+You're crazy.	Você é louco.
+You're crazy.	Você é doido.
+You're dying.	Você está morrendo.
+You're early.	Você está adiantado.
+You're early.	Você está adiantada.
+You're fired.	Você está despedido.
+You're fired.	Você está despedida.
+You're fired.	Vocês estão despedidos.
+You're fools.	Vocês são otários.
+You're fools.	Vocês são burros.
+You're funny.	Você é engraçado.
+You're gross!	Você é nojento!
+You're gross.	Você é nojento!
+You're lucky.	Você é sortudo.
+You're lucky.	Você é sortuda.
+You're lying!	Você está mentindo.
+You're lying!	Você mente!
+You're lying!	Você está mentindo!
+You're lying.	Você está mentindo.
+You're needy.	Você está carente.
+You're right.	Você está certa.
+You're right.	Você está certo.
+You're right.	Você tem razão.
+You're scary.	Você é assustador.
+You're scary.	Tu és assustador.
+You're small.	Você é pequeno.
+You're small.	Tu és pequeno.
+You're smart.	Você é esperto.
+You're smart.	Você é esperta.
+You're timid.	Você é tímido.
+You're timid.	Você é tímida.
+You're timid.	Tu és tímido.
+You're tired.	Você está cansado.
+You're tired.	Tu estás cansado.
+You're upset.	Você está chateado.
+You're upset.	Tu estás chateado.
+You're wrong.	Você está errado.
+You're young.	Você é jovem.
+You're young.	Vocês são jovens.
+You've grown.	Você cresceu.
+You've grown.	Vocês cresceram.
+You've tried.	Você tentou.
+You've tried.	Vocês tentaram.
+A car hit Tom.	Um carro bateu em Tom.
+A car went by.	Um carro passou.
+Ain't he cute?	Ele não é fofinho?
+Ain't he cute?	Ele não é bonitinho?
+Am I dreaming?	Estou sonhando?
+Am I included?	Eu estou incluído?
+Am I mistaken?	Estou errado?
+Am I safe now?	Estou seguro agora?
+Am I too late?	Estou muito atrasado?
+Any questions?	Alguma pergunta?
+Anything else?	Mais alguma coisa?
+Are they busy?	Eles estão ocupados?
+Are they busy?	Elas estão ocupadas?
+Are they busy?	Eles são ocupados?
+Are they dead?	Eles estão mortos?
+Are they dead?	Elas estão mortas?
+Are they gone?	Eles se foram?
+Are they gone?	Elas se foram?
+Are they gone?	Eles foram embora?
+Are they gone?	Elas foram embora?
+Are they here?	Eles estão aqui?
+Are they here?	Elas estão aqui?
+Are they tall?	Eles são altos?
+Are they tall?	Elas são altas?
+Are you a fan?	Você é um fã?
+Are you a fan?	Tu és um fã?
+Are you alone?	Você está só?
+Are you awake?	Você está acordada?
+Are you awake?	Você está acordado?
+Are you blind?	Você é cego?
+Are you blind?	Você é cega?
+Are you bored?	Você está entediado?
+Are you bored?	Você está entediada?
+Are you brave?	Você é corajoso?
+Are you crazy?	Estás louco?
+Are you crazy?	Você está louco?
+Are you crazy?	Você é louco?
+Are you dying?	Você está morrendo?
+Are you going?	Vocês estão indo?
+Are you going?	Vocês estão indo embora?
+Are you going?	Você está indo?
+Are you going?	Você está indo embora?
+Are you happy?	Você está feliz?
+Are you happy?	Você é feliz?
+Are you lying?	Você está mentindo?
+Are you there?	Está aí?
+Are you there?	Você está aí?
+Are you there?	Vocês estão aí?
+Are you there?	Tu estás aí?
+Are you tired?	Você está cansado?
+Are you tired?	Vocês estão cansados?
+Are you tired?	Você está cansada?
+Are you tired?	Vocês estão cansadas?
+Are you upset?	Você está triste?
+Ask Tom again.	Pergunte mais uma vez ao Tom!
+Ask an expert.	Pergunte a um especialista.
+Be a good boy.	Seja inteligente.
+Be reasonable.	Seja razoável.
+Beware of dog.	Cuidado com o cão.
+Boys run fast.	Os meninos correm rápido.
+Bring it back.	Traga de volta.
+Bring it back.	Tragam de volta.
+Bring it here.	Traga isso aqui.
+Bring it here.	Traga aqui.
+Bring the key.	Traga a chave.
+Burn the body.	Queime o corpo.
+Burn the body.	Queimem o corpo.
+Buy some toys.	Comprem brinquedos.
+Cain was evil.	Cain era malvado.
+Cain was evil.	Cain era mau.
+Call me later.	Ligue para mim depois!
+Call me later.	Me liga depois.
+Call security!	Chame a segurança!
+Call security!	Chamem a segurança!
+Can I ask why?	Eu posso perguntar o porquê?
+Can I ask why?	Posso perguntar o porquê?
+Can I come in?	Posso entrar?
+Can I do this?	Eu posso fazer isso?
+Can I do this?	Posso fazer isso?
+Can I do this?	Eu consigo fazer isso?
+Can I do this?	Consigo fazer isso?
+Can I go, too?	Posso ir também?
+Can I hug you?	Posso abraçá-lo?
+Can I hug you?	Eu posso te abraçar?
+Can I hug you?	Posso te dar um abraço?
+Can Tom drive?	Tom sabe dirigir?
+Can you drive?	Você sabe dirigir?
+Can you drive?	Vocês sabem dirigir?
+Can you skate?	Você sabe patinar?
+Clean that up.	Limpe isso.
+Click to edit.	Clique para editar.
+Close the box.	Feche a caixa.
+Come back now.	Agora, volte.
+Come get some.	Venha pegar alguns.
+Come get some.	Venha pegar algumas.
+Come out here.	Venha aqui.
+Come out here.	Vem aqui.
+Come sit down.	Venha se sentar.
+Come this way.	Vem por aqui.
+Come tomorrow.	Venha amanhã.
+Come tomorrow.	Venham amanhã.
+Could I do it?	Eu poderia fazer isso?
+Could it work?	Poderia funcionar?
+Could we walk?	Poderíamos caminhar?
+Dance with me.	Dança comigo.
+Dance with me.	Dance comigo.
+Did I ask you?	Eu te pedi?
+Did I do that?	Eu fiz isso?
+Did Tom laugh?	O Tom riu?
+Did Tom reply?	O Tom respondeu?
+Do I know Tom?	Eu conheço Tom?
+Do I know Tom?	Eu conheço o Tom?
+Do I know Tom?	Conheço o Tom?
+Do I know him?	Conheço-o?
+Do I know you?	Eu conheço-o?
+Do I look fat?	Eu pareço gorda?
+Do as I asked.	Faça como eu pedi.
+Do as he says.	Faça como ele diz.
+Do as he says.	Faz como ele diz.
+Do as he says.	Façam como ele diz.
+Do fish sleep?	Os peixes dormem?
+Do it for Tom.	Façam isso pelo Tom.
+Do it for Tom.	Faça isso pelo Tom.
+Do it with me.	Faça comigo.
+Do it with me.	Faz comigo.
+Do me a favor.	Faça-me um favor.
+Do what I say.	Faça o que eu digo.
+Do what I say.	Façam o que eu digo.
+Do you get me?	Você me compreende?
+Does Tom know?	Tom sabe?
+Dogs can swim.	Cachorros nadam.
+Dogs can swim.	Cachorros sabem nadar.
+Don't be evil.	Não seja mau.
+Don't be evil.	Não seja má.
+Don't be late.	Não se atrase.
+Don't be long.	Não demore.
+Don't be mean.	Não seja mau.
+Don't be rash.	Não seja precipitado.
+Don't be rude.	Não seja grosseiro.
+Don't be rude.	Não seja rude.
+Don't call me.	Não ligue para mim.
+Don't come in.	Não entre.
+Don't do that.	Não faça isso.
+Don't do this.	Não faça isso.
+Don't get fat.	Não engorde.
+Don't get mad.	Não fique bravo.
+Don't get mad.	Não fique brava.
+Don't give up!	Não desista!
+Don't go away.	Não vá embora.
+Don't go away.	Não se vá.
+Don't go, Tom.	Não vá, Tom.
+Don't hang up!	Não desliga!
+Don't kiss me.	Não me beije.
+Don't look up.	Não olhe para cima.
+Don't mind me.	Não ligue para mim.
+Don't push me!	Não me empurre!
+Don't push me.	Não me empurre.
+Don't push me.	Não me empurra.
+Don't respond.	Não responda.
+Don't respond.	Não respondam.
+Don't respond.	Não respondas.
+Don't risk it!	Não se arrisque!
+Don't risk it!	Não se aventure!
+Don't rush me.	Não me empurre.
+Don't rush me.	Não me empurrem!
+Don't tell me.	Não me fale.
+Draw a circle.	Desenhe um círculo.
+Eat and drink.	Coma e beba.
+Eat and drink.	Come e bebe.
+Everyone dies.	Todo mundo morre.
+Everyone wins.	Todo mundo ganha.
+Everyone wins.	Todo mundo sai ganhando.
+Feed the bird.	Alimente o pássaro!
+Fill this out.	Preencha isto.
+Fix the clock.	Conserte o relógio.
+Flowers bloom.	Flores florescem.
+Get a move on!	Avante!
+Get a move on!	Mexa-se!
+Get back here!	Volte aqui!
+Get me a beer.	Pega uma cerveja para mim.
+Get over here.	Venha aqui.
+Get over here.	Vem pra cá.
+Get some rest.	Descansa um pouco.
+Get some rest.	Descanse um pouco.
+Get some rest.	Descansem um pouco.
+Get your coat.	Pegue o seu casaco.
+Give him time.	Dê-lhe tempo.
+Go ahead, Tom.	Prossiga, Tom.
+Go get a beer.	Vá buscar uma cerveja.
+Go get a beer.	Vá pegar uma cerveja.
+Go without me.	Vá sem mim.
+God bless you!	Deus vos abençoe!
+God bless you!	Deus te abençoe!
+God bless you!	Que Deus te abençoe.
+Guess who won.	Adivinha quem ganhou?
+Hang on tight!	Segure-se firme!
+Hang on tight!	Segurem firme!
+Have a cookie.	Come um biscoito.
+Have some tea.	Beba um pouco de chá.
+He came first.	Ele chegou primeiro.
+He can't swim.	Ele não sabe nadar.
+He cheated me.	Ele me enganou.
+He dug a hole.	Ele cavou um buraco.
+He felt tired.	Sentia-se cansado.
+He grows rice.	Ele cultiva arroz.
+He has a blog.	Ele tem um blog.
+He has a book.	Ele tem um livro.
+He has a maid.	Ele tem uma empregada.
+He has braces.	Ele usa aparelho.
+He hugged her.	Ele a abraçou.
+He ignored me.	Ele me ignorou.
+He is English.	Ele é inglês.
+He is Spanish.	Ele é espanhol.
+He is a thief.	Ele é um ladrão.
+He is my boss.	Ele é meu patrão.
+He is my type!	Ele é meu tipo!
+He is no fool.	Ele não está louco.
+He is no fool.	Ele não é idiota.
+He is no fool.	Ele não é bobo.
+He is reading.	Ele está lendo.
+He is too old.	Ele é muito velho.
+He kissed her.	Ele a beijou.
+He lied to me.	Ele mentiu para mim.
+He lied to us.	Ele mentiu para nós.
+He liked that.	Ele gostou disso.
+He liked that.	Ele gostou daquilo.
+He looks pale.	Ele parece pálido.
+He looks well.	Ele parece bem.
+He loves them.	Ele os ama.
+He loves them.	Ele as ama.
+He loves toys.	Ele adora brinquedos.
+He never lies.	Ele nunca mente.
+He seems kind.	Ele parece ser gentil.
+He seems sick.	Ele parece doente.
+He sells cars.	Ele vende carros.
+He shot at me.	Ele atirou em mim.
+He talks well.	Ele fala bem.
+He talks well.	Ele fala bonito.
+He tries hard.	Ele se esforça muito.
+He walks fast.	Ele anda rápido.
+He wants more.	Ele quer mais.
+He was crying.	Ele estava chorando.
+He was crying.	Ele estava a chorar.
+He went blind.	Ele ficou cego.
+He went blind.	Ficou cego.
+He won't know.	Ele não vai saber.
+He's a sexist.	Ele é sexista.
+He's adorable.	Ele é adorável.
+He's not sick.	Ele não está doente.
+He's not sick.	Ele não está enfermo.
+He's so young.	Ele é tão jovem.
+He's studying.	Ele está estudando.
+He's too busy.	Ele está muito ocupado.
+He's very ill.	Ele está muito doente.
+Help yourself.	Sirva-se.
+Help yourself.	Serve-te.
+Help yourself.	Sirvam-se.
+Here he comes.	Lá vem ele.
+Here or to go?	Pra viagem ou pra comer aqui?
+Here or to go?	É para comer aqui ou para levar?
+Here or to go?	Para viagem ou para comer aqui?
+Here or to go?	É pra comer aqui ou para levar?
+Here's $10.00.	Aqui estão $10.
+Hey, don't go.	Ei, não vá!
+Hi, everybody.	Olá, pessoal.
+His nose bled.	O seu nariz sangrava.
+Hold on a sec.	Só um segundinho.
+Hold on to me.	Segure-se em mim.
+Hold the door.	Segure a porta.
+Hold the rope.	Segure a corda.
+Hold the rope.	Segurem a corda.
+How about you?	E você?
+How about you?	E você, como vai?
+How beautiful!	Que bonito!
+How beautiful!	Que bonita!
+How delicious!	Que delicioso!
+How delicious!	Que delícia!
+How did it go?	Como foi?
+How do I look?	Como estou?
+How do you do?	Como você está?
+How do you do?	Como vai?
+How far is it?	A que distância está?
+How far is it?	Quão distante é?
+How many died?	Quantas pessoas morreram?
+How many died?	Quantos morreram?
+How old is he?	Quantos anos ele tem?
+How old is he?	Qual é a idade dele?
+How thrilling!	Que emocionante!
+How wonderful!	Que maravilha!
+How wonderful!	Maravilhoso!
+How's the dog?	Como o cachorro está?
+Hurry up, Tom.	Apresse-se, Tom.
+I already ate.	Eu já comi.
+I always lose.	Eu sempre perco.
+I always walk.	Eu sempre caminho.
+I am American.	Eu sou americano.
+I am American.	Eu sou norte-americano.
+I am Japanese.	Sou japonesa.
+I am Japanese.	Sou japonês.
+I am Japanese.	Eu sou japonês.
+I am a Muslim.	Sou muçulmano.
+I am a Muslim.	Sou muçulmana.
+I am a runner.	Eu sou corredor.
+I am all ears.	Sou todo ouvidos.
+I am divorced.	Sou divorciado.
+I am in Paris.	Estou em Paris.
+I am in Paris.	Eu estou em Paris.
+I am like him.	Eu sou como ele.
+I am studying.	Estou estudando.
+I am studying.	Estou a estudar.
+I am studying.	Eu estou a estudar.
+I am who I am.	Sou o que sou.
+I ate a donut.	Eu comi uma rosquinha.
+I ate quickly.	Eu comi rápido.
+I believe Tom.	Acredito no Tom.
+I believe Tom.	Eu acredito no Tom.
+I believe you.	Eu acredito em você.
+I believe you.	Eu acredito em vocês.
+I believe you.	Acredito em você.
+I belong here.	Meu lugar é aqui.
+I bribed them.	Eu os subornei.
+I came by bus.	Eu vim de ônibus.
+I came by bus.	Vim de ônibus.
+I came by car.	Eu vim de carro.
+I can be good.	Eu posso ser bom.
+I can feel it.	Posso senti-lo.
+I can feel it.	Posso senti-la.
+I can make it.	Posso fazê-lo.
+I can't do it.	Não posso fazer isso.
+I can't sleep.	Não consigo dormir.
+I can't sleep.	Eu não consigo dormir.
+I can't sleep.	Eu não posso dormir.
+I can't sleep.	Não posso dormir.
+I can't smoke.	Eu não posso fumar.
+I can't smoke.	Não posso fumar.
+I contributed.	Eu contribuí.
+I cough a lot.	Eu tusso muito.
+I cried a lot.	Eu chorei muito.
+I cried today.	Eu chorei hoje.
+I despise Tom.	Eu desprezo o Tom.
+I did my best.	Eu fiz o meu melhor.
+I did my best.	Fiz o meu melhor.
+I did my best.	Fiz o melhor que me foi possível.
+I did my best.	Fiz o melhor que pude.
+I did my part.	Eu fiz a minha parte.
+I did nothing.	Eu não fiz nada.
+I did see him.	Eu o vi.
+I didn't care.	Eu não me importo.
+I didn't know.	Eu não sabia.
+I didn't look.	Eu não olhei.
+I didn't sing.	Eu não cantei.
+I didn't swim.	Eu não nadei.
+I didn't vote.	Eu não votei.
+I do like Tom.	Eu gosto muito do Tom.
+I do like Tom.	Gosto muito do Tom.
+I do like Tom.	Faço como o Tom.
+I do like Tom.	Eu faço como o Tom.
+I do like you.	Eu gosto muito de você.
+I do like you.	Gosto muito de vocês.
+I do like you.	Gosto muito de você.
+I do like you.	Gosto de você de verdade.
+I do like you.	Eu gosto muito de vocês.
+I do like you.	Eu gosto de você de verdade.
+I do love you.	Eu te amo mesmo.
+I do not work.	Eu não trabalho.
+I do remember.	Eu me lembro, sim.
+I do think so.	Eu acho que sim.
+I don't agree.	Não concordo.
+I don't agree.	Eu discordo.
+I don't dream.	Eu não sonho.
+I don't drink.	Eu não bebo.
+I don't smoke.	Eu não fumo.
+I don't snore.	Eu não ronco.
+I don't study.	Eu não estudo.
+I dream a lot.	Eu sonho bastante.
+I dream a lot.	Eu sonho muito.
+I dream a lot.	Sonho muito.

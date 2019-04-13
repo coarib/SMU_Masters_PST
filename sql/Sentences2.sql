@@ -1,4 +1,4 @@
-INSERT INTO Sentences
+INSERT INTO masters.Sentences
   (text, language_key)
 VALUES
   ('What time is it','EN'),
