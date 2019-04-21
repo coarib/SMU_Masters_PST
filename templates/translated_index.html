@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
-        <title>Your Sport Recommendation!</title>
+        <title>Pristine Translation</title>
         <!-- Bootstrap core CSS -->
         <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,7 +25,8 @@
 
     </head>
     <body>
-      <center> <h2>Your Sport is {{ sport }} </h2> </center>
-      <img src="static/img/{{user_image}}" alt="centered image" class="center"/>
+      <center> <h2>Closest match sentence in the source language: {{ resultFromText }} </h2> </center>
+      <center> <h2>Resulting match in destination language: {{ resultToText }} </h2> </center>
+      <center> <h2>Percent of cosine similarity: {{ percentMatch }} </h2> </center>
     </body>
 </html>

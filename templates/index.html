@@ -45,27 +45,27 @@
       </div>
     </section>
 
+	<form method="get" action="/translate">
        <div class="rTable">
         <div class="rTableHeading">
             <div class="rTableHead">
                 From Language: <br>
                 <select name="fromLang" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0">
-                <option value="english">English</option>
-                <option value="portuguese">Portuguese</option>
-                <option value="hindi_english">Hindi</option>
+                <option value="EN">English</option>
+                <option value="PT">Portuguese</option>
+                <option value="HI">Hindi</option>
                 </select>
             </div>
                 To Language: <br>
                 <select name="toLang" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0">
-                <option value="english">English</option>
-                <option value="portuguese">Portuguese</option>
-                <option value="hindi_english">Hindi</option>
+                <option value="EN">English</option>
+                <option value="PT">Portuguese</option>
+                <option value="HI">Hindi</option>
                 </select>
         </div>
         <div class="rTableBody">
             <div class="rTableRow">
                 <div class="rTableCell">
-                    
                     Text To Be Translated: <br>
                     <textarea name="fromText" rows="4" cols="50"></textarea>
                 </div>
@@ -85,8 +85,7 @@
         
         <div class="rTableBody">
             <div class="rTableRow">
-                <div class="rTableCell">
-                    
+                <div class="rTableCell">                    
                     Pristine Language Translation Closest Match (Percent Confidence: (form element)): <br>
                     <textarea name="fromText" rows="4" cols="50"></textarea>
                 </div>
@@ -98,7 +97,7 @@
         </div>
         
     </div>
-    
+	</form>
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">

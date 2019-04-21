@@ -23,8 +23,6 @@ def sport():
     # Params for model are in here!
     args = request.args.to_dict()
 
-
-
     import numpy as np
     import pickle
     import sklearn
@@ -38,7 +36,7 @@ def sport():
     to_language=args['toLang']
     
     # read python df of languages matching the "from_language" from the appropriate smart-named pkl file
-    pkl_file = open('../data/sentences_'+from_language+'.pkl', 'rb')
+    pkl_file = open('sentences_'+from_language+'.pkl', 'rb')
     from_language_sentences = pickle.load(pkl_file)
     pkl_file.close()
 
@@ -53,7 +51,7 @@ def sport():
 
     tfidf_vectorizer = TfidfVectorizer()
     tfidf_matrix = tfidf_vectorizer.fit_transform(corpus)
-    print (tfidf_matrix.shape)
+    #print (tfidf_matrix.shape)
     
     #grab the closest match of the sentence based on cosine similarity
     from sklearn.metrics.pairwise import cosine_similarity
@@ -62,26 +60,33 @@ def sport():
 
     #grab the closest match of the sentence based on cosine similarity
     index_max = np.argmax(c_similarity)
-    print("The closest sentence match is: " + corpus[index_max+1])
+    #print("The closest sentence match is: " + corpus[index_max+1])
 
     #grab the matching sentence ID for the language using the identified text and convert it to a string
     sentence_id = from_language_sentences.loc[from_language_sentences['text'] == corpus[index_max+1]]['sentence_id'].values
     sentence_id = int(sentence_id)
-    print("That sentence is sentence ID: " + str(sentence_id))
-    print("The value of the cosine similarity for the sentences is: " + str(np.amax(c_similarity)))
+    percent_match = str(round(np.amax(c_similarity),4)*100)
+    #print("That sentence is sentence ID: " + str(sentence_id))
+    #print("The value of the cosine similarity for the sentences is: " + str(np.amax(c_similarity)))
         
     # read translations pandas df back from the pkl file
-    pkl_file = open('../data/translations.pkl', 'rb')
+    pkl_file = open('translations.pkl', 'rb')
     translations_df = pickle.load(pkl_file)
     pkl_file.close()
 
-    translations_df.head()
+    #print(translations_df.head())
             
      #get the resulting translations for the input sentence and desired language
     #translations_df.loc[(translations_df['input_sentence_id'] == sentence_id) & translations_df['output_language_key'] == to_language]
-    translations_df.loc[(translations_df['output_language_key'] == to_language) & (translations_df['input_sentence_id'] == sentence_id)]
-
-    return render_template('sport.html', sport=sport, user_image=image)
+    
+    #print(translations_df.loc[(translations_df['output_language_key'] == to_language)])
+    
+    #print(translations_df.loc[(translations_df['output_language_key'] == to_language) & (translations_df['input_sentence_id'] == sentence_id)])
+    translations = translations_df.loc[(translations_df['output_language_key'] == to_language) & (translations_df['input_sentence_id'] == sentence_id)]
+    print(translations['input_text'].values[0])
+    print(translations['output_text'].values[0])
+	
+    return render_template('translated.html', resultFromText=translations['input_text'].values[0], resultToText=translations['output_text'].values[0], percentMatch=percent_match, resultOrigText = args['fromText'], resultFromLang=args['fromLang'], resultToLang=args['toLang'])
 
 if __name__ == '__main__':
     app.run(debug=True)
