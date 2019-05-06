@@ -69,14 +69,16 @@
 					</div>
 					<div class="rTableCell">
 						Pristine Language Translation: <br>
-						<textarea name="toText" rows="4" cols="50">{{ resultToText }}</textarea>
+						<textarea name="pstText" rows="4" cols="50">{{ resultToText }}</textarea>
+						<br>
+						<button name="submit_button" value="usePSTTranslation" type="submit" class="btn btn-primary mx-auto">I Approve This Translation!</button>
 					</div>
 				</div>
 			</div>
 			
 			<div class="rTableBody" >
 				<div class="rTableHead">
-					<button type="submit" class="btn btn-primary mx-auto">Translate</button>
+					<button name="submit_button" value="translate" type="submit" class="btn btn-primary mx-auto">Translate</button>
 				</div>
 				<div class="rTableHead"></div>
 			</div>
@@ -85,11 +87,15 @@
 				<div class="rTableRow">
 					<div class="rTableCell">                    
 						Pristine Language Translation Closest Match <br>(Percent Confidence: {{ percentMatch }}): <br>
-						<textarea name="fromText" rows="4" cols="50">{{ resultFromText }}</textarea>
+						<textarea name="toText" rows="4" cols="50">{{ resultFromText }}</textarea>
 					</div>
 					<div class="rTableCell">
 						Google Translation: (Powered by Google)<br>
-						<textarea name="toText" rows="4" cols="50"></textarea>
+						<textarea name="googleText" rows="4" cols="50">{{ googleResult }}</textarea>
+						<br>
+					
+						<button name="submit_button" value="useGoogleTranslation" type="submit" class="btn btn-primary mx-auto"> Use This Instead!</button>
+											
 					</div>
 				</div>
 			</div>
