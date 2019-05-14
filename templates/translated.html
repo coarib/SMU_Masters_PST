@@ -87,11 +87,11 @@
 				<div class="rTableRow">
 					<div class="rTableCell">                    
 						Pristine Language Translation Closest Match <br>(Percent Confidence: {{ percentMatch }}): <br>
-						<textarea name="toText" rows="4" cols="50">{{ resultFromText }}</textarea>
+						<textarea name="toText" rows="4" cols="50" readonly>{{ resultFromText }}</textarea>
 					</div>
 					<div class="rTableCell">
 						Google Translation: (Powered by Google)<br>
-						<textarea name="googleText" rows="4" cols="50">{{ googleResult }}</textarea>
+						<textarea name="googleText" rows="4" cols="50" readonly>{{ googleResult }}</textarea>
 						<br>
 					
 						<button name="submit_button" value="useGoogleTranslation" type="submit" class="btn btn-primary mx-auto"> Use This Instead!</button>
