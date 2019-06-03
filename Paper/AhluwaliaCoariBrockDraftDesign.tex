@@ -22,7 +22,7 @@
 	\maketitle
 	
 	\begin{abstract}
-		Translating text from one language to another is a continuous technological challenge. Although many technologies, such as Google Translate, have used machine learning and neural networks to close the translation gap, there are still many translation problems to be solved. Issues such as multiple word meanings, proper sentence structure, slang, colloquialisms, and determining the literal meaning of words vs contextual intent of those words are areas where we sometimes still see Google Translate struggle. In this paper we explore an original strategy that provides a solution to these translation issues, demonstrate a proof-of-concept of the solution, and examine the feasibility of a large-scale solution. For our translation solution we populated a database with translations of entire sentences from one language to another, instead of the words in a sentence. Since a sentence represents an entire thought instead of an assembly of words, the translation did not suffer from the issues that plague Google Translate. We also used Natural Language Processing (NLP) and predictive modeling in order to find sentences close to the sentence requested, which provides the user examples of common grammatically-correct sentences. With these approaches we were able to translate sentences that seemed impossible using traditional translation methods.
+		In this paper we present a new approach to language translation we call Pristine Sentence Translation (PST). Although many technologies have used machine learning and neural networks to close the translation gap, they still use a word-for-word or sometimes a phrase-by-phrase translation that loses the intended meaning of the sentence. PST overcomes these issues by translating entire sentences between languages without breaking the sentences up, so the entire thought the sentence is meant to convey can be translated into a sentence that would not be derived from other translation technologies. PST takes an input sentence, then uses Natural Language Processing (NLP) and predictive modeling in order to identify sentences close to the sentence requested in the language in which the sentence was requested, then provides the known match for that matched sentence in the requested language. With these approaches we were able to translate sentences that seemed impossible using traditional translation methods into sentences that closely conveyed the meaning of the original sentences. This result demonstrated that PST's method of translating an entire sentence is an effective approach to translations in some circumstances.
 		
 	\end{abstract}
 	
@@ -32,44 +32,43 @@
 	
 	\section{Introduction}
 	
-	The ability to easily communicate with people in another language is one of the most powerful and satisfying experiences in life. Technology has come a long way from the discovery of the Rosetta Stone in 1799, which allowed us to translate Egyptian hieroglyphics to ancient Greek in a mere 23 years. In the modern day, tools such as Google translate can be used in real time to convert between languages and allow people to connect from different cultures~\cite{ref_url6}. The latest iterations of Google Translate even use machine learning and neural nets to parse more than just  single words, delivering a more satisfying user experience~\cite{ref_url7}.
+	The ability to easily communicate with people in another language is one of the most powerful and satisfying experiences in life. Technology has come a long way from the discovery of the Rosetta Stone in 1799, which allowed us to translate Egyptian hieroglyphics to ancient Greek in a mere 23 years. In the modern day, tools such as Google Translate can be used in real time to convert between languages and allow people to connect from different cultures~\cite{ref_url6}. The latest iterations of Google Translate even use machine learning and neural nets to parse more than just  single words, delivering a more satisfying user experience~\cite{ref_url7}.
 	
-	As far as we have come, however, the areas where we struggle are still painfully obvious. While Google Translate will usually allow you to find a bathroom and order off a menu, the intricacies and complexities of a normal, native conversation still can cause a non-fluent speaker issues. For example, if an American coworker mentions to a Brazilian coworker about their performance on a project with "You hit one out of the park.", the Brazilian coworker could translate the words, but without familiarity with the context of a baseball game, the Brazilian would be confused and would have to ask for clarification if it was possible. It would be even harder if the Brazilian was reading a book in English with a colloquialism, since there would be no human to ask for help.
+	As far as we have come in language translations, however, there are still areas for improvement. While Google Translate will usually allow you to find a bathroom and order off a menu, the intricacies and complexities of a normal, native conversation still can cause a non-fluent speaker issues. For example: An American coworker might mention to a Brazilian coworker about performance on a project with "You hit one out of the park". This is a term borrowed from the American sport of baseball, in which hitting a ball out of the ballpark is a great thing to do. The Brazilian coworker might use a traditional translation tool and get a word-for-word result of "Você bateu um fora do parque", but without the context of knowing about American baseball the meaning of this phrase might be lost. This situation can also occur when reading a book in English which would complicate the situation because you cannot ask a book to clarify what it means.
 	
-	If you consider these kinds of issues from a high level they might seem unsolvable. How can you train a translation tool to look at the meaning behind sentences using on the words provided? We think we have a possible answer: an original concept we are calling Pristine Sentence Translations (PSTs). The concept of PST is that instead of translating words or phrases using neural nets and machine learning, we simply store an entire sentence in a database, and we have entire sentences in other languages that represent the meaning of that sentence. 
+	The purpose behind PST is to get to the intended meaning of a sentence instead of translating the sentence word-for-word. To implement the PST solution we stored entire sentences in a database, and mapped them to entire sentences in other languages that represent the meaning of those sentences. For example: using the example above we would have an entry for the English sentence "You hit one out of the park", and we would have an entry for a Portuguese sentence mapped to that English sentence that says "Você foi ótima" which translates in English to the meaning behind the phrase: "You did great". 
+
+	One main issue with the approach outlined above is that if we do not have an exact match for the sentence, PST returns nothing. If we tried to translate "You really hit one out of the park" from English into Portuguese we would not get any results if all we had a translation for was "You hit one out of the park". We  addressed this concern using Natural Language Processing (NLP) to filter out the noise in a sentence, and then used Predictive Modeling in order to find the sentence "most like" the input sentence. Using this method, "You really hit one out of the park" would map most closely to "You hit one out of the park", and return the same translation: "Você foi ótima". The front-end will indicate that the translation is not for the original input sentence, instead it will indicate that it is showing results for: "You hit one out of the park". The algorithm will also provide a percentage for how close the match was, so the user could determine if the match was close enough to useful.
 	
-	For example, using the example above we would have an entry for the English sentence "You hit one out of the park", and we would have an entry for a Portuguese sentence mapped to that English sentence that says "Você foi ótima" which translates in English to the meaning behind the phrase: "You did great". For another example, in Portuguese there's a sentence "Eu adoro Cafuné" Google Translate does not have a translation for "Cafuné", because it's a complicated word which loosely means "the act of running fingers through hair" . Our program's goal is to return an English translation "I love the feeling of fingers running through my hair" when asked to translate "Eu adoro Cafuné" into English. Using this method there is no sentence or concept we will not be able to translate into another language given enough time and resources.
-	
-	One main issue with the approach outlined above is that if we do not have an exact match for the sentence, our method return nothing. so if we tried to translate "You really hit one out of the park" from English into Portuguese we would not get any results. We decided to address this concern using Natural Language Processing (NLP) to filter out the noise in a sentence, and then use Predictive Modeling in order to find the sentence "most like" the input sentence. Using this method, "You really hit one out of the park" would ideally map most closely to "You hit one out of the park", and return the same translation: "Você foi ótima". The front-end will indicate that the translation is not for the original input sentence, instead it will indicate that it is "Showing Results for: You hit one out of the park."
-	
-	Due to the strictly educational and academic nature of the project, we are not attempting to provide a full translation solution. We will limit our translations to English, Portuguese, and Hindi, and we will only provide translations for a few hundred phrases. This will be sufficient to demonstrate the appeal and power of this technique, and we will show how this solution could grow into a complete, living solution using crowdsourcing and time. 
+	For the scope of this project we focused on translations to English, Portuguese, and Hindi. Our input was a few hundred phrases taken from popular travel websites in order to get a good sampling of what might be needed to navigate as a foreigner in a country. We tested these sentences in order to demonstrate the effectiveness of this technique, and we show in theis paper how this solution could grow into a complete, living solution over time. 
 
 	Given the nature of PSTs we will need to find a way to determine the closeness of sentences to each other. We will analyze two different methods of determining how close one sentence is to another, Euclidean Distance and Cosine Similarity, and choose the best method based on the metrics it provides for closeness. After we determine the closest match of an input sentence to one we know through our PST database, we can return a curated translation that matches that sentence in the requested language.
 
 	By the end of this paper, hopefully we can convince the reader of the potential value of this approach to translations and inspire future work that build on our base proof-of-concept into a more robust translation mechanism. 
 	
-	\subsection{Existing Tools and Methods}
-	The concept of translating one langauge to another is one of the most prevalent topics in data science, so it was all too easy to find existing tools and methods. This first example we would like to cover is one of the stronger forces in translation today: Google Translate. In 2016 Google started using Neural Nets to perform translations and saw vast reduction in errors. ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
+	\section{Existing Tools and Methods}
+	The concept of translating one langauge to another is one of the most prevalent topics in data science, existing tools and methods were readily available. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Neural Nets to perform translations and saw vast reduction in errors. ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
 
-	The next method we found was much closer to our intent. The outhor developed a Neural Machine Translation System using Keras, and used a "closeness of match" system to translate between one language and another.~\cite{ref_url16} This approach is almost perfect for what we need, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST will use a similar approach, but aims to find a matching sentence ID for the input sentece, then lookup all sentences that are translations for that sentence in the requested language. More details will be provided in the "Solution Approach" section.
+	The next method we found was much closer to our intent for PST. The author developed a Neural Machine Translation System using Keras, and used a "closeness of match" system to translate between one language and another.~\cite{ref_url16} This approach was almost perfect for what we needed, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST will use a similar approach, but aims to find a matching sentence ID for the input sentence, then lookup all sentences that are translations for that sentence in the requested language. More details on this are provided in the "Solution Approach" section.
 	
+	\section{Predictive Modeling Background}
+	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation. ~\cite{ref_url16}
+	
+	Sequence to Sequence (often abbreviated to seq2seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We will target sentence translations to and from English, Portuguese and  Hindi languages only. Use of seq2seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data
+	
+	To summarize our model, the Encoder simply takes the input data, and train on it then it passes the last state of its recurrent layer as an initial state to the first recurrent layer of the decoder part. The Decoder takes the last state of encoder’s last recurrent layer and uses it as an initial state to its first recurrent layer , the input of the decoder is the sequences that we want to get. We will use Keras API with Tensorflow backend to build our model.
+
 	\section{Solution Approach}
-	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section will go over what the steps look like and how they relate to each other in a full iteration of the program. 
+	To solve the problem of PSTs we first collected 200 sample sentences from various travel sites in order to build a base of useful translations. Next, we developed a back end of a Google Cloud-hosted MySQL database that holds the the translations for all of our sentences and the translation relationships between those sentences. We then developed an HTML front end that allows users to request a translation of a sentence from one language to another. Once a sentence translation has been requested we used a combination of NLP and similarity metrics in order to find a close sentence match in the source language. Then we used our MySQL database to find all of the related matches to the closest-matched sentence in the language requested by the user and returned them to the UI for display, along with the percentage of how close the match was. 
 
-	First, we will form a pristine database of known, correct, contextual translations to sentences that focus on translating the intent of sentences rather than the word in that sentence. There is more detail on this step in the "Data Collection" section. 
-
-	Second, we will take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the "Full Demo" section. 
-
-	Third, we plan to use a sequence to sequence model to find as close a match as possible to the input sentence and its associated translation. This section is still in progress in this iteration of the document, we will use it to verify our approach in step four which meets functional expectations for the project. More details of that can be found in the "Encoder-Decoder Long Short-Term Memory (LSTM) Networks" section. 
-
-	Fourth, we will measure the closeness of our guessed sentence to our input sentence using Euclidean Distance and  Cosine Similarity and return the result of the method that we determine is the best performing indicator, along with alll sentences that relate to the matched sentence to the front end.This is covered in more detail in the "Euclidean Distance and Cosine Similarity" and "Results and Analysis" sections.
-
-	Fifth and last, we will display our results to the user through the front end. This is covered in more detail in the "Full Demo" section.
+	\subsection{Data Collection}
+	The data for this project was collected to help people who travel for businsess or pleasure.  If someone who can speak English is travelling to India, though most Indians know some English, he/she will face a few communication issues when conversing with waiter, taxi driver, hotel staff etc. The initial collection of 200 English Sentences are those various travel sites found were valuable to know when travelling. The sentences were assembled in English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Potuguese and Hindi using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in Hindi. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public Github Repository in the Appendix.
 	
+
 	\subsection{Database Design}
-	For our database design we wanted to leverage a cloud-based storage system so that we could both reference the same live database, as well as making the database updateable in realtime in case we want to utilize a realtime update strategy in the future. We chose Google Coud Platform (GCP) as a host for our database due to its ease of setup and robust set of no-cost features. 
+	For our database design we leveraged a cloud-based storage system so that we could both reference the same live database, as well as making the database updateable in realtime so we can allow users to teach the program new translations for sentences for which it does not yet have a translation. We chose Google Coud Platform (GCP) as a host for our database due to its ease of setup and robust set of no-cost features. We created a MySQL database on Cloud SQL to store our translation tables.
 	
-	Our GCP database consists of two tables:
+	Our Cloud SQL MySQL database consists of two tables:
 			
 		\begin{enumerate}
 			\item Sentences: Stores a unique Sentence ID for a combination of text (max 500 characters) and a language key (EN=English, PT=Portuguese, HI=Hindi). There is also a place for a suggested replacement for possible future enhancements, but this is not used in our current version of the program.
@@ -90,23 +89,8 @@
 
 	One of the problems we wanted to solve early was to be able to test our model offline, in case a network connect occurred we still wanted access to our model. To facilitate this we extracted the data in the database into dataframes through sqlalchemy~\cite{ref_url15} and exported the data to .pkl files. We then load the .pkl files whenever we need the data for a model, which makes us immune to network interruptions. Examples of the SQL Queries used to extract the data can be found in Appendix A.
 
-	\subsection{Data Collection}
-	
-	The data for this project was collected to help people who travel for businsess or pleasure.  If someone who can speak English is travelling to India, though most Indians know some English, he will face a few communication issues when conversing with waiter, taxi driver, hotel staff etc. The initial collection of 200 English Sentences  are valuable to know when travelling. The sentences were assembled in English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Potuguese and Hindi using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in Hindi. If the translation done by Google did not make sense, the translation was modified to make it more sensible. 
-	The list of sentences and translations can be found in our public Github Repository:
-	
-	\url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
-	
-	\section{Predictive Modeling}
-	Automatic or machine translation is one of the most challenging AI tasks given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation. ~\cite{ref_url16}
-	
-	Sequence to Sequence (often abbreviated to seq2seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We will target sentence translations to and from English, Portuguese and  Hindi languages only. Use of seq2seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data
-	
-	To summarize our model, the Encoder simply takes the input data, and train on it then it passes the last state of its recurrent layer as an initial state to the first recurrent layer of the decoder part. The Decoder takes the last state of encoder’s last recurrent layer and uses it as an initial state to its first recurrent layer , the input of the decoder is the sequences that we want to get. We will use Keras API with Tensorflow backend to build our model.
-
-
 	\subsection{Data Preparation}
-	Before we start building the model, we need to clean up the text data (i.e. the sentences). We will remove all punctuation characters, normalize the case to lowercase, normalize all Unicode characters to ASCII and remove any tokens that are not alphabetic. To build the model, we need to map words to Integers. We will use Keras Tokenize class for this. The Tokenizer must be constructed and then fit on either raw text documents or integer encoded text documents. Once fit, the Tokenizer provides four attributes that you can use to understand about your text., viz.,
+	Before we start building the model, we needed to clean up the text data (i.e. the sentences). We removed all punctuation characters, normalized the case to lowercase, normalized all Unicode characters to ASCII and removed any tokens that are not alphabetic. To build the model, we needed to map words to integers  using the Keras Tokenize class. The Tokenizer had to be constructed and then fit on either raw text documents or integer-encoded text documents. Once fit, the Tokenizer provided four attributes that we used to understand our text., viz.,
 					\begin{enumerate}
 						 \item word-counts: A dictionary of words and their counts
 						 \item word-docs: A dictionary of words and how many documents each appeared in.
@@ -114,14 +98,14 @@
 						\item document-count:An integer count of the total number of documents that were used to fit the Tokenizer.
 					\end{enumerate}
 	
-	We will also compute the vocabulary sizes and the length of maximum sequence for both the languages. We need to encode each input and output sentences to integers and  pad them to the maximum phrase length to make all sentences of the same length. This is because we will use word embedding for the input sentence and one hot encoding for the output. In one hot encoding, a document is represented as a sequence of integer values, where each word in the document is represented as a unique integer. One hot encoding is needed because the model will predict the probability of each word in the vocabulary as output.	
+	We also computed the vocabulary sizes and the lengths of maximum sequence for both the languages. We needed to encode each input and output sentence to integers and pad them to the maximum phrase length to make all sentences of the same length. The sentences had to be padded to be the same length because we used word embedding for the input sentence and one hot encoding for the output. In one hot encoding, a document is represented as a sequence of integer values, where each word in the document is represented as a unique integer. One hot encoding was needed because the model predicted the probability of each word in the vocabulary as output.	
 
 	\subsection{Euclidean Distance and Cosine Similarity}	
-	For our comparison on closeness of strings we will leverage two methods: Euclidean Distance and Cosine Similarity. Euclidean Distance measures the distance between two points in a space, and therefore the minimum distance is the closest match. Cosine Similarity is the similarity between two vectors in a space, and therefor the maximum similarity is the closest match. In this section we will decribe how these methods calculate their scores, and in the "Results" section we will show the result of the comparison and choose our preferred match.
+	For our comparison on closeness of strings we leveraged two methods: Euclidean Distance and Cosine Similarity. Euclidean Distance measures the distance between two points in a space, and therefore the minimum distance is the closest match. Cosine Similarity is the similarity between two vectors in a space, and therefore the maximum similarity is the closest match. In this section we describe how these methods calculate their scores, and in the "Results" section we show the result of the comparison and choose our preferred match.
 	
-Euclidean distance, also known as L2 distance or the Pythagorean metric, is a basic measure of distance in a space. given a number of dimensions in a space, the Euclidean Distance calculates the length of a line segment connecting those points. This distance is calculated by going through all of the dimensions, adding up the square of the difference between the points of each value for that dimension, then taking the square root of that sum. This method is called the Pythagorean Formula.~\cite{ref_url19}. This method is easy to understand, but it seems like it might struggle if the data are not of similar shapes, as is the case with our sentence sample.
+Euclidean distance, also known as L2 distance or the Pythagorean metric, is a basic measure of distance in a space. Given a number of dimensions in a space, the Euclidean Distance calculates the length of a line segment connecting those points. This distance is calculated by going through all of the dimensions, adding up the square of the difference between the points of each value for that dimension, then taking the square root of that sum. This method is called the Pythagorean Formula.~\cite{ref_url19}. Euclidean distance is simple, but sometimes struggles if the data are not of similar shapes, as is the case with our sentence sample~\cite{ref_url19}.
 
-Cosine Similarity tries to measure similarity in a fundementally different way from Euclidean Distance. Instead of stepping through and comparing data point-by-point, Cosine Similarity instead steps through each sample and tries to build a directional veector for ther shape of the data, then measures the cosine of the angle between the two vectors. In the case of text analysis the cosine similarity uses the frequency of words in a sentence order to determine a directional vector. Cosine Similarity ignores the words that are not in common between two sentences, and focuses only on words that are in common, which avoids penalizing sentences that are very long and simply focuses on finding the closest possible match. Therefore cosine similarity is very resilient to data that is of different shapes, since the shape of the data would not necessarily affect the direction of the vector, instead the sentences with the closest ratios of like words would be considered a match.~\cite{ref_book1} This reslience to differently-shaped data is promising for our purposes, and seems to be a good fit for comparing sentences, and we will see in the "Results" section how it performs.
+Cosine Similarity tries to measure similarity in a fundementally different way from Euclidean Distance. Instead of stepping through and comparing data point-by-point, Cosine Similarity steps through each sample and tries to build a directional veector for ther shape of the data, then measures the cosine of the angle between the two vectors. In the case of text analysis, the cosine similarity uses the frequency of words in a sentence to determine a directional vector. Cosine Similarity ignores the words that are not in common between two sentences, and focuses only on words that are common, which avoids penalizing sentences that are very long and focuses on finding the most commonality. Therefore cosine similarity is very resilient to data that is of different shapes, since the shape of the data would not necessarily affect the direction of the vector. The sentences with the closest ratios of like words would be considered a match.~\cite{ref_book1} This reslience to differently-shaped data is promising for our purposes, and seems to be a good fit for comparing sentences, and we will see in the "Results" section how it performs.
 
 	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
 	A typical seq2seq model consists of 2 major components
@@ -141,7 +125,7 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	We will explain the  Encoder and Decoder model in more detail.  
+	We will explain the Encoder and Decoder model in more detail.  
 	
 	Let's say we are trying to convert the following sentence from English to Portuguese.
 
@@ -201,8 +185,22 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 
+
+	\section{Implementation and Basic Operation Flow}
+	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
+
+	First, we form a pristine database of known, correct, contextual translations to sentences that focus on translating the intent of sentences rather than the word in that sentence. There is more detail on this step in the "Data Collection" section. 
+
+	Second, we take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the "Full Demo" section. 
+
+	Third, we use a sequence-to-sequence model to find as close a match as possible to the input sentence and its associated translation.  More details of that can be found in the "Encoder-Decoder Long Short-Term Memory (LSTM) Networks" section. 
+
+	Fourth, we measure the closeness of our guessed sentence to our input sentence using Euclidean Distance and Cosine Similarity, then return the result of the method that we determine is the best performing indicator, along with all sentences that relate to the matched sentence to the front end. This is covered in more detail in the "Euclidean Distance and Cosine Similarity" and "Results and Analysis" sections.
+
+	Fifth and last, we display our results to the user through the front end. This is covered in more detail in the "Full Demo" section.
 	
-	\section{Full Demo}
+	
+	\section{Illustrative Example}
 	The front end for the Pristine Language Translation (PST) site is a simple proof-of-concept page with three boxes for input: The language and the text the user is translating from, and the language code the user is translating to. The user must fill in all three boxes with valid input before hitting the "Translate" button:
 
 	\begin{minipage}{\linewidth}
@@ -238,82 +236,102 @@ The results are then reurned to the screen for display. Note that there can be m
 	\afterpage{\clearpage}
 If the user wants to try another sentence the user can change any of the three inputs above and hit the "Translate" button again to repeat the process.
 
-	\subsection{Results and Analysis}
+	\section{Results and Analysis}
 	After we assembled our database of translations and built our PKL files our only outstanding task was to pick a method for determining how close sentences are. We had two contenders: Euclidean Distances and Cosine Similarities. We needed a way to determine, given our dataset, which method stood the best chance of matching an input sentence to the sentence we thought it should match to. We decided to try slightly altering some of our pristine sentences in our database and runnign them through both comparisons, then analyze how well each method performed.
 
-To start, we altered our known sentence "'we are good friends" to "we are best friends", and ran it through the Euclidean Distance and Cosine Similarity comparisons. Here is the output:
+To start, we altered our known sentence "'we are good friends" to "we are best friends", and ran it through the Euclidean Distance and Cosine Similarity comparisons. For the full code please reference \hyperlink{Appendix C}{Appendix C}.
 
+\vspace{10 mm}
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{Friends_Comparison.png}
-			\captionof{figure}{Sentence Comparison 1}
-			\label{fig:Sentence Comparison 1}
-			\vspace*{1cm}
+			\begin{tabular}{| l | l | l | l |}
+			  \hline			
+			  Method & Resulting Text & Distance/Percentage Match & Percent Difference Between Top 2 Results \\
+			  \hline			
+			  Euclidean Distance & we are good friends & 72.18 & 62.31 \\
+			  \hline			
+			  Cosine Similarity & we are good friends & 73.95 & 135.73 \\
+			  \hline  
+			\end{tabular}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
+\vspace{10 mm}
 
-	You can see that both methods were effective at finding the result we anticipated: "We are good friends." However, if you look at how close the second-best guess was in each comparison you can see that the cosine similarity method seemed much better at finding that result. The next-closest Euclidean Distance was only 62.31\% more than the best guess, but for Cosine Similarity the best guess was 135.73\% better than the next-best guess. Even though both performed admirably in this circumstance, it seems like cosine similarity was able to more clearly diffferentiate the sentence we want from the sentence we don't. 
-	As an example of the end-to-end process, here's the translation of our found pristine sentence to the Portuguese "Nós somos bons amigos.":
+	Both methods were effective at finding the result we anticipated: "We are good friends." However, if you look at how close the second-best guess was in each comparison you can see that the cosine similarity method seemed much better at finding that result. The next-closest Euclidean Distance was only 62.31\% more than the best guess, but for Cosine Similarity the best guess was 135.73\% better than the next-best guess. Even though both performed admirably in this circumstance, it seems like cosine similarity was able to more clearly diffferentiate the sentence we want from the sentence we don't.  To demonstrate the end-to-end process, in \hyperlink{Appendix D}{Appendix D} we show that our pristine sentence result of "we are best friends" translates to the Portuguese sentence "Nós somos bons amigos".
 
+	We tried many examples and the results were similar, here is another example where we altered our known sentence "'I would like dessert" to "'I would love dessert", the code example can be found in \hyperlink{Appendix E}{Appendix E} :
+
+
+\vspace{10 mm}
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{Language_Match.png}
-			\captionof{figure}{Translating Matched Sentence to Portuguese}
-			\label{fig:Translating Matched Sentence  to Portuguese}
-			\vspace*{1cm}
+			\begin{tabular}{| l | l | l | l |}
+			  \hline			
+			  Method & Resulting Text & Distance/Percentage Match & Percent Difference Between Top 2 Results \\
+			  \hline			
+			  Euclidean Distance & I would like dessert & 77.26 & 46.48 \\
+			  \hline			
+			  Cosine Similarity & I would like dessert & 70.16 & 95.07 \\
+			  \hline  
+			\end{tabular}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
+\vspace{10 mm}
 
-	We tried many examples and the results were similar, here is another example where we  we altered our known sentence "'I would like dessert" to "'I would love dessert":
 
 
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{Dessert_Comparison.png}
-			\captionof{figure}{Sentence Comparison 2}
-			\label{fig:Sentence Comparison 2}
-			\vspace*{1cm}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
 	Again, both methods were effective at finding the result we anticipated: "I would like dessert." However, the next-closest Euclidean Distance was only 46.48\% more than the best guess, but for Cosine Similarity the best guess was 95.07\% better than the next-best guess. 
 
-	We also thought that it would be interesting to try a sentence that wasn't even close to one to which we knew the translation. For this we altered "I would like some water" to "I would like some blueberry muffins and orange juice, please." We knew this wouldn't be pretty, here is the result:
+	We also thought that it would be interesting to try a sentence that wasn't close to one for which we knew the translation. For this we altered "I would like some water" to "I would like some blueberry muffins and orange juice, please."  \hyperlink{Appendix F}{Appendix F} has the code example, here is the result:
 
+
+
+\vspace{10 mm}
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{Terrible_Comparison.png}
-			\captionof{figure}{Sentence Comparison 3}
-			\label{fig:Sentence Comparison 3}
-			\vspace*{1cm}
+			\begin{tabular}{| l | l | l | l |}
+			  \hline			
+			  Method & Resulting Text & Distance/Percentage Match & Percent Difference Between Top 2 Results \\
+			  \hline			
+			  Euclidean Distance & I would like some water & 113.03 & 0.82 \\
+			  \hline			
+			  Cosine Similarity & I would like some water & 36.12 & 3.01 \\
+			  \hline  
+			\end{tabular}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
-	The good news is that both methods found what we hoped: "I would like some water." It's also notable that the Cosine Similarity did perform very slightly better than Euclidean Distance in terms of the difference to the next-highest match: 3.01\% for Cosine Similarity vs. 0.83\% for Euclidean Distance. However, looking at the quality of match for Cosine Similarity says that these sentences are only 36.12\% similar, which is a very low similarity compared to the over 70\% of the other two matches. We would need to strongly discourage anyone taking this translation as a close match to what is entered.
+\vspace{10 mm}
 
-	Finally, we wanted to list the point of PST, translating a sentence that is hard to translation from one language to another. In this case we chose "You really hit one out of the park". Google Translate shows this in Portuguese as "Você realmente bateu um fora do Parque", which still would not give a native Portuguese speaker any idea what that sentence means to them, unless they knew American Baseball. Here's how PST Performs:
 
+	The good news is that both methods found what we hoped: "I would like some water." It's also notable that the Cosine Similarity did perform very slightly better than Euclidean Distance in terms of the difference to the next-highest match: 3.01\% for Cosine Similarity vs. 0.82\% for Euclidean Distance. However, looking at the quality of match for Cosine Similarity says that these sentences are only 36.12\% similar, which is a very low similarity compared to the over 70\% of the other two matches. We would need to strongly discourage anyone taking this translation as a close match to what is entered.
+
+	Finally, we wanted to list the point of PST, translating a sentence that is hard to translation from one language to another. In this case we chose "You really hit one out of the park". Google Translate shows this in Portuguese as "Você realmente bateu um fora do Parque", which still would not give a native Portuguese speaker any idea what that sentence means to them, unless they knew American Baseball. Here's how PST Performs, \hyperlink{Appendix G}{Appendix G} has the code:
+
+
+
+\vspace{10 mm}
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{Park_Comparison.png}
-			\captionof{figure}{Sentence Comparison 4}
-			\label{fig:Sentence Comparison 4}
-			\vspace*{1cm}
+			\begin{tabular}{| l | l | l | l |}
+			  \hline			
+			  Method & Resulting Text & Distance/Percentage Match & Percent Difference Between Top 2 Results \\
+			  \hline			
+			  Euclidean Distance & you hit one out of the park & 41.99 & 191.66 \\
+			  \hline			
+			  Cosine Similarity & you hit one out of the park & 91.18 & 264.79 \\
+			  \hline  
+			\end{tabular}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{Park_Translation.png}
-			\captionof{figure}{Translation for Colloquialism}
-			\label{fig:Translation for Colloquialism}
-			\vspace*{1cm}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
+\vspace{10 mm}
+
 	The sentence we input was very similar to the PST entry "You hit one out of the park", which is reflected in the displayed scores. More importantly, PST returned "Você foi ótimo", which means "You were great" in English, which is the intent of the colloquialism. 
+
+For another example, in Portuguese there's a sentence "Eu adoro Cafuné" Google Translate does not have a translation for "Cafuné", because it's a complicated word which loosely means "the act of running fingers through hair" . Our program's goal is to return an English translation "I love the feeling of fingers running through my hair" when asked to translate "Eu adoro Cafuné" into English. Using this method there is no sentence or concept we will not be able to translate into another language given enough time and resources.
 
 	Now that we have performed our analysis we are ready to decide on a final method.
 
@@ -434,6 +452,10 @@ Jiawei Han, Micheline Kamber and Jian Pei: Data Mining: Concepts and Techniques.
 
 
 \appendix
+
+\section{GitHub Repository}
+	\url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
+
 \section{SQL Queries}
 Select the text and sentence IDs for a language key. Language keys can be EN, PT, or HI for English, Portuguese, or Hindi, respectively. 
 
@@ -451,5 +473,82 @@ left join masters.Sentences a on a.sentence_id=Translations.sentence_id_1
 left join masters.Sentences b on b.sentence_id=Translations.sentence_id_2
 \end{verbatim}
 
+\section{Cosine Similarity and Euclidean Distance Comparison}
+\hypertarget{Appendix C}{}
 
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Friends_Comparison.png}
+			\captionof{figure}{Sentence Comparison 1}
+			\label{fig:Sentence Comparison 1}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
+
+\section{"we are best friends" Translation Example}
+\hypertarget{Appendix D}{}
+
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Language_Match.png}
+			\captionof{figure}{Translating Matched Sentence to Portuguese}
+			\label{fig:Translating Matched Sentence  to Portuguese}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
+
+
+\section{"I would love dessert" Translation Example}
+\hypertarget{Appendix E}{}
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Dessert_Comparison.png}
+			\captionof{figure}{Sentence Comparison 2}
+			\label{fig:Sentence Comparison 2}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
+
+\section{"I would like some blueberry muffins and orange juice, please." Translation Example}
+\hypertarget{Appendix F}{}
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Terrible_Comparison.png}
+			\captionof{figure}{Sentence Comparison 3}
+			\label{fig:Sentence Comparison 3}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
+\section{"You really hit one out of the park." Translation Example}
+\hypertarget{Appendix G}{}
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Park_Comparison.png}
+			\captionof{figure}{Sentence Comparison 4}
+			\label{fig:Sentence Comparison 4}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Park_Translation.png}
+			\captionof{figure}{Translation for Colloquialism}
+			\label{fig:Translation for Colloquialism}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
 \end{document}
