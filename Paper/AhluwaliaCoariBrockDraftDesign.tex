@@ -54,10 +54,14 @@
 	\section{Predictive Modeling Background}
 	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation. ~\cite{ref_url16}
 	
-	Sequence to Sequence (often abbreviated to seq2seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We will target sentence translations to and from English, Portuguese and  Hindi languages only. Use of seq2seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data
+	Sequence to Sequence (often abbreviated to Seq2Seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We will target sentence translations to and from English, Portuguese and  Hindi languages only. Use of Seq2Seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data
 	
-	To summarize our model, the Encoder simply takes the input data, and train on it then it passes the last state of its recurrent layer as an initial state to the first recurrent layer of the decoder part. The Decoder takes the last state of encoder’s last recurrent layer and uses it as an initial state to its first recurrent layer , the input of the decoder is the sequences that we want to get. We will use Keras API with Tensorflow backend to build our model.
-
+	To summarize our Encoder-Decoder model, the Encoder simply takes the input data, and train on it then it passes the last state of its recurrent layer as an initial state to the first recurrent layer of the decoder part. The Decoder takes the last state of encoder’s last recurrent layer and uses it as an initial state to its first recurrent layer , the input of the decoder is the sequences that we want to get. We will use Keras API with Tensorflow backend to build our model.
+	
+	One of the important tasks for language understanding and information retrieval is to model semantic similarity between words, phrases or senttences. Siamese networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more.
+	Siamese Neural Network is a supervised learning model where input is pairs of sentences having different sequence length and a label for the pair which describe the underlying similarity between sentence pairs~\cite{ref_url21}. We use this similarity score to find the closest matched sentence from our dataset for the sentence input by the user for translation.
+	
+	
 	\section{Solution Approach}
 	To solve the problem of PSTs we first collected 200 sample sentences from various travel sites in order to build a base of useful translations. Next, we developed a back end of a Google Cloud-hosted MySQL database that holds the the translations for all of our sentences and the translation relationships between those sentences. We then developed an HTML front end that allows users to request a translation of a sentence from one language to another. Once a sentence translation has been requested we used a combination of NLP and similarity metrics in order to find a close sentence match in the source language. Then we used our MySQL database to find all of the related matches to the closest-matched sentence in the language requested by the user and returned them to the UI for display, along with the percentage of how close the match was. 
 
@@ -125,8 +129,6 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	We will explain the Encoder and Decoder model in more detail.  
-	
 	Let's say we are trying to convert the following sentence from English to Portuguese.
 
 	Input sentence (English) - i have lost my passport
@@ -167,13 +169,14 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	 \end{minipage}
 	 \afterpage{\clearpage}
 	 
-	\subsection{Building the Neural Translation Model}
-	We will split our dataset into train and test set for model training and evaluation, respectively.
-	Our seq2seq model is defined as the following
+	\subsubsection{Building the Neural Translation Model}
+	\paragraph
+	We split our dataset into train and test set for model training and evaluation, respectively.
+	Our Seq2Seq model is defined as the following
 
 	\begin{enumerate}
-		\item For the encoder, we will use an embedding layer and an LSTM layer
-		\item For the decoder, we will use another LSTM layer followed by a dense layer
+		\item For the encoder, we used an embedding layer and an LSTM layer
+		\item For the decoder, we used another LSTM layer followed by a dense layer
 	\end{enumerate}
 
 	\begin{minipage}{\linewidth}
@@ -185,6 +188,36 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 
+	\subsection{Siamese Manhattan LSTM for Learning Sentence Similarity}	
+	Siamese networks are networks that have two or more identical sub-networks in them. The two sub neural networks are identical.  'Identical' here means they have the same configuration with the same parameters and weights. Parameter updating is mirrored across both subnetworks.
+	
+	Siamese Neural Network is a keras based implementation of deep siamese Bidirectional LSTM network to capture phrase/sentence similarity using word embeddings.
+	Named MaLSTM (“Ma” for Manhattan distance), its architecture is depicted in figure below.
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{siamese_image.png}
+			\captionof{figure}{Siamese Network Architechture}
+			\label{fig:Siamese Model Architectture}~\cite{ref_url22}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	In MaLSTM, the identical sub-network is all the way from the embedding up to the last LSTM hidden state. Inputs to the network are zero-padded sequences of word indices. These inputs are vectors of fixed length, where the first zeros are being ignored and the nonzeros are indices that uniquely identify words. Those vectors are then fed into the embedding layer. Word embedding is a modern way to represent words in deep learning models. This layer looks up the corresponding embedding for each word and encapsulates all them into a matrix. This matrix represents the given text as a series of embeddings. We used Google’s word2vec embedding~\cite{ref_url23}, same as in the original paper~\cite{ref_url24}.
+	
+	We have two embedded matrices that represent a candidate of two similar questions. Then we feed them into the LSTM (practically, there is only one) and the final state of the LSTM for each question is a 50-dimensional vector. It is trained to capture semantic meaning of the question. By now we have the two vectors that hold the semantic meaning of each question. We put them through the defined similarity function (below)
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\centering{\includegraphics[width=5cm,height=4cm,keepaspectratio]{ma_similarity.png}}
+			\captionof{figure}{MaLSTM Similarity Function}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	and since we have an exponent of a negative the output (the prediction in our case) will be between 0 and 1.
+	
+	We trained the Siamese  MaLSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25} consisting of about 400,000 question pairs. The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the MaLSTM model above.
 
 	\section{Implementation and Basic Operation Flow}
 	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
@@ -252,6 +285,8 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 			  \hline			
 			  Cosine Similarity & we are good friends & 73.95 & 135.73 \\
 			  \hline  
+			  Siamese MaLSTM & we are good friends & 75.22 & 73.8 \\
+			  \hline
 			\end{tabular}
 		\end{center}
 	\end{minipage}
@@ -274,6 +309,8 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 			  \hline			
 			  Cosine Similarity & I would like dessert & 70.16 & 95.07 \\
 			  \hline  
+			  Siamese MaLSTM & I would like dessert & 100.00 & 52.72 \\
+			  \hline
 			\end{tabular}
 		\end{center}
 	\end{minipage}
@@ -299,6 +336,8 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 			  \hline			
 			  Cosine Similarity & I would like some water & 36.12 & 3.01 \\
 			  \hline  
+			  Siamese MaLSTM & I would like dessert & 100.00 & 85.75 \\
+			  \hline
 			\end{tabular}
 		\end{center}
 	\end{minipage}
@@ -323,6 +362,8 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 			  \hline			
 			  Cosine Similarity & you hit one out of the park & 91.18 & 264.79 \\
 			  \hline  
+			  Siamese MaLSTM & you hit one out of the park & 100.00 & 220.0 \\
+			  \hline
 			\end{tabular}
 		\end{center}
 	\end{minipage}
@@ -447,6 +488,26 @@ Text Similarities, Meenu Ahluwalia and Brian Coari, Available at:  \url{https://
 
 \bibitem{ref_book1}
 Jiawei Han, Micheline Kamber and Jian Pei: Data Mining: Concepts and Techniques. 3rd ed. Elsevier Inc., Chapter 2.4.7 - Cosine Similarity, Page 77 (2012)
+
+\bibitem{ref_url21}
+Siamese Recurrent Architectures for Learning Sentence Similarity (2016), Available at:
+\url{https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12195/}.
+
+\bibitem{ref_url22}
+Figure 5, Available at: \url{https://raw.githubusercontent.com/amansrivastava17/lstm-siamese-text-similarity/master/images/arch_image.png/}.
+
+\bibitem{ref_url23}
+Google's word2ve,c Available at:
+\url{https://code.google.com/archive/p/word2vec//}.
+
+\bibitem{ref_url24}
+Siamese Recurrent Architectures for Learning Sentence Similarity, Available at:
+\url{http://people.csail.mit.edu/jonasmueller/info/MuellerThyagarajan_AAAI16.pdf/}.
+
+\bibitem{ref_url25}
+Kaggle Quora Question Pairs  Dataset, Available at: 
+\url{https://www.kaggle.com/c/quora-question-pairs/}.
+
 
 \end{thebibliography}
 
