@@ -58,8 +58,8 @@
 	
 	To summarize our Encoder-Decoder model, the Encoder simply takes the input data, and train on it then it passes the last state of its recurrent layer as an initial state to the first recurrent layer of the decoder part. The Decoder takes the last state of encoder’s last recurrent layer and uses it as an initial state to its first recurrent layer , the input of the decoder is the sequences that we want to get. We will use Keras API with Tensorflow backend to build our model.
 	
-	One of the important tasks for language understanding and information retrieval is to model semantic similarity between words, phrases or senttences. Siamese networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more.
-	Siamese Neural Network is a supervised learning model where input is pairs of sentences having different sequence length and a label for the pair which describe the underlying similarity between sentence pairs~\cite{ref_url21}. We use this similarity score to find the closest matched sentence from our dataset for the sentence input by the user for translation.
+	One of the important tasks for language understanding and information retrieval is to model semantic similarity between words, phrases or senttences. Siamese LSTM networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more.
+	Siamese LSTM is a supervised learning model where input is pairs of sentences having different sequence length and a label for the pair which describe the underlying similarity between sentence pairs~\cite{ref_url21}. We use this similarity score to find the closest matched sentence from our dataset for the sentence input by the user for translation.
 	
 	
 	\section{Solution Approach}
@@ -188,36 +188,36 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 
-	\subsection{Siamese Manhattan LSTM for Learning Sentence Similarity}	
-	Siamese networks are networks that have two or more identical sub-networks in them. The two sub neural networks are identical.  'Identical' here means they have the same configuration with the same parameters and weights. Parameter updating is mirrored across both subnetworks.
+	\subsection{Siamese LSTM for Learning Sentence Similarity}	
+	Siamese LSTM, a version of Manhattan LSTM. Manhattan LSTM models has two networks LSTMleft and LSTMright which process one of the sentences in a given pair independently. In Siamese LSTM, both LSTMleft and LSTMright have same tied weights such that LSTMleft = LSTMright. Such a model is useful for tasks like duplicate query detection 
 	
-	Siamese Neural Network is a keras based implementation of deep siamese Bidirectional LSTM network to capture phrase/sentence similarity using word embeddings.
-	Named MaLSTM (“Ma” for Manhattan distance), its architecture is depicted in figure below.
+	Siamese LSTM is a keras based implementation of deep siamese Bidirectional LSTM network to capture phrase/sentence similarity using word embeddings.
+	Its architecture is depicted in figure below.
 	
 	\begin{minipage}{\linewidth}
 		\begin{center}
 			\includegraphics[width=\linewidth]{siamese_image.png}
-			\captionof{figure}{Siamese Network Architechture}
-			\label{fig:Siamese Model Architectture}~\cite{ref_url22}
+			\captionof{figure}{Siamese LSTM Architechture}
+			\label{fig:Siamese LSTM Architectture}~\cite{ref_url22}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	In MaLSTM, the identical sub-network is all the way from the embedding up to the last LSTM hidden state. Inputs to the network are zero-padded sequences of word indices. These inputs are vectors of fixed length, where the first zeros are being ignored and the nonzeros are indices that uniquely identify words. Those vectors are then fed into the embedding layer. Word embedding is a modern way to represent words in deep learning models. This layer looks up the corresponding embedding for each word and encapsulates all them into a matrix. This matrix represents the given text as a series of embeddings. We used Google’s word2vec embedding~\cite{ref_url23}, same as in the original paper~\cite{ref_url24}.
+	In Siamese LSTM, the identical sub-network is all the way from the embedding up to the last LSTM hidden state. Inputs to the network are zero-padded sequences of word indices. These inputs are vectors of fixed length, where the first zeros are being ignored and the nonzeros are indices that uniquely identify words. Those vectors are then fed into the embedding layer. Word embedding is a modern way to represent words in deep learning models. This layer looks up the corresponding embedding for each word and encapsulates all them into a matrix. This matrix represents the given text as a series of embeddings. We used Google’s word2vec embedding~\cite{ref_url23}, same as in the original paper~\cite{ref_url24}.
 	
 	We have two embedded matrices that represent a candidate of two similar questions. Then we feed them into the LSTM (practically, there is only one) and the final state of the LSTM for each question is a 50-dimensional vector. It is trained to capture semantic meaning of the question. By now we have the two vectors that hold the semantic meaning of each question. We put them through the defined similarity function (below)
 	
 	\begin{minipage}{\linewidth}
 		\begin{center}
 			\centering{\includegraphics[width=5cm,height=4cm,keepaspectratio]{ma_similarity.png}}
-			\captionof{figure}{MaLSTM Similarity Function}
+			\captionof{figure}{Siamese Similarity Function}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
 	
 	and since we have an exponent of a negative the output (the prediction in our case) will be between 0 and 1.
 	
-	We trained the Siamese  MaLSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25} consisting of about 400,000 question pairs. The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the MaLSTM model above.
+	We trained the Siamese  LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25} consisting of about 400,000 question pairs. The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.
 
 	\section{Implementation and Basic Operation Flow}
 	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
@@ -226,7 +226,7 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 
 	Second, we take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the "Full Demo" section. 
 
-	Third, we use a sequence-to-sequence model to find as close a match as possible to the input sentence and its associated translation.  More details of that can be found in the "Encoder-Decoder Long Short-Term Memory (LSTM) Networks" section. 
+	Third, we use a Siamese LSTM model to find as close a match as possible to the input sentence and its associated translation.  More details of that can be found in the "Siamese LSTM for Learning Sentence Similarity" section. 
 
 	Fourth, we measure the closeness of our guessed sentence to our input sentence using Euclidean Distance and Cosine Similarity, then return the result of the method that we determine is the best performing indicator, along with all sentences that relate to the matched sentence to the front end. This is covered in more detail in the "Euclidean Distance and Cosine Similarity" and "Results and Analysis" sections.
 
@@ -272,7 +272,7 @@ If the user wants to try another sentence the user can change any of the three i
 	\section{Results and Analysis}
 	After we assembled our database of translations and built our PKL files our only outstanding task was to pick a method for determining how close sentences are. We had two contenders: Euclidean Distances and Cosine Similarities. We needed a way to determine, given our dataset, which method stood the best chance of matching an input sentence to the sentence we thought it should match to. We decided to try slightly altering some of our pristine sentences in our database and runnign them through both comparisons, then analyze how well each method performed.
 
-To start, we altered our known sentence "'we are good friends" to "we are best friends", and ran it through the Euclidean Distance and Cosine Similarity comparisons. For the full code please reference \hyperlink{Appendix C}{Appendix C}.
+	To start, we altered our known sentence "'we are good friends" to "we are best friends", and ran it through the Euclidean Distance and Cosine Similarity comparisons. For the full code please reference \hyperlink{Appendix C}{Appendix C}.
 
 \vspace{10 mm}
 	\begin{minipage}{\linewidth}
@@ -291,7 +291,7 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 	\afterpage{\clearpage}
 \vspace{10 mm}
 
-	Both methods were effective at finding the result we anticipated: "We are good friends." However, if you look at how close the second-best guess was in each comparison you can see that the cosine similarity method seemed much better at finding that result. The next-closest Euclidean Distance was only 62.31\% more than the best guess, but for Cosine Similarity the best guess was 135.73\% better than the next-best guess. Even though both performed admirably in this circumstance, it seems like cosine similarity was able to more clearly diffferentiate the sentence we want from the sentence we don't.  To demonstrate the end-to-end process, in \hyperlink{Appendix D}{Appendix D} we show that our pristine sentence result of "we are best friends" translates to the Portuguese sentence "Nós somos bons amigos".
+	All three methods were effective at finding the result we anticipated: "We are good friends." However, if you look at how close the second-best guess was in each comparison you can see that the cosine similarity method seemed much better at finding that result. The next-closest for Siamese MaLSTM was 73.8\%, Euclidean Distance was only 62.31\% more than the best guess, but for Cosine Similarity the best guess was 135.73\% better than the next-best guess. Even though all performed admirably in this circumstance, it seems like cosine similarity was able to more clearly diffferentiate the sentence we want from the sentence we don't.  To demonstrate the end-to-end process, in \hyperlink{Appendix D}{Appendix D} we show that our pristine sentence result of "we are best friends" translates to the Portuguese sentence "Nós somos bons amigos".
 
 	We tried many examples and the results were similar, here is another example where we altered our known sentence "'I would like dessert" to "'I would love dessert", the code example can be found in \hyperlink{Appendix E}{Appendix E} :
 
@@ -306,7 +306,7 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 			  \hline			
 			  Cosine Similarity & I would like dessert & 70.16 & 95.07 \\
 			  \hline  
-			  Siamese MaLSTM & I would like dessert & 100.00 & 52.72 \\
+			  Siamese MaLSTM & I would like dessert & 60.94 & 52.72 \\
 			  \hline
 			\end{tabular}
 	\end{minipage}
@@ -331,7 +331,7 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 			  \hline			
 			  Cosine Similarity & I would like some water & 36.12 & 3.01 \\
 			  \hline  
-			  Siamese MaLSTM & I would like dessert & 100.00 & 85.75 \\
+			  Siamese MaLSTM & I would like some water & 25.66 & 7.02 \\
 			  \hline
 			\end{tabular}
 	\end{minipage}
@@ -355,7 +355,7 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 			  \hline			
 			  Cosine Similarity & you hit one out of the park & 91.18 & 264.79 \\
 			  \hline  
-			  Siamese MaLSTM & you hit one out of the park & 100.00 & 220.0 \\
+			  Siamese MaLSTM & you hit one out of the park & 75.08 & 108.14 \\
 			  \hline
 			\end{tabular}
 	\end{minipage}
@@ -364,7 +364,7 @@ To start, we altered our known sentence "'we are good friends" to "we are best f
 
 	The sentence we input was very similar to the PST entry "You hit one out of the park", which is reflected in the displayed scores. More importantly, PST returned "Você foi ótimo", which means "You were great" in English, which is the intent of the colloquialism. 
 
-For another example, in Portuguese there's a sentence "Eu adoro Cafuné" Google Translate does not have a translation for "Cafuné", because it's a complicated word which loosely means "the act of running fingers through hair" . Our program's goal is to return an English translation "I love the feeling of fingers running through my hair" when asked to translate "Eu adoro Cafuné" into English. Using this method there is no sentence or concept we will not be able to translate into another language given enough time and resources.
+	For another example, in Portuguese there's a sentence "Eu adoro Cafuné" Google Translate does not have a translation for "Cafuné", because it's a complicated word which loosely means "the act of running fingers through hair" . Our program's goal is to return an English translation "I love the feeling of fingers running through my hair" when asked to translate "Eu adoro Cafuné" into English. Using this method there is no sentence or concept we will not be able to translate into another language given enough time and resources.
 
 	Now that we have performed our analysis we are ready to decide on a final method.
 
@@ -382,7 +382,7 @@ For another example, in Portuguese there's a sentence "Eu adoro Cafuné" Google 
 	\section{Ethical Considerations}
 	Ethical considerations help outline the moral principles, principles about what is good or bad, that come into effect for a topic. In order to determine if we were meeting our moral obligations with this work we asked ourselves who will be affected by our work, and how we can ensure we are doing good to that group without harming another group. To answer the first question: the people affected by our work will be the users of our translation program, and the people with whom they speak. To answer the second question: we can ensure our translation process is as clear as possible, and we can provide the user with enough information to make an informed decision around his or her communication. 
 
-How can we be sure that our data we are providing to the user will be helpful instead of harmful? For example, if we provide a bad translation to a user then a well-meaning user could end up saying something inappropriate to a stranger or coworker, leading to negative repurcussions such as exclusion or disciplinary actions. In order to find a framework in which to address this ethical consideration, we found it helpful to have a template with some core questions to answer. Margot Mieske proposes in her paper "A Quantitative Study of Data in the NLP community" five key questions every NLP programmer must answer: ~\cite{ref_url8}
+	How can we be sure that our data we are providing to the user will be helpful instead of harmful? For example, if we provide a bad translation to a user then a well-meaning user could end up saying something inappropriate to a stranger or coworker, leading to negative repurcussions such as exclusion or disciplinary actions. In order to find a framework in which to address this ethical consideration, we found it helpful to have a template with some core questions to answer. Margot Mieske proposes in her paper "A Quantitative Study of Data in the NLP community" five key questions every NLP programmer must answer: ~\cite{ref_url8}
 
 
 \begin{itemize}
