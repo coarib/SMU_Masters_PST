@@ -189,10 +189,10 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\afterpage{\clearpage}
 
 	\subsection{Siamese LSTM for Learning Sentence Similarity}	
-	Siamese LSTM, a version of Manhattan LSTM. Manhattan LSTM models has two networks LSTMleft and LSTMright which process one of the sentences in a given pair independently. In Siamese LSTM, both LSTMleft and LSTMright have same tied weights such that LSTMleft = LSTMright. Such a model is useful for tasks like duplicate query detection 
+	Siamese LSTM, a version of Manhattan LSTM. Manhattan LSTM models has two networks LSTMleft and LSTMright which processes one of the sentences in a given pair independently. In Siamese LSTM, both LSTMleft and LSTMright have the same tied weights such that LSTMleft = LSTMright. Such a model is useful for tasks like duplicate query detection. 
 	
-	Siamese LSTM is a keras based implementation of deep siamese Bidirectional LSTM network to capture phrase/sentence similarity using word embeddings.
-	Its architecture is depicted in figure below.
+	Siamese LSTM is a keras-based implementation of a deep siamese Bidirectional LSTM network used to capture phrase/sentence similarity using word embeddings.
+	Its architecture is depicted in figure below:
 	
 	\begin{minipage}{\linewidth}
 		\begin{center}
@@ -203,9 +203,9 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	In Siamese LSTM, the identical sub-network is all the way from the embedding up to the last LSTM hidden state. Inputs to the network are zero-padded sequences of word indices. These inputs are vectors of fixed length, where the first zeros are being ignored and the nonzeros are indices that uniquely identify words. Those vectors are then fed into the embedding layer. Word embedding is a modern way to represent words in deep learning models. This layer looks up the corresponding embedding for each word and encapsulates all them into a matrix. This matrix represents the given text as a series of embeddings. We used Google’s word2vec embedding~\cite{ref_url23}, same as in the original paper~\cite{ref_url24}.
+	In Siamese LSTM, the identical sub-network is all the way from the embedding up to the last LSTM hidden state. Inputs to the network are zero-padded sequences of word indices. These inputs are vectors of fixed length, where the first zeros are ignored and the nonzeros are indices that uniquely identify words. Those vectors are then fed into the embedding layer. Word embedding is a modern way to represent words in deep learning models. This layer looks up the corresponding embedding for each word and encapsulates all them into a matrix. This matrix represents the given text as a series of embeddings. We used Google’s word2vec embedding~\cite{ref_url23}, same as in the original paper~\cite{ref_url24}.
 	
-	We have two embedded matrices that represent a candidate of two similar questions. Then we feed them into the LSTM (practically, there is only one) and the final state of the LSTM for each question is a 50-dimensional vector. It is trained to capture semantic meaning of the question. By now we have the two vectors that hold the semantic meaning of each question. We put them through the defined similarity function (below)
+	We have two embedded matrices that represent a candidate of two similar questions. Then we feed them into the LSTM (practically, there is only one) and the final state of the LSTM for each question is a 50-dimensional vector. It is trained to capture the semantic meaning of the question. By now we have the two vectors that hold the semantic meaning of each question. We put them through the defined similarity function (below):
 	
 	\begin{minipage}{\linewidth}
 		\begin{center}
@@ -215,9 +215,9 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	and since we have an exponent of a negative the output (the prediction in our case) will be between 0 and 1.
+	Since we have an exponent of a negative, the output (the prediction in our case) will be between 0 and 1.
 	
-	We trained the Siamese  LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25} consisting of about 400,000 question pairs. The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.
+	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25} consisting of about 400,000 question pairs. The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.
 
 	\section{Implementation and Basic Operation Flow}
 	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
@@ -270,7 +270,7 @@ The results are then reurned to the screen for display. Note that there can be m
 If the user wants to try another sentence the user can change any of the three inputs above and hit the "Translate" button again to repeat the process.
 
 	\section{Results and Analysis}
-	After we assembled our database of translations and built our PKL files our only outstanding task was to pick a method for determining how close sentences are. We had two contenders: Euclidean Distances and Cosine Similarities. We needed a way to determine, given our dataset, which method stood the best chance of matching an input sentence to the sentence we thought it should match to. We decided to try slightly altering some of our pristine sentences in our database and runnign them through both comparisons, then analyze how well each method performed.
+	After we assembled our database of translations and built our PKL files our only outstanding task was to pick a method for determining how close sentences are. We had two contenders: Euclidean Distances and Cosine Similarities. We needed a way to determine, given our dataset, which method stood the best chance of matching an input sentence to the sentence we thought it should match to. We decided to try slightly altering some of our pristine sentences in our database and running them through both comparisons, then analyze how well each method performed.
 
 	To start, we altered our known sentence "'we are good friends" to "we are best friends", and ran it through the Euclidean Distance and Cosine Similarity comparisons. For the full code please reference \hyperlink{Appendix C}{Appendix C}.
 
@@ -291,7 +291,7 @@ If the user wants to try another sentence the user can change any of the three i
 	\afterpage{\clearpage}
 \vspace{10 mm}
 
-	All three methods were effective at finding the result we anticipated: "We are good friends." However, if you look at how close the second-best guess was in each comparison you can see that the cosine similarity method seemed much better at finding that result. The next-closest for Siamese MaLSTM was 73.8\%, Euclidean Distance was only 62.31\% more than the best guess, but for Cosine Similarity the best guess was 135.73\% better than the next-best guess. Even though all performed admirably in this circumstance, it seems like cosine similarity was able to more clearly diffferentiate the sentence we want from the sentence we don't.  To demonstrate the end-to-end process, in \hyperlink{Appendix D}{Appendix D} we show that our pristine sentence result of "we are best friends" translates to the Portuguese sentence "Nós somos bons amigos".
+	All three methods were effective at finding the result we anticipated: "We are good friends." However, examining the second-best guess score in each comparison shows that the cosine similarity method seemed much better at finding that result. The next-closest for Siamese MaLSTM was 73.8\%, Euclidean Distance was only 62.31\% more than the best guess, but for Cosine Similarity the best guess was 135.73\% better than the next-best guess. Even though all performed admirably in this circumstance, it seems like cosine similarity was able to more clearly diffferentiate the sentence we want from the sentence we don't.  To demonstrate the end-to-end process, in \hyperlink{Appendix D}{Appendix D} we show that our pristine sentence result of "we are best friends" translates to the Portuguese sentence "Nós somos bons amigos".
 
 	We tried many examples and the results were similar, here is another example where we altered our known sentence "'I would like dessert" to "'I would love dessert", the code example can be found in \hyperlink{Appendix E}{Appendix E} :
 
@@ -315,7 +315,7 @@ If the user wants to try another sentence the user can change any of the three i
 
 
 
-	Again, both methods were effective at finding the result we anticipated: "I would like dessert." However, the next-closest Euclidean Distance was only 46.48\% more than the best guess, but for Cosine Similarity the best guess was 95.07\% better than the next-best guess. 
+	Again, both methods were effective at finding the result we anticipated: "I would like dessert." However, the next-closest Euclidean Distance was only 46.48\% more than the best guess,  the next-closest Siamese similarity was 52.72\% more than the best guess, but for Cosine Similarity the best guess was 95.07\% better than the next-best guess. 
 
 	We also thought that it would be interesting to try a sentence that wasn't close to one for which we knew the translation. For this we altered "I would like some water" to "I would like some blueberry muffins and orange juice, please."  \hyperlink{Appendix F}{Appendix F} has the code example, here is the result:
 
@@ -339,7 +339,7 @@ If the user wants to try another sentence the user can change any of the three i
 \vspace{10 mm}
 
 
-	The good news is that both methods found what we hoped: "I would like some water." It's also notable that the Cosine Similarity did perform very slightly better than Euclidean Distance in terms of the difference to the next-highest match: 3.01\% for Cosine Similarity vs. 0.82\% for Euclidean Distance. However, looking at the quality of match for Cosine Similarity says that these sentences are only 36.12\% similar, which is a very low similarity compared to the over 70\% of the other two matches. We would need to strongly discourage anyone taking this translation as a close match to what is entered.
+	The good news is that all three methods found what we hoped: "I would like some water." Cosine Similarity did perform very slightly better than Euclidean Distance in terms of the difference to the next-highest match: 3.01\% for Cosine Similarity vs. 0.82\% for Euclidean Distance, but siamese handled this difficult problem with the most distinction, with a distance of 7.02\% between the top and second-best guess. However, looking at the quality of match for Cosine Similarity says that these sentences are only 36.12\% similar and the siamese similarity is only 25.66\% similar, which are very low similarity scores compared to the over 60\% of the other two matches. This low score serves as a caution to the user to discourage anyone from taking this translation as a close match to what is entered.
 
 	Finally, we wanted to list the point of PST, translating a sentence that is hard to translation from one language to another. In this case we chose "You really hit one out of the park". Google Translate shows this in Portuguese as "Você realmente bateu um fora do Parque", which still would not give a native Portuguese speaker any idea what that sentence means to them, unless they knew American Baseball. Here's how PST Performs, \hyperlink{Appendix G}{Appendix G} has the code:
 
@@ -364,16 +364,17 @@ If the user wants to try another sentence the user can change any of the three i
 
 	The sentence we input was very similar to the PST entry "You hit one out of the park", which is reflected in the displayed scores. More importantly, PST returned "Você foi ótimo", which means "You were great" in English, which is the intent of the colloquialism. 
 
-	For another example, in Portuguese there's a sentence "Eu adoro Cafuné" Google Translate does not have a translation for "Cafuné", because it's a complicated word which loosely means "the act of running fingers through hair" . Our program's goal is to return an English translation "I love the feeling of fingers running through my hair" when asked to translate "Eu adoro Cafuné" into English. Using this method there is no sentence or concept we will not be able to translate into another language given enough time and resources.
+	For another example, in Portuguese there's a popular sentence "Eu adoro Cafuné". Google Translate does not have a translation for "Cafuné", which is a complicated word which loosely means "the act of running fingers through hair" . Our program's goal is to return an English translation "I love the feeling of fingers running through my hair" when asked to translate "Eu adoro Cafuné" into English. Using this method there is no sentence or concept we will not be able to translate into another language given enough time and resources.
 
 	Now that we have performed our analysis we are ready to decide on a final method.
 
 	All code for our comparisons can be found at this URL in the References section: ~\cite{ref_url20}
 	
-	\subsection{Conclusions}
-	Cosine Similarity seems to outperform Euclidean Distance as a determination of sentence similarity, so that is the metric we will focus on for determining closeness of input sentences to our known sentences. It makes sense that Cosine Similarity would be a more ideal fit than Euclidean Sentences because every unexpected word in Euclidean Distance comparison is penalized, but in Cosine Similarity these are ignored and we focus only on the matches. This helps cut through the noise and return a more confident match in what we want.
+	\subsection{Results and Analysis Conclusions}
+	Cosine Similarity conistently outperformed Euclidean Distance as a determination of sentence similarity, so that is the metric we will focus on for determining closeness of input sentences to our known sentences. It makes sense that Cosine Similarity would be a more ideal fit than Euclidean Sentences because every unexpected word in Euclidean Distance comparison is penalized, but in Cosine Similarity these are ignored and we focus only on the matches. This helps cut through the noise and return a more confident match in what we want. 
+	Cosine Similarity vs. Siamese Similarity is a much closer match. While Cosine Similarity, in general, had a higher persentage match and a larger distance between the top two matches, there two key factors to remember. The Siamese translation was pulling from a much larger dataset, over 400,000 records compared to only 200. This means the difference between the first and second guess could be understandably lower, since there is likely a closer sentence in the 400,000 sentences. Also, in our sentence with the most differences, siamese similarity had a wider margin than cosine similarity. For this reason we will select Siamese Similarity as our preferred similarity metric.
 
-	In addition, by testing a very bad sentence match we touched on the possibility of using a similarity threshold of some kind, where perhaps in future iterations of the program we could warn users not to pay too much attention to a sentence match less than some percentage. Over 70\% match seems like a good match, below 40\% seems like a bad match, but we need to compare a lot more data to determine what that threshold might make sense to be.
+	In addition, by testing a very bad sentence match we touched on the possibility of using a similarity threshold of some kind, where perhaps in future iterations of the program we could warn users not to pay too much attention to a sentence match less than some percentage. A match with at least 60\% similarity seems like a good match, below 40\% seems like a bad match, but we need to compare more data to determine what that threshold might make sense to be.
 
 	We have also shown how PST could be used to overcome some of the hazards around langauge translation today, ignoring colloquialisms and focusing on the intent of the sentence.
 
@@ -403,7 +404,8 @@ This is also why we carefully scanned each translation for fairness to make sure
 
 	
 	\section{Conclusions}
-	Through this proof-of-concept we have shown the potential around Pristine Sentence Translations, and have overcome some of the technical hurdles of implementing the translation system. PST explores a fresh take on translations that is both simple in nature and effective for solving issues around hard-to-translate words and colloquialisms. We have shown examples where translating the words in a sentence are not sufficient to capture the intent of the speaker, and demonstrated that PST provides a viable method to translate that intent. 
+	Through this proof-of-concept we have shown the potential around Pristine Sentence Translations, and have overcome some of the technical hurdles of implementing the translation system. PST has been shown to be an approach to translations that is both simple in nature and effective for solving issues around hard-to-translate words and colloquialisms. We have shown examples where translating the words in a sentence are not sufficient to capture the intent of the speaker, and demonstrated that PST provides a viable method to translate that intent. 
+	We have identified Siamese Similarity as our preferred method of sentence comparisons, its matrix-based approach to sentence comparisons seemed to be the most resilient to a variety of sentence structures. We discovered that a match of over 60\% similarity was visually close to the sentence that was input and therefor would be most useful to a user attempting to find a viable translation for a sentence.
 
 	\section{Future Work}
 	This Pristine Sentence Translations proof-of-concept is only built for about 200 sentences which could be translated from/to English, Portuguese and German languages. This model could be expanded by adding more data and by incorporating more languages for translations. The greater the number of sentences in the database, the greater the chance of finding a significant match to an imput sentence. Tens of thousands of sentences would be needed in order to function as a serivceable translation algorithm, and with the evolution of language this would need to be added onto constantly. Methods of discovering translations might include crowdsourcing to large groups knowledgeable in both languages (translators, teachers, bilingual students), or crawling for translations on travel sites, online movie scripts, instruction booklets, etc.
@@ -440,9 +442,6 @@ This is also why we carefully scanned each translation for fairness to make sure
 	
 \bibitem{ref_url8}
 	A Quantitative Study of Data in the NLP community, Margot Mieskes, Available at: \url{http://www.ethicsinnlp.org/workshop/EthNLP-2017.pdf}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url9}
-	XXXXXXXXXXXXX
 
 \bibitem{ref_ur1l0}
 	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 25 Mar 2019
