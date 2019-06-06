@@ -189,7 +189,7 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\afterpage{\clearpage}
 
 	\subsection{Siamese LSTM for Learning Sentence Similarity}	
-	Siamese LSTM, a version of Manhattan LSTM. Manhattan LSTM models has two networks LSTMleft and LSTMright which processes one of the sentences in a given pair independently. In Siamese LSTM, both LSTMleft and LSTMright have the same tied weights such that LSTMleft = LSTMright. Such a model is useful for tasks like duplicate query detection. 
+	Siamese LSTM is a version of Manhattan LSTM. Manhattan LSTM models has two networks LSTMleft and LSTMright which processes one of the sentences in a given pair independently. In Siamese LSTM, both LSTMleft and LSTMright have the same tied weights such that LSTMleft = LSTMright. Such a model is useful for tasks like duplicate query detection. 
 	
 	Siamese LSTM is a keras-based implementation of a deep siamese Bidirectional LSTM network used to capture phrase/sentence similarity using word embeddings.
 	Its architecture is depicted in figure below:
@@ -284,7 +284,7 @@ If the user wants to try another sentence the user can change any of the three i
 			  \hline			
 			  Cosine Similarity & we are good friends & 73.95 & 135.73 \\
 			  \hline  
-			  Siamese MaLSTM & we are good friends & 75.22 & 73.8 \\
+			  Siamese LSTM & we are good friends & 75.22 & 73.8 \\
 			  \hline
 			\end{tabular}
 	\end{minipage}
@@ -306,7 +306,7 @@ If the user wants to try another sentence the user can change any of the three i
 			  \hline			
 			  Cosine Similarity & I would like dessert & 70.16 & 95.07 \\
 			  \hline  
-			  Siamese MaLSTM & I would like dessert & 60.94 & 52.72 \\
+			  Siamese LSTM & I would like dessert & 60.94 & 52.72 \\
 			  \hline
 			\end{tabular}
 	\end{minipage}
@@ -331,7 +331,7 @@ If the user wants to try another sentence the user can change any of the three i
 			  \hline			
 			  Cosine Similarity & I would like some water & 36.12 & 3.01 \\
 			  \hline  
-			  Siamese MaLSTM & I would like some water & 25.66 & 7.02 \\
+			  Siamese LSTM & I would like some water & 25.66 & 7.02 \\
 			  \hline
 			\end{tabular}
 	\end{minipage}
@@ -355,7 +355,7 @@ If the user wants to try another sentence the user can change any of the three i
 			  \hline			
 			  Cosine Similarity & you hit one out of the park & 91.18 & 264.79 \\
 			  \hline  
-			  Siamese MaLSTM & you hit one out of the park & 75.08 & 108.14 \\
+			  Siamese LSTM & you hit one out of the park & 75.08 & 108.14 \\
 			  \hline
 			\end{tabular}
 	\end{minipage}
