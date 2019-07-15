@@ -6,14 +6,14 @@
 \usepackage{graphicx}
 \usepackage{afterpage}
 \usepackage{caption}
-
+\usepackage{subcaption}
 \title{Pristine Sentence Translation: A New Approach to a Timeless Problem}
 
 \author{
 	Meenu Ahluwalia, Brian Coari, and Ben Brock
 }
 
-\institute{$^1$Master of Science in Data Science \\ Southern Methodist University \\ Dallas, Texas USA \\
+\institute{Master of Science in Data Science \\ Southern Methodist University \\ Dallas, Texas USA \\
 	\email{\{mahluwalia, bcoari, bbrock\}@smu.edu}}
 
 
@@ -46,10 +46,10 @@
 
 	By the end of this paper, hopefully we can convince the reader of the potential value of this approach to translations and inspire future work that build on our base proof-of-concept into a more robust translation mechanism. 
 	
-	\section{Existing Tools and Methods}
-	The concept of translating one langauge to another is one of the most prevalent topics in data science, existing tools and methods were readily available. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Neural Nets to perform translations and saw vast reduction in errors. ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
+	\section{Related Work}
+	The concept of translating one langauge to another is one of the most prevalent topics in data science, existing tools and methods were readily available. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Deep Learning  to perform translations and saw vast reduction in errors. ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
 
-	The next method we found was much closer to our intent for PST. The author developed a Neural Machine Translation System using Keras, and used a "closeness of match" system to translate between one language and another.~\cite{ref_url16} This approach was almost perfect for what we needed, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST will use a similar approach, but aims to find a matching sentence ID for the input sentence, then lookup all sentences that are translations for that sentence in the requested language. More details on this are provided in the "Solution Approach" section.
+	The next method we found was much closer to our intent for PST. The author developed a Neural Machine Translation System using Keras, and used a "closeness of match" system to translate between one language and another ~\cite{ref_url16}. This approach was almost perfect for what we needed, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST will use a similar approach, but aims to find a matching sentence ID for the input sentence, then lookup all sentences that are translations for that sentence in the requested language. More details on this are provided in the "Solution Approach" section.
 	
 	\section{Predictive Modeling Background}
 	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation. ~\cite{ref_url16}
@@ -62,13 +62,40 @@
 	Siamese LSTM is a supervised learning model where input is pairs of sentences having different sequence length and a label for the pair which describe the underlying similarity between sentence pairs~\cite{ref_url21}. We use this similarity score to find the closest matched sentence from our dataset for the sentence input by the user for translation.
 	
 	
-	\section{Solution Approach}
-	To solve the problem of PSTs we first collected 200 sample sentences from various travel sites in order to build a base of useful translations. Next, we developed a back end of a Google Cloud-hosted MySQL database that holds the the translations for all of our sentences and the translation relationships between those sentences. We then developed an HTML front end that allows users to request a translation of a sentence from one language to another. Once a sentence translation has been requested we used a combination of NLP and similarity metrics in order to find a close sentence match in the source language. Then we used our MySQL database to find all of the related matches to the closest-matched sentence in the language requested by the user and returned them to the UI for display, along with the percentage of how close the match was. 
+	\section{Approach}
+	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
+	
+	First, we form a pristine database of known, correct, contextual translations to sentences that focus on translating the intent of sentences rather than the word in that sentence. There is more detail on this step in the "Data Collection" section. 
+	
+	Second, we take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the "Full Demo" section. 
+	
+	Third, we use a Siamese LSTM model to find as close a match as possible to the input sentence and its associated translation.  More details of that can be found in the "Siamese LSTM for Learning Sentence Similarity" section. 
+	
+	Fourth, we measure the closeness of our guessed sentence to our input sentence using Euclidean Distance and Cosine Similarity, then return the result of the method that we determine is the best performing indicator, along with all sentences that relate to the matched sentence to the front end. This is covered in more detail in the "Euclidean Distance and Cosine Similarity" and "Results and Analysis" sections.
+	
+	Fifth and last, we display our results to the user through the front end. This is covered in more detail in the "Full Demo" section.
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Process_Map.png}
+			\captionof{figure}{Process Map}
+			\label{fig:Process Map}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	We also implement a Sequence to Sequence model for our translations and compare it with the Siamese LSTM model.
+	
+	We first collected 200 sample sentences from various travel sites in order to build a base of useful translations. Next, we developed a back end of a Google Cloud-hosted MySQL database that holds the the translations for all of our sentences and the translation relationships between those sentences. We then developed an HTML front end that allows users to request a translation of a sentence from one language to another. Once a sentence translation has been requested we used a combination of NLP and similarity metrics in order to find a close sentence match in the source language. Then we used our MySQL database to find all of the related matches to the closest-matched sentence in the language requested by the user and returned them to the UI for display, along with the percentage of how close the match was. 
 
-	\subsection{Data Collection}
+	\subsection{Data}
 	The data for this project was collected to help people who travel for businsess or pleasure.  If someone who can speak English is travelling to India, though most Indians know some English, he/she will face a few communication issues when conversing with waiter, taxi driver, hotel staff etc. The initial collection of 200 English Sentences are those various travel sites found were valuable to know when travelling. The sentences were assembled in English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Portuguese and German using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in German. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public Github Repository in the Appendix.
 	
-
+	Before we start building the model, we needed to clean up the text data (i.e. the sentences). We removed all punctuation characters, normalized the case to lowercase, normalized all Unicode characters to ASCII and removed any tokens that are not alphabetic. To build the model, we needed to map words to integers  using the Keras Tokenize class. The Tokenizer had to be constructed and then fit on either raw text documents or integer-encoded text documents
+	
+	We also computed the vocabulary sizes and the lengths of maximum sequence for both the languages. We needed to encode each input and output sentence to integers and pad them to the maximum phrase length to make all sentences of the same length. 
+	
 	\subsection{Database Design}
 	For our database design we leveraged a cloud-based storage system so that we could both reference the same live database, as well as making the database updateable in realtime so we can allow users to teach the program new translations for sentences for which it does not yet have a translation. We chose Google Coud Platform (GCP) as a host for our database due to its ease of setup and robust set of no-cost features. We created a MySQL database on Cloud SQL to store our translation tables.
 	
@@ -92,17 +119,7 @@
 	\afterpage{\clearpage}
 
 	One of the problems we wanted to solve early was to be able to test our model offline, in case a network connect occurred we still wanted access to our model. To facilitate this we extracted the data in the database into dataframes through sqlalchemy~\cite{ref_url15} and exported the data to .pkl files. We then load the .pkl files whenever we need the data for a model, which makes us immune to network interruptions. Examples of the SQL Queries used to extract the data can be found in Appendix A.
-
-	\subsection{Data Preparation}
-	Before we start building the model, we needed to clean up the text data (i.e. the sentences). We removed all punctuation characters, normalized the case to lowercase, normalized all Unicode characters to ASCII and removed any tokens that are not alphabetic. To build the model, we needed to map words to integers  using the Keras Tokenize class. The Tokenizer had to be constructed and then fit on either raw text documents or integer-encoded text documents. Once fit, the Tokenizer provided four attributes that we used to understand our text., viz.,
-					\begin{enumerate}
-						 \item word-counts: A dictionary of words and their counts
-						 \item word-docs: A dictionary of words and how many documents each appeared in.
-						\item word-index: A dictionary of words and their uniquely assigned integers.
-						\item document-count:An integer count of the total number of documents that were used to fit the Tokenizer.
-					\end{enumerate}
 	
-	We also computed the vocabulary sizes and the lengths of maximum sequence for both the languages. We needed to encode each input and output sentence to integers and pad them to the maximum phrase length to make all sentences of the same length. The sentences had to be padded to be the same length because we used word embedding for the input sentence and one hot encoding for the output. In one hot encoding, a document is represented as a sequence of integer values, where each word in the document is represented as a unique integer. One hot encoding was needed because the model predicted the probability of each word in the vocabulary as output.	
 
 	\subsection{Euclidean Distance and Cosine Similarity}	
 	For our comparison on closeness of strings we leveraged two methods: Euclidean Distance and Cosine Similarity. Euclidean Distance measures the distance between two points in a space, and therefore the minimum distance is the closest match. Cosine Similarity is the similarity between two vectors in a space, and therefore the maximum similarity is the closest match. In this section we describe how these methods calculate their scores, and in the "Results" section we show the result of the comparison and choose our preferred match.
@@ -110,83 +127,6 @@
 Euclidean distance, also known as L2 distance or the Pythagorean metric, is a basic measure of distance in a space. Given a number of dimensions in a space, the Euclidean Distance calculates the length of a line segment connecting those points. This distance is calculated by going through all of the dimensions, adding up the square of the difference between the points of each value for that dimension, then taking the square root of that sum. This method is called the Pythagorean Formula.~\cite{ref_url19}. Euclidean distance is simple, but sometimes struggles if the data are not of similar shapes, as is the case with our sentence sample~\cite{ref_url19}.
 
 Cosine Similarity tries to measure similarity in a fundementally different way from Euclidean Distance. Instead of stepping through and comparing data point-by-point, Cosine Similarity steps through each sample and tries to build a directional veector for ther shape of the data, then measures the cosine of the angle between the two vectors. In the case of text analysis, the cosine similarity uses the frequency of words in a sentence to determine a directional vector. Cosine Similarity ignores the words that are not in common between two sentences, and focuses only on words that are common, which avoids penalizing sentences that are very long and focuses on finding the most commonality. Therefore cosine similarity is very resilient to data that is of different shapes, since the shape of the data would not necessarily affect the direction of the vector. The sentences with the closest ratios of like words would be considered a match.~\cite{ref_book1} This reslience to differently-shaped data is promising for our purposes, and seems to be a good fit for comparing sentences, and we will see in the "Results" section how it performs.
-
-	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
-	A typical seq2seq model consists of 2 major components
-	\begin{enumerate}
-		\item Encoder
-		\item Decoder
-	\end{enumerate}
-	
-	Both these components are essentailly two different Recurrent Neural Network models combined into one giant network.
-	
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{enc_dec_2.png}
-			\captionof{figure}{Sequence to Sequence Modell}
-			\label{fig:Sequence to Sequence Model}~\cite{ref_url4}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
-	
-	Let's say we are trying to convert the following sentence from English to Portuguese.
-
-	Input sentence (English) - i have lost my passport
-	
-	Output sentence (Portuguese) - eu perdi meu passaporte
-	
-	A sentence can be seen as a sequence of words or characters. We will split the sentence by words. So, for the above example in English, there are 5 words which are fed to the encoder as shown in the figure below. The input is referred to as X and X{i} is the input sequence at time step i. So we have the following input.
-	X{1} = i, X{2} = have, X{3} = lost,  X{4}=my, X{5} = passport.
-	Each X{i} is mapped to a fixed-length vector using the built-in embedding layer of Keras API.
-	
-	The LSTM will read this sentence word by word in 5 time steps as shown in the figure.
-	
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{EncoderLSTM.jpeg}
-			\captionof{figure}{Encoder LSTM}
-			\label{fig:Encoder LSTM}~\cite{ref_url5}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
-	
- 	h{i} and c{i} in the figure above represent the internal state, viz., the hidden state and the cell state of the Encoder. In simple terms, they remember what LSTM has read till now. 
- 	For example, 
- 	h{3}, c{3} vectors will remember that the network has read “I have lost” till now. Basically its the summary of information till time step 3 which is stored in the vectors h3 and c3 (thus called the states at time step 3). So, h{5},c{5} will contain the summary of the entire sentence. These states coming out of the last time step are also called as the “Thought vectors” as they summarize the entire sequence in a vector form. We initialize h{0},c{0} to zero as the model has not started to read the input.
- 	
- 	Y{i} is the output of the LSTM at each step. We discard the outputs of the encoder and only preserve the internal states as the model has nothing to output unless it has read the entire English sentence.
-	
-	Next, we define the Decoder. Unlike the Encoder LSTM which has the same role to play in both the training phase as well as in the inference phase, the Decoder LSTM has a slightly different role to play in both of these phases. Recall that given the input sentence "i have lost my passport", the goal of the decoder is to output "eu perdi meu passaporte". 
-
-	The intial states (h{0},c{0}) of the Decoder are set to the final states of the Encoder. This intuitively means that the decoder is trained to start generating the output sequence depending on the information encoded by the encoder.
-	
-	\begin{minipage}{\linewidth}
-	 	\begin{center}
-	 		\includegraphics[width=\linewidth]{decoder.jpeg}
-	 		\captionof{figure}{Decoder LSTM}
-	 		\label{fig:Decoder LSTM}~\cite{ref_url6}
-	 	\end{center}
-	 \end{minipage}
-	 \afterpage{\clearpage}
-	 
-	\subsubsection{Building the Neural Translation Model}
-	\paragraph
-	We split our dataset into train and test set for model training and evaluation, respectively.
-	Our Seq2Seq model is defined as the following
-
-	\begin{enumerate}
-		\item For the encoder, we used an embedding layer and an LSTM layer
-		\item For the decoder, we used another LSTM layer followed by a dense layer
-	\end{enumerate}
-
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{architecture.png}
-			\captionof{figure}{Model Architechture}
-			\label{fig:Model Architectture}~\cite{ref_url7}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
 
 	\subsection{Siamese LSTM for Learning Sentence Similarity}	
 	Siamese LSTM is a version of Manhattan LSTM. Manhattan LSTM models has two networks LSTMleft and LSTMright which processes one of the sentences in a given pair independently. In Siamese LSTM, both LSTMleft and LSTMright have the same tied weights such that LSTMleft = LSTMright. Such a model is useful for tasks like duplicate query detection. 
@@ -218,6 +158,101 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	Since we have an exponent of a negative, the output (the prediction in our case) will be between 0 and 1.
 	
 	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25} consisting of about 400,000 question pairs. The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.
+
+		\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
+	A typical seq2seq model consists of 2 major components
+	\begin{enumerate}
+		\item Encoder
+		\item Decoder
+	\end{enumerate}
+	
+	Both these components are essentailly two different Recurrent Neural Network models combined into one giant network.
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{enc_dec_2.png}
+			\captionof{figure}{Sequence to Sequence Model}
+			\label{fig:Sequence to Sequence Model}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	Let's say we are trying to convert the following sentence from English to Portuguese.
+	
+	Input sentence (English) - i have lost my passport
+	
+	Output sentence (Portuguese) - eu perdi meu passaporte
+	
+	A sentence can be seen as a sequence of words or characters. We will split the sentence by words. So, for the above example in English, there are 5 words which are fed to the encoder as shown in the figure below. The input is referred to as X and X{i} is the input sequence at time step i. So we have the following input.
+	X{1} = i, X{2} = have, X{3} = lost,  X{4}=my, X{5} = passport.
+	Each X{i} is mapped to a fixed-length vector using the built-in embedding layer of Keras API.
+	
+	The LSTM will read this sentence word by word in 5 time steps as shown in the figure.
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{EncoderLSTM.jpeg}
+			\captionof{figure}{Encoder LSTM}
+			\label{fig:Encoder LSTM}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	h{i} and c{i} in the Figure 6 represent the internal state, viz., the hidden state and the cell state of the Encoder. In simple terms, they remember what LSTM has read till now. 
+	For example, 
+	h{3}, c{3} vectors remember that the network has read “I have lost” till now. Basically its the summary of information till time step 3 which is stored in the vectors h3 and c3 (thus called the states at time step 3). So, h{5},c{5} will contain the summary of the entire sentence. These states coming out of the last time step are also called as the “Thought vectors” as they summarize the entire sequence in a vector form. We initialize h{0},c{0} to zero as the model has not started to read the input.
+	
+	Y{i} is the output of the LSTM at each step. We discard the outputs of the encoder and only preserve the internal states as the model has nothing to output unless it has read the entire English sentence.
+	
+	Next, we define the Decoder. Unlike the Encoder LSTM which has the same role to play in both the training phase as well as in the inference phase, the Decoder LSTM has a slightly different role to play in both of these phases. Recall that given the input sentence "i have lost my passport", the goal of the decoder is to output "eu perdi meu passaporte". 
+	
+	The intial states (h{0},c{0}) of the Decoder are set to the final states of the Encoder. This intuitively means that the decoder is trained to start generating the output sequence depending on the information encoded by the encoder.
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{decoder.jpeg}
+			\captionof{figure}{Decoder LSTM}
+			\label{fig:Decoder LSTM}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	\subsubsection{Building aand Training the Neural Translation Model}
+	\paragraph
+	We used the English-Portuguese and  English-German sentence pairs dataset downloaded from [~\cite{ref_url5}]  to train our Seq2Seq model.
+	Our Seq2Seq model is defined as the following
+	
+	\begin{enumerate}
+		\item For the encoder, we used an embedding layer and an LSTM layer
+		\item For the decoder, we used another LSTM layer followed by a dense layer
+	\end{enumerate}
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{architecture.png}
+			\captionof{figure}{Model Architechture}
+			\label{fig:Model Architectture}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	
+	We trained the model for 30 epochs and a batch size of 512 on a training set of 40,000 sentences and a hold-out set of 10,000 sentences. 
+	As shown in the loos and the accuracy curves, the validation loss stopped decreasing after 20 epochs and the accuracy of the model did not increase after 20 epochs.
+
+	\begin{figure}[!tbp]
+		\begin{subfigure}[b]{0.6\textwidth}
+			\includegraphics[width=\textwidth]{Por-Eng-Train_Loss.png}
+			\label{fig:f1}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.6\textwidth}
+			\includegraphics[width=\textwidth]{Por-Eng-Train_Acc.png}
+			\label{fig:f2}
+		\end{subfigure}
+		\caption{Model Loss/Accuracy Plot}
+	\end{figure}
+	\vfill
 
 	\section{Implementation and Basic Operation Flow}
 	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
@@ -427,19 +462,10 @@ This is also why we carefully scanned each translation for fairness to make sure
 
 \bibitem{ref_ur3}
 	A ten-minute introduction to sequence-to-sequence learning in Keras, Available at: \url{https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html}.  Last accessed 4 Feb 2019
-	
-\bibitem{ref_url4}
-	Figure 1. Available at: \url{https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/01/enc_dec_2.png}.  Last accessed 22 Mar 2019
-	
-\bibitem{ref_url5}
-	Figure 2. Available at: \url{https://cdn-images-1.medium.com/max/1600/1*37tROolA8uW7Nz2YpFsWqA.jpeg}.  Last accessed 22 Mar 2019
 
-\bibitem{ref_url6}
-	Figure 3. Available at: \url{https://cdn-images-1.medium.com/max/1600/1*SQAxk6gSUM_AK2d53neYmA.jpeg}. Last accessed 22 Mar 2019
-
-\bibitem{ref_url7}
-	Figure 4, Available at: \url{https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/01/architecture.png}. Last accessd 22 Mar 2019
-	
+\bibitem{ref_ur4}
+	Tab-delimited bilingual sentence pairs \url{http://www.manythings.org/anki/}.Last accessed  10 July 2019
+		
 \bibitem{ref_url8}
 	A Quantitative Study of Data in the NLP community, Margot Mieskes, Available at: \url{http://www.ethicsinnlp.org/workshop/EthNLP-2017.pdf}.  Last accessed 25 Mar 2019
 
