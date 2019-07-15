@@ -309,7 +309,7 @@ def translate():
 
     button_id=''
     button_id = args['submit_button']
-    print(button_id)
+    #print(button_id)
 	
     #set input values
     sent = args['fromText']
@@ -327,8 +327,8 @@ def translate():
     if (button_id=="useGoogleTranslation") :
         updateTranslations(my_return_df,google_text)
 
-    #populate_main_cosine(my_return_df)
-    populate_main_siamese(my_return_df)
+    populate_main_cosine(my_return_df)
+    #populate_main_siamese(my_return_df)
     #populate_main(my_return_df)
 		
     print("orig_sent: " + my_return_df['orig_sent'].values[0])
