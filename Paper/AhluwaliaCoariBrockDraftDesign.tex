@@ -159,15 +159,10 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	
 	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25} consisting of about 400,000 question pairs. The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.
 
-		\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
-	A typical seq2seq model consists of 2 major components
-	\begin{enumerate}
-		\item Encoder
-		\item Decoder
-	\end{enumerate}
-	
-	Both these components are essentailly two different Recurrent Neural Network models combined into one giant network.
-	
+	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
+	The encoder-decoder model also known as Seq2Seq model provides a pattern for using recurrent neural networks to address challenging sequence-to-sequence prediction problems, such as machine translation.
+	Key to the encoder-decoder architecture is the ability of the model to encode the source text into an internal fixed-length representation called the context vector. Once encoded, different decoding systems could be used to translate the context into different languages.
+
 	\begin{minipage}{\linewidth}
 		\begin{center}
 			\includegraphics[width=\linewidth]{enc_dec_2.png}
@@ -177,49 +172,6 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	Let's say we are trying to convert the following sentence from English to Portuguese.
-	
-	Input sentence (English) - i have lost my passport
-	
-	Output sentence (Portuguese) - eu perdi meu passaporte
-	
-	A sentence can be seen as a sequence of words or characters. We will split the sentence by words. So, for the above example in English, there are 5 words which are fed to the encoder as shown in the figure below. The input is referred to as X and X{i} is the input sequence at time step i. So we have the following input.
-	X{1} = i, X{2} = have, X{3} = lost,  X{4}=my, X{5} = passport.
-	Each X{i} is mapped to a fixed-length vector using the built-in embedding layer of Keras API.
-	
-	The LSTM will read this sentence word by word in 5 time steps as shown in the figure.
-	
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{EncoderLSTM.jpeg}
-			\captionof{figure}{Encoder LSTM}
-			\label{fig:Encoder LSTM}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
-	
-	h{i} and c{i} in the Figure 6 represent the internal state, viz., the hidden state and the cell state of the Encoder. In simple terms, they remember what LSTM has read till now. 
-	For example, 
-	h{3}, c{3} vectors remember that the network has read “I have lost” till now. Basically its the summary of information till time step 3 which is stored in the vectors h3 and c3 (thus called the states at time step 3). So, h{5},c{5} will contain the summary of the entire sentence. These states coming out of the last time step are also called as the “Thought vectors” as they summarize the entire sequence in a vector form. We initialize h{0},c{0} to zero as the model has not started to read the input.
-	
-	Y{i} is the output of the LSTM at each step. We discard the outputs of the encoder and only preserve the internal states as the model has nothing to output unless it has read the entire English sentence.
-	
-	Next, we define the Decoder. Unlike the Encoder LSTM which has the same role to play in both the training phase as well as in the inference phase, the Decoder LSTM has a slightly different role to play in both of these phases. Recall that given the input sentence "i have lost my passport", the goal of the decoder is to output "eu perdi meu passaporte". 
-	
-	The intial states (h{0},c{0}) of the Decoder are set to the final states of the Encoder. This intuitively means that the decoder is trained to start generating the output sequence depending on the information encoded by the encoder.
-	
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{decoder.jpeg}
-			\captionof{figure}{Decoder LSTM}
-			\label{fig:Decoder LSTM}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
-	
-	\subsubsection{Building aand Training the Neural Translation Model}
-	\paragraph
-	We used the English-Portuguese and  English-German sentence pairs dataset downloaded from [~\cite{ref_url5}]  to train our Seq2Seq model.
 	Our Seq2Seq model is defined as the following
 	
 	\begin{enumerate}
@@ -237,8 +189,14 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\afterpage{\clearpage}
 	
 	
-	We trained the model for 30 epochs and a batch size of 512 on a training set of 40,000 sentences and a hold-out set of 10,000 sentences. 
-	As shown in the loos and the accuracy curves, the validation loss stopped decreasing after 20 epochs and the accuracy of the model did not increase after 20 epochs.
+	
+	\subsubsection{Training the Neural Translation Model}
+	\paragraph
+	We used the English-Portuguese and  English-German sentence pairs dataset  from Anki~\cite{ref_url4}  to train our Seq2Seq model.
+	The model was trained for 30 epochs and a batch size of 512 on a training set of 40,000 sentences and a hold-out set of 10,000 sentences.   
+		
+	As shown in Fig 7, the validation loss stopped decreasing after 20 epochs and the accuracy of the model did not improve after 20 epochs.
+	
 
 	\begin{figure}[!tbp]
 		\begin{subfigure}[b]{0.6\textwidth}
@@ -252,8 +210,16 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 		\end{subfigure}
 		\caption{Model Loss/Accuracy Plot}
 	\end{figure}
-	\vfill
+	\afterpage{\clearpage}
 
+	Below is an excerpt of the Portuguese to English translation.
+	
+
+
+	The Seq2Seq does a decent job of translating sentences from Portuguese to English. There are several instances where it miisses out on understanding the keywords. For example, it translates “im tired of boston” to “im am boston”.
+	
+	These are the challenges which are addressed in the Siamese netwrrk model.
+	
 	\section{Implementation and Basic Operation Flow}
 	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The "Full Demo" section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
 
@@ -463,7 +429,7 @@ This is also why we carefully scanned each translation for fairness to make sure
 \bibitem{ref_ur3}
 	A ten-minute introduction to sequence-to-sequence learning in Keras, Available at: \url{https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html}.  Last accessed 4 Feb 2019
 
-\bibitem{ref_ur4}
+\bibitem{ref_url4}
 	Tab-delimited bilingual sentence pairs \url{http://www.manythings.org/anki/}.Last accessed  10 July 2019
 		
 \bibitem{ref_url8}
