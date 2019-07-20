@@ -59,7 +59,7 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	\section{NLP and Neural Networks}
 	The recent advances of machine learning and growing amounts of available data have made a great impact on the field of  Natural Language Processing (NLP). They facilitated development of new neural architectures and led to strong improvements on many NLP tasks, such as machine translation or text classification. 
 	
-	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation ~\cite{ref_url16}.
+	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation~\cite{ref_url16}.
 	One advancement of particular importance is the development of models which build good quality, machine-readable representations of word meanings. These representations, often referred to as word embeddings, are vectors which can be used as features in neural models that process text data.
 	
 	Sequence to Sequence (often abbreviated to Seq2Seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We target sentence translations to and from English, Portuguese and German languages. Use of Seq2Seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data
@@ -262,7 +262,7 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	
 	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25}. 	
 	
-	Fig. 5 shows a plot of Model Loss (MSE) and Accuracy on y-axis as a function of number of epochs on the x-axis.
+	Fig.8 shows a plot of Model Loss (MSE) and Accuracy on y-axis as a function of number of epochs on the x-axis.
 	The mean squared error (MSE) is the same as loss measure of the model. The best value of training MSE obtained is 0.1179 and it is found to be decreasing at a decreasing rate throughout the training process of the model. Whereas the validation MSE is found to be 0.1257 at the end of 30 epochs.
 	
 	Validation accuracy which indicates the performance of model on unlabelled data is found to be 82.80\% at the end of 20 epoch after which the model does not perform as well as evident from the accuracy plot in Fig.8.
