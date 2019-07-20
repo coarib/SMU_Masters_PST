@@ -2,6 +2,7 @@
 
 \documentclass[runningheads]{llncs}
 
+\usepackage[hyphens]{url}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{afterpage}
@@ -21,7 +22,7 @@
 
 
 \begin{document}
-	
+	\emergencystretch 3em
 	\maketitle
 	
 	\begin{abstract}
@@ -78,10 +79,13 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	Fourth, we measure the closeness of our guessed sentence to our input sentence using Euclidean Distance and Cosine Similarity, then return the result of the method that we determine is the best performing indicator, along with all sentences that relate to the matched sentence to the front end. This is covered in more detail in the ``Euclidean Distance and Cosine Similarity'' and ``Results and Analysis'' sections.
 	
 	Fifth and last, we display our results to the user through the front end. This is covered in more detail in the ``Full Demo'' section.
-	
+
+
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{Process_Map.png}
+			\hspace*{-.3in}
+			\hspace*{-.3in}
+			\includegraphics[width=\textwidth]{Process_Map.png}
 			\captionof{figure}{Process Map}
 			\label{fig:Process Map}
 			\vspace*{1cm}
@@ -101,28 +105,28 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	We also computed the vocabulary sizes and the lengths of maximum sequence for both the languages. We needed to encode each input and output sentence to integers and pad them to the maximum phrase length to make all sentences of the same length. 
 	
 	\subsection{Database Design}
-	For our database design we leveraged a cloud-based storage system so that we could both reference the same live database, as well as making the database updateable in realtime so we can allow users to teach the program new translations for sentences for which it does not yet have a translation. We chose Google Coud Platform (GCP) as a host for our database due to its ease of setup and robust set of no-cost features. We created a MySQL database on Cloud SQL to store our translation tables.
+	For our database design we leveraged a cloud-based storage system so that we could both reference the same live database around the world, as well as making the database updateable in realtime. Realtime updates allows to users to teach the program new translations for sentences for which it does not yet have a translation. We chose Google Coud Platform (GCP) as a host for our database due to its ease of setup and robust set of no-cost features. We created a MySQL database on Cloud SQL to store our translation tables.
 	
-	Our Cloud SQL MySQL database consists of two tables:
+	In order to build a database that allows us translate whole sentences easily from one language to another we needed a way to store the text of the sentences as well as the relationships between them. Our Cloud SQL MySQL database consists of two tables:
 			
 		\begin{enumerate}
 			\item Sentences: Stores a unique Sentence ID for a combination of text (max 500 characters) and a language key (EN=English, PT=Portuguese, DE=German). There is also a place for a suggested replacement for possible future enhancements, but this is not used in our current version of the program.
-			\item Translations: A table that stores the Sentence IDs that are translations of each other, linking the sentences together. These Sentence IDs are foreign keys that link to Sentence IDs in the Sentece table
+			\item Translations: A table that stores the Sentence IDs that are translations of each other, linking the sentences together. These Sentence IDs are foreign keys that link to Sentence IDs in the Sentence table
 		\end{enumerate}
 
 	The use of the Translations lookup table allows us to associate any number of sentences to each other, so we can have more than one translation for a sentence, and we can maintain translations to sentences only that match up together. In the fuure we might have sentences in English that only have translations in German, but not Portuguese, for example. 	
 
 	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{Database_Diagram.png}
-			\captionof{figure}{Database Diagram}
+			\hspace*{-.25in}
+  			 \noindent\makebox[\textwidth]{%
+			\includegraphics[width=1\textwidth]{Database_Diagram.png}}
+			\captionof{figure}{Data Example}
 			\label{fig:Database Diagrams}
 			\vspace*{1cm}
-		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
 
-	One of the problems we wanted to solve early was to be able to test our model offline, in case a network connect occurred we still wanted access to our model. To facilitate this we extracted the data in the database into dataframes through sqlalchemy~\cite{ref_url15} and exported the data to .pkl files. We then load the .pkl files whenever we need the data for a model, which makes us immune to network interruptions. Examples of the SQL Queries used to extract the data can be found in Appendix A.
+	In order to facilitate rapid and stable testing and a responsive user interface we extracted the data in the database into dataframes through sqlalchemy~\cite{ref_url15} and exported the data to .pkl files. We then loaded the .pkl files whenever we need the data for a model, which makes us immune to network interruptions and allows us faster access to our data. Examples of the SQL Queries used to extract the data can be found in Appendix A.
 	
 
 	\subsection{Euclidean Distance and Cosine Similarity}	
@@ -169,12 +173,12 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	Validation accuracy which indicates the performance of model on unlabelled data is found to be 82.80\% at the end of 20 epoch after which the model does not perform as well as evident from the accuracy plot in Fig.5.
 	
 	\begin{figure}[H]
-		\begin{subfigure}[b]{0.6\textwidth}
+		\begin{subfigure}[b]{0.51\textwidth}
 			\includegraphics[width=\textwidth]{siamese_eng_loss.png}
 			\label{fig:Model Loss}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}[b]{0.6\textwidth}
+		\begin{subfigure}[b]{0.51\textwidth}
 			\includegraphics[width=\textwidth]{siamese_eng_acc.png}
 			\label{fig:Model Accuracy}
 		\end{subfigure}
@@ -182,28 +186,25 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{figure}
 	\afterpage{\clearpage}
 		
-	
-
-	
 
 	The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.
 	
-	
-
 	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
 	The encoder-decoder model also known as Seq2Seq model provides a pattern for using recurrent neural networks to address challenging sequence-to-sequence prediction problems, such as machine translation.
 	Key to the encoder-decoder architecture is the ability of the model to encode the source text into an internal fixed-length representation called the context vector. Once encoded, different decoding systems could be used to translate the context into different languages.
 
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{enc_dec_2.png}
+			\hspace*{-.25in}
+  			 \noindent\makebox[\textwidth]{%
+			\includegraphics[width=.9\textwidth]{enc_dec_2.png}}
 			\captionof{figure}{Sequence to Sequence Model}
 			\label{fig:Sequence to Sequence Model}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	Our Seq2Seq model is defined as the following
+	Our Seq2Seq model is defined as the following:
 	
 	\begin{enumerate}
 		\item For the encoder, we used an embedding layer and an LSTM layer
@@ -212,7 +213,9 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{architecture.png}
+			\hspace*{-.4in}
+  			 \noindent\makebox[\textwidth]{%
+			\includegraphics[width=.9\textwidth]{architecture.png}}
 			\captionof{figure}{Model Architechture}
 			\label{fig:Model Architectture}
 		\end{center}
@@ -230,12 +233,12 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	
 
 	\begin{figure}[H]
-		\begin{subfigure}[b]{0.6\textwidth}
+		\begin{subfigure}[b]{0.49\textwidth}
 			\includegraphics[width=\textwidth]{Por-Eng-Train_Loss.png}
 			\label{fig:f1}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}[b]{0.6\textwidth}
+		\begin{subfigure}[b]{0.49\textwidth}
 			\includegraphics[width=\textwidth]{Por-Eng-Train_Acc.png}
 			\label{fig:f2}
 		\end{subfigure}
@@ -243,42 +246,42 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{figure}
 	\afterpage{\clearpage}
 
-	Below is an excerpt of the result for Portuguese to English translation.
-	
-	\vspace{10 mm}
-	\begin{minipage}{\linewidth}
-		\begin{tabular}{| l | l | l | |}			
-			\hline
-			 & Actual \ & Predicted  \\
-			 \hline
-				1 & i have lost my passport & i lost my passport \\
-			    \hline				
-				2 & someone stole my money & someone stole my money \\
-				\hline
-				3 & i would like to order & i like to ask \\
-				\hline
-				4 & may i see a menur & can i see a menu \\
-				\hline
-				5 & i would like a drink & i want a drink   \\
-				\hline
-				6 & how do i call down to the front desk & how do i call to machine    \\
-				\hline
-			    7 & how many beds are in the room & how many are  in  room       \\
-			    \hline
-				8 & i dont understand & i dont understand   \\
-				\hline
-				9 & how are you &  how are you  \\
-				\hline
-				10 & how is it going & how are things    \\
-			\hline
-	\end{tabular}
-	\end{minipage}
-	\afterpage{\clearpage}
-	\vspace{10 mm}
-
-	The Seq2Seq does a decent job of translating sentences from Portuguese to English. There are several instances where it miisses out on understanding the keywords. For example, when the expected translation was “i would like to order”, it translated to “i like to ask”.
+	Here is an excerpt of the result for finding various English sentence matches.
 	
 
+	\begin{table} 
+		\begin{center}
+			\begin{tabular}{| l | l | l | |}			
+				\hline
+				 & Actual \ & Predicted  \\
+				 \hline
+					1 & i have lost my passport & i lost my passport \\
+				    \hline				
+					2 & someone stole my money & someone stole my money \\
+					\hline
+					3 & i would like to order & i like to ask \\
+					\hline
+					4 & may i see a menur & can i see a menu \\
+					\hline
+					5 & i would like a drink & i want a drink   \\
+					\hline
+					6 & how do i call down to the front desk & how do i call to machine    \\
+					\hline
+				    7 & how many beds are in the room & how many are  in  room       \\
+				    \hline
+					8 & i dont understand & i dont understand   \\
+					\hline
+					9 & how are you &  how are you  \\
+					\hline
+					10 & how is it going & how are things    \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\captionof{table}{English Sentence Matches}
+		\label{table:English Sentence Matches}
+	\end{table}
+
+	The Seq2Seq English sentence matches give us an opportunity to see how well PST sentence matching works. There are several instances where it miisses out on understanding the keywords. For example, when the expected translation was “i would like to order”, it translated to “i like to ask”. Most of the translations, however, are visually and meaningfully close to the input.
 	
 	\section{Implementation and Basic Operation Flow}
 	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The ``Full Demo'' section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
@@ -299,29 +302,23 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{Screen_top.png}
+  			 \noindent\makebox[\textwidth]{%
+			\includegraphics[width=.9\textwidth]{Screen_top.png}}
 			\captionof{figure}{Language Input}
 			\label{fig:Language Input}
 			\vspace*{1cm}
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
-After the user has entered the data and hit the ``Translate'' button the information is passed to our pyton NLP processing. First our model finds the closest linguistic match to the sentence entered to a sentence for which the translation is known. Then we have a separate post-processing step to calculate how close of a match the input sentence is to the matched sentence, and we retrieve that translations of that sentence for the requested language:
+
+After the user has entered the data and hit the ``Translate'' button the information is passed to our pyton NLP processing. First our model finds the closest linguistic match to the sentence entered to a sentence for which the translation is known. Then we have a separate post-processing step to calculate how close of a match the input sentence is to the matched sentence, and we retrieve that translations of that sentence for the requested language. See Figure 1 in Section 4 for a visual reference.
+
+The results are then returned to the screen for display. Note that there can be more than one valid translation for an input sentence, provided our database has the mappings:
 
 	\begin{minipage}{\linewidth}
 		\begin{center}
-			\includegraphics[width=\linewidth]{Process_Map.png}
-			\captionof{figure}{Process Map}
-			\label{fig:Process Map}
-			\vspace*{1cm}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
-The results are then reurned to the screen for display. Note that there can be more than one valid translation for an input sentence, provided our database has the mappings:
-
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{Screen.png}
+  			 \noindent\makebox[\textwidth]{%
+			\includegraphics[width=.9\textwidth]{Screen.png}}
 			\captionof{figure}{Display Translations}
 			\label{fig:Display Translations}
 			\vspace*{1cm}
@@ -335,8 +332,8 @@ If the user wants to try another sentence the user can change any of the three i
 
 	To start, we altered our known sentence ``'we are good friends'' to ``we are best friends'', and ran it through the Euclidean Distance and Cosine Similarity comparisons. For the full code please reference \hyperlink{Appendix C}{Appendix C}.
 
-\vspace{10 mm}
-	\begin{minipage}{\linewidth}
+	\begin{table} 
+		\begin{center}
 			\begin{tabular}{| l | l | l | l |}
 			  \hline			
 			  Method & Resulting Text & Distance/\% Match & Top 2 \% Diff \\
@@ -348,17 +345,18 @@ If the user wants to try another sentence the user can change any of the three i
 			  Siamese LSTM & we are good friends & 75.22 & 73.8 \\
 			  \hline
 			\end{tabular}
-	\end{minipage}
-	\afterpage{\clearpage}
-\vspace{10 mm}
+		\end{center}
+		\captionof{table}{``We Are Best Friends'' Match Test}
+		\label{table:``We Are Best Friends'' Match Test}
+	\end{table}
 
 	All three methods were effective at finding the result we anticipated: ``We are good friends.'' However, examining the second-best guess score in each comparison shows that the cosine similarity method seemed much better at finding that result. The next-closest for Siamese MaLSTM was 73.8\%, Euclidean Distance was only 62.31\% more than the best guess, but for Cosine Similarity the best guess was 135.73\% better than the next-best guess. Even though all performed admirably in this circumstance, it seems like cosine similarity was able to more clearly diffferentiate the sentence we want from the sentence we don't.  To demonstrate the end-to-end process, in \hyperlink{Appendix D}{Appendix D} we show that our pristine sentence result of ``we are best friends'' translates to the Portuguese sentence ``Nós somos bons amigos''.
 
-	We tried many examples and the results were similar, here is another example where we altered our known sentence ``'I would like dessert'' to ``I would love dessert'', the code example can be found in \hyperlink{Appendix E}{Appendix E} :
+	We tried many examples and the results were similar, here is another example where we altered our known sentence ``I would like dessert'' to ``I would love dessert'', the code example can be found in \hyperlink{Appendix E}{Appendix E} :
 
 
-\vspace{10 mm}
-	\begin{minipage}{\linewidth}
+	\begin{table} 
+		\begin{center}
 			\begin{tabular}{| l | l | l | l |}
 			  \hline			
 			  Method & Resulting Text & Distance/\% Match & Top 2 \% Diff \\
@@ -370,9 +368,10 @@ If the user wants to try another sentence the user can change any of the three i
 			  Siamese LSTM & I would like dessert & 60.94 & 52.72 \\
 			  \hline
 			\end{tabular}
-	\end{minipage}
-	\afterpage{\clearpage}
-\vspace{10 mm}
+		\end{center}
+		\captionof{table}{``I Would Love Dessert'' Match Test}
+		\label{table:``I Would Love Dessert'' Test}
+	\end{table}
 
 
 
@@ -382,8 +381,8 @@ If the user wants to try another sentence the user can change any of the three i
 
 
 
-\vspace{10 mm}
-	\begin{minipage}{\linewidth}
+	\begin{table} 
+		\begin{center}
 			\begin{tabular}{| l | l | l | l |}
 			  \hline			
 			  Method & Resulting Text & Distance/\% Match & Top 2 \% Diff \\
@@ -395,9 +394,10 @@ If the user wants to try another sentence the user can change any of the three i
 			  Siamese LSTM & I would like some water & 25.66 & 7.02 \\
 			  \hline
 			\end{tabular}
-	\end{minipage}
-	\afterpage{\clearpage}
-\vspace{10 mm}
+		\end{center}
+		\captionof{table}{``I Would Like Some Blueberry Muffins and Orange Juice, Please'' Match Test}
+		\label{table:``I Would Like Some Blueberry Muffins and Orange Juice, Please'' Test}
+	\end{table}
 
 
 	The good news is that all three methods found what we hoped: ``I would like some water.'' Cosine Similarity did perform very slightly better than Euclidean Distance in terms of the difference to the next-highest match: 3.01\% for Cosine Similarity vs. 0.82\% for Euclidean Distance, but siamese handled this difficult problem with the most distinction, with a distance of 7.02\% between the top and second-best guess. However, looking at the quality of match for Cosine Similarity says that these sentences are only 36.12\% similar and the siamese similarity is only 25.66\% similar, which are very low similarity scores compared to the over 60\% of the other two matches. This low score serves as a caution to the user to discourage anyone from taking this translation as a close match to what is entered.
@@ -406,8 +406,9 @@ If the user wants to try another sentence the user can change any of the three i
 
 
 
-\vspace{10 mm}
-	\begin{minipage}{\linewidth}
+
+	\begin{table} 
+		\begin{center}
 			\begin{tabular}{| l | l | l | l |}
 			  \hline			
 			  Method & Resulting Text & Distance/\% Match & Top 2 \% Diff \\
@@ -419,9 +420,10 @@ If the user wants to try another sentence the user can change any of the three i
 			  Siamese LSTM & you hit one out of the park & 75.08 & 108.14 \\
 			  \hline
 			\end{tabular}
-	\end{minipage}
-	\afterpage{\clearpage}
-\vspace{10 mm}
+		\end{center}
+		\captionof{table}{``You Really Hit One Out of the Park'' Match Test}
+		\label{table:``You Really Hit One Out of the Park'' Test}
+	\end{table}
 
 	The sentence we input was very similar to the PST entry ``You hit one out of the park'', which is reflected in the displayed scores. More importantly, PST returned ``Você foi ótimo'', which means ``You were great'' in English, which is the intent of the colloquialism. 
 
@@ -445,13 +447,19 @@ If the user wants to try another sentence the user can change any of the three i
 	How can we be sure that our data we are providing to the user will be helpful instead of harmful? For example, if we provide a bad translation to a user then a well-meaning user could end up saying something inappropriate to a stranger or coworker, leading to negative repurcussions such as exclusion or disciplinary actions. In order to find a framework in which to address this ethical consideration, we found it helpful to have a template with some core questions to answer. Margot Mieske proposes in her paper ``A Quantitative Study of Data in the NLP community'' five key questions every NLP programmer must answer: ~\cite{ref_url8}
 
 
-\begin{itemize}
-	\item Has data been collected? 
-	\item How was this data collected and processed? 
- 	\item Was previously available data used/extended – which one? 
-	\item Is a link or a contact given? 
-	\item Where does it point (private page, research institute, official repository)?
-\end{itemize}
+	\begin{table} 
+		\begin{center}
+			\begin{itemize}
+				\item Has data been collected? 
+				\item How was this data collected and processed? 
+			 	\item Was previously available data used/extended – which one? 
+				\item Is a link or a contact given? 
+				\item Where does it point (private page, research institute, official repository)?
+			\end{itemize}
+		\end{center}
+		\captionof{table}{Ethical Questions}
+		\label{List: Ethical Questions}
+	\end{table}
 
 For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url11,ref_url12,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. We also met with native speakers of our languages and had them review the translations to make sure the translations provided by the travel sites made sense. If there were gaps in the translations provided by the travel sites, we used a combination of Google Translate~\cite{ref_url14} and human expertise in Portuguese and German in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation from human expertise. The original list of sentences and translations can be found in our public Github Repository here:
 
@@ -477,7 +485,9 @@ This is also why we carefully scanned each translation for fairness to make sure
 	
 	
 \bibitem{ref_url1}
+	\sloppy
 	Google’s new translation software is powered by brainlike artificial intelligence (2016, September 27), Available at:
+
 	\url{https://www.sciencemag.org/news/2016/09/google-s-new-translation-software-powered-brainlike-artificial-intelligence?r3f\_986=https://www.google.com/}.  Last accessed 4 Feb 2019
 	
 	
