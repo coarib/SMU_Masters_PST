@@ -52,12 +52,15 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	By returning a curated translation to a sentence that is determined to be close to the sentence that is input we remove the granularity of a word-to-word translation, getting us closer to conveying the thoughts behind the sentence the speaker is trying to communicate. Our input data of a few hundred phrases is not sufficient to provide a close match to sentences from normal conversations, but our examples does not have the seed data 
 	
 	\section{Related Work}
-	The concept of translating one langauge to another is one of the most prevalent topics in data science, existing tools and methods were readily available. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Deep Learning  to perform translations and saw vast reduction in errors. ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
+	The concept of translating one langauge to another is one of the most prevalent topics in data science, existing tools and methods were readily available. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Deep Learning  to perform translations and saw vast reduction in errors ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
 
 	The next method we found was much closer to our intent for PST. The author developed a Neural Machine Translation System using Keras, and used a ``closeness of match'' system to translate between one language and another ~\cite{ref_url16}. This approach was almost perfect for what we needed, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST uses a similar approach, but aims to find a matching sentence ID for the input sentence, then look up all sentences that are translations for that sentence in the requested language. More details on this are provided in the ``Solution Approach'' section.
 	
-	\section{Predictive Modeling Background}
-	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation. ~\cite{ref_url16}
+	\section{NLP and Neural Networks}
+	The recent advances of machine learning and growing amounts of available data have made a great impact on the field of  Natural Language Processing (NLP). They facilitated development of new neural architectures and led to strong improvements on many NLP tasks, such as machine translation or text classification. 
+	
+	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation ~\cite{ref_url16}.
+	One advancement of particular importance is the development of models which build good quality, machine-readable representations of word meanings. These representations, often referred to as word embeddings, are vectors which can be used as features in neural models that process text data.
 	
 	Sequence to Sequence (often abbreviated to Seq2Seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We target sentence translations to and from English, Portuguese and German languages. Use of Seq2Seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data
 	
@@ -74,7 +77,7 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	
 	Second, we take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the ``Full Demo'' section. 
 	
-	Third, we use a Siamese LSTM model to find as close a match as possible to the input sentence and its associated translation.  More details of that can be found in the ``Siamese LSTM for Learning Sentence Similarity'' section. 
+	Third, we  implement a Sequence to Sequence model for our translations. We also develop a Siamese LSTM model to find as close a match as possible to the input sentence and its associated translation.  More details of that can be found in the  ``Encoder-Decoder Long Short-Term Memory (LSTM) Networks''  and ``Siamese LSTM for Learning Sentence Similarity'' section. 
 	
 	Fourth, we measure the closeness of our guessed sentence to our input sentence using Euclidean Distance and Cosine Similarity, then return the result of the method that we determine is the best performing indicator, along with all sentences that relate to the matched sentence to the front end. This is covered in more detail in the ``Euclidean Distance and Cosine Similarity'' and ``Results and Analysis'' sections.
 	
@@ -93,7 +96,7 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	We also implement a Sequence to Sequence model for our translations and compare it with the Siamese LSTM model.
+
 	
 	We first collected 200 sample sentences from various travel sites in order to build a base of useful translations. Next, we developed a back end of a Google Cloud-hosted MySQL database that holds the the translations for all of our sentences and the translation relationships between those sentences. We then developed an HTML front end that allows users to request a translation of a sentence from one language to another. Once a sentence translation has been requested we used a combination of NLP and similarity metrics in order to find a close sentence match in the source language. Then we used our MySQL database to find all of the related matches to the closest-matched sentence in the language requested by the user and returned them to the UI for display, along with the percentage of how close the match was. 
 
@@ -136,55 +139,7 @@ Euclidean distance, also known as L2 distance or the Pythagorean metric, is a ba
 
 Cosine Similarity tries to measure similarity in a fundementally different way from Euclidean Distance. Instead of stepping through and comparing data point-by-point, Cosine Similarity steps through each sample and tries to build a directional veector for ther shape of the data, then measures the cosine of the angle between the two vectors. In the case of text analysis, the cosine similarity uses the frequency of words in a sentence to determine a directional vector. Cosine Similarity ignores the words that are not in common between two sentences, and focuses only on words that are common, which avoids penalizing sentences that are very long and focuses on finding the most commonality. Therefore cosine similarity is very resilient to data that is of different shapes, since the shape of the data would not necessarily affect the direction of the vector. The sentences with the closest ratios of like words would be considered a match.~\cite{ref_book1} This reslience to differently-shaped data is promising for our purposes, and seems to be a good fit for comparing sentences, and we see in the ``Results'' section that we did get results that are visually close to the requests.
 
-	\subsection{Siamese MaLSTM for Learning Sentence Similarity}	
-	Siamese networks are networks that have two or more identical sub-networks in them.
-	Siamese networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more
-	
-	In the model, there are two identical LSTM network. LSTM is passed vector representations of sentences and output a hidden state encoding semantic meaning of the sentences. Subsequently, these hidden states are compared using some similarity mechanism to output a similarity score.
-	Its architecture is depicted in figure below:
-	
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\includegraphics[width=\linewidth]{siamese_image.png}
-			\captionof{figure}{Siamese LSTM Architechture}
-			\label{fig:Siamese LSTM Architectture}~\cite{ref_url22}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
-	
-	We have two embedded matrices that represent a candidate of two similar questions.  We feed them into the LSTM (practically, there is only one) and the final state of the LSTM for each question is a 50-dimensional vector. It is trained to capture the semantic meaning of the question. By now we have the two vectors that hold the semantic meaning of each question. We put them through the defined similarity function (below):
-	
-	\begin{minipage}{\linewidth}
-		\begin{center}
-			\centering{\includegraphics[width=5cm,height=4cm,keepaspectratio]{ma_similarity.png}}
-			\captionof{figure}{Siamese Similarity Function}
-		\end{center}
-	\end{minipage}
-	\afterpage{\clearpage}
-	
-	Since we have an exponent of a negative, the output (the prediction in our case) is between 0 and 1.
-	
-	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25}. 	
-	
-	Fig. 5 shows a plot of Model Loss (MSE) and Accuracy on y-axis as a function of number of epochs on the x-axis.
-	The mean squared error (MSE) is the same as loss measure of the model. The best value of training MSE obtained is 0.1179 and it is found to be decreasing at a decreasing rate throughout the training process of the model. Whereas the validation MSE is found to be 0.1257 at the end of 30 epochs.
-	
-	Validation accuracy which indicates the performance of model on unlabelled data is found to be 82.80\% at the end of 20 epoch after which the model does not perform as well as evident from the accuracy plot in Fig.5.
-	
-	\begin{figure}[H]
-		\begin{subfigure}[b]{0.51\textwidth}
-			\includegraphics[width=\textwidth]{siamese_eng_loss.png}
-			\label{fig:Model Loss}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}[b]{0.51\textwidth}
-			\includegraphics[width=\textwidth]{siamese_eng_acc.png}
-			\label{fig:Model Accuracy}
-		\end{subfigure}
-		\caption{Loss and Accuracy plots for Training and Validation data for Siamese Network}
-	\end{figure}
 
-	The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.
 	
 	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
 	The encoder-decoder model also known as Seq2Seq model provides a pattern for using recurrent neural networks to address challenging sequence-to-sequence prediction problems, such as machine translation.
@@ -212,7 +167,7 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 		\begin{center}
 			\hspace*{-.4in}
   			 \noindent\makebox[\textwidth]{%
-			\includegraphics[width=.9\textwidth]{architecture.png}}
+			\includegraphics[width=.9\textwidth]{Seq2Seq.png}}
 			\captionof{figure}{Model Architechture}
 			\label{fig:Model Architectture}
 		\end{center}
@@ -224,7 +179,7 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	We used the English-Portuguese and  English-German sentence pairs dataset  from Anki~\cite{ref_url4}  to train our Seq2Seq model.
 	The model was trained for 30 epochs and a batch size of 512 on a training set of 40,000 sentences and a hold-out set of 10,000 sentences.   
 		
-	As shown in Fig 8, the validation loss stopped decreasing after 20 epochs and the accuracy of the model did not improve after 20 epochs.
+	As shown in Fig 5, the validation loss stopped decreasing after 20 epochs and the accuracy of the model did not improve after 20 epochs.
 	
 	\begin{figure}[H]
 		\begin{subfigure}[b]{0.49\textwidth}
@@ -254,7 +209,7 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 					\hline
 					3 & i would like to order & i like to ask \\
 					\hline
-					4 & may i see a menur & can i see a menu \\
+					4 & may i see a menu & can i see a menu \\
 					\hline
 					5 & i would like a drink & i want a drink   \\
 					\hline
@@ -274,7 +229,58 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 		\label{table:English Sentence Matches}
 	\end{table}
 
-	The Seq2Seq English sentence matches give us an opportunity to see how well PST sentence matching works. There are several instances where it miisses out on understanding the keywords. For example, when the expected translation was “i would like to order”, it translated to “i like to ask”. Most of the translations, however, are visually and meaningfully close to the input.
+	The Seq2Seq English sentence matches give us an opportunity to see how well PST sentence matching works. There are several instances where it miisses out on understanding the keywords. For example, when the expected translation was “i would like to order”, it translated to “i like to ask”. Although most of the translations, are visually and meaningfully close to the input, this model does not allow for more than one possible meaning of a sentence. We were able to achieve this behavior by implementing a Simaese Network model described in the sextion 5.4.
+	
+	
+	\subsection{Siamese MaLSTM for Learning Sentence Similarity}	
+	Siamese networks are networks that have two or more identical sub-networks in them.
+	Siamese networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more
+	
+	In the model, there are two identical LSTM network. LSTM is passed vector representations of sentences and output a hidden state encoding semantic meaning of the sentences. Subsequently, these hidden states are compared using some similarity mechanism to output a similarity score.
+	Its architecture is depicted in figure below:
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\includegraphics[width=\linewidth]{Siamese_Network.png}
+			\captionof{figure}{Siamese LSTM Architechture}
+			\label{fig:Siamese LSTM Architectture}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	We have two embedded matrices that represent a candidate of two similar questions.  We feed them into the LSTM (practically, there is only one) and the final state of the LSTM for each question is a 50-dimensional vector. It is trained to capture the semantic meaning of the question. By now we have the two vectors that hold the semantic meaning of each question. We put them through the defined similarity function (below):
+	
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\centering{\includegraphics[width=5cm,height=4cm,keepaspectratio]{ma_similarity.png}}
+			\captionof{figure}{Siamese Similarity Function}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+	
+	Since we have an exponent of a negative, the output (the prediction in our case) is between 0 and 1.
+	
+	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25}. 	
+	
+	Fig. 5 shows a plot of Model Loss (MSE) and Accuracy on y-axis as a function of number of epochs on the x-axis.
+	The mean squared error (MSE) is the same as loss measure of the model. The best value of training MSE obtained is 0.1179 and it is found to be decreasing at a decreasing rate throughout the training process of the model. Whereas the validation MSE is found to be 0.1257 at the end of 30 epochs.
+	
+	Validation accuracy which indicates the performance of model on unlabelled data is found to be 82.80\% at the end of 20 epoch after which the model does not perform as well as evident from the accuracy plot in Fig.8.
+	
+	\begin{figure}[H]
+		\begin{subfigure}[b]{0.51\textwidth}
+			\includegraphics[width=\textwidth]{siamese_eng_loss.png}
+			\label{fig:Model Loss}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.51\textwidth}
+			\includegraphics[width=\textwidth]{siamese_eng_acc.png}
+			\label{fig:Model Accuracy}
+		\end{subfigure}
+		\caption{Loss and Accuracy plots for Training and Validation data for Siamese Network}
+	\end{figure}
+	
+	The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.	Results of this model are discussed in ''Results and Analysis" section.
 	
 	\section{Implementation and Basic Operation Flow}
 	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The ``Full Demo'' section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
@@ -304,7 +310,7 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 
-After the user has entered the data and hit the ``Translate'' button the information is passed to our pyton NLP processing. First our model finds the closest linguistic match to the sentence entered to a sentence for which the translation is known. Then we have a separate post-processing step to calculate how close of a match the input sentence is to the matched sentence, and we retrieve that translations of that sentence for the requested language. See Figure 1 in Section 4 for a visual reference.
+After the user has entered the data and hit the ``Translate'' button the information is passed to our python text-processing. First our model finds the closest linguistic match to the sentence entered to a sentence for which the translation is known. Then we have a separate post-processing step to calculate how close of a match the input sentence is to the matched sentence, and we retrieve that translations of that sentence for the requested language. See Figure 1 in Section 4 for a visual reference.
 
 The results are then returned to the screen for display. Note that there can be more than one valid translation for an input sentence, provided our database has the mappings:
 
@@ -513,7 +519,7 @@ This is also why we carefully scanned each translation for fairness to make sure
 	Ethical by Design: Ethics Best Practices for Natural Language Processing, Jochen L. Leidner and Vassilis Plachouras, Available at: \url{http://www.ethicsinnlp.org/workshop/pdf/EthNLP02.pdf/}.  Last accessed 25 Mar 2019
 
 \bibitem{ref_url16}
-How to Develop a Neural Machine Translation System from Scratch, by Jason Brownlee on January 10, 2018, Available at: \url{https://machinelearningmastery.com/develop-neural-machine-translation-system-keras/}.  Last accessed 25 Mar 2019
+Sequence to Sequence Learning with Neural Networks, Available at: \url{https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf/}.  Last accessed 25 Mar 2019
 
 \bibitem{ref_url17}
 SQL Alchemy, Available at: \url{https://www.sqlalchemy.org/}.  Last accessed 25 Mar 2019
@@ -533,9 +539,6 @@ Jiawei Han, Micheline Kamber and Jian Pei: Data Mining: Concepts and Techniques.
 \bibitem{ref_url21}
 Siamese Recurrent Architectures for Learning Sentence Similarity (2016), Available at:
 \url{https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12195/}.
-
-\bibitem{ref_url22}
-Figure 5, Available at: \url{https://raw.githubusercontent.com/amansrivastava17/lstm-siamese-text-similarity/master/images/arch_image.png/}.
 
 \bibitem{ref_url23}
 Google's word2ve,c Available at:
