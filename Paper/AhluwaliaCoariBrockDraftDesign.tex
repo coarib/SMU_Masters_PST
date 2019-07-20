@@ -152,7 +152,6 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	
 	We have two embedded matrices that represent a candidate of two similar questions.  We feed them into the LSTM (practically, there is only one) and the final state of the LSTM for each question is a 50-dimensional vector. It is trained to capture the semantic meaning of the question. By now we have the two vectors that hold the semantic meaning of each question. We put them through the defined similarity function (below):
 	
 	\begin{minipage}{\linewidth}
@@ -184,8 +183,6 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 		\end{subfigure}
 		\caption{Loss and Accuracy plots for Training and Validation data for Siamese Network}
 	\end{figure}
-	\afterpage{\clearpage}
-		
 
 	The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.
 	
@@ -222,8 +219,6 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\end{minipage}
 	\afterpage{\clearpage}
 	
-	
-	
 	\subsubsection{Training the Neural Translation Model}
 	\paragraph
 	We used the English-Portuguese and  English-German sentence pairs dataset  from Anki~\cite{ref_url4}  to train our Seq2Seq model.
@@ -231,7 +226,6 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 		
 	As shown in Fig 8, the validation loss stopped decreasing after 20 epochs and the accuracy of the model did not improve after 20 epochs.
 	
-
 	\begin{figure}[H]
 		\begin{subfigure}[b]{0.49\textwidth}
 			\includegraphics[width=\textwidth]{Por-Eng-Train_Loss.png}
@@ -248,7 +242,6 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 
 	Here is an excerpt of the result for finding various English sentence matches.
 	
-
 	\begin{table} 
 		\begin{center}
 			\begin{tabular}{| l | l | l | |}			
