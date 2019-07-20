@@ -43,18 +43,30 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	
 	In this paper, we present Pristine Sentence Translation (PST), a novel approach to language translation based upon sentence-level granularity. This approach allows a translator to use any number of words in order to properly communicate an idea behind a sentence instead of translating the sentence word-for-word. To implement the PST solution we stored entire sentences in a database, and mapped them to entire sentences in other languages that represent the meaning of those sentences. For example: using the example above we would have an entry for the English sentence ``You hit one out of the park'', and we would have an entry for a Portuguese sentence mapped to that English sentence that says ``Você foi ótima'' which translates in English to the meaning behind the phrase: ``You did great''. 
 
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\hspace*{-.5in}
+			\includegraphics[width=\textwidth]{Pristine_Sentence_Translation_Visual.png}
+			\captionof{figure}{Pristine Sentence Translation High-Level Overview}
+			\label{fig:Pristine Sentence Translation High-Level Overview}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
 	One main issue with doing sentence-to-sentence translations is that if we do not have an exact match for the sentence, PST returns nothing. If we tried to translate ``You really hit one out of the park'' from English into Portuguese we would not get any results if all we had a translation for was ``You hit one out of the park''. We addressed this concern by removing special characters and making all input lowercase to filter out the noise in a sentence, and then used Predictive Modeling in order to find the sentence most like the input sentence, using a closeness metric of Euclidean Distance. Using this method, ``You really hit one out of the park'' would map most closely to ``You hit one out of the park'', and return the same translation: ``Você foi ótima''. We built a graphical user interface (GUI) to inform the user that the translation is not for the original input sentence, instead it indicates that it is showing results for: ``You hit one out of the park''. The algorithm also provides a percentage for how close the match was, so the user can determine if the match was close enough to be useful.
 	
 	Our initial version of PST focuses on translations between English, Portuguese, and German. Our input was a few hundred phrases taken from popular travel websites in order to get a good sampling of what might be needed to navigate as a foreigner in a country. We tested these sentences in order to demonstrate the effectiveness of this technique, and in this paper we display our results for review. 
 
 	In order to find a close match between sentences for PST we needed to find a way to determine the closeness of sentences to each other. We analyzed two  methods of determining how close one sentence is to another, Euclidean Distance and Cosine Similarity, and choose the best method based on the metrics it provides for closeness. After we determine the closest match of an input sentence to one we know through our PST database, we can return a curated translation that matches that sentence in the requested language.
 
-	By returning a curated translation to a sentence that is determined to be close to the sentence that is input we remove the granularity of a word-to-word translation, getting us closer to conveying the thoughts behind the sentence the speaker is trying to communicate. Our input data of a few hundred phrases is not sufficient to provide a close match to sentences from normal conversations, but our examples does not have the seed data 
+	By returning a curated translation to a sentence that is determined to be close to the sentence that is input we remove the granularity of a word-to-word translation, getting us closer to conveying the thoughts behind the sentence the speaker is trying to communicate. Our input data of a few hundred phrases is not sufficient to provide a close match to sentences from normal conversations, but our examples show the basic functionality of PST. With more seed data curated by language and cultural experts, PST's usefulness can grow to applications in movie or television script translation, technical documentation translation, and other forms of translation where specialized language 
 	
 	\section{Related Work}
 	The concept of translating one langauge to another is one of the most prevalent topics in data science, existing tools and methods were readily available. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Deep Learning  to perform translations and saw vast reduction in errors ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or wirds that have no direct equivalent in the destination language. 
 
-	The next method we found was much closer to our intent for PST. The author developed a Neural Machine Translation System using Keras, and used a ``closeness of match'' system to translate between one language and another ~\cite{ref_url16}. This approach was almost perfect for what we needed, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST uses a similar approach, but aims to find a matching sentence ID for the input sentence, then look up all sentences that are translations for that sentence in the requested language. More details on this are provided in the ``Solution Approach'' section.
+	The author developed a Neural Machine Translation System using Keras, and used a ``closeness of match'' system to translate between one language and another ~\cite{ref_url16}. This approach was much close to the spirit of PST, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST uses a similar approach, but aims to find a matching sentence ID for the input sentence, then look up all sentences that are translations for that sentence in the requested language. More details on this are provided in the ``Solution Approach'' section.
 	
 	\section{NLP and Neural Networks}
 	The recent advances of machine learning and growing amounts of available data have made a great impact on the field of  Natural Language Processing (NLP). They facilitated development of new neural architectures and led to strong improvements on many NLP tasks, such as machine translation or text classification. 
@@ -103,7 +115,22 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	\section{Data}
 	The data for this project was collected to help people who travel for businsess or pleasure.  If someone who can speak English is travelling to India, though most Indians know some English, he/she will face a few communication issues when conversing with waiter, taxi driver, hotel staff etc. The initial collection of 200 English Sentences are those various travel sites found were valuable to know when travelling. The sentences were assembled in English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Portuguese and German using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in German. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public Github Repository in the Appendix.
 	
-	Before we start building the model, we needed to clean up the text data (i.e. the sentences). We removed all punctuation characters, normalized the case to lowercase, normalized all Unicode characters to ASCII and removed any tokens that are not alphabetic. To build the model, we needed to map words to integers  using the Keras Tokenize class. The Tokenizer had to be constructed and then fit on either raw text documents or integer-encoded text documents
+	Before we start building the model, we needed to clean up the text data (i.e. the sentences). We removed all punctuation characters. We then normalized the case to lowercase, normalized all Unicode characters to ASCII and removed any tokens that are not alphabetic. 
+\newline
+
+	\begin{minipage}{\linewidth}
+		\begin{center}
+			\hspace*{-.3in}
+			\hspace*{-.3in}
+			\includegraphics[width=\textwidth]{Text_Cleanup.png}
+			\captionof{figure}{Text Cleanup Code}
+			\label{fig:Text Cleanup Code}
+			\vspace*{1cm}
+		\end{center}
+	\end{minipage}
+	\afterpage{\clearpage}
+
+To build the model, we needed to map words to integers  using the Keras Tokenize class. The Tokenizer had to be constructed and then fit on either raw text documents or integer-encoded text documents
 	
 	We also computed the vocabulary sizes and the lengths of maximum sequence for both the languages. We needed to encode each input and output sentence to integers and pad them to the maximum phrase length to make all sentences of the same length. 
 	
@@ -118,7 +145,7 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 		\end{enumerate}
 
 	The use of the Translations lookup table allows us to associate any number of sentences to each other, so we can have more than one translation for a sentence, and we can maintain translations to sentences only that match up together. In the fuure we might have sentences in English that only have translations in German, but not Portuguese, for example. 	
-
+\newline
 	\begin{minipage}{\linewidth}
 			\hspace*{-.25in}
   			 \noindent\makebox[\textwidth]{%
@@ -249,7 +276,8 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	\afterpage{\clearpage}
 	
 	We have two embedded matrices that represent a candidate of two similar questions.  We feed them into the LSTM (practically, there is only one) and the final state of the LSTM for each question is a 50-dimensional vector. It is trained to capture the semantic meaning of the question. By now we have the two vectors that hold the semantic meaning of each question. We put them through the defined similarity function (below):
-	
+\newline
+
 	\begin{minipage}{\linewidth}
 		\begin{center}
 			\centering{\includegraphics[width=5cm,height=4cm,keepaspectratio]{ma_similarity.png}}
@@ -257,7 +285,8 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 		\end{center}
 	\end{minipage}
 	\afterpage{\clearpage}
-	
+
+
 	Since we have an exponent of a negative, the output (the prediction in our case) is between 0 and 1.
 	
 	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25}. 	
@@ -282,20 +311,6 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 	
 	The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.	Results of this model are discussed in ''Results and Analysis" section.
 	
-	\section{Implementation and Basic Operation Flow}
-	Our approach to solving the issues around language translations takes five main steps. Each step is discrete and can be run and unit-tested independently. The ``Full Demo'' section goes over what the steps look like and how they relate to each other in a full iteration of the program. 
-
-	First, we form a pristine database of known, correct, contextual translations to sentences that focus on translating the intent of sentences rather than the word in that sentence. There is more detail on this step in the ``Data Collection'' section. 
-
-	Second, we take input from a user on the requested translation and the languages involved in the translation. This is covered in more detail in the ``Full Demo'' section. 
-
-	Third, we use a Siamese LSTM model to find as close a match as possible to the input sentence and its associated translation.  More details of that can be found in the ``Siamese LSTM for Learning Sentence Similarity'' section. 
-
-	Fourth, we measure the closeness of our guessed sentence to our input sentence using Euclidean Distance and Cosine Similarity, then return the result of the method that we determine is the best performing indicator, along with all sentences that relate to the matched sentence to the front end. This is covered in more detail in the ``Euclidean Distance and Cosine Similarity'' and ``Results and Analysis'' sections.
-
-	Fifth and last, we display our results to the user through the front end. This is covered in more detail in the ``Full Demo'' section.
-	
-	
 	\section{Illustrative Example}
 	The front end for the Pristine Language Translation (PST) site is a simple proof-of-concept page with three boxes for input: The language and the text the user is translating from, and the language code the user is translating to. The user must fill in all three boxes with valid input before hitting the ``Translate'' button:
 
@@ -305,13 +320,10 @@ Cosine Similarity tries to measure similarity in a fundementally different way f
 			\includegraphics[width=.9\textwidth]{Screen_top.png}}
 			\captionof{figure}{Language Input}
 			\label{fig:Language Input}
-			\vspace*{1cm}
 		\end{center}
 	\end{minipage}
-	\afterpage{\clearpage}
 
 After the user has entered the data and hit the ``Translate'' button the information is passed to our python text-processing. First our model finds the closest linguistic match to the sentence entered to a sentence for which the translation is known. Then we have a separate post-processing step to calculate how close of a match the input sentence is to the matched sentence, and we retrieve that translations of that sentence for the requested language. See Figure 1 in Section 4 for a visual reference.
-
 The results are then returned to the screen for display. Note that there can be more than one valid translation for an input sentence, provided our database has the mappings:
 
 	\begin{minipage}{\linewidth}
@@ -323,7 +335,7 @@ The results are then returned to the screen for display. Note that there can be 
 			\vspace*{1cm}
 		\end{center}
 	\end{minipage}
-	\afterpage{\clearpage}
+
 If the user wants to try another sentence the user can change any of the three inputs above and hit the ``Translate'' button again to repeat the process.
 
 	\section{Results and Analysis}
@@ -399,7 +411,7 @@ If the user wants to try another sentence the user can change any of the three i
 	\end{table}
 
 
-	The good news is that all three methods found what we hoped: ``I would like some water.'' Cosine Similarity did perform very slightly better than Euclidean Distance in terms of the difference to the next-highest match: 3.01\% for Cosine Similarity vs. 0.82\% for Euclidean Distance, but siamese handled this difficult problem with the most distinction, with a distance of 7.02\% between the top and second-best guess. However, looking at the quality of match for Cosine Similarity says that these sentences are only 36.12\% similar and the siamese similarity is only 25.66\% similar, which are very low similarity scores compared to the over 60\% of the other two matches. This low score serves as a caution to the user to discourage anyone from taking this translation as a close match to what is entered.
+	All three methods found what we hoped: ``I would like some water.'' Cosine Similarity did perform very slightly better than Euclidean Distance in terms of the difference to the next-highest match: 3.01\% for Cosine Similarity vs. 0.82\% for Euclidean Distance, but siamese handled this difficult problem with the most distinction, with a distance of 7.02\% between the top and second-best guess. However, looking at the quality of match for Cosine Similarity says that these sentences are only 36.12\% similar and the siamese similarity is only 25.66\% similar, which are very low similarity scores compared to the over 60\% of the other two matches. This low score serves as a caution to the user to discourage anyone from taking this translation as a close match to what is entered.
 
 	Finally, we wanted to list the point of PST, translating a sentence that is hard to translation from one language to another. In this case we chose ``You really hit one out of the park''. Google Translate shows this in Portuguese as ``Você realmente bateu um fora do Parque'', which still would not give a native Portuguese speaker any idea what that sentence means to them, unless they knew American Baseball. Here's how PST Performs, \hyperlink{Appendix G}{Appendix G} has the code:
 
@@ -460,18 +472,20 @@ If the user wants to try another sentence the user can change any of the three i
 		\label{List: Ethical Questions}
 	\end{table}
 
-For this project the initial set of 200 English Sentences data were gathered from three travel websites.~\cite{ref_url11,ref_url12,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. We also met with native speakers of our languages and had them review the translations to make sure the translations provided by the travel sites made sense. If there were gaps in the translations provided by the travel sites, we used a combination of Google Translate~\cite{ref_url14} and human expertise in Portuguese and German in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation from human expertise. The original list of sentences and translations can be found in our public Github Repository here:
+We answer each of these questions in turn. First, yes, data was collected for this project. For this project the initial set of 200 English Sentences data were gathered from three travel websites. Second, yes, we processed the data using removal of several characters as detailed in the Data section. Third, we extended this data using a couple of test sentences of our own, showin in Table 5 in the Results and Analysis section. We did this to explore some popular colloquialisms and explore our problem statement. To answer the fourth and fifth questions together, the links for the travel sites are public URLs detailed here: ~\cite{ref_url11,ref_url12,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. We also met with native speakers of our languages and had them review the translations to make sure the translations provided by the travel sites made sense. 
 
+If there were gaps in the translations provided by the travel sites, we used a combination of Google Translate~\cite{ref_url14} and human expertise in Portuguese and German in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation from human expertise. The original list of sentences and translations can be found in our public Github Repository here:
 \url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
 
 For the specifics around ethical considerations for NLP we turn to Jochen L. Leidner and Vassilis Plachouras and their paper ``Ethical by Design: Ethics Best Practices for Natural Language Processing''~\cite{ref_url15}.  Leidner and Plachouras propose that since NLP pertains to human language and touches every part of human life it has a specific ethics dimension, therefore automation and errors also become ethical topics. We need to make sure our translations and base sentences are unbiased and fair, without discrimination based on age, race, or gender. This is why we chose to target trave sites that hopefuly won't favor certain demographics. At the very least we are transparent about from where we pulled the sentences.
 
-This is also why we carefully scanned each translation for fairness to make sure our data was reviewed before putting it out to the public, and why we keep a tight control over the sentences that might be suggested for a user. As it is, this proof-of-concept system is not something I'd like to put out into the world for general use. With only 200 sentences the risks around mistranslating something are too high, there is the potential for widepread confusion if our suggestions aren't close enough to the input request. Before going public we would need to follow Leidner and Plachouras's advice and establish an ethics review board that establish a process for reviewing and implementing new translation requests and helping monitor issues around translations on the site.
+We carefully scanned each translation for fairness to make sure our data was reviewed before putting it out to the public, and we keep a tight control over the sentences that might be suggested for a user. With PST using curators to craft the translation by hand there is an increased potential for a curator to use bad translations in order to purposefully mislead a user. We had the translations peer-reviewed to mitigate this risk, and will need to continue this for the lifetime of the program.
+
+This proof-of-concept system is not something we recomment putting into the world for general use. With only 200 sentences the risks around mistranslating something are too high, there is the potential for widepread confusion if our suggestions aren't close enough to the input request. That confusion has the potential to do harm to others, violating the ACM Code of Ethics section "1.2 Avoid Harm". Before going public we would need to follow Leidner and Plachouras's advice and establish an ethics review board that establish a process for reviewing and implementing new translation requests and helping monitor issues around translations on the site. 
 	
 	\section{Conclusions}
 	Through this proof-of-concept we concluded that by moving the granularity of translations up to the sentence level we can get closer to the idea behind a sentence, and that enables us to translate colloquialisms, idioms, and slang between languages. We have given examples of deep learning models using the Keras API that returns close matches to sentences, and have have identified Siamese Similarity as our preferred method of sentence comparisons, its matrix-based approach to sentence comparisons seemed to be the most resilient to a variety of sentence structures. We discovered that a match of over 60\% similarity was visually close to the sentence that was input and therefore would be most useful to a user attempting to find a viable translation for a sentence. We also concluded that our sentence matches were insufficeint to be a global solution at this time, as our closeness metrics were often very low, and that more pristine sentence matches would help improve our models and the usefulness of PST.
 
-	
 \begin{thebibliography}{8}
 	
 	
