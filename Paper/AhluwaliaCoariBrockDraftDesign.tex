@@ -206,7 +206,7 @@ Cosine Similarity tries to measure similarity in a fundamentally different way f
 	We used the English-Portuguese and  English-German sentence pairs dataset  from Anki~\cite{ref_url4}  to train our Seq2Seq model.
 	The model was trained for 30 epochs and a batch size of 512 on a training set of 40,000 sentences and a hold-out set of 10,000 sentences.   
 		
-	As shown in Fig 5, the validation loss stopped decreasing after 20 epochs and the accuracy of the model did not improve after 20 epochs.
+	As shown in Fig 7, the validation loss stopped decreasing after 20 epochs and the accuracy of the model did not improve after 20 epochs.
 	
 	\begin{figure}[H]
 		\begin{subfigure}[b]{0.49\textwidth}
@@ -291,10 +291,10 @@ Cosine Similarity tries to measure similarity in a fundamentally different way f
 	
 	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25}. 	
 	
-	Fig.8 shows a plot of Model Loss (MSE) and Accuracy on y-axis as a function of number of epochs on the x-axis.
+	Fig.10 shows a plot of Model Loss (MSE) and Accuracy on y-axis as a function of number of epochs on the x-axis.
 	The mean squared error (MSE) is the same as loss measure of the model. The best value of training MSE obtained is 0.1179 and it is found to be decreasing at a decreasing rate throughout the training process of the model. Whereas the validation MSE is found to be 0.1257 at the end of 30 epochs.
 	
-	Validation accuracy which indicates the performance of model on unlabeled data is found to be 82.80\% at the end of 20 epoch after which the model does not perform as well as evident from the accuracy plot in Fig.8.
+	Validation accuracy which indicates the performance of model on unlabeled data is found to be 82.80\% at the end of 20 epoch after which the model does not perform as well as evident from the accuracy plot in Fig.10.
 	
 	\begin{figure}[H]
 		\begin{subfigure}[b]{0.51\textwidth}
