@@ -66,7 +66,7 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	\section{Related Work}
 	The concept of translating one language to another is one of the most prevalent topics in data science, existing tools and methods were readily available. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Deep Learning  to perform translations and saw vast reduction in errors ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or words that have no direct equivalent in the destination language. 
 
-	The author developed a Neural Machine Translation System using Keras, and used a ``closeness of match'' system to translate between one language and another ~\cite{ref_url16}. This approach was much close to the spirit of PST, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST uses a similar approach, but aims to find a matching sentence ID for the input sentence, then look up all sentences that are translations for that sentence in the requested language. More details on this are provided in the ``Solution Approach'' section.
+	The author developed a Neural Machine Translation System using Keras, and used a ``closeness of match'' system to translate between one language and another ~\cite{ref_url16}. This approach is much close to the spirit of PST, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST uses a similar approach, but aims to find a matching sentence ID for the input sentence, then look up all sentences that are translations for that sentence in the requested language. More details on this are provided in the ``Solution Approach'' section.
 	
 	\section{NLP and Neural Networks}
 	The recent advances of machine learning and growing amounts of available data have made a great impact on the field of  Natural Language Processing (NLP). They facilitated development of new neural architectures and led to strong improvements on many NLP tasks, such as machine translation or text classification. 
@@ -74,11 +74,11 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation~\cite{ref_url16}.
 	One advancement of particular importance is the development of models which build good quality, machine-readable representations of word meanings. These representations, often referred to as word embeddings, are vectors which can be used as features in neural models that process text data.
 	
-	Sequence to Sequence (often abbreviated to Seq2Seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We target sentence translations to and from English, Portuguese and German languages. Use of Seq2Seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data
+	Sequence to Sequence (often abbreviated to Seq2Seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We target sentence translations to and from English, Portuguese and German languages. Use of Seq2Seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data.
 	
 	To summarize our Encoder-Decoder model, the Encoder simply takes the input data, and train on it then it passes the last state of its recurrent layer as an initial state to the first recurrent layer of the decoder part. The Decoder takes the last state of encoder’s last recurrent layer and uses it as an initial state to its first recurrent layer, the input of the decoder is the sequences that we want to get. We use the Keras API with Tensorflow backend to build our model.
 	
-	One of the important tasks for language understanding and information retrieval is to model semantic similarity between words, phrases or sentences. Siamese LSTM networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more.
+	One of the important tasks for language understanding and information retrieval~\cite{ref_url26} is to model semantic similarity between words, phrases or sentences. Siamese LSTM networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more.
 	Siamese LSTM is a supervised learning model where input is pairs of sentences having different sequence length and a label for the pair which describe the underlying similarity between sentence pairs~\cite{ref_url21}. We use this similarity score to find the closest matched sentence from our dataset for the sentence input by the user for translation.
 	
 	
@@ -113,9 +113,9 @@ In this paper, we present Pristine Sentence Translation (PST), a novel approach 
 	We first collected 200 sample sentences from various travel sites in order to build a base of useful translations. Next, we developed a back end of a Google Cloud-hosted MySQL database that holds the the translations for all of our sentences and the translation relationships between those sentences. We then developed an HTML front end that allows users to request a translation of a sentence from one language to another. Once a sentence translation has been requested we used a combination of NLP and similarity metrics in order to find a close sentence match in the source language. Then we used our MySQL database to find all of the related matches to the closest-matched sentence in the language requested by the user and returned them to the UI for display, along with the percentage of how close the match was. 
 
 	\section{Data}
-	The data for this project was collected to help people who travel for business or pleasure.  If someone who can speak English is travelling to India, though most Indians know some English, he/she will face a few communication issues when conversing with waiter, taxi driver, hotel staff etc. The initial collection of 200 English Sentences are those various travel sites found were valuable to know when travelling. The sentences were assembled in English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Portuguese and German using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in German. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public GitHub Repository in the Appendix.
+	The data for this project was collected to help people who travel for business or pleasure.  While travel is becoming more accessible (with an increasing number of both travelers and destinations), the tourist may face a few communication issues when conversing with waiter, taxi driver, hotel staff etc., because of the number of different languages and countries involved. The initial collection of 200 English Sentences are those various travel sites found were valuable to know when travelling. The sentences were assembled in English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Portuguese and German using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in German. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public GitHub Repository in the Appendix.
 	
-	Before we start building the model, we needed to clean up the text data (i.e. the sentences). We removed all punctuation characters. We then normalized the case to lowercase, normalized all Unicode characters to ASCII and removed any tokens that are not alphabetic. 
+	Before we start building the model, we need to clean up the text data (i.e. the sentences). We removed all punctuation characters. We then normalized the case to lowercase, normalized all Unicode characters to ASCII and removed any tokens that are not alphabetic. 
 \newline
 
 	\begin{minipage}{\linewidth}
@@ -166,9 +166,7 @@ Euclidean distance, also known as L2 distance or the Pythagorean metric, is a ba
 
 Cosine Similarity tries to measure similarity in a fundamentally different way from Euclidean Distance. Instead of stepping through and comparing data point-by-point, Cosine Similarity steps through each sample and tries to build a directional vector for the shape of the data, then measures the cosine of the angle between the two vectors. In the case of text analysis, the cosine similarity uses the frequency of words in a sentence to determine a directional vector. Cosine Similarity ignores the words that are not in common between two sentences, and focuses only on words that are common, which avoids penalizing sentences that are very long and focuses on finding the most commonality. Therefore, cosine similarity is very resilient to data that is of different shapes, since the shape of the data would not necessarily affect the direction of the vector. The sentences with the closest ratios of like words would be considered a match.~\cite{ref_book1} This resilience to differently-shaped data is promising for our purposes, and seems to be a good fit for comparing sentences, and we see in the ``Results'' section that we did get results that are visually close to the requests.
 
-
-	
-	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}	
+	\subsection{Encoder-Decoder Long Short-Term Memory (LSTM) Networks}
 	The encoder-decoder model also known as Seq2Seq model provides a pattern for using recurrent neural networks to address challenging sequence-to-sequence prediction problems, such as machine translation.
 	Key to the encoder-decoder architecture is the ability of the model to encode the source text into an internal fixed-length representation called the context vector. Once encoded, different decoding systems could be used to translate the context into different languages.
 
@@ -256,7 +254,7 @@ Cosine Similarity tries to measure similarity in a fundamentally different way f
 		\label{table:English Sentence Matches}
 	\end{table}
 
-	The Seq2Seq English sentence matches give us an opportunity to see how well PST sentence matching works. There are several instances where it misses out on understanding the keywords. For example, when the expected translation was “i would like to order”, it translated to “i like to ask”. Although most of the translations, are visually and meaningfully close to the input, this model does not allow for more than one possible meaning of a sentence. We were able to achieve this behavior by implementing a Siamese Network model described in the section 5.4.
+	The Seq2Seq English sentence matches give us an opportunity to see how well PST sentence matching works. There are several instances where it misses out on understanding the keywords. For example, when the expected translation was “i would like to order”, it translated to “i like to ask”. Although most of the translations, are visually and meaningfully close to the input, this model does not allow for more than one possible meaning of a sentence. We have been able to achieve this behavior by implementing a Siamese Network model that will be described in the next section.
 	
 	
 	\subsection{Siamese MaLSTM for Learning Sentence Similarity}	
@@ -309,7 +307,7 @@ Cosine Similarity tries to measure similarity in a fundamentally different way f
 		\caption{Loss and Accuracy plots for Training and Validation data for Siamese Network}
 	\end{figure}
 	
-	The test dataset consisted of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user was compared with every sentence in the test dataset using the Siamese LSTM model above.	Results of this model are discussed in ''Results and Analysis" section.
+	The test dataset consists of 200 sentences that were collected from travel sites as stated in the Data Collection section above. The sentence input by the user is compared with every sentence in the test dataset using the Siamese LSTM model above. Results of this model are discussed in ''Results and Analysis" section.
 	
 	\section{Illustrative Example}
 	The front end for the Pristine Language Translation (PST) site is a simple proof-of-concept page with three boxes for input: The language and the text the user is translating from, and the language code the user is translating to. The user must fill in all three boxes with valid input before hitting the ``Translate'' button:
@@ -566,6 +564,9 @@ Siamese Recurrent Architectures for Learning Sentence Similarity, Available at:
 Kaggle Quora Question Pairs  Dataset, Available at: 
 \url{https://www.kaggle.com/c/quora-question-pairs/}.
 
+\bibitem{ref_url26}
+Infornation Retrieval, Available at: 
+\url{https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf/}.
 
 \end{thebibliography}
 

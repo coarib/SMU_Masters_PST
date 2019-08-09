@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.8.28)  20 JUL 2019 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.8.28)  9 AUG 2019 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -427,7 +427,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--57
 [2 <./Pristine_Sentence_Translation_Visual.png>] [3
 
 ] [4]
-<Process_Map.png, id=56, 498.36188pt x 79.79813pt>
+<Process_Map.png, id=59, 498.36188pt x 79.79813pt>
 File: Process_Map.png Graphic file (type png)
 <use Process_Map.png>
 Package pdftex.def Info: Process_Map.png  used on input line 103.
@@ -453,7 +453,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--120
 
  []
 
-<Text_Cleanup.png, id=71, 580.569pt x 12.045pt>
+<Text_Cleanup.png, id=74, 580.569pt x 12.045pt>
 File: Text_Cleanup.png Graphic file (type png)
 <use Text_Cleanup.png>
 Package pdftex.def Info: Text_Cleanup.png  used on input line 125.
@@ -482,7 +482,7 @@ e,
 [6
 
  <./Text_Cleanup.png>]
-<Database_Diagram.png, id=84, 481.8pt x 75.8835pt>
+<Database_Diagram.png, id=87, 481.8pt x 75.8835pt>
 File: Database_Diagram.png Graphic file (type png)
 <use Database_Diagram.png>
 Package pdftex.def Info: Database_Diagram.png  used on input line 152.
@@ -501,24 +501,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--158
 [7
 
  <./Database_Diagram.png>]
-<enc_dec_2.png, id=105, 515.9275pt x 388.45125pt>
+<enc_dec_2.png, id=108, 515.9275pt x 388.45125pt>
 File: enc_dec_2.png Graphic file (type png)
 <use enc_dec_2.png>
-Package pdftex.def Info: enc_dec_2.png  used on input line 179.
+Package pdftex.def Info: enc_dec_2.png  used on input line 177.
 (pdftex.def)             Requested size: 312.40906pt x 235.22414pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 180.
+(caption)                particular \caption on input line 178.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 175--185
+Overfull \hbox (15.0pt too wide) in paragraph at lines 173--183
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--185
+Underfull \hbox (badness 10000) in paragraph at lines 173--183
 
  []
 
@@ -528,123 +528,123 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [8
 
 ]
-<Seq2Seq.png, id=113, 742.775pt x 180.675pt>
+<Seq2Seq.png, id=116, 742.775pt x 180.675pt>
 File: Seq2Seq.png Graphic file (type png)
 <use Seq2Seq.png>
-Package pdftex.def Info: Seq2Seq.png  used on input line 197.
+Package pdftex.def Info: Seq2Seq.png  used on input line 195.
 (pdftex.def)             Requested size: 312.40906pt x 75.99324pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 198.
+(caption)                particular \caption on input line 196.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 193--203
+Overfull \hbox (15.0pt too wide) in paragraph at lines 191--201
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--203
+Underfull \hbox (badness 10000) in paragraph at lines 191--201
 
  []
 
-<Por-Eng-Train_Loss.png, id=116, 158.39175pt x 111.41624pt>
+<Por-Eng-Train_Loss.png, id=119, 158.39175pt x 111.41624pt>
 File: Por-Eng-Train_Loss.png Graphic file (type png)
 <use Por-Eng-Train_Loss.png>
-Package pdftex.def Info: Por-Eng-Train_Loss.png  used on input line 213.
+Package pdftex.def Info: Por-Eng-Train_Loss.png  used on input line 211.
 (pdftex.def)             Requested size: 170.09244pt x 119.64601pt.
-<Por-Eng-Train_Acc.png, id=117, 160.80075pt x 111.41624pt>
+<Por-Eng-Train_Acc.png, id=120, 160.80075pt x 111.41624pt>
 File: Por-Eng-Train_Acc.png Graphic file (type png)
 <use Por-Eng-Train_Acc.png>
-Package pdftex.def Info: Por-Eng-Train_Acc.png  used on input line 218.
+Package pdftex.def Info: Por-Eng-Train_Acc.png  used on input line 216.
 (pdftex.def)             Requested size: 170.09244pt x 117.85583pt.
 [9
 
  <./enc_dec_2.png> <./Seq2Seq.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 229.
+(Font)              <9> on input line 227.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 229.
+(Font)              <6> on input line 227.
  [10
 
 
  <./Por-Eng-Train_Loss.png> <./Por-Eng-Train_Acc.png>]
-<Siamese_Network.png, id=141, 943.525pt x 552.0625pt>
+<Siamese_Network.png, id=144, 943.525pt x 552.0625pt>
 File: Siamese_Network.png Graphic file (type png)
 <use Siamese_Network.png>
-Package pdftex.def Info: Siamese_Network.png  used on input line 271.
+Package pdftex.def Info: Siamese_Network.png  used on input line 269.
 (pdftex.def)             Requested size: 347.12354pt x 203.10587pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 272.
+(caption)                particular \caption on input line 270.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 269--277
+Overfull \hbox (15.0pt too wide) in paragraph at lines 267--275
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--277
+Underfull \hbox (badness 10000) in paragraph at lines 267--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 276--278
 
  []
 
-<ma_similarity.png, id=142, 357.335pt x 39.14626pt>
+<ma_similarity.png, id=145, 357.335pt x 39.14626pt>
 File: ma_similarity.png Graphic file (type png)
 <use ma_similarity.png>
-Package pdftex.def Info: ma_similarity.png  used on input line 283.
+Package pdftex.def Info: ma_similarity.png  used on input line 281.
 (pdftex.def)             Requested size: 142.2608pt x 15.58475pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 284.
+(caption)                particular \caption on input line 282.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 281--288
+Overfull \hbox (15.0pt too wide) in paragraph at lines 279--286
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--288
+Underfull \hbox (badness 10000) in paragraph at lines 279--286
 
  []
 
-<siamese_eng_loss.png, id=145, 187.902pt x 125.268pt>
+<siamese_eng_loss.png, id=148, 187.902pt x 125.268pt>
 File: siamese_eng_loss.png Graphic file (type png)
 <use siamese_eng_loss.png>
-Package pdftex.def Info: siamese_eng_loss.png  used on input line 301.
+Package pdftex.def Info: siamese_eng_loss.png  used on input line 299.
 (pdftex.def)             Requested size: 177.03108pt x 118.02718pt.
-<siamese_eng_acc.png, id=146, 187.902pt x 125.268pt>
+<siamese_eng_acc.png, id=149, 187.902pt x 125.268pt>
 File: siamese_eng_acc.png Graphic file (type png)
 <use siamese_eng_acc.png>
-Package pdftex.def Info: siamese_eng_acc.png  used on input line 306.
+Package pdftex.def Info: siamese_eng_acc.png  used on input line 304.
 (pdftex.def)             Requested size: 177.03108pt x 118.02718pt.
 
-Overfull \hbox (8.99417pt too wide) in paragraph at lines 300--309
+Overfull \hbox (8.99417pt too wide) in paragraph at lines 298--307
 [][]  [] 
  []
 
 [11 <./Siamese_Network.png> <./ma_similarity.png>]
-<Screen_top.png, id=156, 403.5075pt x 206.27063pt>
+<Screen_top.png, id=159, 403.5075pt x 206.27063pt>
 File: Screen_top.png Graphic file (type png)
 <use Screen_top.png>
-Package pdftex.def Info: Screen_top.png  used on input line 320.
+Package pdftex.def Info: Screen_top.png  used on input line 318.
 (pdftex.def)             Requested size: 312.40906pt x 159.70384pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 321.
+(caption)                particular \caption on input line 319.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 317--325
+Overfull \hbox (15.0pt too wide) in paragraph at lines 315--323
 []$[]$ 
  []
 
@@ -655,19 +655,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
  <./siamese_eng_loss.png> <./siamese_eng_acc.png>]
-<Screen.png, id=165, 405.76593pt x 414.04688pt>
+<Screen.png, id=168, 405.76593pt x 414.04688pt>
 File: Screen.png Graphic file (type png)
 <use Screen.png>
-Package pdftex.def Info: Screen.png  used on input line 332.
+Package pdftex.def Info: Screen.png  used on input line 330.
 (pdftex.def)             Requested size: 312.40906pt x 318.7918pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 333.
+(caption)                particular \caption on input line 331.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 329--338
+Overfull \hbox (15.0pt too wide) in paragraph at lines 327--336
 []$[]$ 
  []
 
@@ -675,7 +675,7 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 329--338
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13 <./Screen_top.png>] [14 <./Screen.png>] [15] [16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 477--479
+Underfull \hbox (badness 10000) in paragraph at lines 475--477
 \OT1/cmr/m/n/10 here: []$\OT1/cmtt/m/n/10 https : / / github . com / coarib / S
 MU _ Masters _ PST / blob / master / data /
  []
@@ -685,148 +685,148 @@ Underfull \vbox (badness 1043) has occurred while \output is active []
 
  [18]
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 [][]$\OT1/cmtt/m/n/9 https : / / www . sciencemag . org / news / 2016 / 09 / go
 ogle -[] s -[] new -[] translation -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 \OT1/cmtt/m/n/9 software -[] powered -[] brainlike -[] artificial -[] intellige
 nce ? r3f _ 986 = https :
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 500--501
+Underfull \hbox (badness 1460) in paragraph at lines 498--499
 \OT1/cmr/m/n/9 Novem-ber 15), Avail-able at: []$\OT1/cmtt/m/n/9 https : / / www
  . blog . google / products / translate /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--510
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
 []\OT1/cmr/m/n/9 Figure 3. Avail-able at: []$\OT1/cmtt/m/n/9 https : / / cdn -[
 ] images -[] 1 . medium . com / max / 1600 /
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 518--519
+Underfull \hbox (badness 1460) in paragraph at lines 516--517
 \OT1/cmr/m/n/9 Novem-ber 15), Avail-able at: []$\OT1/cmtt/m/n/9 https : / / www
  . blog . google / products / translate /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 \OT1/cmr/m/n/9 at: []$\OT1/cmtt/m/n/9 https : / / basicenglishspeaking . com / 
 100 -[] common -[] phrases -[] and -[] sentence -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
 []\OT1/cmr/m/n/9 Sequence to Se-quence Learn-ing with Neu-ral Net-works, Avail-
 able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
 []$\OT1/cmtt/m/n/9 https : / / papers . nips . cc / paper / 5346 -[] sequence -
 [] to -[] sequence -[] learning -[] with -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--543
+Underfull \hbox (badness 10000) in paragraph at lines 540--541
 \OT1/cmtt/m/n/9 org / news / 2016 / 09 / google -[] s -[] new -[] translation -
 [] software -[] powered -[] brainlike -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 []\OT1/cmr/m/n/9 What is Eu-clidean Dis-tance?, On April 1, 2017, Avail-able at
 :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 []$\OT1/cmtt/m/n/9 WhatisEuclideanDistance ? https : / / machinelearningtutoria
 ls . com /
  []
 
 [20]
-Underfull \hbox (badness 1048) in paragraph at lines 548--549
+Underfull \hbox (badness 1048) in paragraph at lines 546--547
 []\OT1/cmr/m/n/9 Text Sim-i-lar-i-ties, Meenu Ahluwalia and Brian Coari, Avail-
 able at: []$\OT1/cmtt/m/n/9 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
 \OT1/cmtt/m/n/9 / / github . com / coarib / SMU _ Masters _ PST / blob / master
  / src / TextSimilarity _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 558--560
+Underfull \hbox (badness 10000) in paragraph at lines 556--558
 []\OT1/cmr/m/n/9 Google's word2ve,c Avail-able at: []$\OT1/cmtt/m/n/9 https : /
  / code . google . com / archive / p /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--564
+Underfull \hbox (badness 10000) in paragraph at lines 560--562
 \OT1/cmr/m/n/9 at: []$\OT1/cmtt/m/n/9 http : / / people . csail . mit . edu / j
 onasmueller / info / MuellerThyagarajan _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 576--577
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
 []$\OT1/cmtt/m/n/10 https : / / github . com / coarib / SMU _ Masters _ PST / b
 lob / master / data /
  []
 
 
-Overfull \hbox (46.62303pt too wide) in paragraph at lines 583--583
+Overfull \hbox (46.62303pt too wide) in paragraph at lines 584--584
 []\OT1/cmtt/m/n/10 select text, sentence_id from Sentences where language_key='
 [Language_Key]'[] 
  []
 
 
-Overfull \hbox (36.12312pt too wide) in paragraph at lines 593--593
+Overfull \hbox (36.12312pt too wide) in paragraph at lines 594--594
 []\OT1/cmtt/m/n/10 left join masters.Sentences a on a.sentence_id=Translations.
 sentence_id_1[] 
  []
 
 
-Overfull \hbox (36.12312pt too wide) in paragraph at lines 593--593
+Overfull \hbox (36.12312pt too wide) in paragraph at lines 594--594
 []\OT1/cmtt/m/n/10 left join masters.Sentences b on b.sentence_id=Translations.
 sentence_id_2[] 
  []
 
-<Friends_Comparison.png, id=286, 531.48563pt x 545.03625pt>
+<Friends_Comparison.png, id=290, 531.48563pt x 545.03625pt>
 File: Friends_Comparison.png Graphic file (type png)
 <use Friends_Comparison.png>
-Package pdftex.def Info: Friends_Comparison.png  used on input line 601.
+Package pdftex.def Info: Friends_Comparison.png  used on input line 602.
 (pdftex.def)             Requested size: 347.12354pt x 355.98259pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 602.
+(caption)                particular \caption on input line 603.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 599--608
+Underfull \hbox (badness 10000) in paragraph at lines 600--609
 
  []
 
 [21]
-<Language_Match.png, id=303, 828.09375pt x 145.29282pt>
+<Language_Match.png, id=308, 828.09375pt x 145.29282pt>
 File: Language_Match.png Graphic file (type png)
 <use Language_Match.png>
-Package pdftex.def Info: Language_Match.png  used on input line 616.
+Package pdftex.def Info: Language_Match.png  used on input line 617.
 (pdftex.def)             Requested size: 347.12354pt x 60.90506pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 617.
+(caption)                particular \caption on input line 618.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 614--623
+Underfull \hbox (badness 10000) in paragraph at lines 615--624
 
  []
 
@@ -836,19 +836,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [22
 
  <./Friends_Comparison.png>]
-<Dessert_Comparison.png, id=310, 529.22719pt x 530.73282pt>
+<Dessert_Comparison.png, id=315, 529.22719pt x 530.73282pt>
 File: Dessert_Comparison.png Graphic file (type png)
 <use Dessert_Comparison.png>
-Package pdftex.def Info: Dessert_Comparison.png  used on input line 631.
+Package pdftex.def Info: Dessert_Comparison.png  used on input line 632.
 (pdftex.def)             Requested size: 347.12354pt x 348.1144pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 632.
+(caption)                particular \caption on input line 633.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--638
+Underfull \hbox (badness 10000) in paragraph at lines 630--639
 
  []
 
@@ -858,19 +858,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [23
 
  <./Language_Match.png>]
-<Terrible_Comparison.png, id=317, 542.025pt x 548.0475pt>
+<Terrible_Comparison.png, id=322, 542.025pt x 548.0475pt>
 File: Terrible_Comparison.png Graphic file (type png)
 <use Terrible_Comparison.png>
-Package pdftex.def Info: Terrible_Comparison.png  used on input line 645.
+Package pdftex.def Info: Terrible_Comparison.png  used on input line 646.
 (pdftex.def)             Requested size: 347.12354pt x 350.99171pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 646.
+(caption)                particular \caption on input line 647.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--652
+Underfull \hbox (badness 10000) in paragraph at lines 644--653
 
  []
 
@@ -880,29 +880,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [24
 
  <./Dessert_Comparison.png>]
-<Park_Comparison.png, id=324, 852.93657pt x 515.67656pt>
+<Park_Comparison.png, id=329, 852.93657pt x 515.67656pt>
 File: Park_Comparison.png Graphic file (type png)
 <use Park_Comparison.png>
-Package pdftex.def Info: Park_Comparison.png  used on input line 657.
+Package pdftex.def Info: Park_Comparison.png  used on input line 658.
 (pdftex.def)             Requested size: 347.12354pt x 209.87077pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 658.
+(caption)                particular \caption on input line 659.
 See the caption package documentation for explanation.
 
-<Park_Translation.png, id=325, 828.84656pt x 144.54pt>
+<Park_Translation.png, id=330, 828.84656pt x 144.54pt>
 File: Park_Translation.png Graphic file (type png)
 <use Park_Translation.png>
-Package pdftex.def Info: Park_Translation.png  used on input line 666.
+Package pdftex.def Info: Park_Translation.png  used on input line 667.
 (pdftex.def)             Requested size: 347.12354pt x 60.53214pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 667.
+(caption)                particular \caption on input line 668.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--673
+Underfull \hbox (badness 10000) in paragraph at lines 656--674
 
  []
 
@@ -913,12 +913,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  <./Terrible_Comparison.png>] [26 <./Park_Comparison.png> <./Park_Translation.p
 ng>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 673.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 673.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 674.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 674.
 
 (./AhluwaliaCoariBrockDraftDesign.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 673.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 673.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 674.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 674.
 Package rerunfilecheck Info: File `AhluwaliaCoariBrockDraftDesign.out' has not 
 changed.
 (rerunfilecheck)             Checksum: 6C1B9E536B6A6271A5088D532A71F3E8;182.
@@ -926,13 +926,13 @@ changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 673.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 674.
  ) 
 Here is how much of TeX's memory you used:
- 6790 strings out of 492649
- 104388 string characters out of 6129622
- 208125 words of memory out of 5000000
- 10511 multiletter control sequences out of 15000+600000
+ 6792 strings out of 492649
+ 104413 string characters out of 6129622
+ 208157 words of memory out of 5000000
+ 10512 multiletter control sequences out of 15000+600000
  7970 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,7n,39p,1245b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -945,10 +945,10 @@ ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local
 /texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on AhluwaliaCoariBrockDraftDesign.pdf (26 pages, 611942 bytes).
+Output written on AhluwaliaCoariBrockDraftDesign.pdf (26 pages, 612790 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 300 compressed objects within 3 object streams
- 108 named destinations out of 1000 (max. 500000)
+ 402 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
+ 109 named destinations out of 1000 (max. 500000)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
