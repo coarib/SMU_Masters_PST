@@ -113,7 +113,7 @@ Pristine Sentence Translation (PST) is a new approach to language translation ba
 	We first collected 200 sample sentences from various travel sites in order to build a base of useful translations. Next, we developed a back end of a Google Cloud-hosted MySQL database that holds the the translations for all of our sentences and the translation relationships between those sentences. We then developed an HTML front end that allows users to request a translation of a sentence from one language to another. Once a sentence translation has been requested we used a combination of NLP and similarity metrics in order to find a close sentence match in the source language. Then we used our MySQL database to find all of the related matches to the closest-matched sentence in the language requested by the user and returned them to the UI for display, along with the percentage of how close the match was. 
 
 	\section{Data}
-	The data for this project was collected to help people who travel for business or pleasure.  While travel is becoming more accessible (with an increasing number of both travelers and destinations), the tourist may face a few communication issues when conversing with waiter, taxi driver, hotel staff, etc., because of the number of different languages and countries involved. The initial collection of 200 American English Sentences are those various travel sites found were valuable to know when travelling. The sentences were assembled in American English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Portuguese and German using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in German. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public GitHub Repository in the Appendix.
+	The data for this project was collected to help people who travel for business or pleasure.  While travel is becoming more accessible (with an increasing number of both travelers and destinations), the tourist may face a few communication issues when conversing with waiter, taxi driver, hotel staff, etc., because of the number of different languages and countries involved. The initial collection of 200 American English Sentences are from various travel sites that are valuable to know when travelling. The sentences were assembled in American English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Portuguese and German using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in German. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public GitHub Repository in the Appendix.
 	
 	Before we start building the model, we need to clean up the text data (i.e. the sentences). We remove all punctuation characters. We then normalize the case to lowercase, normalize all Unicode characters to ASCII and remove any tokens that are not alphabetic. 
 \newline
@@ -200,7 +200,10 @@ Cosine Similarity tries to measure similarity in a fundamentally different way f
 	\afterpage{\clearpage}
 	
 	\subsubsection{Training the Neural Translation Model}
-	\paragraph
+	\hfill
+	\hfill
+	\newline
+	\newline
 	We use the English-Portuguese and English-German sentence pairs dataset from Anki~\cite{ref_url4}  to train our Seq2Seq model.
 	The model is trained for 30 epochs and a batch size of 512 on a training set of 40,000 sentences and a hold-out set of 10,000 sentences.   
 		
@@ -502,13 +505,7 @@ This proof-of-concept system is not something we recommend putting into the worl
 
 \bibitem{ref_url4}
 	Tab-delimited bilingual sentence pairs \url{http://www.manythings.org/anki/}.Last accessed  10 July 2019
-		
-\bibitem{ref_url6}
-	Figure 3. Available at: \url{https://cdn-images-1.medium.com/max/1600/1*SQAxk6gSUM_AK2d53neYmA.jpeg}. Last accessed 22 Mar 2019
-
-\bibitem{ref_url7}
-	Figure 4, Available at: \url{https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2019/01/architecture.png}. Last accessd 22 Mar 2019
-	
+			
 \bibitem{ref_url8}
 	A Quantitative Study of Data in the NLP community, Margot Mieskes, Available at: \url{http://www.ethicsinnlp.org/workshop/EthNLP-2017.pdf}.  Last accessed 25 Mar 2019
 
