@@ -37,7 +37,7 @@ Pristine Sentence Translation (PST) is a new approach to language translation ba
 	
 	\section{Introduction}
 	
-	There is not a robust way to translate sentences containing colloquialisms, idioms, and other forms of slang correctly into other languages. The ability to communicate with people in another language presents a number of technical challenges. Technology has come a long way from the discovery of the Rosetta Stone in 1799, which allowed us to translate Egyptian hieroglyphics to ancient Greek in 23 years. In the modern day, tools such as Google Translate can be used in real time to convert between languages and allow people to communicate from different cultures~\cite{ref_url6}. The latest iterations of Google Translate even use machine learning and neural networks to parse word combinations instead of just single words, delivering a more satisfying user experience~\cite{ref_url7}.
+	There is not a robust way to translate sentences containing colloquialisms, idioms, and other forms of slang correctly into other languages. The ability to communicate with people in another language presents a number of technical challenges. Technology has come a long way from the discovery of the Rosetta Stone in 1799, which allowed us to translate Egyptian hieroglyphics to ancient Greek in 23 years. In the modern day, tools such as Google Translate can be used in real time to convert between languages and allow people to communicate from different cultures~\cite{ref_url1}. The latest iterations of Google Translate even use machine learning and neural networks to parse word combinations instead of just single words, delivering a more satisfying user experience~\cite{ref_url2}.
 	
 	With the magnitudes of advancements in language translations, however, there are still areas for improvement. While Google Translate works very well with basic translations such as finding a bathroom and ordering off a menu off a menu, the intricacies and complexities of a normal, native conversation still can cause a non-fluent speaker difficulty. For example: an American coworker might mention to a Brazilian coworker about performance on a project with ``You hit one out of the park''. This is a term borrowed from the American sport of baseball, in which hitting a ball out of the ballpark is a great thing to do. The Brazilian coworker might use a traditional translation tool and get a word-for-word result of ``Você bateu um fora do parque'', but without the context of knowing about American baseball the meaning of this phrase might be lost. This situation is even greater when encountered in print, which complicates the situation because you cannot ask a book to clarify what it means.
 	
@@ -64,22 +64,22 @@ Pristine Sentence Translation (PST) is a new approach to language translation ba
 	By returning a curated translation to a sentence that is determined to be close to the sentence that is input we remove the granularity of a word-to-word translation, getting us closer to conveying the thoughts behind the sentence the speaker is trying to communicate. Our input data of a few hundred phrases is not sufficient to provide a close match to sentences from normal conversations, but our examples show the basic functionality of PST. With more seed data curated by language and cultural experts, PST's usefulness can grow to applications in movie or television script translation, technical documentation translation, and other forms of translation where specialized language 
 	
 	\section{Related Work}
-	 Existing tools and methods were readily available in the field of language translations. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Deep Learning  to perform translations and saw vast reduction in errors ~\cite{ref_url18}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or words that have no direct equivalent in the destination language. 
+	 Existing tools and methods were readily available in the field of language translations. This first tool we looked at is one of the strongest and most popular forces in translation today: Google Translate. In 2016 Google started using Deep Learning  to perform translations and saw vast reduction in errors ~\cite{ref_url3}. Even though this method was vastly superior to Google's previous system it is still dependent on the individual words in a sentence, and still subject to the same issues stated above with translations, since it would not handle colloquialisms or words that have no direct equivalent in the destination language. 
 
-	The author developed a Neural Machine Translation System using Keras, and used a ``closeness of match'' system to translate between one language and another ~\cite{ref_url16}. This approach is much closer to the spirit of PST, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST uses a similar approach, but aims to find a matching sentence ID for the input sentence, then look up all sentences that are translations for that sentence in the requested language. More details on this are provided in the ``Solution Approach'' section.
+	The author developed a Neural Machine Translation System using Keras ~\cite{ref_url4}, and used a ``closeness of match'' system to translate between one language and another ~\cite{ref_url5}. This approach is much closer to the spirit of PST, with the exception of only returning one sentence in the intended language. We would like an approach that allows us to find more than one sentence ID from the destination language. PST uses a similar approach, but aims to find a matching sentence ID for the input sentence, then look up all sentences that are translations for that sentence in the requested language. More details on this are provided in the ``Solution Approach'' section.
 	
 	\section{NLP and Neural Networks}
 	The recent advances of machine learning and growing amounts of available data have made a great impact on the field of  Natural Language Processing (NLP). They facilitated development of new neural architectures and led to strong improvements on many NLP tasks, such as machine translation or text classification. 
 	
-	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation~\cite{ref_url16}.
+	Automatic or machine translation is a challenging AI task, given the fluidity of human language. Classically, rule-based systems were used for this task, which were replaced in the 1990s with statistical methods. More recently, deep neural network models achieve state-of-the-art results in a field that is aptly named neural machine translation~\cite{ref_url6}.
 	One advancement of particular importance is the development of models which build good quality, machine-readable representations of word meanings. These representations, often referred to as word embeddings, are vectors which can be used as features in neural models that process text data.
 	
 	Sequence to Sequence (often abbreviated to Seq2Seq) models are a special class of Recurrent Neural Network architectures typically used (but not restricted) to solve complex Language related problems like Machine Translation, Question Answering, creating Chat-bots, Text Summarization, etc. Our aim is to translate given sentence from one language to another. We target sentence translations to and from American English, Brazilian Portuguese, and German languages. Use of Seq2Seq (or Encoder-Decoder) architecture is appropriate in this case as the length of the input sequence  does not has the same length as the output data.
 	
 	To summarize our Encoder-Decoder model, the Encoder simply takes the input data, and train on it then it passes the last state of its recurrent layer as an initial state to the first recurrent layer of the decoder part. The Decoder takes the last state of encoder’s last recurrent layer and uses it as an initial state to its first recurrent layer, the input of the decoder is the sequences that we want to get. We use the Keras API with Tensorflow backend to build our model.
 	
-	One of the important tasks for language understanding and information retrieval~\cite{ref_url26} is to model semantic similarity between words, phrases or sentences. Siamese LSTM networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more.
-	Siamese LSTM is a supervised learning model where input is pairs of sentences having different sequence length and a label for the pair which describe the underlying similarity between sentence pairs~\cite{ref_url21}. We use this similarity score to find the closest matched sentence from our dataset for the sentence input by the user for translation.
+	One of the important tasks for language understanding and information retrieval~\cite{ref_url7} is to model semantic similarity between words, phrases or sentences. Siamese LSTM networks seem to perform well on similarity tasks and have been used for tasks like sentence semantic similarity, recognizing forged signatures and many more.
+	Siamese LSTM is a supervised learning model where input is pairs of sentences having different sequence length and a label for the pair which describe the underlying similarity between sentence pairs~\cite{ref_url8}. We use this similarity score to find the closest matched sentence from our dataset for the sentence input by the user for translation.
 	
 	
 	\section{Approach}
@@ -113,7 +113,7 @@ Pristine Sentence Translation (PST) is a new approach to language translation ba
 	We first collected 200 sample sentences from various travel sites in order to build a base of useful translations. Next, we developed a back end of a Google Cloud-hosted MySQL database that holds the the translations for all of our sentences and the translation relationships between those sentences. We then developed an HTML front end that allows users to request a translation of a sentence from one language to another. Once a sentence translation has been requested we used a combination of NLP and similarity metrics in order to find a close sentence match in the source language. Then we used our MySQL database to find all of the related matches to the closest-matched sentence in the language requested by the user and returned them to the UI for display, along with the percentage of how close the match was. 
 
 	\section{Data}
-	The data for this project was collected to help people who travel for business or pleasure.  While travel is becoming more accessible (with an increasing number of both travelers and destinations), the tourist may face a few communication issues when conversing with waiter, taxi driver, hotel staff, etc., because of the number of different languages and countries involved. The initial collection of 200 American English Sentences are from various travel sites that are valuable to know when travelling. The sentences were assembled in American English from three travel websites.~\cite{ref_url11,ref_url12,ref_url13} and translated to Portuguese and German using Google Translate~\cite{ref_url14}. The translations were verified manually by a human who is proficient in Portuguese and another one in German. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public GitHub Repository in the Appendix.
+	The data for this project was collected to help people who travel for business or pleasure.  While travel is becoming more accessible (with an increasing number of both travelers and destinations), the tourist may face a few communication issues when conversing with waiter, taxi driver, hotel staff, etc., because of the number of different languages and countries involved. The initial collection of 200 American English Sentences are from various travel sites that are valuable to know when travelling. We assembled our American English test sentences using examples from three travel websites (~\cite{ref_url9},~\cite{ref_url4},~\cite{ref_url10} ) and translated to Portuguese and German using Google Translate~\cite{ref_url3}. The translations were verified manually by a human who is proficient in Portuguese and another one in German. If the translation done by Google did not make sense, the translation was modified to make it more sensible. The list of sentences and translations can be found in our public GitHub Repository in the Appendix.
 	
 	Before we start building the model, we need to clean up the text data (i.e. the sentences). We remove all punctuation characters. We then normalize the case to lowercase, normalize all Unicode characters to ASCII and remove any tokens that are not alphabetic. 
 \newline
@@ -156,13 +156,13 @@ To build the model, we map words to integers using the Keras Tokenize class. The
 	\end{minipage}
 	\afterpage{\clearpage}
 
-	In order to facilitate rapid and stable testing and a responsive user interface we extract the data in the database into dataframes through sqlalchemy~\cite{ref_url15} and export the data to .pkl files. We then load the .pkl files whenever we need the data for a model, which makes us immune to network interruptions and allows us faster access to our data. Examples of the SQL Queries used to extract the data can be found in Appendix A.
+	In order to facilitate rapid and stable testing and a responsive user interface we extract the data in the database into dataframes through sqlalchemy~\cite{ref_url11} and export the data to .pkl files. We then load the .pkl files whenever we need the data for a model, which makes us immune to network interruptions and allows us faster access to our data. Examples of the SQL Queries used to extract the data can be found in Appendix A.
 	
 
 	\subsection{Euclidean Distance and Cosine Similarity}	
 	For our comparison on closeness of strings we leverage two methods: Euclidean Distance and Cosine Similarity. Euclidean Distance measures the distance between two points in a space, and therefore the minimum distance is the closest match. Cosine Similarity is the similarity between two vectors in a space, and therefore the maximum similarity is the closest match. In this section we describe how these methods calculate their scores, and in the ``Results'' section we show the result of the comparison and choose our preferred match.
 	
-Euclidean distance, also known as L2 distance or the Pythagorean metric, is a basic measure of distance in a space. Given a number of dimensions in a space, the Euclidean Distance calculates the length of a line segment connecting those points. This distance is calculated by going through all of the dimensions, adding up the square of the difference between the points of each value for that dimension, then taking the square root of that sum. This method is called the Pythagorean Formula.~\cite{ref_url19}. Euclidean distance is simple, but sometimes struggles if the data are not of similar shapes, as is the case with our sentence sample~\cite{ref_url19}.
+Euclidean distance, also known as L2 distance or the Pythagorean metric, is a basic measure of distance in a space. Given a number of dimensions in a space, the Euclidean Distance calculates the length of a line segment connecting those points. This distance is calculated by going through all of the dimensions, adding up the square of the difference between the points of each value for that dimension, then taking the square root of that sum. This method is called the Pythagorean Formula.~\cite{ref_url12}. Euclidean distance is simple, but sometimes struggles if the data are not of similar shapes, as is the case with our sentence sample~\cite{ref_url12}.
 
 Cosine Similarity tries to measure similarity in a fundamentally different way from Euclidean Distance. Instead of stepping through and comparing data point-by-point, Cosine Similarity steps through each sample and tries to build a directional vector for the shape of the data, then measures the cosine of the angle between the two vectors. In the case of text analysis, the cosine similarity uses the frequency of words in a sentence to determine a directional vector. Cosine Similarity ignores the words that are not in common between two sentences, and focuses only on words that are common, which avoids penalizing sentences that are very long and focuses on finding the most commonality. Therefore, cosine similarity is very resilient to data that is of different shapes, since the shape of the data would not necessarily affect the direction of the vector. The sentences with the closest ratios of like words would be considered a match.~\cite{ref_book1} This resilience to differently-shaped data is promising for our purposes, and seems to be a good fit for comparing sentences, and we see in the ``Results'' section that we did get results that are visually close to the requests.
 
@@ -204,7 +204,7 @@ Cosine Similarity tries to measure similarity in a fundamentally different way f
 	\hfill
 	\newline
 	\newline
-	We use the English-Portuguese and English-German sentence pairs dataset from Anki~\cite{ref_url4}  to train our Seq2Seq model.
+	We use the English-Portuguese and English-German sentence pairs dataset from Anki~\cite{ref_url13}  to train our Seq2Seq model.
 	The model is trained for 30 epochs and a batch size of 512 on a training set of 40,000 sentences and a hold-out set of 10,000 sentences.   
 		
 	As shown in Fig 7, the validation loss stops decreasing after 20 epochs and the accuracy of the model did not improve after 20 epochs.
@@ -290,7 +290,7 @@ Cosine Similarity tries to measure similarity in a fundamentally different way f
 
 	Since we have an exponent of a negative, the output (the prediction in our case) is between 0 and 1.
 	
-	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url25}. 	
+	We trained the Siamese LSTM model using Kaggle's Quora Pairs dataset~\cite{ref_url14}. 	
 	
 	Fig.10 shows a plot of Model Loss (MSE) and Accuracy on y-axis as a function of number of epochs on the x-axis.
 	The mean squared error (MSE) is the same as loss measure of the model. The best value of training MSE obtained is 0.1179 and it is found to be decreasing at a decreasing rate throughout the training process of the model. Whereas the validation MSE is found to be 0.1257 at the end of 30 epochs.
@@ -441,7 +441,7 @@ If the user wants to try another sentence the user can change any of the three i
 
 	For another example, in Brazilian Portuguese there's a popular sentence ``Eu adoro Cafuné''. Google Translate does not have a translation for ``Cafuné'', a complicated word which loosely means ``the act of running fingers through hair''. PST returns an American English translation ``I love the feeling of fingers running through my hair'' when asked to translate ``Eu adoro Cafuné'' from Portuguese into English. Translating from sentence to sentence provides us a method to translate any sentence or concept into another language given enough time and resources.
 
-	Now that we have performed our analysis we are ready to decide on a final method. All of code for our comparisons can be found at this URL in the References section: ~\cite{ref_url20}
+	Now that we have performed our analysis we are ready to decide on a final method. All of code for our comparisons can be found at this URL in the References section: ~\cite{ref_url15}
 	
 	\subsection{Method Comparisons}
 	Cosine Similarity consistently outperformed Euclidean Distance as a determination of sentence similarity, so that is the metric we will focus on for determining closeness of input sentences to our known sentences. It makes sense that Cosine Similarity would be a more ideal fit than Euclidean Sentences because every unexpected word in Euclidean Distance comparison is penalized, but in Cosine Similarity these are ignored, and we focus only on the matches. This helps cut through the noise and return a more confident match in what we want. 
@@ -456,7 +456,7 @@ If the user wants to try another sentence the user can change any of the three i
 	\section{Ethical Considerations}
 	Ethical considerations help outline the moral principles, principles about what is good or bad, that come into effect for a topic. In order to determine if we were meeting our moral obligations with this work we asked ourselves who will be affected by our work, and how we can ensure we are doing good to that group without harming another group. To answer the first question: the people affected by our work will be the users of our translation program, and the people with whom they speak. To answer the second question: we can ensure our translation process is as clear as possible, and we can provide the user with enough information to make an informed decision around his or her communication. 
 
-	How can we be sure that our data we are providing to the user will be helpful instead of harmful? For example, if we provide a bad translation to a user then a well-meaning user could end up saying something inappropriate to a stranger or coworker, leading to negative repercussions such as exclusion, or disciplinary actions. In order to find a framework in which to address this ethical consideration, we found it helpful to have a template with some core questions to answer. Margot Mieske proposes in her paper ``A Quantitative Study of Data in the NLP community'' five key questions every NLP programmer must answer: ~\cite{ref_url8}
+	How can we be sure that our data we are providing to the user will be helpful instead of harmful? For example, if we provide a bad translation to a user then a well-meaning user could end up saying something inappropriate to a stranger or coworker, leading to negative repercussions such as exclusion, or disciplinary actions. In order to find a framework in which to address this ethical consideration, we found it helpful to have a template with some core questions to answer. Margot Mieske proposes in her paper ``A Quantitative Study of Data in the NLP community'' five key questions every NLP programmer must answer: ~\cite{ref_url16}
 
 
 	\begin{table} 
@@ -473,12 +473,12 @@ If the user wants to try another sentence the user can change any of the three i
 		\label{List: Ethical Questions}
 	\end{table}
 
-We answer each of these questions in turn. First, yes, data was collected for this project. For this project the initial set of 200 English Sentences data were gathered from three travel websites. Second, yes, we processed the data using removal of several characters as detailed in the Data section. Third, we extended this data using a couple of test sentences of our own, shown in in Table 5 in the Results and Analysis section. We did this to explore some popular colloquialisms and explore our problem statement. To answer the fourth and fifth questions together, the links for the travel sites are public URLs detailed here: ~\cite{ref_url11,ref_url12,ref_url13}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. We also met with native speakers of our languages and had them review the translations to make sure the translations provided by the travel sites made sense. 
+We answer each of these questions in turn. First, yes, data was collected for this project. For this project the initial set of 200 English Sentences data were gathered from three travel websites. Second, yes, we processed the data using removal of several characters as detailed in the Data section. Third, we extended this data using a couple of test sentences of our own, shown in in Table 5 in the Results and Analysis section. We did this to explore some popular colloquialisms and explore our problem statement. To answer the fourth and fifth questions together, the links for the travel sites are public URLs detailed here: ~\cite{ref_url9,ref_url4,ref_url10}. Travel sites were chosen in order to get a good spread of what sentences people might find useful. We also met with native speakers of our languages and had them review the translations to make sure the translations provided by the travel sites made sense. 
 
-If there were gaps in the translations provided by the travel sites, we used a combination of Google Translate~\cite{ref_url14} and human expertise in Brazilian Portuguese and German in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation from human expertise. The original list of sentences and translations can be found in our public GitHub Repository here:
+If there were gaps in the translations provided by the travel sites, we used a combination of Google Translate~\cite{ref_url3} and human expertise in Brazilian Portuguese and German in order to determine if the Google Translation made sense. If the sentence did not make sense as Google Translated it, we entered a more sensible translation from human expertise. The original list of sentences and translations can be found in our public GitHub Repository here:
 \url{https://github.com/coarib/SMU_Masters_PST/blob/master/data/processed/PST_workbook.xlsx}
 
-For the specifics around ethical considerations for NLP we turn to Jochen L. Leidner and Vassilis Plachouras and their paper ``Ethical by Design: Ethics Best Practices for Natural Language Processing''~\cite{ref_url15}.  Leidner and Plachouras propose that since NLP pertains to human language and touches every part of human life it has a specific ethics dimension, therefore automation and errors also become ethical topics. We need to make sure our translations and base sentences are unbiased and fair, without discrimination based on age, race, or gender. This is why we chose to target travel sites that hopefully won't favor certain demographics. At the very least we are transparent about from where we pulled the sentences.
+For the specifics around ethical considerations for NLP we turn to Jochen L. Leidner and Vassilis Plachouras and their paper ``Ethical by Design: Ethics Best Practices for Natural Language Processing''~\cite{ref_url17}.  Leidner and Plachouras propose that since NLP pertains to human language and touches every part of human life it has a specific ethics dimension, therefore automation and errors also become ethical topics. We need to make sure our translations and base sentences are unbiased and fair, without discrimination based on age, race, or gender. This is why we chose to target travel sites that hopefully won't favor certain demographics. At the very least we are transparent about from where we pulled the sentences.
 
 We carefully scanned each translation for fairness to make sure our data was reviewed before putting it out to the public, and we keep a tight control over the sentences that might be suggested for a user. With PST using curators to craft the translation by hand there is an increased potential for a curator to use bad translations in order to purposefully mislead a user. We had the translations peer-reviewed to mitigate this risk, and will need to continue this for the lifetime of the program.
 
@@ -500,54 +500,60 @@ This proof-of-concept system is not something we recommend putting into the worl
 \bibitem{ref_url2}
 	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 4 Feb 2019
 
+
 \bibitem{ref_url3}
-	A ten-minute introduction to sequence-to-sequence learning in Keras, Available at: \url{https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html}.  Last accessed 4 Feb 2019
-
-\bibitem{ref_url4}
-	Tab-delimited bilingual sentence pairs \url{http://www.manythings.org/anki/}.Last accessed  10 July 2019
-			
-\bibitem{ref_url8}
-	A Quantitative Study of Data in the NLP community, Margot Mieskes, Available at: \url{http://www.ethicsinnlp.org/workshop/EthNLP-2017.pdf}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url10}
-	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url11}
-	76 English Phrases for Traveling with Ease, Available at: \url{https://www.fluentu.com/blog/english/english-travel-phrases/}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url12}
-	Travel English-- 100 sentences you must know, Available at: \url{https://www.rong-chang.com/travel/}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url13}
-	100 Common English Phrases and Sentence Patterns (With Dialogue), Available at: \url{https://basicenglishspeaking.com/100-common-phrases-and-sentence-patterns/}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url14}
 	Google Translate, Available at: \url{https://translate.google.com/}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url15}
-	Ethical by Design: Ethics Best Practices for Natural Language Processing, Jochen L. Leidner and Vassilis Plachouras, Available at: \url{http://www.ethicsinnlp.org/workshop/pdf/EthNLP02.pdf/}.  Last accessed 25 Mar 2019
+\bibitem{ref_url4}
+	A ten-minute introduction to sequence-to-sequence learning in Keras, Available at: \url{https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html}.  Last accessed 4 Feb 2019
 
-\bibitem{ref_url16}
+\bibitem{ref_url5}
+	Travel English-- 100 sentences you must know, Available at: \url{https://www.rong-chang.com/travel/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url6}
 Sequence to Sequence Learning with Neural Networks, Available at: \url{https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf/}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url17}
+\bibitem{ref_url7}
+Infornation Retrieval, Available at: 
+\url{https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf/}.
+
+\bibitem{ref_url8}
+Siamese Recurrent Architectures for Learning Sentence Similarity (2016), Available at:
+\url{https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12195/}.
+
+\bibitem{ref_url9}
+	76 English Phrases for Traveling with Ease, Available at: \url{https://www.fluentu.com/blog/english/english-travel-phrases/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url10}
+	100 Common English Phrases and Sentence Patterns (With Dialogue), Available at: \url{https://basicenglishspeaking.com/100-common-phrases-and-sentence-patterns/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url11}
 SQL Alchemy, Available at: \url{https://www.sqlalchemy.org/}.  Last accessed 25 Mar 2019
 
-\bibitem{ref_url18}
-Found in translation: More accurate, fluent sentences in Google Translat, by Catherine Matacic on Sep. 27, 2016,  Available at:  \url{https://www.sciencemag.org/news/2016/09/google-s-new-translation-software-powered-brainlike-artificial-intelligence?r3f 986=https://www.google.com/}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url19}
+\bibitem{ref_url12}
 What is Euclidean Distance?, On April 1, 2017, Available at:  \url{What is Euclidean Distance?  https://machinelearningtutorials.com/euclidean-distance/}.  Last accessed 25 Mar 2019
-
-\bibitem{ref_url20}
-Text Similarities, Meenu Ahluwalia and Brian Coari, Available at:  \url{https://github.com/coarib/SMU_Masters_PST/blob/master/src/TextSimilarity_edited.ipynb}.  Last accessed 25 Mar 2019
 
 \bibitem{ref_book1}
 Jiawei Han, Micheline Kamber and Jian Pei: Data Mining: Concepts and Techniques. 3rd ed. Elsevier Inc., Chapter 2.4.7 - Cosine Similarity, Page 77 (2012)
 
-\bibitem{ref_url21}
-Siamese Recurrent Architectures for Learning Sentence Similarity (2016), Available at:
-\url{https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12195/}.
+\bibitem{ref_url13}
+	Tab-delimited bilingual sentence pairs \url{http://www.manythings.org/anki/}.Last accessed  10 July 2019
+
+\bibitem{ref_url14}
+Kaggle Quora Question Pairs  Dataset, Available at: 
+\url{https://www.kaggle.com/c/quora-question-pairs/}.
+
+
+\bibitem{ref_url15}
+Text Similarities, Meenu Ahluwalia and Brian Coari, Available at:  \url{https://github.com/coarib/SMU_Masters_PST/blob/master/src/TextSimilarity_edited.ipynb}.  Last accessed 25 Mar 2019
+			
+\bibitem{ref_url16}
+	A Quantitative Study of Data in the NLP community, Margot Mieskes, Available at: \url{http://www.ethicsinnlp.org/workshop/EthNLP-2017.pdf}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_url17}
+	Ethical by Design: Ethics Best Practices for Natural Language Processing, Jochen L. Leidner and Vassilis Plachouras, Available at: \url{http://www.ethicsinnlp.org/workshop/pdf/EthNLP02.pdf/}.  Last accessed 25 Mar 2019
+
+
 
 \bibitem{ref_url23}
 Google's word2ve,c Available at:
@@ -557,13 +563,7 @@ Google's word2ve,c Available at:
 Siamese Recurrent Architectures for Learning Sentence Similarity, Available at:
 \url{http://people.csail.mit.edu/jonasmueller/info/MuellerThyagarajan_AAAI16.pdf/}.
 
-\bibitem{ref_url25}
-Kaggle Quora Question Pairs  Dataset, Available at: 
-\url{https://www.kaggle.com/c/quora-question-pairs/}.
 
-\bibitem{ref_url26}
-Infornation Retrieval, Available at: 
-\url{https://nlp.stanford.edu/IR-book/pdf/irbookonlinereading.pdf/}.
 
 \end{thebibliography}
 
