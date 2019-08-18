@@ -41,7 +41,8 @@ Pristine Sentence Translation (PST) is a new approach to language translation ba
 	
 	With the magnitudes of advancements in language translations, however, there are still areas for improvement. While Google Translate works very well with basic translations such as finding a bathroom and ordering off a menu off a menu, the intricacies and complexities of a normal, native conversation still can cause a non-fluent speaker difficulty. For example: an American coworker might mention to a Brazilian coworker about performance on a project with ``You hit one out of the park''. This is a term borrowed from the American sport of baseball, in which hitting a ball out of the ballpark is a great thing to do. The Brazilian coworker might use a traditional translation tool and get a word-for-word result of ``Você bateu um fora do parque'', but without the context of knowing about American baseball the meaning of this phrase might be lost. This situation is even greater when encountered in print, which complicates the situation because you cannot ask a book to clarify what it means.
 	
-	In this paper, we present Pristine Sentence Translation (PST), a novel approach to language translation based upon sentence-level granularity. This approach allows a translator to use any number of words in order to properly communicate an idea behind a sentence instead of translating the sentence word-for-word. To implement the PST solution we stored entire sentences in a database, and mapped them to entire sentences in other languages that represent the meaning of those sentences. For example: using the example above we would have an entry for the American English sentence ``You hit one out of the park'', and we would have an entry for a Brazilian Portuguese sentence mapped to that American English sentence that says ``Você foi ótima'' which translates in American English to the meaning behind the phrase: ``You did great''. 
+
+	In this paper, we present Pristine Sentence Translation (PST), a novel approach to language translation based upon sentence-level granularity.  In language evaluation tests, the best reliable method for capturing the meaning of sentences is in expert human analysis~\cite{ref_url18}. Using this result as a basis for our system, PST allows a translator to use any number of words in order to properly communicate an idea behind a sentence instead of translating the sentence word-for-word. To implement the PST solution we stored entire sentences in a database, and mapped them to entire sentences in other languages that represent the meaning of those sentences. For example: using the example above we would have an entry for the American English sentence ``You hit one out of the park'', and we would have an entry for a Brazilian Portuguese sentence mapped to that American English sentence that says ``Você foi ótima'' which translates in American English to the meaning behind the phrase: ``You did great''. 
 
 
 	\begin{minipage}{\linewidth}
@@ -482,6 +483,19 @@ For the specifics around ethical considerations for NLP we turn to Jochen L. Lei
 
 We carefully scanned each translation for fairness to make sure our data was reviewed before putting it out to the public, and we keep a tight control over the sentences that might be suggested for a user. With PST using curators to craft the translation by hand there is an increased potential for a curator to use bad translations in order to purposefully mislead a user. We had the translations peer-reviewed to mitigate this risk, and will need to continue this for the lifetime of the program.
 
+We also recognize that the inherent risk in allowing any person, no matter the level of expertise, to interpret the meaning of a sentence will carry some inherent bias. This bias raises the ethical concern of considering one person an authority in contextual analysis, as described by Rosemary Arrojo in ``Training for the New Millennium: Pedagogies for translation and interpreting'':
+
+\begin{verbatim}
+'...if we truly accepted the full implications of language theories
+which claim to go beyond the merely linguistic and to take into account
+the ideological, historical, and cultural basis of meaning, we would have to
+recognise the translator’s inescapable authorial interference in the process of
+translation and would have to review most of the clichés which consider it as a
+``serving'' profession....'
+\end{verbatim} ~\cite{ref_book2}
+
+While we understand that no one person should be considered an ultimate authority on the contextual meaning of a sentence, our application can grow to take into account multiple meanings of a sentence. If ethical considerations arise from the interpretation of a sentence we can correct the sentence translation or include more possible meanings of the sentence. To fulfill our ethical obligations here we need to do our best to make sure our end users understand this limitation, our mitigation strategy, and any inherent risk. This is communicated in the ``Help'' section of our application.
+
 This proof-of-concept system is not something we recommend putting into the world for general use. With only 200 sentences the risks around mistranslating something are too high, there is the potential for widespread confusion if our suggestions aren't close enough to the input request. That confusion has the potential to do harm to others, violating the ACM Code of Ethics section "1.2 Avoid Harm". Before going public we would need to follow Leidner and Plachouras's advice and establish an ethics review board that establish a process for reviewing and implementing new translation requests and helping monitor issues around translations on the site. 
 	
 	\section{Conclusions}
@@ -499,6 +513,9 @@ This proof-of-concept system is not something we recommend putting into the worl
 	
 \bibitem{ref_url2}
 	Found in translation: More accurate, fluent sentences in Google Translate (2016, November 15), Available at: \url{https://www.blog.google/products/translate/found-translation-more-accurate-fluent-sentences-google-translate}.  Last accessed 4 Feb 2019
+
+\bibitem{ref_url18}
+	Evaluating language translations: Experiments on three assessment methods. Journal of Applied Psychology, 57(3), 328-334, Sinaiko, H. W., \& Brislin, R. W., Available at: \url{http://dx.doi.org/10.1037/h0034677}.  Last accessed 7 Jul 2019
 
 
 \bibitem{ref_url3}
@@ -552,6 +569,10 @@ Text Similarities, Meenu Ahluwalia and Brian Coari, Available at:  \url{https://
 
 \bibitem{ref_url17}
 	Ethical by Design: Ethics Best Practices for Natural Language Processing, Jochen L. Leidner and Vassilis Plachouras, Available at: \url{http://www.ethicsinnlp.org/workshop/pdf/EthNLP02.pdf/}.  Last accessed 25 Mar 2019
+
+\bibitem{ref_book2}
+	Edited by Martha Tennent, Rosemary Arrojo: Training for the New Millennium: Pedagogies for translation and interpreting. John Benjamins Publishing, Chapter 11.2 - The ethics of translation in contemporary approaches to translator training, Page 231 (2005)
+
 
 
 \end{thebibliography}
