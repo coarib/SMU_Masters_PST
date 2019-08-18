@@ -7,6 +7,8 @@
 \usepackage{graphicx}
 \usepackage{afterpage}
 \usepackage{caption}
+\usepackage{geometry}
+\geometry{top=2in,bottom=2in,left=1.5in,right=1.5in}
 
 \usepackage{subcaption}
 \usepackage{float}
@@ -24,7 +26,7 @@
 \begin{document}
 	\emergencystretch 3em
 	\maketitle
-	
+	\pagestyle{empty}
 	\begin{abstract}
 
 Pristine Sentence Translation (PST) is a new approach to language translation based upon sentence-level granularity. Traditional translation approaches, including those utilizing advanced machine learning or neural network-based approaches, translate on a word-by-word or phrase-by-phrase basis; thereby, potentially missing the context or meaning of the complete sentence. Instead of these piecewise translations, PST utilizes deep learning and predictive modeling techniques to translate complete sentences from their source language into their target language. With these approaches we were able to translate sentences that closely conveyed the meaning of the original sentences. Our results demonstrated that PST's method of translating an entire sentence is a robust approach to translations in some circumstances.
@@ -485,13 +487,16 @@ We carefully scanned each translation for fairness to make sure our data was rev
 
 We also recognize that the inherent risk in allowing any person, no matter the level of expertise, to interpret the meaning of a sentence will carry some inherent bias. This bias raises the ethical concern of considering one person an authority in contextual analysis, as described by Rosemary Arrojo in ``Training for the New Millennium: Pedagogies for translation and interpreting'':
 
+
 \begin{verbatim}
-'...if we truly accepted the full implications of language theories
-which claim to go beyond the merely linguistic and to take into account
-the ideological, historical, and cultural basis of meaning, we would have to
-recognise the translator’s inescapable authorial interference in the process of
-translation and would have to review most of the clichés which consider it as a
-``serving'' profession....'
+    '...if we truly accepted the full implications of language 
+    theories which claim to go beyond the merely linguistic 
+    and to take into account the ideological, historical, and 
+    cultural basis of meaning, we would have to recognise 
+    the translator’s inescapable authorial interference in 
+    the process of translation and would have to review 
+    most of the clichés which consider it as a ``serving'' 
+    profession....'
 \end{verbatim} ~\cite{ref_book2}
 
 While we understand that no one person should be considered an ultimate authority on the contextual meaning of a sentence, our application can grow to take into account multiple meanings of a sentence. If ethical considerations arise from the interpretation of a sentence we can correct the sentence translation or include more possible meanings of the sentence. To fulfill our ethical obligations here we need to do our best to make sure our end users understand this limitation, our mitigation strategy, and any inherent risk. This is communicated in the ``Help'' section of our application.

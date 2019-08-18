@@ -197,7 +197,7 @@
 \global\let\@textbottom\relax}}
 
 \renewcommand\small{%
-   \@setfontsize\small\@ixpt{11}%
+   \@setfontsize\small\@ixpt{10}%
    \abovedisplayskip 8.5\p@ \@plus3\p@ \@minus4\p@
    \abovedisplayshortskip \z@ \@plus2\p@
    \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
@@ -337,7 +337,7 @@
 
 \renewcommand\section{\@startsection{section}{1}{\z@}%
                        {-18\p@ \@plus -4\p@ \@minus -4\p@}%
-                       {12\p@ \@plus 4\p@ \@minus 4\p@}%
+                       {10\p@ \@plus 4\p@ \@minus 4\p@}%
                        {\normalfont\large\bfseries\boldmath
                         \rightskip=\z@ \@plus 8em\pretolerance=10000 }}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
